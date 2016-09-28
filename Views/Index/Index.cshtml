@@ -1,0 +1,22 @@
+﻿@using System.Management
+@model ManagementObjectCollection
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    @foreach (ManagementObject vm in Model)
+    {
+        <tr>
+            <td>@vm["ElementName"]</td>
+            <td>@vm["EnabledState"]</td>
+            <td>@vm["Description"]</td>
+            <td>
+                <a href="/Index/StartVM?vmName=@vm["ElementName"]">Start</a>
+            </td>
+        </tr>
+    }
+</table>
