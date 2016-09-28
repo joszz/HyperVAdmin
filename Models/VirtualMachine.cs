@@ -14,6 +14,7 @@ namespace HyperVAdmin.Models
         public string MemoryAllocationUnits { get; set; }
         public VirtualMachineState State { get; set; }
         public int CoresAmount { get; set; }
+        public string MAC { get; set; }
     }
 
     public enum VirtualMachineState

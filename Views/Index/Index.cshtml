@@ -15,9 +15,10 @@
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
-                    <th>Cores</th>
+                    <th class="text-center">Cores</th>
                     <th>Memory</th>
-                    <th>Actions</th>
+                    <th>MAC</th>
+                    <th class="text-right">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,10 +27,13 @@
                     <tr>
                         <td>@vm.Name</td>
                         <td>@vm.Description</td>
-                        <td>@vm.CoresAmount</td>
+                        <td class="text-center">@vm.CoresAmount</td>
                         <td>@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
-                        <td>
-                            <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") glyphicon glyphicon-off" />
+                        <td>@vm.MAC</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") glyphicon glyphicon-off" />
+                            </div>
                         </td>
                     </tr>
                 }

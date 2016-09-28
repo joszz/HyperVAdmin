@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management;
-using System.Web;
+using System.Text.RegularExpressions;
 using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
@@ -33,7 +33,10 @@ namespace HyperVAdmin.Controllers
                 ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();
                 ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().First();
                 ManagementObject cores = settings.GetRelated("Msvm_ProcessorSettingData").Cast<ManagementObject>().ToList().First();
-                
+                ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().First();
+
+                string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
+                mac = mac.Substring(0, mac.Length - 1);
 
                 vms.Add(new VirtualMachine
                 {
@@ -42,7 +45,8 @@ namespace HyperVAdmin.Controllers
                     State = (VirtualMachineState)Convert.ToInt32(vm["EnabledState"]),
                     MemoryTotal = Convert.ToInt32(memorySettings["Limit"]),
                     MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString(),
-                    CoresAmount = Convert.ToInt32(cores["VirtualQuantity"])
+                    CoresAmount = Convert.ToInt32(cores["VirtualQuantity"]),
+                    MAC = mac
                 });
                 
             }
@@ -50,7 +54,7 @@ namespace HyperVAdmin.Controllers
             return View(vms);
         }
 
-        public ActionResult ToggleVMState(string vmName, VirtualMachineState state)
+        public JsonResult ToggleVMState(string vmName, VirtualMachineState state)
         {
             ManagementObject vm = HyperVUtility.GetTargetComputer(vmName, scope);
 
@@ -84,7 +88,7 @@ namespace HyperVAdmin.Controllers
                 returnValue = string.Format("Change virtual system state failed with error {0}.", outParams["ReturnValue"]);
             }
             
-            return RedirectToAction("Index");
+            return Json(returnValue);
         }
     }
 }
