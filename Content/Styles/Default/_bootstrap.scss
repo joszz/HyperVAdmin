@@ -1,0 +1,11 @@
+﻿@font-face 
+{
+  font-family: 'Glyphicons Halflings';
+
+  src: url('#{$bootstrapFont}.eot');
+  src: url('#{$bootstrapFont}.eot?#iefix') format('embedded-opentype'),
+	   url('#{$bootstrapFont}.woff2') format('woff2'), 
+	   url('#{$bootstrapFont}.woff') format('woff'), 
+	   url('#{$bootstrapFont}.ttf') format('truetype'), 
+	   url('#{$bootstrapFont}.svg#glyphicons_halflingsregular') format('svg');
+}

@@ -1,22 +1,39 @@
-﻿@using System.Management
-@model ManagementObjectCollection
+﻿@using HyperVAdmin.Models
+@model List<VirtualMachine>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Hyper-V Admin";
 }
 
-<h2>Index</h2>
-
-<table>
-    @foreach (ManagementObject vm in Model)
-    {
-        <tr>
-            <td>@vm["ElementName"]</td>
-            <td>@vm["EnabledState"]</td>
-            <td>@vm["Description"]</td>
-            <td>
-                <a href="/Index/StartVM?vmName=@vm["ElementName"]">Start</a>
-            </td>
-        </tr>
-    }
-</table>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Virtual machines</h4>
+    </div>
+    <div class="panel-body table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Cores</th>
+                    <th>Memory</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (VirtualMachine vm in Model)
+                {
+                    <tr>
+                        <td>@vm.Name</td>
+                        <td>@vm.Description</td>
+                        <td>@vm.CoresAmount</td>
+                        <td>@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
+                        <td>
+                            <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") glyphicon glyphicon-off" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

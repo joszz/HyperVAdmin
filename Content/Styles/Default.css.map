@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAUC;EARC,WAAW,EAAE,sBAAsB;EAEnC,GAAG,EAAE,sDAA4B;EACjC,GAAG,EAAE,wZAImE;ACT1E,IACA;EACI,WAAW,EAAE,IAAI",
+"sources": ["Default/_bootstrap.scss","Default/_general.scss"],
+"names": [],
+"file": "Default.css"
+}

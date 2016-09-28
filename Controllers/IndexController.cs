@@ -1,4 +1,5 @@
-﻿using HyperVAdmin.Utilities;
+﻿using HyperVAdmin.Models;
+using HyperVAdmin.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,6 @@ namespace HyperVAdmin.Controllers
     public class IndexController : Controller
     {
         private ManagementScope scope;
-        const int Enabled = 2, Disabled = 3;
 
         public IndexController() : base()
         {
@@ -21,20 +21,41 @@ namespace HyperVAdmin.Controllers
         public ActionResult Index()
         {
             // define the information we want to query - in this case, just grab all properties of the object
-            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem");
+            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem WHERE Description != 'Microsoft Hosting Computer System'");
 
             // connect and set up our search
             ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
+            ManagementObjectCollection vmCollection = vmSearcher.Get();
 
-            return View(vmSearcher.Get());
+            List<VirtualMachine> vms = new List<VirtualMachine>();
+            foreach(ManagementObject vm in vmCollection)
+            {
+                ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();
+                ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().First();
+                ManagementObject cores = settings.GetRelated("Msvm_ProcessorSettingData").Cast<ManagementObject>().ToList().First();
+                
+
+                vms.Add(new VirtualMachine
+                {
+                    Name = vm["ElementName"].ToString(),
+                    Description = vm["Description"].ToString(),
+                    State = (VirtualMachineState)Convert.ToInt32(vm["EnabledState"]),
+                    MemoryTotal = Convert.ToInt32(memorySettings["Limit"]),
+                    MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString(),
+                    CoresAmount = Convert.ToInt32(cores["VirtualQuantity"])
+                });
+                
+            }
+
+            return View(vms);
         }
 
-        public ActionResult StartVM(string vmName)
+        public ActionResult ToggleVMState(string vmName, VirtualMachineState state)
         {
             ManagementObject vm = HyperVUtility.GetTargetComputer(vmName, scope);
 
             ManagementBaseObject inParams = vm.GetMethodParameters("RequestStateChange");
-            inParams["RequestedState"] = Enabled;
+            inParams["RequestedState"] = state;
 
             ManagementBaseObject outParams = vm.InvokeMethod(
                             "RequestStateChange",
@@ -62,7 +83,7 @@ namespace HyperVAdmin.Controllers
             {
                 returnValue = string.Format("Change virtual system state failed with error {0}.", outParams["ReturnValue"]);
             }
-
+            
             return RedirectToAction("Index");
         }
     }

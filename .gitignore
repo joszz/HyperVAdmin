@@ -47,7 +47,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# 
+# Own excludes
 *.csproj.user
 bin
 obj
+.sass-cache
+watch.bat
