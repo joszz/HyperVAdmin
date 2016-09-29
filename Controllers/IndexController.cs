@@ -20,38 +20,12 @@ namespace HyperVAdmin.Controllers
 
         public ActionResult Index()
         {
-            // define the information we want to query - in this case, just grab all properties of the object
-            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem WHERE Description != 'Microsoft Hosting Computer System'");
+            return View(GetVMList());
+        }
 
-            // connect and set up our search
-            ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
-            ManagementObjectCollection vmCollection = vmSearcher.Get();
-
-            List<VirtualMachine> vms = new List<VirtualMachine>();
-            foreach(ManagementObject vm in vmCollection)
-            {
-                ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject cores = settings.GetRelated("Msvm_ProcessorSettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().First();
-
-                string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
-                mac = mac.Substring(0, mac.Length - 1);
-
-                vms.Add(new VirtualMachine
-                {
-                    Name = vm["ElementName"].ToString(),
-                    Description = vm["Description"].ToString(),
-                    State = (VirtualMachineState)Convert.ToInt32(vm["EnabledState"]),
-                    MemoryTotal = Convert.ToInt32(memorySettings["Limit"]),
-                    MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString(),
-                    CoresAmount = Convert.ToInt32(cores["VirtualQuantity"]),
-                    MAC = mac
-                });
-                
-            }
-
-            return View(vms);
+        public JsonResult GetVMs()
+        {
+            return Json(GetVMList());
         }
 
         public JsonResult ToggleVMState(string vmName, VirtualMachineState state)
@@ -89,6 +63,41 @@ namespace HyperVAdmin.Controllers
             }
             
             return Json(returnValue);
+        }
+
+        private List<VirtualMachine> GetVMList()
+        {
+            // define the information we want to query - in this case, just grab all properties of the object
+            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem WHERE Description != 'Microsoft Hosting Computer System'");
+
+            // connect and set up our search
+            ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
+            ManagementObjectCollection vmCollection = vmSearcher.Get();
+
+            List<VirtualMachine> vms = new List<VirtualMachine>();
+            foreach (ManagementObject vm in vmCollection)
+            {
+                ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();
+                ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().First();
+                ManagementObject cores = settings.GetRelated("Msvm_ProcessorSettingData").Cast<ManagementObject>().ToList().First();
+                ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().First();
+
+                string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
+                mac = mac.Substring(0, mac.Length - 1);
+
+                vms.Add(new VirtualMachine
+                {
+                    Name = vm["ElementName"].ToString(),
+                    Description = vm["Description"].ToString(),
+                    State = (VirtualMachineState)Convert.ToInt32(vm["EnabledState"]),
+                    MemoryTotal = Convert.ToInt32(memorySettings["Limit"]),
+                    MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString(),
+                    CoresAmount = Convert.ToInt32(cores["VirtualQuantity"]),
+                    MAC = mac
+                });
+            }
+
+            return vms;
         }
     }
 }

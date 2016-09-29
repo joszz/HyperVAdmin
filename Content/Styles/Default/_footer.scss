@@ -1,0 +1,25 @@
+﻿footer.navbar 
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 5px 0;
+    border-radius: 0;
+    opacity: 0.9;
+    z-index: 7500;
+}
+
+footer .execution-time
+{
+    line-height: 36px;
+}
+
+footer a.copyright,
+footer a.copyright:hover,
+footer a.copyright:active,
+footer a.copyright:focus
+{
+    color: #777;
+    line-height: 36px;
+}

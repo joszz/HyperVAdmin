@@ -1,0 +1,25 @@
+﻿.isloading-wrapper.isloading-right {
+    margin-left: 10px;
+}
+
+.isloading-overlay {
+    position: relative;
+    text-align: center;
+    border-radius: 3px;
+    z-index: 7001 !important;
+}
+
+.isloading-overlay .isloading-wrapper {
+    background: #FFF;
+    -webkit-border-radius: 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px;
+    -moz-background-clip: padding;
+    border-radius: 7px;
+    background-clip: padding-box;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    top: 10%;
+    z-index: 7000;
+}

@@ -7,6 +7,11 @@
 
 <div class="panel panel-primary">
     <div class="panel-heading">
+        <div class="pull-right btn-group">
+            <button class="btn btn-default">
+                <i class="glyphicon glyphicon-refresh"></i>
+            </button>
+        </div>
         <h4>Virtual machines</h4>
     </div>
     <div class="panel-body table-responsive">
@@ -37,6 +42,19 @@
                         </td>
                     </tr>
                 }
+
+                <tr class="hidden cloneable">
+                    <td></td>
+                    <td></td>
+                    <td class="text-center"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button class="btn glyphicon glyphicon-off" />
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

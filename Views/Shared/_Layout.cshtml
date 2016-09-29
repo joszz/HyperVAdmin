@@ -17,6 +17,15 @@
         @RenderBody()
     </div>
 
+    <footer class="navbar navbar-inverse">
+        <div class="container text-muted">
+            <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright">
+                Copyright &copy; 2016 @Html.Raw(@DateTime.Now.Year != 2016 ? " - " + DateTime.Now.Year : null)
+                Jos Nienhuis
+            </a>
+        </div>
+    </footer>
+
     @Scripts.Render("~/bundles/scripts")
 </body>
 </html>

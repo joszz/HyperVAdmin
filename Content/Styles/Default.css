@@ -1,8 +1,118 @@
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/Content/Fonts/glyphicons-halflings-regular.eot");
-  src: url("/Content/Fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/Content/Fonts/glyphicons-halflings-regular.woff") format("woff"), url("/Content/Fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/Content/Fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("..//Fonts/glyphicons-halflings-regular.eot");
+  src: url("..//Fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("..//Fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("..//Fonts/glyphicons-halflings-regular.woff") format("woff"), url("..//Fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("..//Fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+.glyphicon-spin,
+.icon-refresh-animate {
+  -webkit-animation-name: rotateThis;
+  -moz-animation-name: rotateThis;
+  -ms-animation-name: rotateThis;
+  -o-animation-name: rotateThis;
+  animation-name: rotateThis;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  -o-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+@keyframes rotateThis {
+  from {
+    -webkit-transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg); }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+    -moz-transform: scale(1) rotate(360deg);
+    -o-transform: scale(1) rotate(360deg);
+    -ms-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg); } }
+@-moz-keyframes rotateThis {
+  from {
+    -moz-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg); }
+  to {
+    -moz-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg); } }
+@-webkit-keyframes rotateThis {
+  from {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg); }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg); } }
+@-ms-keyframes rotateThis {
+  from {
+    -ms-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg); }
+  to {
+    -ms-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg); } }
+@-o-keyframes rotateThis {
+  from {
+    -o-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg); }
+  to {
+    -o-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg); } }
+.isloading-wrapper.isloading-right {
+  margin-left: 10px; }
+
+.isloading-overlay {
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  z-index: 7001 !important; }
+
+.isloading-overlay .isloading-wrapper {
+  background: #FFF;
+  -webkit-border-radius: 7px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 7px;
+  -moz-background-clip: padding;
+  border-radius: 7px;
+  background-clip: padding-box;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  top: 10%;
+  z-index: 7000; }
+
+footer.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0;
+  border-radius: 0;
+  opacity: 0.9;
+  z-index: 7500; }
+
+footer .execution-time {
+  line-height: 36px; }
+
+footer a.copyright,
+footer a.copyright:hover,
+footer a.copyright:active,
+footer a.copyright:focus {
+  color: #777;
+  line-height: 36px; }
+
 body {
-  padding-top: 70px; }
+  padding-top: 70px;
+  padding-bottom: 55px;
+  background-image: linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=Default.css.map */
