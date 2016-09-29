@@ -9,16 +9,16 @@ $(function () {
     $("body").on("click", ".glyphicon-off", toggleVM);
     $(".panel-heading button").click(refreshVMList);
 
-    refreshIntervalID = window.setInterval(refreshVMList, refreshInterval);
+    refreshIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
 });
 
 function refreshVMList() {
-    window.clearInterval(refreshIntervalID);
-
     $(".panel").isLoading({
         text: "Loading",
         position: "overlay"
     });
+
+    window.clearInterval(refreshIntervalID);
     var $this = $(this);
 
     $.getJSON({
@@ -51,7 +51,7 @@ function refreshVMList() {
             $(".panel").isLoading("hide");
             $this.blur();
 
-            refreshIntervalID = window.setInterval(refreshVMList, refreshInterval);
+            refreshIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
         }
     });
 }
