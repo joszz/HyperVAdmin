@@ -4,6 +4,8 @@ $(function () {
     Waves.attach(".btn");
     Waves.init();
 
+    $("a, button").vibrate();
+
     $("body").on("click", ".glyphicon-off", toggleVM);
     $(".panel-heading button").click(refreshVMList);
 });
@@ -13,6 +15,7 @@ function refreshVMList() {
         text: "Loading",
         position: "overlay"
     });
+    var $this = $(this);
 
     $.getJSON({
         url: "Index/GetVMs",
@@ -42,6 +45,7 @@ function refreshVMList() {
         },
         complete: function () {
             $(".panel").isLoading("hide");
+            $this.blur();
         }
     });
 }
@@ -51,6 +55,7 @@ function toggleVM() {
 
     if (confirm("Are you sure you want to toggle this VM " + ($(this).hasClass("btn-danger") ? "on" : "off") + "?")) {
         $this.addClass("disabled");
+        $this.blur();
 
         $.post({
             url: "Index/ToggleVMState",
@@ -65,7 +70,7 @@ function toggleVM() {
             },
             error: function () {
                 flashAlert("Something went wrong changing VM state!", "danger");
-            }
+            },
         });
     }
 }

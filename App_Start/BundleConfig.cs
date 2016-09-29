@@ -11,6 +11,7 @@ namespace HyperVAdmin
                 "~/Content/Scripts/jQuery/jquery-{version}.js",
                 "~/Content/Scripts/Bootstrap/bootstrap.js",
                 "~/Content/Scripts/jquery.isloading.js",
+                "~/Content/Scripts/jquery.vibrate.js",
                 "~/Content/Scripts/waves.js",
                 "~/Content/Scripts/general.js"
             ));

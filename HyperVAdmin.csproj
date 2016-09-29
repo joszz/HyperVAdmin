@@ -138,6 +138,7 @@
     <Content Include="Content\Scripts\Bootstrap\npm.js" />
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
+    <Content Include="Content\Scripts\jquery.vibrate.js" />
     <Content Include="Content\Scripts\jQuery\jquery-3.1.1.js" />
     <Content Include="Content\Scripts\jQuery\jquery-3.1.1.min.js" />
     <Content Include="Content\Scripts\waves.js" />
