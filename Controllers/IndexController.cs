@@ -13,7 +13,8 @@ namespace HyperVAdmin.Controllers
     {
         private ManagementScope scope;
 
-        public IndexController() : base()
+        public IndexController()
+            : base()
         {
             scope = new ManagementScope(@"\\.\root\virtualization\v2");
         }
@@ -23,6 +24,7 @@ namespace HyperVAdmin.Controllers
             return View(GetVMList());
         }
 
+        [HttpPost]
         public JsonResult GetVMs()
         {
             return Json(GetVMList());
@@ -31,14 +33,10 @@ namespace HyperVAdmin.Controllers
         public JsonResult ToggleVMState(string vmName, VirtualMachineState state)
         {
             ManagementObject vm = HyperVUtility.GetTargetComputer(vmName, scope);
-
             ManagementBaseObject inParams = vm.GetMethodParameters("RequestStateChange");
             inParams["RequestedState"] = state;
 
-            ManagementBaseObject outParams = vm.InvokeMethod(
-                            "RequestStateChange",
-                            inParams,
-                            null);
+            ManagementBaseObject outParams = vm.InvokeMethod("RequestStateChange", inParams, null);
 
             string returnValue = string.Empty;
 
@@ -46,7 +44,7 @@ namespace HyperVAdmin.Controllers
             {
                 if (HyperVUtility.JobCompleted(outParams, scope))
                 {
-                    returnValue = string.Format("{0} state was changed successfully.", vmName);
+                    returnValue = string.Format("VM '{0}' state was changed successfully.", vmName);
                 }
                 else
                 {
@@ -55,13 +53,13 @@ namespace HyperVAdmin.Controllers
             }
             else if ((UInt32)outParams["ReturnValue"] == ReturnCode.Completed)
             {
-                returnValue = string.Format("{0} state was changed successfully.", vmName);
+                returnValue = string.Format("VM '{0}' state was changed successfully.", vmName);
             }
             else
             {
                 returnValue = string.Format("Change virtual system state failed with error {0}.", outParams["ReturnValue"]);
             }
-            
+
             return Json(returnValue);
         }
 

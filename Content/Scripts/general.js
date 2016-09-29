@@ -1,8 +1,15 @@
-﻿$(function () {
+﻿var alertTimeout = 5;
+
+$(function () {
+    Waves.attach(".btn");
+    Waves.init();
+
     $("body").on("click", ".glyphicon-off", function () {
         var $this = $(this);
 
         if (confirm("Are you sure you want to toggle this VM " + ($(this).hasClass("btn-danger") ? "on" : "off") + "?")) {
+            $this.addClass("disabled");
+
             $.post({
                 url: "Index/ToggleVMState",
                 data: {
@@ -10,7 +17,12 @@
                     state: $(this).hasClass("btn-danger") ? 2 : 3
                 },
                 success: function (data) {
-                    $this.toggleClass("btn-success btn-danger");
+                    $this.toggleClass("btn-success btn-danger disabled");
+
+                    flashAlert(data, "success");
+                },
+                error: function(){
+                    flashAlert("Something went wrong changing VM state!", "danger");
                 }
             });
         }
@@ -41,6 +53,11 @@
 
                     clone.appendTo($("tbody"));
                 });
+
+                flashAlert("VM list refreshed!", "success");
+            },
+            error: function(){
+                flashAlert("Something went wrong refreshing list!", "danger");
             },
             complete: function () {
                 $(".panel").isLoading("hide");
@@ -48,3 +65,21 @@
         });
     });
 });
+
+function fadeOutAlert() {
+    window.setTimeout(function () {
+        $("div.alert").fadeOut("fast", function () {
+            $("div.alert").removeClass("alert-success alert-danger");
+        });
+    }, alertTimeout * 1000);
+}
+
+function flashAlert(message, type)
+{
+    $("div.alert").addClass("alert-" + type);
+    $("div.alert").html(message);
+    $("div.alert").fadeIn("fast");
+
+    fadeOutAlert();
+
+}

@@ -115,4 +115,12 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat; }
 
+div.alert {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 7501;
+  margin-bottom: 0;
+  display: none; }
+
 /*# sourceMappingURL=Default.css.map */

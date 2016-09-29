@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,11 +133,14 @@
     <Content Include="Content\Scripts\jquery.isloading.js" />
     <Content Include="Content\Scripts\jQuery\jquery-3.1.1.js" />
     <Content Include="Content\Scripts\jQuery\jquery-3.1.1.min.js" />
+    <Content Include="Content\Scripts\waves.js" />
     <Content Include="Content\Styles\Bootstrap\bootstrap-theme.css" />
     <Content Include="Content\Styles\Bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\Styles\Bootstrap\bootstrap.css" />
     <Content Include="Content\Styles\Bootstrap\bootstrap.min.css" />
     <Content Include="Content\Styles\Default.css" />
+    <None Include="Content\Styles\Default\_footer.scss" />
+    <Content Include="Content\Styles\waves.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -217,6 +222,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

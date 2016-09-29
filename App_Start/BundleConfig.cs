@@ -1,5 +1,4 @@
 ﻿using System.Configuration;
-using System.Web;
 using System.Web.Optimization;
 
 namespace HyperVAdmin
@@ -17,12 +16,14 @@ namespace HyperVAdmin
                 "~/Content/Scripts/jQuery/jquery-{version}.js",
                 "~/Content/Scripts/Bootstrap/bootstrap.js",
                 "~/Content/Scripts/jquery.isloading.js",
+                "~/Content/Scripts/waves.js",
                 "~/Content/Scripts/general.js"
             ));
 
             bundles.Add(new StyleBundle("~/Content/default").Include(
                 "~/Content/Styles/Bootstrap/bootstrap.css",
                 "~/Content/Styles/Bootstrap/bootstrap-theme.css",
+                "~/Content/Styles/waves.css",
                 "~/Content/Styles/Default.css"
             ));
         }
