@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace HyperVAdmin
 {

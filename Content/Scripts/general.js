@@ -22,7 +22,7 @@ function refreshVMList() {
     var $this = $(this);
 
     $.getJSON({
-        url: "Index/GetVMs",
+        url: "VM/GetVMs",
         type: "POST",
         success: function (data) {
             $("tbody tr:not(.hidden)").remove();
@@ -64,7 +64,7 @@ function toggleVM() {
         $this.addClass("disabled");
         
         $.post({
-            url: "Index/ToggleVMState",
+            url: "VM/ToggleState",
             data: {
                 vmName: $.trim($(this).closest("tr").find("td:eq(0)").html()),
                 state: $(this).hasClass("btn-danger") ? 2 : 3
