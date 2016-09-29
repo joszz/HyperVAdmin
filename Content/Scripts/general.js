@@ -52,11 +52,11 @@ function refreshVMList() {
 
 function toggleVM() {
     var $this = $(this);
+    $this.blur();
 
     if (confirm("Are you sure you want to toggle this VM " + ($(this).hasClass("btn-danger") ? "on" : "off") + "?")) {
         $this.addClass("disabled");
-        $this.blur();
-
+        
         $.post({
             url: "Index/ToggleVMState",
             data: {

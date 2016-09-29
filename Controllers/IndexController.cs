@@ -70,9 +70,9 @@ namespace HyperVAdmin.Controllers
 
             // connect and set up our search
             ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
-            ManagementObjectCollection vmCollection = vmSearcher.Get();
-
+            List<ManagementObject> vmCollection = vmSearcher.Get().Cast<ManagementObject>().OrderBy(vm => vm["ElementName"]).ToList();
             List<VirtualMachine> vms = new List<VirtualMachine>();
+
             foreach (ManagementObject vm in vmCollection)
             {
                 ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();

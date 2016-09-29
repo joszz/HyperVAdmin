@@ -2,6 +2,9 @@
   font-family: 'Glyphicons Halflings';
   src: url("..//Fonts/glyphicons-halflings-regular.eot");
   src: url("..//Fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("..//Fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("..//Fonts/glyphicons-halflings-regular.woff") format("woff"), url("..//Fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("..//Fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+.table > tbody > tr > td {
+  vertical-align: middle; }
+
 .glyphicon-spin,
 .icon-refresh-animate {
   -webkit-animation-name: rotateThis;
