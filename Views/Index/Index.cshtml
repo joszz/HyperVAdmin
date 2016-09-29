@@ -19,7 +19,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Description</th>
+                    <th>Last state change</th>
                     <th class="text-center">Cores</th>
                     <th>Memory</th>
                     <th>MAC</th>
@@ -31,7 +31,7 @@
                 {
                     <tr>
                         <td>@vm.Name</td>
-                        <td>@vm.Description</td>
+                        <td>@vm.TimeOfLastStateChangeFormatted</td>
                         <td class="text-center">@vm.CoresAmount</td>
                         <td>@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
                         <td>@vm.MAC</td>

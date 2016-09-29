@@ -89,9 +89,10 @@ namespace HyperVAdmin.Controllers
                     Description = vm["Description"].ToString(),
                     State = (VirtualMachineState)Convert.ToInt32(vm["EnabledState"]),
                     MemoryTotal = Convert.ToInt32(memorySettings["Limit"]),
-                    MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString(),
+                    MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString() == "byte * 2^20" ? "MB" : memorySettings["AllocationUnits"].ToString(),
                     CoresAmount = Convert.ToInt32(cores["VirtualQuantity"]),
-                    MAC = mac
+                    MAC = mac,
+                    TimeOfLastStateChange = ManagementDateTimeConverter.ToDateTime(vm["TimeOfLastStateChange"].ToString()),
                 });
             }
 

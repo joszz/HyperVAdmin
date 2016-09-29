@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace HyperVAdmin.Models
 {
     public class VirtualMachine
@@ -11,6 +12,15 @@ namespace HyperVAdmin.Models
         public VirtualMachineState State { get; set; }
         public int CoresAmount { get; set; }
         public string MAC { get; set; }
+        public DateTime TimeOfLastStateChange { get; set; }
+
+        public string TimeOfLastStateChangeFormatted
+        {
+            get
+            {
+                return TimeOfLastStateChange.ToString("dd-MM-yyyy HH:mm:ss");
+            }
+        }
     }
 
     public enum VirtualMachineState

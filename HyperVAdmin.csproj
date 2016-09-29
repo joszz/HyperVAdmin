@@ -142,7 +142,6 @@
     <None Include="Content\Styles\Default\_footer.scss" />
     <Content Include="Content\Styles\waves.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
