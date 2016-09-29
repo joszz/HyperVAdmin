@@ -126,6 +126,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\Favicons\apple-touch-icon.png" />
+    <Content Include="Content\Images\Favicons\browserconfig.xml" />
+    <Content Include="Content\Images\Favicons\favicon-16x16.png" />
+    <Content Include="Content\Images\Favicons\favicon-32x32.png" />
+    <Content Include="Content\Images\Favicons\favicon.ico" />
+    <Content Include="Content\Images\Favicons\mstile-150x150.png" />
+    <Content Include="Content\Images\Favicons\safari-pinned-tab.svg" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js" />
     <Content Include="Content\Scripts\Bootstrap\npm.js" />
@@ -139,6 +146,7 @@
     <Content Include="Content\Styles\Bootstrap\bootstrap.css" />
     <Content Include="Content\Styles\Bootstrap\bootstrap.min.css" />
     <Content Include="Content\Styles\Default.css" />
+    <Content Include="Content\Images\Favicons\manifest.json" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <Content Include="Content\Styles\waves.css" />
     <Content Include="Global.asax" />
