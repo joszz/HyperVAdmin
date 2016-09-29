@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Configuration
+
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="utf-8" />
@@ -34,6 +36,11 @@
     </footer>
 
     <div class="alert"></div>
+
+    <script type="text/javascript">
+        var alertTimeout = @ConfigurationManager.AppSettings["AlertTimeout"];
+        var refreshInterval = @ConfigurationManager.AppSettings["RefreshInterval"];
+    </script>
 
     @Scripts.Render("~/bundles/scripts")
 </body>

@@ -1,4 +1,4 @@
-﻿var alertTimeout = 5;
+﻿var refreshIntervalID = 0;
 
 $(function () {
     Waves.attach(".btn");
@@ -8,9 +8,13 @@ $(function () {
 
     $("body").on("click", ".glyphicon-off", toggleVM);
     $(".panel-heading button").click(refreshVMList);
+
+    refreshIntervalID = window.setInterval(refreshVMList, refreshInterval);
 });
 
 function refreshVMList() {
+    window.clearInterval(refreshIntervalID);
+
     $(".panel").isLoading({
         text: "Loading",
         position: "overlay"
@@ -46,6 +50,8 @@ function refreshVMList() {
         complete: function () {
             $(".panel").isLoading("hide");
             $this.blur();
+
+            refreshIntervalID = window.setInterval(refreshVMList, refreshInterval);
         }
     });
 }
