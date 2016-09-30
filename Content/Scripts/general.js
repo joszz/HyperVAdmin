@@ -30,12 +30,12 @@ function refreshVMList() {
             $.each(data, function (index, value) {
                 var clone = $("tr.hidden").clone();
 
-                clone.find("td:eq(0)").html(value.Name);
-                clone.find("td:eq(1)").html(value.TimeOfLastStateChangeFormatted);
-                clone.find("td:eq(2)").html(value.GetOnTimeFormatted);
-                clone.find("td:eq(3)").html(value.CoresAmount);
-                clone.find("td:eq(4)").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
-                clone.find("td:eq(5)").html(value.MAC);
+                clone.find("td:eq(1)").html(value.Name);
+                clone.find("td:eq(2)").html(value.TimeOfLastStateChangeFormatted);
+                clone.find("td:eq(3)").html(value.GetOnTimeFormatted);
+                clone.find("td:eq(4)").html(value.CoresAmount);
+                clone.find("td:eq(5)").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
+                clone.find("td:eq(6)").html(value.MAC);
                 clone.find("button").addClass("btn-" + (value.State == 2 ? "success" : "danger"));
                 clone.removeClass("hidden cloneable");
 

@@ -111,12 +111,16 @@ footer a.copyright:focus {
   color: #777;
   line-height: 36px; }
 
+html {
+  min-height: 100%; }
+
 body {
   padding-top: 70px;
   padding-bottom: 55px;
   background-image: linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100%; }
 
 div.alert {
   position: fixed;

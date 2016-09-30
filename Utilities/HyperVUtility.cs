@@ -34,8 +34,6 @@ namespace HyperVAdmin.Utilities
         public const UInt16 BasePartitionableUnit = 27;
         public const UInt16 PowerSupply = 28;
         public const UInt16 CoolingDevice = 29;
-
-
         public const UInt16 DisketteController = 1;
     }
 
@@ -107,7 +105,6 @@ namespace HyperVAdmin.Utilities
         /// <returns></returns>
         public static ManagementObject GetServiceObject(ManagementScope scope, string serviceName)
         {
-
             scope.Connect();
             ManagementPath wmiPath = new ManagementPath(serviceName);
             ManagementClass serviceClass = new ManagementClass(scope, wmiPath, null);
@@ -130,12 +127,7 @@ namespace HyperVAdmin.Utilities
         }
 
 
-        public static ManagementObject GetSystemDevice
-        (
-            string deviceClassName,
-            string deviceObjectElementName,
-            string vmName,
-            ManagementScope scope)
+        public static ManagementObject GetSystemDevice(string deviceClassName, string deviceObjectElementName, string vmName, ManagementScope scope)
         {
             ManagementObject systemDevice = null;
             ManagementObject computerSystem = HyperVUtility.GetTargetComputer(vmName, scope);
@@ -259,28 +251,22 @@ namespace HyperVAdmin.Utilities
         //
         // Get RASD definitions
         //
-        public static ManagementObject GetResourceAllocationsettingDataDefault
-        (
-            ManagementScope scope,
-            UInt16 resourceType,
-            string resourceSubType,
-            string otherResourceType
-            )
+        public static ManagementObject GetResourceAllocationsettingDataDefault(ManagementScope scope, UInt16 resourceType, string resourceSubType, string otherResourceType)
         {
             ManagementObject RASD = null;
 
             string query = String.Format("select * from Msvm_ResourcePool where ResourceType = '{0}' and ResourceSubType ='{1}' and OtherResourceType = '{2}'",
-                             resourceType, resourceSubType, otherResourceType);
+                resourceType, resourceSubType, otherResourceType);
 
             if (resourceType == ResourceType.Other)
             {
                 query = String.Format("select * from Msvm_ResourcePool where ResourceType = '{0}' and ResourceSubType = null and OtherResourceType = {1}",
-                                             resourceType, otherResourceType);
+                    resourceType, otherResourceType);
             }
             else
             {
                 query = String.Format("select * from Msvm_ResourcePool where ResourceType = '{0}' and ResourceSubType ='{1}' and OtherResourceType = null",
-                                             resourceType, resourceSubType);
+                    resourceType, resourceSubType);
             }
 
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, new ObjectQuery(query));
@@ -312,13 +298,7 @@ namespace HyperVAdmin.Utilities
             return RASD;
         }
 
-        public static ManagementObject GetResourceAllocationsettingData
-        (
-            ManagementObject vm,
-            UInt16 resourceType,
-            string resourceSubType,
-            string otherResourceType
-            )
+        public static ManagementObject GetResourceAllocationsettingData(ManagementObject vm, UInt16 resourceType, string resourceSubType, string otherResourceType)
         {
             //vm->vmsettings->RASD for IDE controller
             ManagementObject RASD = null;
@@ -350,8 +330,8 @@ namespace HyperVAdmin.Utilities
                         }
                     }
                 }
-
             }
+
             return RASD;
         }
     }
