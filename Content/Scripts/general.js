@@ -27,7 +27,7 @@ $(function () {
 });
 
 function refreshVMList() {
-    $("#virtual-machines .panel").isLoading({
+    $("#virtual-machines").isLoading({
         text: "Loading",
         position: "overlay"
     });
@@ -62,7 +62,7 @@ function refreshVMList() {
             flashAlert("Something went wrong refreshing list!", "danger");
         },
         complete: function () {
-            $("#virtual-machines .panel").isLoading("hide");
+            $("#virtual-machines").isLoading("hide");
             $this.blur();
 
             refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
@@ -96,7 +96,7 @@ function toggleVM() {
 }
 
 function refreshSites() {
-    $("#sites .panel").isLoading({
+    $("#sites").isLoading({
         text: "Loading",
         position: "overlay"
     });
@@ -135,7 +135,7 @@ function refreshSites() {
             flashAlert("Something went wrong refreshing list!", "danger");
         },
         complete: function () {
-            $("#sites .panel").isLoading("hide");
+            $("#sites").isLoading("hide");
             $this.blur();
 
             refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);

@@ -8,13 +8,13 @@
 }
 
 <div class="row">
-    <div class="col-xs-12" id="virtual-machines">
+    <div class="col-xs-12">
         @Html.Partial("~/Views/VMs/Index.cshtml", Model)
     </div>
 </div>
 
 <div class="row hidden-xs">
-    <div class="col-xs-12" id="sites">
+    <div class="col-xs-12">
         @Html.Partial("~/Views/Sites/Index.cshtml", (List<SiteModel>)ViewBag.Sites)
     </div>
 </div>
