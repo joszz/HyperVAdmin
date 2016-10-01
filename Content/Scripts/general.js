@@ -10,6 +10,7 @@ $(function () {
     $("#virtual-machines .panel-heading button").click(refreshVMList);
     $("#sites .panel-heading button").click(refreshSites);
     $("#sites").on("click", "button.copy-path", copyPath);
+    $("#sites").on("click", "tr td:first-child button:visible", toggleSite);
 
     $('#virtual-machines table').addSortWidget({
         img_asc: "Content/Images/Sorttable/asc_sort.gif",
@@ -76,7 +77,7 @@ function toggleVM() {
 
     if (confirm("Are you sure you want to toggle this VM " + ($(this).hasClass("btn-danger") ? "on" : "off") + "?")) {
         $this.addClass("disabled");
-        
+
         $.post({
             url: "VMs/ToggleState",
             data: {
@@ -128,7 +129,7 @@ function refreshSites() {
 
                 clone.find("td:eq(1)").html(value.Name);
                 clone.find("td:eq(2) textarea").val(value.PhysicalPath);
-                clone.find("td:eq(2) button").html(value.PhysicalPath).attr("title",value.PhysicalPath);
+                clone.find("td:eq(2) button").html(value.PhysicalPath).attr("title", value.PhysicalPath);
                 clone.removeClass("hidden");
 
                 clone.appendTo($("#sites tbody"));
@@ -151,21 +152,23 @@ function refreshSites() {
 function toggleSite(event) {
     event.stopPropagation();
 
-    var button = $(this);
+    if (confirm("Are you sure you want to " + ($(this).hasClass("btn-success") ? "stop" : "start") + " this website?")) {
+        var button = $(this);
 
-    $("tr").removeClass("active");
-    $(this).closest("tr").find(".protocol").toggleClass("disabled");
+        $("tr").removeClass("active");
+        $(this).closest("tr").find(".protocol").toggleClass("disabled");
 
-    $.post({
-        url: "/Sites/" + ($(this).hasClass("btn-success") ? "StopSite" : "StartSite"),
-        data: {
-            sitename: $.trim($(this).closest("tr").find(".name").html())
-        },
-        success: function () {
-            button.toggleClass("btn-success btn-danger");
-            button.closest("tr").toggleClass("disabled");
-        }
-    });
+        $.post({
+            url: "Sites/" + ($(this).hasClass("btn-success") ? "StopSite" : "StartSite"),
+            data: {
+                sitename: $.trim($(this).closest("tr").find(".name").html())
+            },
+            success: function () {
+                button.toggleClass("btn-success btn-danger");
+                button.closest("tr").toggleClass("disabled");
+            }
+        });
+    }
 }
 
 function copyPath(event) {

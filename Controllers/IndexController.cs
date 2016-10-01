@@ -1,6 +1,5 @@
 ﻿using HyperVAdmin.Models;
 using Microsoft.Web.Administration;
-using System.Management;
 using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers

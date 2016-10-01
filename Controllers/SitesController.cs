@@ -1,9 +1,7 @@
-﻿using Microsoft.Web.Administration;
-using System.Web.Mvc;
+﻿using HyperVAdmin.Models;
+using Microsoft.Web.Administration;
 using System.Linq;
-using HyperVAdmin.Models;
-using System;
-using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
 {
