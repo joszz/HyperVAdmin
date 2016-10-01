@@ -78,24 +78,29 @@ function toggleVM() {
         $this.addClass("disabled");
         
         $.post({
-            url: "VM/ToggleState",
+            url: "VMs/ToggleState",
             data: {
-                vmName: $.trim($(this).closest("tr").find("td:eq(0)").html()),
+                vmName: $.trim($(this).closest("tr").find("td:eq(1)").html()),
                 state: $(this).hasClass("btn-danger") ? 2 : 3
             },
             success: function (data) {
-                $this.toggleClass("btn-success btn-danger disabled");
+                $this.toggleClass("btn-success btn-danger");
 
                 flashAlert(data, "success");
             },
             error: function () {
                 flashAlert("Something went wrong changing VM state!", "danger");
             },
+            complete: function () {
+                $this.toggleClass("disabled");
+            }
         });
     }
 }
 
 function refreshSites() {
+    if ($("#sites:hidden").length > 0) return;
+
     $("#sites").isLoading({
         text: "Loading",
         position: "overlay"
