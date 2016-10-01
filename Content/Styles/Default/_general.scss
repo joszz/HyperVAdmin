@@ -1,5 +1,8 @@
-﻿html {
-    min-height: 100%;
+﻿html,
+body,
+.container,
+.row > div {
+    height: 100%;
 }
 
 body {
@@ -8,7 +11,6 @@ body {
     background-image: $gradiantDark;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100%;
 }
 
 div.alert {
@@ -18,4 +20,37 @@ div.alert {
     z-index: 7501;
     margin-bottom: 0;
     display: none;
+}
+
+.row {
+    height: 50%;
+}
+@media (max-width: 768px) {
+    .row {
+        height: 100%;
+    }
+}
+
+.panel {
+    height: calc(100% - 15px);
+}
+
+.panel-body {
+    overflow-y: auto;
+    height: calc(100% - 60px);
+}
+
+th {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    min-width: 85px;
+}
+
+th img {
+    cursor: pointer;
+    float: right;
+    margin: 2px 0 0 0;
 }

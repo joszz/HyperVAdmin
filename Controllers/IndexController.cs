@@ -7,9 +7,12 @@ namespace HyperVAdmin.Controllers
 {
     public class IndexController : Controller
     {
+        private ServerManager manager = new ServerManager();
+
         public ActionResult Index()
         {
-            return View(VirtualMachine.GetVMList());
+            ViewBag.Sites = SiteModel.GetSites();
+            return View(VirtualMachineModel.GetVMList());
         }
     }
 }

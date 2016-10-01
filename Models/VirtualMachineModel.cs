@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace HyperVAdmin.Models
 {
-    public class VirtualMachine
+    public class VirtualMachineModel
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -43,7 +43,7 @@ namespace HyperVAdmin.Models
             }
         }
 
-        public static List<VirtualMachine> GetVMList()
+        public static List<VirtualMachineModel> GetVMList()
         {
             ManagementScope scope = GetVMScope();
 
@@ -53,7 +53,7 @@ namespace HyperVAdmin.Models
             // connect and set up our search
             ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
             List<ManagementObject> vmCollection = vmSearcher.Get().Cast<ManagementObject>().OrderBy(vm => vm["ElementName"]).ToList();
-            List<VirtualMachine> vms = new List<VirtualMachine>();
+            List<VirtualMachineModel> vms = new List<VirtualMachineModel>();
 
             foreach (ManagementObject vm in vmCollection)
             {
@@ -63,7 +63,7 @@ namespace HyperVAdmin.Models
                 ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().First();
                 string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
 
-                vms.Add(new VirtualMachine
+                vms.Add(new VirtualMachineModel
                 {
                     Name = vm["ElementName"].ToString(),
                     Description = vm["Description"].ToString(),

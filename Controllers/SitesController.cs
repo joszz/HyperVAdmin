@@ -1,16 +1,25 @@
 ﻿using Microsoft.Web.Administration;
 using System.Web.Mvc;
 using System.Linq;
+using HyperVAdmin.Models;
+using System;
+using System.Collections.Generic;
 
 namespace HyperVAdmin.Controllers
 {
-    public class SiteController : Controller
+    public class SitesController : Controller
     {
         private ServerManager manager = new ServerManager();
 
         public ActionResult Index()
         {
-            return View();
+            return View(SiteModel.GetSites());
+        }
+
+        [HttpPost]
+        public JsonResult GetSites()
+        {
+            return Json(SiteModel.GetSites());
         }
 
         [HttpPost]

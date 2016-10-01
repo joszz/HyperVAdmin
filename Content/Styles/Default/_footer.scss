@@ -1,5 +1,4 @@
-﻿footer.navbar 
-{
+﻿footer.navbar {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -10,16 +9,14 @@
     z-index: 7500;
 }
 
-footer .execution-time
-{
+footer .execution-time {
     line-height: 36px;
 }
 
 footer a.copyright,
 footer a.copyright:hover,
 footer a.copyright:active,
-footer a.copyright:focus
-{
+footer a.copyright:focus {
     color: #777;
     line-height: 36px;
 }

@@ -1,0 +1,16 @@
+﻿.offcanvas {
+    position: absolute;
+    left: -2000px;
+}
+
+button.copy-path {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left !important;
+}
+
+#sites a.btn {
+    margin-top: 1px;
+}

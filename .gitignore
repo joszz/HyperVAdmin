@@ -49,7 +49,6 @@ Temporary Items
 
 # Own excludes
 *.csproj.user
-bin
 obj
 .sass-cache
 watch.bat

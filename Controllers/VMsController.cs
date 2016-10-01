@@ -6,17 +6,22 @@ using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
 {
-    public class VMController : Controller
+    public class VMsController : Controller
     {
+        public ActionResult Index()
+        {
+            return View(VirtualMachineModel.GetVMList());
+        }
+
         [HttpPost]
         public JsonResult GetVMs()
         {
-            return Json(VirtualMachine.GetVMList());
+            return Json(VirtualMachineModel.GetVMList());
         }
 
         public JsonResult ToggleState(string vmName, VirtualMachineState state)
         {
-            ManagementScope scope = VirtualMachine.GetVMScope();
+            ManagementScope scope = VirtualMachineModel.GetVMScope();
             ManagementObject vm = HyperVUtility.GetTargetComputer(vmName, scope);
             ManagementBaseObject inParams = vm.GetMethodParameters("RequestStateChange");
             inParams["RequestedState"] = state;

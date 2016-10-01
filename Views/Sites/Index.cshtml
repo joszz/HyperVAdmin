@@ -1,0 +1,66 @@
+﻿@using HyperVAdmin.Models
+@using Microsoft.Web.Administration;
+
+@model List<SiteModel>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="pull-right btn-group">
+            <button class="btn btn-default">
+                <i class="glyphicon glyphicon-refresh"></i>
+            </button>
+        </div>
+        <h4>Sites</h4>
+    </div>
+
+    <div class="panel-body table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th data-nosort="true">Actions</th>
+                    <th>Name</th>
+                    <th>Path</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (SiteModel site in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") glyphicon glyphicon-off"
+                                        title="Toggle website state"></button>
+
+                                @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
+                                {
+                                    <a href="@keyValue.Value" class="btn btn-default protocol @Html.Raw(site.State == ObjectState.Stopped ? "disabled" : null)" title="Open website">@keyValue.Key</a>
+                                }
+                            </div>
+                        </td>
+                        <td class="name">@site.Name</td>
+                        <td>
+                            <button class="btn btn-primary copy-path" title="@site.PhysicalPath">
+                                @site.PhysicalPath
+                            </button>
+                            <textarea class="offcanvas">@site.PhysicalPath</textarea>
+                        </td>
+                    </tr>
+                }
+
+                <tr class="hidden">
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn glyphicon glyphicon-off" title="Toggle website state"></button>
+                            <a class="btn btn-default protocol hidden" title="Open website"></a>
+                        </div>
+                    </td>
+                    <td class="name"></td>
+                    <td>
+                        <button class="btn btn-primary copy-path"></button>
+                        <textarea class="offcanvas"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

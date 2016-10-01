@@ -1,0 +1,60 @@
+﻿@using HyperVAdmin.Models
+@model List<VirtualMachineModel>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="pull-right btn-group">
+            <button class="btn btn-default">
+                <i class="glyphicon glyphicon-refresh"></i>
+            </button>
+        </div>
+        <h4>Virtual machines</h4>
+    </div>
+    <div class="panel-body table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th data-nosort="true">Actions</th>
+                    <th>Name</th>
+                    <th>Last state change</th>
+                    <th>On time</th>
+                    <th class="text-center">Cores</th>
+                    <th>Memory</th>
+                    <th>MAC</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (VirtualMachineModel vm in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") glyphicon glyphicon-off" />
+                            </div>
+                        </td>
+                        <td>@vm.Name</td>
+                        <td>@vm.TimeOfLastStateChangeFormatted</td>
+                        <td>@vm.GetOnTimeFormatted</td>
+                        <td class="text-center">@vm.CoresAmount</td>
+                        <td>@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
+                        <td>@vm.MAC</td>
+                    </tr>
+                }
+
+                <tr class="hidden">
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn glyphicon glyphicon-off" />
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
