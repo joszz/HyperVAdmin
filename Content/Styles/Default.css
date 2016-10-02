@@ -13,6 +13,10 @@
   float: none;
   margin-left: -5px !important; }
 
+a.navbar-brand img {
+  float: left;
+  margin: -5px 5px 0 5px; }
+
 .glyphicon-spin,
 .icon-refresh-animate {
   -webkit-animation-name: rotateThis;
