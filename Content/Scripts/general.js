@@ -23,8 +23,13 @@ $(function () {
         img_nosort: "Content/Images/Sorttable/no_sort.gif",
     });
 
-    refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
-    refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);
+    if ($("#virtual-machines:visible").length > 0) {
+        refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
+    }
+
+    if ($("#sites:visible").length > 0) {
+        refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);
+    }
 });
 
 function refreshVMList() {
@@ -100,8 +105,6 @@ function toggleVM() {
 }
 
 function refreshSites() {
-    if ($("#sites:hidden").length > 0) return;
-
     $("#sites").isLoading({
         text: "Loading",
         position: "overlay"
