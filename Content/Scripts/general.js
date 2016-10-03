@@ -13,14 +13,14 @@ $(function () {
     $("#sites").on("click", "tr td:first-child button:visible", toggleSite);
 
     $('#virtual-machines table').addSortWidget({
-        img_asc: "Content/Images/Sorttable/asc_sort.gif",
-        img_desc: "Content/Images/Sorttable/desc_sort.gif",
-        img_nosort: "Content/Images/Sorttable/no_sort.gif",
+        img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
+        img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
+        img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
     });
     $('#sites table').addSortWidget({
-        img_asc: "Content/Images/Sorttable/asc_sort.gif",
-        img_desc: "Content/Images/Sorttable/desc_sort.gif",
-        img_nosort: "Content/Images/Sorttable/no_sort.gif",
+        img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
+        img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
+        img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
     });
 
     if ($("#virtual-machines:visible").length > 0) {
@@ -42,7 +42,7 @@ function refreshVMList() {
     var $this = $(this);
 
     $.getJSON({
-        url: "VMs/GetVMs",
+        url: baseUrl + "VMs/GetVMs",
         type: "POST",
         success: function (data) {
             $("#virtual-machines tbody tr:not(.hidden)").remove();
@@ -84,7 +84,7 @@ function toggleVM() {
         $this.addClass("disabled");
 
         $.post({
-            url: "VMs/ToggleState",
+            url: baseUrl + "VMs/ToggleState",
             data: {
                 vmName: $.trim($(this).closest("tr").find("td:eq(1)").html()),
                 state: $(this).hasClass("btn-danger") ? 2 : 3
@@ -114,7 +114,7 @@ function refreshSites() {
     var $this = $(this);
 
     $.getJSON({
-        url: "Sites/GetSites",
+        url: baseUrl + "Sites/GetSites",
         type: "POST",
         success: function (data) {
             $("#sites tbody tr:not(.hidden)").remove();
@@ -162,7 +162,7 @@ function toggleSite(event) {
         $(this).closest("tr").find(".protocol").toggleClass("disabled");
 
         $.post({
-            url: "Sites/" + ($(this).hasClass("btn-success") ? "StopSite" : "StartSite"),
+            url: baseUrl + "Sites/" + ($(this).hasClass("btn-success") ? "StopSite" : "StartSite"),
             data: {
                 sitename: $.trim($(this).closest("tr").find(".name").html())
             },
