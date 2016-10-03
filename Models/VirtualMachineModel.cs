@@ -48,7 +48,7 @@ namespace HyperVAdmin.Models
             ManagementScope scope = GetVMScope();
 
             // define the information we want to query - in this case, just grab all properties of the object
-            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem WHERE Description != 'Microsoft Hosting Computer System'");
+            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem WHERE NOT Description  LIKE '%Host%'");
 
             // connect and set up our search
             ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
