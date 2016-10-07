@@ -123,6 +123,12 @@ footer a.copyright:focus {
   color: #777;
   line-height: 36px; }
 
+footer .btn {
+  background-image: none;
+  background-color: transparent;
+  color: #FFF;
+  border: 1px solid #333; }
+
 html,
 body,
 .container,
