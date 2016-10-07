@@ -258,7 +258,6 @@
     <Content Include="Documentation\api\HyperVAdmin.Utilities.ReturnCode.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Utilities.yml" />
     <Content Include="Documentation\api\HyperVAdmin.yml" />
-    <Content Include="Documentation\filterConfig.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Attributes.yml" />
   </ItemGroup>
@@ -339,6 +338,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>docfx $(SolutionDir)HyperVAdmin\Documentation\docfx.json</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -246,6 +246,16 @@ references:
   href: api/HyperVAdmin.Utilities.html#HyperVAdmin_Utilities
   commentId: N:HyperVAdmin.Utilities
   fullName: HyperVAdmin.Utilities
+- uid: HyperVAdmin.Utilities.HtmlUtility
+  name: HtmlUtility
+  href: api/HyperVAdmin.Utilities.HtmlUtility.html#HyperVAdmin_Utilities_HtmlUtility
+  commentId: T:HyperVAdmin.Utilities.HtmlUtility
+  fullName: HyperVAdmin.Utilities.HtmlUtility
+- uid: HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath
+  name: GetVirtualApplicationPath()
+  href: api/HyperVAdmin.Utilities.HtmlUtility.html#HyperVAdmin_Utilities_HtmlUtility_GetVirtualApplicationPath
+  commentId: M:HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath
+  fullName: HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath()
 - uid: HyperVAdmin.Utilities.HyperVUtility
   name: HyperVUtility
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility
