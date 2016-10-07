@@ -21,9 +21,17 @@ footer a.copyright:focus {
     line-height: 36px;
 }
 
-footer .btn {
+footer .btn,
+footer .btn:active, 
+footer .btn:hover {
     background-image: none;
     background-color: transparent;
     color: #FFF;
     border: 1px solid #333;
+}
+
+
+footer .btn:active, footer .btn:hover {
+    background-image: linear-gradient(to bottom, #5cb85c 0px, #419641 100%);
+    background-position: 0;
 }
