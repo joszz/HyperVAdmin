@@ -1,5 +1,6 @@
 ﻿@using System.Configuration;
 @using System.Web.Hosting;
+@using HyperVAdmin.Utilities;
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -28,11 +29,16 @@
     </div>
 
     <footer class="navbar navbar-inverse">
-        <div class="container text-muted">
-            <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright">
+        <div class="container">
+            <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright text-muted pull-left">
                 Copyright &copy; 2016 @Html.Raw(@DateTime.Now.Year != 2016 ? " - " + DateTime.Now.Year : null)
                 Jos Nienhuis
             </a>
+            <div class="pull-right">
+                <div class="btn-group">
+                    <a href="@Html.Raw(HtmlUtility.GetVirtualApplicationPath() + "Documentation/_site/")" target="_blank" class="btn btn-default glyphicon glyphicon-question-sign" title="RTFM!"></a>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -41,7 +47,7 @@
     <script type="text/javascript">
         var alertTimeout = @ConfigurationManager.AppSettings["AlertTimeout"];
         var refreshInterval = @ConfigurationManager.AppSettings["RefreshInterval"];
-        var baseUrl = "@Html.Raw(HostingEnvironment.ApplicationVirtualPath + (HostingEnvironment.ApplicationVirtualPath.Substring(HostingEnvironment.ApplicationVirtualPath.Length - 1) != "/" ? "/" : null))";
+        var baseUrl = "@Html.Raw(HtmlUtility.GetVirtualApplicationPath())";
     </script>
 
     @Scripts.Render("~/bundles/scripts")

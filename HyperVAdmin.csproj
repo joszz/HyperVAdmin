@@ -131,6 +131,7 @@
     <Compile Include="Models\SiteModel.cs" />
     <Compile Include="Models\VirtualMachineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\HtmlUtility.cs" />
     <Compile Include="Utilities\HyperVUtility.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -208,6 +208,17 @@
             The off state
             </summary>
         </member>
+        <member name="T:HyperVAdmin.Utilities.HtmlUtility">
+            <summary>
+            A utility class to help with HTML related tasks.
+            </summary>
+        </member>
+        <member name="M:HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath">
+            <summary>
+            Retrieves the VirtualDirectory/Path (also for "IIS Applications") when not hosted in the root of the domain
+            </summary>
+            <returns>Either the VirtualDirectory/Path (with trailing slash) or "/" when hosted in the domain</returns>
+        </member>
         <member name="M:HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope,System.String)">
             <summary>
             Common utility function to get a service object
