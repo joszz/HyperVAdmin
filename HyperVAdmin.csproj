@@ -31,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\HyperVAdmin.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -120,6 +121,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\AJAXOnlyAttribute.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\SitesController.cs" />
     <Compile Include="Controllers\VMsController.cs" />
@@ -162,9 +164,47 @@
       <DependentUpon>Default.scss</DependentUpon>
     </Content>
     <Content Include="Content\Images\Favicons\manifest.json" />
+    <Content Include="build_documentation.bat" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
     <Content Include="Content\Styles\waves.css" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Attributes.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.BundleConfig.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Controllers.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Controllers.IndexController.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Controllers.SitesController.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Controllers.VMsController.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Models.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Models.SiteModel.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Models.VirtualMachineModel.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Models.VirtualMachineState.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.MvcApplication.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.RouteConfig.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.HyperVUtility.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.OtherResourceType.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.ResourceSubType.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.ResourceType.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.ReturnCode.html" />
+    <Content Include="Documentation\_site\api\index.html" />
+    <Content Include="Documentation\_site\api\toc.html" />
+    <Content Include="Documentation\_site\articles\intro.html" />
+    <Content Include="Documentation\_site\articles\toc.html" />
+    <Content Include="Documentation\_site\favicon.ico" />
+    <Content Include="Documentation\_site\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Documentation\_site\index.html" />
+    <Content Include="Documentation\_site\logo.svg" />
+    <Content Include="Documentation\_site\styles\docfx.css" />
+    <Content Include="Documentation\_site\styles\docfx.js" />
+    <Content Include="Documentation\_site\styles\docfx.vendor.css" />
+    <Content Include="Documentation\_site\styles\docfx.vendor.js" />
+    <Content Include="Documentation\_site\styles\lunr.min.js" />
+    <Content Include="Documentation\_site\styles\main.css" />
+    <Content Include="Documentation\_site\styles\main.js" />
+    <Content Include="Documentation\_site\styles\search-worker.js" />
+    <Content Include="Documentation\_site\toc.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -182,9 +222,50 @@
     <Content Include="Views\VMs\Index.cshtml" />
     <Content Include="Views\Sites\Index.cshtml" />
     <Content Include="README.md" />
+    <Content Include="Documentation\.gitignore" />
+    <Content Include="Documentation\api\.gitignore" />
+    <Content Include="Documentation\api\index.md" />
+    <Content Include="Documentation\api\toc.yml" />
+    <Content Include="Documentation\articles\intro.md" />
+    <Content Include="Documentation\articles\toc.yml" />
+    <Content Include="Documentation\docfx.json" />
+    <Content Include="Documentation\index.md" />
+    <Content Include="Documentation\toc.yml" />
+    <Content Include="Documentation\_site\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Documentation\_site\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Documentation\_site\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Documentation\_site\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Documentation\_site\manifest.json" />
+    <Content Include="Documentation\_site\search-stopwords.json" />
+    <Content Include="Documentation\_site\xrefmap.yml" />
+    <Content Include="Documentation\api\.manifest" />
+    <Content Include="Documentation\api\HyperVAdmin.BundleConfig.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Controllers.IndexController.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Controllers.SitesController.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Controllers.VMsController.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Controllers.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Models.SiteModel.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Models.VirtualMachineModel.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Models.VirtualMachineState.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Models.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.MvcApplication.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.RouteConfig.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.HyperVUtility.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.OtherResourceType.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.ResourceSubType.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.ResourceType.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.ReturnCode.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.yml" />
+    <Content Include="Documentation\filterConfig.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Attributes.yml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Documentation\apidoc\" />
+    <Folder Include="Documentation\images\" />
+    <Folder Include="Documentation\src\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

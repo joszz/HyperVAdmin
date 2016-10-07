@@ -6,19 +6,64 @@ using System.Text.RegularExpressions;
 
 namespace HyperVAdmin.Models
 {
+    /// <summary>
+    /// The model representing a VirtualMachine
+    /// </summary>
     public class VirtualMachineModel
     {
+        /// <summary>
+        /// The name of the VM.
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// The description of the VM.
+        /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// The total Virtual Memory available for this VM.
+        /// </summary>
         public UInt64 MemoryTotal { get; set; }
+
+        /// <summary>
+        /// The used memory of this VM. Currently not used.
+        /// </summary>
         public int MemoryUsed { get; set; }
+
+        /// <summary>
+        /// The units of virtual memory allocation as a string (such as MB).
+        /// </summary>
         public string MemoryAllocationUnits { get; set; }
+
+        /// <summary>
+        /// The current state of the VM. Such as start, stop etc.
+        /// </summary>
         public VirtualMachineState State { get; set; }
+
+        /// <summary>
+        /// The amounts of virtual cores associated with this VM.
+        /// </summary>
         public UInt64 CoresAmount { get; set; }
+
+        /// <summary>
+        /// The MAC address of the virtual network switch adapter.
+        /// </summary>
         public string MAC { get; set; }
+
+        /// <summary>
+        /// The last time the VirtualMachineState was changed.
+        /// </summary>
         public DateTime TimeOfLastStateChange { get; set; }
+
+        /// <summary>
+        /// The time in ms inidicating how long the VM has been running. Will be 0 when off.
+        /// </summary>
         public UInt64 OnTimeInMilliseconds { get; set; }
 
+        /// <summary>
+        /// A human readable string of the last time the VirtualMachineState was changed.
+        /// </summary>
         public string TimeOfLastStateChangeFormatted
         {
             get
@@ -27,6 +72,9 @@ namespace HyperVAdmin.Models
             }
         }
 
+        /// <summary>
+        /// A TimeSpan inidicating how long the VM has been running.
+        /// </summary>
         public TimeSpan GetOnTime
         {
             get
@@ -35,6 +83,9 @@ namespace HyperVAdmin.Models
             }
         }
 
+        /// <summary>
+        /// A human readable represantation of the time the VM has been running.
+        /// </summary>
         public string GetOnTimeFormatted
         {
             get
@@ -43,6 +94,10 @@ namespace HyperVAdmin.Models
             }
         }
 
+        /// <summary>
+        /// Gets a list of VirtualMachinesModels.
+        /// </summary>
+        /// <returns>A list of VirtualMachineModels.</returns>
         public static List<VirtualMachineModel> GetVMList()
         {
             ManagementScope scope = GetVMScope();
@@ -80,15 +135,26 @@ namespace HyperVAdmin.Models
             return vms;
         }
 
+        /// <summary>
+        /// Used to retrieve the VirtualMachineModel List by GetVMList.
+        /// </summary>
+        /// <returns>The ManagementScope object to use to build the VM List.</returns>
         public static ManagementScope GetVMScope()
         {
             return new ManagementScope(@"\\.\root\virtualization\v2");
         }
     }
 
+    /// <summary>The used VirtualMachineStates used internally by WMI. Only supported states for this application are present.</summary>
     public enum VirtualMachineState
     {
+        /// <summary>
+        /// The on state
+        /// </summary>
         Enabled = 2,
+        /// <summary>
+        /// The off state
+        /// </summary>
         Disabled = 3
     }
 }

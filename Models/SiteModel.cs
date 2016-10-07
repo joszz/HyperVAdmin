@@ -5,12 +5,25 @@ using System.Linq;
 
 namespace HyperVAdmin.Models
 {
+    /// <summary>
+    /// The Model representing a site.
+    /// </summary>
     public class SiteModel
     {
+        /// <summary>
+        /// The name of the Site.
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// The fullpath of the site's location.
+        /// </summary>
         public string PhysicalPath { get; set; }
 
         private Dictionary<string, string> _bindings = new Dictionary<string, string>();
+        /// <summary>
+        /// The bindings of the Site.
+        /// </summary>
         public Dictionary<string, string> Bindings
         {
             get
@@ -19,8 +32,15 @@ namespace HyperVAdmin.Models
             }
         }
 
+        /// <summary>
+        /// The current state of the Site, such as stopped, started etc.
+        /// </summary>
         public ObjectState State { get; set; }
 
+        /// <summary>
+        /// Retrieves a list of SiteModels.
+        /// </summary>
+        /// <returns>A list of SiteModels</returns>
         public static List<SiteModel> GetSites()
         {
             ServerManager manager = new ServerManager();

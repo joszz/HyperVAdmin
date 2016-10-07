@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Management;
 
+#pragma warning disable 1591
 namespace HyperVAdmin.Utilities
 {
     public static class ResourceType

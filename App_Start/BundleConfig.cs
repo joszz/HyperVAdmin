@@ -2,6 +2,7 @@
 
 namespace HyperVAdmin
 {
+#pragma warning disable 1591
     public class BundleConfig
     {
         public static void RegisterBundles(BundleCollection bundles)

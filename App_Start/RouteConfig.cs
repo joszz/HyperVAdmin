@@ -3,6 +3,7 @@ using System.Web.Routing;
 
 namespace HyperVAdmin
 {
+#pragma warning disable 1591
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
