@@ -42,8 +42,8 @@
     // Create the defaults once
     var pluginName = "isLoading",
         defaults = {
-            'position': "right",        // right | inside | overlay
-            'text': "",                 // Text to display next to the loader
+            'position': "overlay",        // right | inside | overlay
+            'text': "Loading",                 // Text to display next to the loader
             'class': "glyphicon glyphicon-refresh",    // loader CSS class
             'transparency': 0.5,        // background transparency for using with overlay
             'tpl': '<span class="isloading-wrapper %wrapper%">%text%<i class="%class% glyphicon-spin"></i></span>',    // loader base Tag. Change to support bootstrap > 3.x

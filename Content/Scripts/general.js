@@ -6,37 +6,36 @@ $(function () {
 
     $("a, button").vibrate();
 
-    $("body").on("click", "#virtual-machines .glyphicon-off", toggleVM);
-    $("#virtual-machines .panel-heading button").click(refreshVMList);
-    $("#sites .panel-heading button").click(refreshSites);
-    $("#sites").on("click", "button.glyphicon-copy:visible", copyPath);
-    $("#sites").on("click", "tr td:first-child button.glyphicon-off:visible", toggleSite);
-
-    $('#virtual-machines table').addSortWidget({
-        img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
-        img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
-        img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
-    });
-    $('#sites table').addSortWidget({
-        img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
-        img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
-        img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
-    });
-
     if ($("#virtual-machines:visible").length > 0) {
         refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
+
+        $("#virtual-machines").on("click", ".glyphicon-off", toggleVM);
+        $("#virtual-machines .panel-heading button").click(refreshVMList);
+
+        $('#virtual-machines table').addSortWidget({
+            img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
+            img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
+            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
+        });
     }
 
     if ($("#sites:visible").length > 0) {
         refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);
+
+        $("#sites .panel-heading button").click(refreshSites);
+        $("#sites").on("click", "button.glyphicon-copy:visible", copyPath);
+        $("#sites").on("click", "tr td:first-child button.glyphicon-off:visible", toggleSite);
+
+        $('#sites table').addSortWidget({
+            img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
+            img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
+            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
+        });
     }
 });
 
 function refreshVMList() {
-    $("#virtual-machines").isLoading({
-        text: "Loading",
-        position: "overlay"
-    });
+    $("#virtual-machines").isLoading();
 
     window.clearInterval(refreshVMListIntervalID);
     var $this = $(this);
@@ -105,10 +104,7 @@ function toggleVM() {
 }
 
 function refreshSites() {
-    $("#sites").isLoading({
-        text: "Loading",
-        position: "overlay"
-    });
+    $("#sites").isLoading();
 
     window.clearInterval(refreshSitesListIntervalID);
     var $this = $(this);
