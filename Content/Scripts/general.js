@@ -9,8 +9,8 @@ $(function () {
     $("body").on("click", "#virtual-machines .glyphicon-off", toggleVM);
     $("#virtual-machines .panel-heading button").click(refreshVMList);
     $("#sites .panel-heading button").click(refreshSites);
-    $("#sites").on("click", "button.copy-path", copyPath);
-    $("#sites").on("click", "tr td:first-child button:visible", toggleSite);
+    $("#sites").on("click", "button.glyphicon-copy:visible", copyPath);
+    $("#sites").on("click", "tr td:first-child button.glyphicon-off:visible", toggleSite);
 
     $('#virtual-machines table').addSortWidget({
         img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
@@ -122,7 +122,7 @@ function refreshSites() {
             $.each(data, function (index, value) {
                 var clone = $("#sites tr.hidden").clone();
 
-                clone.find("td:eq(0) button").addClass("btn-" + (value.State == 1 ? "success" : "danger"));
+                clone.find(".glyphicon-off").addClass("btn-" + (value.State == 1 ? "success" : "danger"));
 
                 $.each(value.Bindings, function (index, value) {
                     var binding = clone.find("td:eq(0) a.protocol.hidden").clone()
@@ -131,8 +131,8 @@ function refreshSites() {
                 });
 
                 clone.find("td:eq(1)").html(value.Name);
-                clone.find("td:eq(2) textarea").val(value.PhysicalPath);
-                clone.find("td:eq(2) button").html(value.PhysicalPath).attr("title", value.PhysicalPath);
+                clone.find("td:eq(0) textarea").val(value.PhysicalPath);
+                clone.find("td:eq(2)").html(value.PhysicalPath);
                 clone.removeClass("hidden");
 
                 clone.appendTo($("#sites tbody"));

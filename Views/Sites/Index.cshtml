@@ -28,8 +28,9 @@
                     <tr>
                         <td>
                             <div class="btn-group">
-                                <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") glyphicon glyphicon-off"
-                                        title="Toggle website state"></button>
+                                <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") glyphicon glyphicon-off" title="Toggle website state"></button>
+                                <button class="btn btn-default glyphicon glyphicon-copy" title="Copy path"></button>
+                                <textarea class="offcanvas">@site.PhysicalPath</textarea>
 
                                 @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
                                 {
@@ -39,10 +40,7 @@
                         </td>
                         <td class="name">@site.Name</td>
                         <td>
-                            <button class="btn btn-primary copy-path" title="@site.PhysicalPath">
-                                @site.PhysicalPath
-                            </button>
-                            <textarea class="offcanvas">@site.PhysicalPath</textarea>
+                            @site.PhysicalPath
                         </td>
                     </tr>
                 }
@@ -51,13 +49,13 @@
                     <td>
                         <div class="btn-group">
                             <button class="btn glyphicon glyphicon-off" title="Toggle website state"></button>
+                            <button class="btn btn-default glyphicon glyphicon-copy" title="Copy path"></button>
+
                             <a class="btn btn-default protocol hidden" title="Open website"></a>
                         </div>
                     </td>
                     <td class="name"></td>
                     <td>
-                        <button class="btn btn-primary copy-path"></button>
-                        <textarea class="offcanvas"></textarea>
                     </td>
                 </tr>
             </tbody>

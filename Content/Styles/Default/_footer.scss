@@ -23,6 +23,7 @@ footer a.copyright:focus {
 
 footer .btn,
 footer .btn:active, 
+footer .btn:focus, 
 footer .btn:hover {
     background-image: none;
     background-color: transparent;
@@ -31,7 +32,8 @@ footer .btn:hover {
 }
 
 
-footer .btn:active, footer .btn:hover {
+footer .btn:active, 
+footer .btn:hover {
     background-image: linear-gradient(to bottom, #5cb85c 0px, #419641 100%);
     background-position: 0;
 }
