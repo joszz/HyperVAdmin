@@ -26,6 +26,7 @@ div.alert {
 .row {
     height: 50%;
 }
+
 @media (max-width: 768px) {
     .row {
         height: 100%;
@@ -48,6 +49,10 @@ th {
     user-select: none;
     cursor: pointer;
     min-width: 85px;
+}
+
+th:first-child {
+    cursor: default;
 }
 
 th img {

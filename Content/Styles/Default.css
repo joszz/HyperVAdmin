@@ -180,6 +180,9 @@ th {
   cursor: pointer;
   min-width: 85px; }
 
+th:first-child {
+  cursor: default; }
+
 th img {
   cursor: pointer;
   float: right;
