@@ -17,7 +17,7 @@ namespace HyperVAdmin
                 "~/Content/Scripts/general.js"
             ));
 
-            bundles.Add(new StyleBundle("~/Content/default").Include(
+            bundles.Add(new StyleBundle("~/Content/Styles/bundle").Include(
                 "~/Content/Styles/Bootstrap/bootstrap.css",
                 "~/Content/Styles/Bootstrap/bootstrap-theme.css",
                 "~/Content/Styles/waves.css",
