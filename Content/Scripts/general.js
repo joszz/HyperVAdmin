@@ -131,7 +131,7 @@ function refreshSites() {
                 });
 
                 clone.find("td:eq(1)").html(value.Name);
-                clone.find("td:eq(0) textarea").val(value.PhysicalPath);
+                clone.find("textarea").val(value.PhysicalPath);
                 clone.find("td:eq(2)").html(value.PhysicalPath);
                 clone.removeClass("hidden");
 
