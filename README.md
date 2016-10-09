@@ -24,11 +24,14 @@ Configuration
 -------------
 In the web.config of this project there are a couple settings you can change;
 
-- AlertTimeout
+- **AlertTimeout**
+
 	The time the Bootstrap alert box will be displayed in seconds.
 
-- RefreshInterval
+- **RefreshInterval**
+
 	The time between automatic AJAX enabled refresh of list content in seconds.
 
-- compilation debug="false"
+- **compilation debug="false"**
+
 	Change this to true to turn of minification (amongst others). False will minify JS and CSS.
