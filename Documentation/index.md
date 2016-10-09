@@ -12,11 +12,11 @@ https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx
 In the web.config of this project there are a couple settings you can change;
 * **AlertTimeout**
 
-	The time the Bootstrap alert box will be displayed in seconds
+	The time the Bootstrap alert box will be displayed in seconds.
 
 * **RefreshInterval**
 
-	The time between automatic AJAX enabled refresh of list content in seconds
+	The time between automatic AJAX enabled refresh of list content in seconds.
 
 * **compilation debug="false"**
 	
