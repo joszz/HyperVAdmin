@@ -151,6 +151,10 @@ body {
   background-repeat: no-repeat;
   overflow: hidden; }
 
+nav small {
+  padding: 18px 0 0 0;
+  float: left; }
+
 div.alert {
   position: fixed;
   bottom: 15px;
