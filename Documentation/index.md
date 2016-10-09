@@ -1,6 +1,14 @@
 # Hyper-V Admin
-This is a simple project to manage your Hyper-V VMs and toggle their running state.
+A little website to control and check your Hyper-V VMs and IIS websites with.
 
+## Installation
+Just create a website or application in IIS as you normally would. Point the path to the location of this project's files.
+
+Make sure the Application Pool of that website is running under a user with admin priviliges, the default Application Pool will not have enough rights. Look here for more information
+
+https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx
+
+## Configuration
 In the web.config of this project there are a couple settings you can change;
 * **AlertTimeout**
 
@@ -9,3 +17,7 @@ In the web.config of this project there are a couple settings you can change;
 * **RefreshInterval**
 
 	The time between automatic AJAX enabled refresh of list content in seconds
+
+* **compilation debug="false"**
+	
+	Change this to true to turn of minification (amongst others). False will minify JS and CSS.
