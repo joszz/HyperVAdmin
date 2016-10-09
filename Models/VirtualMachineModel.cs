@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Management;
 using System.Text.RegularExpressions;
@@ -103,7 +104,7 @@ namespace HyperVAdmin.Models
             ManagementScope scope = GetVMScope();
 
             // define the information we want to query - in this case, just grab all properties of the object
-            ObjectQuery queryObj = new ObjectQuery("SELECT * FROM Msvm_ComputerSystem WHERE NOT Description  LIKE '%Host%'");
+            ObjectQuery queryObj = new ObjectQuery(ConfigurationManager.AppSettings["HyperVQueryVMs"].ToString());
 
             // connect and set up our search
             ManagementObjectSearcher vmSearcher = new ManagementObjectSearcher(scope, queryObj);
@@ -141,7 +142,7 @@ namespace HyperVAdmin.Models
         /// <returns>The ManagementScope object to use to build the VM List.</returns>
         public static ManagementScope GetVMScope()
         {
-            return new ManagementScope(@"\\.\root\virtualization\v2");
+            return new ManagementScope(ConfigurationManager.AppSettings["HyperVManagementPath"].ToString());
         }
     }
 

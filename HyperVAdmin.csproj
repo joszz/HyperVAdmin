@@ -184,6 +184,7 @@
     <Content Include="Documentation\_site\api\HyperVAdmin.MvcApplication.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.RouteConfig.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.HtmlUtility.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.HyperVUtility.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.OtherResourceType.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.ResourceSubType.html" />
@@ -260,6 +261,7 @@
     <Content Include="Documentation\api\HyperVAdmin.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Attributes.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Utilities.HtmlUtility.yml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -60,21 +60,32 @@
               <h1 id="hyper-v-admin" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Hyper-V Admin</h1>
               
 <p sourcefile="index.md" sourcestartlinenumber="2" sourceendlinenumber="2">A little website to control and check your Hyper-V VMs and IIS websites with.</p>
-<h2 id="installation" sourcefile="index.md" sourcestartlinenumber="4" sourceendlinenumber="4">Installation</h2>
-<p sourcefile="index.md" sourcestartlinenumber="5" sourceendlinenumber="5">Just create a website or application in IIS as you normally would. Point the path to the location of this project&#39;s files.</p>
-<p sourcefile="index.md" sourcestartlinenumber="7" sourceendlinenumber="7">Make sure the Application Pool of that website is running under a user with admin priviliges, the default Application Pool will not have enough rights. Look here for more information</p>
-<p sourcefile="index.md" sourcestartlinenumber="9" sourceendlinenumber="9"><a href="https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx" sourcefile="index.md" sourcestartlinenumber="9" sourceendlinenumber="9">https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx</a></p>
-<h2 id="configuration" sourcefile="index.md" sourcestartlinenumber="11" sourceendlinenumber="11">Configuration</h2>
-<p sourcefile="index.md" sourcestartlinenumber="12" sourceendlinenumber="12">In the web.config of this project there are a couple settings you can change;</p>
-<ul sourcefile="index.md" sourcestartlinenumber="13" sourceendlinenumber="23">
-<li sourcefile="index.md" sourcestartlinenumber="13" sourceendlinenumber="15"><p sourcefile="index.md" sourcestartlinenumber="13" sourceendlinenumber="13"><strong>AlertTimeout</strong></p>
-<p sourcefile="index.md" sourcestartlinenumber="13" sourceendlinenumber="13">  The time the Bootstrap alert box will be displayed in seconds.</p>
+<h2 id="prerequisites" sourcefile="index.md" sourcestartlinenumber="4" sourceendlinenumber="4">Prerequisites</h2>
+<ul sourcefile="index.md" sourcestartlinenumber="5" sourceendlinenumber="6">
+<li sourcefile="index.md" sourcestartlinenumber="5" sourceendlinenumber="5">IIS</li>
+<li sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">.NET Framework 4.5</li>
+</ul>
+<h2 id="installation" sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="8">Installation</h2>
+<p sourcefile="index.md" sourcestartlinenumber="9" sourceendlinenumber="9">Just create a website or application in IIS as you normally would. Point the path to the location of this project&#39;s files.</p>
+<p sourcefile="index.md" sourcestartlinenumber="11" sourceendlinenumber="11">Make sure the Application Pool of that website is running under a user with admin priviliges, the default Application Pool will not have enough rights. Look here for more information;</p>
+<p sourcefile="index.md" sourcestartlinenumber="13" sourceendlinenumber="13"><a href="https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx" sourcefile="index.md" sourcestartlinenumber="13" sourceendlinenumber="13">https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx</a></p>
+<h2 id="configuration" sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">Configuration</h2>
+<p sourcefile="index.md" sourcestartlinenumber="16" sourceendlinenumber="16">In the web.config of this project there are a couple settings you can change;</p>
+<ul sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="35">
+<li sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19"><p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="17"><strong>AlertTimeout</strong></p>
+<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="17">  The time the Bootstrap alert box will be displayed in seconds.</p>
 </li>
-<li sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19"><p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="17"><strong>RefreshInterval</strong></p>
-<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="17">  The time between automatic AJAX enabled refresh of list content in seconds.</p>
+<li sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="23"><p sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="21"><strong>RefreshInterval</strong></p>
+<p sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="21">  The time between automatic AJAX enabled refresh of list content in seconds.</p>
 </li>
-<li sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="23"><p sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="21"><strong>compilation debug=&quot;false&quot;</strong></p>
-<p sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="21">  Change this to true to turn of minification (amongst others). False will minify JS and CSS.</p>
+<li sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="27"><p sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25"><strong>HyperVManagementPath</strong></p>
+<p sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25">  The &quot;\v2&quot; can be stripped of to support older Hyper-V installations.</p>
+</li>
+<li sourcefile="index.md" sourcestartlinenumber="29" sourceendlinenumber="31"><p sourcefile="index.md" sourcestartlinenumber="29" sourceendlinenumber="29"><strong>HyperVQueryVMs</strong></p>
+<p sourcefile="index.md" sourcestartlinenumber="29" sourceendlinenumber="29">  The WMI query used to retrieve to Hyper-V VMs.</p>
+</li>
+<li sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="35"><p sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="33"><strong>compilation debug=&quot;false&quot;</strong></p>
+<p sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="33">  Change this to true to turn of minification (amongst others). False will minify JS and CSS.</p>
 </li>
 </ul>
 
