@@ -208,6 +208,29 @@
             The off state
             </summary>
         </member>
+        <member name="T:HyperVAdmin.Modules.TimingModule">
+            <summary>
+            A HTTPModule to keep trak of duration of page lifecycle
+            </summary>
+        </member>
+        <member name="M:HyperVAdmin.Modules.TimingModule.Dispose">
+            <summary>
+            Disposes this module
+            </summary>
+        </member>
+        <member name="M:HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Bind BeginRequest eventhandler
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object,System.EventArgs)">
+            <summary>
+            Start a stopwatch at the beginning of the request to calculate duration of lifecycle
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="T:HyperVAdmin.Utilities.HtmlUtility">
             <summary>
             A utility class to help with HTML related tasks.

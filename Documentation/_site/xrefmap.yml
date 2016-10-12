@@ -21,6 +21,11 @@ references:
   href: api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html#HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_System_Web_Mvc_ControllerContext_System_Reflection_MethodInfo_
   commentId: M:HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext,System.Reflection.MethodInfo)
   fullName: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext, System.Reflection.MethodInfo)
+- uid: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest*
+  href: api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html#HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_
+  commentId: Overload:HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest
+  name: IsValidForRequest
+  fullName: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext, System.Reflection.MethodInfo)
 - uid: HyperVAdmin.BundleConfig
   name: BundleConfig
   href: api/HyperVAdmin.BundleConfig.html#HyperVAdmin_BundleConfig
@@ -30,6 +35,11 @@ references:
   name: RegisterBundles(BundleCollection)
   href: api/HyperVAdmin.BundleConfig.html#HyperVAdmin_BundleConfig_RegisterBundles_System_Web_Optimization_BundleCollection_
   commentId: M:HyperVAdmin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)
+  fullName: HyperVAdmin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)
+- uid: HyperVAdmin.BundleConfig.RegisterBundles*
+  href: api/HyperVAdmin.BundleConfig.html#HyperVAdmin_BundleConfig_RegisterBundles_
+  commentId: Overload:HyperVAdmin.BundleConfig.RegisterBundles
+  name: RegisterBundles
   fullName: HyperVAdmin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)
 - uid: HyperVAdmin.Controllers
   name: HyperVAdmin.Controllers
@@ -46,6 +56,11 @@ references:
   href: api/HyperVAdmin.Controllers.IndexController.html#HyperVAdmin_Controllers_IndexController_Index
   commentId: M:HyperVAdmin.Controllers.IndexController.Index
   fullName: HyperVAdmin.Controllers.IndexController.Index()
+- uid: HyperVAdmin.Controllers.IndexController.Index*
+  href: api/HyperVAdmin.Controllers.IndexController.html#HyperVAdmin_Controllers_IndexController_Index_
+  commentId: Overload:HyperVAdmin.Controllers.IndexController.Index
+  name: Index
+  fullName: HyperVAdmin.Controllers.IndexController.Index()
 - uid: HyperVAdmin.Controllers.SitesController
   name: SitesController
   href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController
@@ -56,20 +71,40 @@ references:
   href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_GetSites
   commentId: M:HyperVAdmin.Controllers.SitesController.GetSites
   fullName: HyperVAdmin.Controllers.SitesController.GetSites()
+- uid: HyperVAdmin.Controllers.SitesController.GetSites*
+  href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_GetSites_
+  commentId: Overload:HyperVAdmin.Controllers.SitesController.GetSites
+  name: GetSites
+  fullName: HyperVAdmin.Controllers.SitesController.GetSites()
 - uid: HyperVAdmin.Controllers.SitesController.Index
   name: Index()
   href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_Index
   commentId: M:HyperVAdmin.Controllers.SitesController.Index
+  fullName: HyperVAdmin.Controllers.SitesController.Index()
+- uid: HyperVAdmin.Controllers.SitesController.Index*
+  href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_Index_
+  commentId: Overload:HyperVAdmin.Controllers.SitesController.Index
+  name: Index
   fullName: HyperVAdmin.Controllers.SitesController.Index()
 - uid: HyperVAdmin.Controllers.SitesController.StartSite(System.String)
   name: StartSite(String)
   href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_StartSite_System_String_
   commentId: M:HyperVAdmin.Controllers.SitesController.StartSite(System.String)
   fullName: HyperVAdmin.Controllers.SitesController.StartSite(System.String)
+- uid: HyperVAdmin.Controllers.SitesController.StartSite*
+  href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_StartSite_
+  commentId: Overload:HyperVAdmin.Controllers.SitesController.StartSite
+  name: StartSite
+  fullName: HyperVAdmin.Controllers.SitesController.StartSite(System.String)
 - uid: HyperVAdmin.Controllers.SitesController.StopSite(System.String)
   name: StopSite(String)
   href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_StopSite_System_String_
   commentId: M:HyperVAdmin.Controllers.SitesController.StopSite(System.String)
+  fullName: HyperVAdmin.Controllers.SitesController.StopSite(System.String)
+- uid: HyperVAdmin.Controllers.SitesController.StopSite*
+  href: api/HyperVAdmin.Controllers.SitesController.html#HyperVAdmin_Controllers_SitesController_StopSite_
+  commentId: Overload:HyperVAdmin.Controllers.SitesController.StopSite
+  name: StopSite
   fullName: HyperVAdmin.Controllers.SitesController.StopSite(System.String)
 - uid: HyperVAdmin.Controllers.VMsController
   name: VMsController
@@ -81,15 +116,30 @@ references:
   href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_GetVMs
   commentId: M:HyperVAdmin.Controllers.VMsController.GetVMs
   fullName: HyperVAdmin.Controllers.VMsController.GetVMs()
+- uid: HyperVAdmin.Controllers.VMsController.GetVMs*
+  href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_GetVMs_
+  commentId: Overload:HyperVAdmin.Controllers.VMsController.GetVMs
+  name: GetVMs
+  fullName: HyperVAdmin.Controllers.VMsController.GetVMs()
 - uid: HyperVAdmin.Controllers.VMsController.Index
   name: Index()
   href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_Index
   commentId: M:HyperVAdmin.Controllers.VMsController.Index
   fullName: HyperVAdmin.Controllers.VMsController.Index()
+- uid: HyperVAdmin.Controllers.VMsController.Index*
+  href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_Index_
+  commentId: Overload:HyperVAdmin.Controllers.VMsController.Index
+  name: Index
+  fullName: HyperVAdmin.Controllers.VMsController.Index()
 - uid: HyperVAdmin.Controllers.VMsController.ToggleState(System.String,HyperVAdmin.Models.VirtualMachineState)
   name: ToggleState(String, VirtualMachineState)
   href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_ToggleState_System_String_HyperVAdmin_Models_VirtualMachineState_
   commentId: M:HyperVAdmin.Controllers.VMsController.ToggleState(System.String,HyperVAdmin.Models.VirtualMachineState)
+  fullName: HyperVAdmin.Controllers.VMsController.ToggleState(System.String, HyperVAdmin.Models.VirtualMachineState)
+- uid: HyperVAdmin.Controllers.VMsController.ToggleState*
+  href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_ToggleState_
+  commentId: Overload:HyperVAdmin.Controllers.VMsController.ToggleState
+  name: ToggleState
   fullName: HyperVAdmin.Controllers.VMsController.ToggleState(System.String, HyperVAdmin.Models.VirtualMachineState)
 - uid: HyperVAdmin.Models
   name: HyperVAdmin.Models
@@ -106,25 +156,50 @@ references:
   href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_Bindings
   commentId: P:HyperVAdmin.Models.SiteModel.Bindings
   fullName: HyperVAdmin.Models.SiteModel.Bindings
+- uid: HyperVAdmin.Models.SiteModel.Bindings*
+  href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_Bindings_
+  commentId: Overload:HyperVAdmin.Models.SiteModel.Bindings
+  name: Bindings
+  fullName: HyperVAdmin.Models.SiteModel.Bindings
 - uid: HyperVAdmin.Models.SiteModel.GetSites
   name: GetSites()
   href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_GetSites
   commentId: M:HyperVAdmin.Models.SiteModel.GetSites
+  fullName: HyperVAdmin.Models.SiteModel.GetSites()
+- uid: HyperVAdmin.Models.SiteModel.GetSites*
+  href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_GetSites_
+  commentId: Overload:HyperVAdmin.Models.SiteModel.GetSites
+  name: GetSites
   fullName: HyperVAdmin.Models.SiteModel.GetSites()
 - uid: HyperVAdmin.Models.SiteModel.Name
   name: Name
   href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_Name
   commentId: P:HyperVAdmin.Models.SiteModel.Name
   fullName: HyperVAdmin.Models.SiteModel.Name
+- uid: HyperVAdmin.Models.SiteModel.Name*
+  href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_Name_
+  commentId: Overload:HyperVAdmin.Models.SiteModel.Name
+  name: Name
+  fullName: HyperVAdmin.Models.SiteModel.Name
 - uid: HyperVAdmin.Models.SiteModel.PhysicalPath
   name: PhysicalPath
   href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_PhysicalPath
   commentId: P:HyperVAdmin.Models.SiteModel.PhysicalPath
   fullName: HyperVAdmin.Models.SiteModel.PhysicalPath
+- uid: HyperVAdmin.Models.SiteModel.PhysicalPath*
+  href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_PhysicalPath_
+  commentId: Overload:HyperVAdmin.Models.SiteModel.PhysicalPath
+  name: PhysicalPath
+  fullName: HyperVAdmin.Models.SiteModel.PhysicalPath
 - uid: HyperVAdmin.Models.SiteModel.State
   name: State
   href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_State
   commentId: P:HyperVAdmin.Models.SiteModel.State
+  fullName: HyperVAdmin.Models.SiteModel.State
+- uid: HyperVAdmin.Models.SiteModel.State*
+  href: api/HyperVAdmin.Models.SiteModel.html#HyperVAdmin_Models_SiteModel_State_
+  commentId: Overload:HyperVAdmin.Models.SiteModel.State
+  name: State
   fullName: HyperVAdmin.Models.SiteModel.State
 - uid: HyperVAdmin.Models.VirtualMachineModel
   name: VirtualMachineModel
@@ -136,75 +211,150 @@ references:
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_CoresAmount
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.CoresAmount
   fullName: HyperVAdmin.Models.VirtualMachineModel.CoresAmount
+- uid: HyperVAdmin.Models.VirtualMachineModel.CoresAmount*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_CoresAmount_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.CoresAmount
+  name: CoresAmount
+  fullName: HyperVAdmin.Models.VirtualMachineModel.CoresAmount
 - uid: HyperVAdmin.Models.VirtualMachineModel.Description
   name: Description
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_Description
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.Description
+  fullName: HyperVAdmin.Models.VirtualMachineModel.Description
+- uid: HyperVAdmin.Models.VirtualMachineModel.Description*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_Description_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.Description
+  name: Description
   fullName: HyperVAdmin.Models.VirtualMachineModel.Description
 - uid: HyperVAdmin.Models.VirtualMachineModel.GetOnTime
   name: GetOnTime
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetOnTime
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.GetOnTime
   fullName: HyperVAdmin.Models.VirtualMachineModel.GetOnTime
+- uid: HyperVAdmin.Models.VirtualMachineModel.GetOnTime*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetOnTime_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.GetOnTime
+  name: GetOnTime
+  fullName: HyperVAdmin.Models.VirtualMachineModel.GetOnTime
 - uid: HyperVAdmin.Models.VirtualMachineModel.GetOnTimeFormatted
   name: GetOnTimeFormatted
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetOnTimeFormatted
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.GetOnTimeFormatted
+  fullName: HyperVAdmin.Models.VirtualMachineModel.GetOnTimeFormatted
+- uid: HyperVAdmin.Models.VirtualMachineModel.GetOnTimeFormatted*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetOnTimeFormatted_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.GetOnTimeFormatted
+  name: GetOnTimeFormatted
   fullName: HyperVAdmin.Models.VirtualMachineModel.GetOnTimeFormatted
 - uid: HyperVAdmin.Models.VirtualMachineModel.GetVMList
   name: GetVMList()
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetVMList
   commentId: M:HyperVAdmin.Models.VirtualMachineModel.GetVMList
   fullName: HyperVAdmin.Models.VirtualMachineModel.GetVMList()
+- uid: HyperVAdmin.Models.VirtualMachineModel.GetVMList*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetVMList_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.GetVMList
+  name: GetVMList
+  fullName: HyperVAdmin.Models.VirtualMachineModel.GetVMList()
 - uid: HyperVAdmin.Models.VirtualMachineModel.GetVMScope
   name: GetVMScope()
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetVMScope
   commentId: M:HyperVAdmin.Models.VirtualMachineModel.GetVMScope
+  fullName: HyperVAdmin.Models.VirtualMachineModel.GetVMScope()
+- uid: HyperVAdmin.Models.VirtualMachineModel.GetVMScope*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_GetVMScope_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.GetVMScope
+  name: GetVMScope
   fullName: HyperVAdmin.Models.VirtualMachineModel.GetVMScope()
 - uid: HyperVAdmin.Models.VirtualMachineModel.MAC
   name: MAC
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MAC
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.MAC
   fullName: HyperVAdmin.Models.VirtualMachineModel.MAC
+- uid: HyperVAdmin.Models.VirtualMachineModel.MAC*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MAC_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.MAC
+  name: MAC
+  fullName: HyperVAdmin.Models.VirtualMachineModel.MAC
 - uid: HyperVAdmin.Models.VirtualMachineModel.MemoryAllocationUnits
   name: MemoryAllocationUnits
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MemoryAllocationUnits
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.MemoryAllocationUnits
+  fullName: HyperVAdmin.Models.VirtualMachineModel.MemoryAllocationUnits
+- uid: HyperVAdmin.Models.VirtualMachineModel.MemoryAllocationUnits*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MemoryAllocationUnits_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.MemoryAllocationUnits
+  name: MemoryAllocationUnits
   fullName: HyperVAdmin.Models.VirtualMachineModel.MemoryAllocationUnits
 - uid: HyperVAdmin.Models.VirtualMachineModel.MemoryTotal
   name: MemoryTotal
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MemoryTotal
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.MemoryTotal
   fullName: HyperVAdmin.Models.VirtualMachineModel.MemoryTotal
+- uid: HyperVAdmin.Models.VirtualMachineModel.MemoryTotal*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MemoryTotal_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.MemoryTotal
+  name: MemoryTotal
+  fullName: HyperVAdmin.Models.VirtualMachineModel.MemoryTotal
 - uid: HyperVAdmin.Models.VirtualMachineModel.MemoryUsed
   name: MemoryUsed
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MemoryUsed
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.MemoryUsed
+  fullName: HyperVAdmin.Models.VirtualMachineModel.MemoryUsed
+- uid: HyperVAdmin.Models.VirtualMachineModel.MemoryUsed*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_MemoryUsed_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.MemoryUsed
+  name: MemoryUsed
   fullName: HyperVAdmin.Models.VirtualMachineModel.MemoryUsed
 - uid: HyperVAdmin.Models.VirtualMachineModel.Name
   name: Name
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_Name
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.Name
   fullName: HyperVAdmin.Models.VirtualMachineModel.Name
+- uid: HyperVAdmin.Models.VirtualMachineModel.Name*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_Name_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.Name
+  name: Name
+  fullName: HyperVAdmin.Models.VirtualMachineModel.Name
 - uid: HyperVAdmin.Models.VirtualMachineModel.OnTimeInMilliseconds
   name: OnTimeInMilliseconds
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_OnTimeInMilliseconds
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.OnTimeInMilliseconds
+  fullName: HyperVAdmin.Models.VirtualMachineModel.OnTimeInMilliseconds
+- uid: HyperVAdmin.Models.VirtualMachineModel.OnTimeInMilliseconds*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_OnTimeInMilliseconds_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.OnTimeInMilliseconds
+  name: OnTimeInMilliseconds
   fullName: HyperVAdmin.Models.VirtualMachineModel.OnTimeInMilliseconds
 - uid: HyperVAdmin.Models.VirtualMachineModel.State
   name: State
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_State
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.State
   fullName: HyperVAdmin.Models.VirtualMachineModel.State
+- uid: HyperVAdmin.Models.VirtualMachineModel.State*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_State_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.State
+  name: State
+  fullName: HyperVAdmin.Models.VirtualMachineModel.State
 - uid: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChange
   name: TimeOfLastStateChange
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_TimeOfLastStateChange
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChange
   fullName: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChange
+- uid: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChange*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_TimeOfLastStateChange_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChange
+  name: TimeOfLastStateChange
+  fullName: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChange
 - uid: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChangeFormatted
   name: TimeOfLastStateChangeFormatted
   href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_TimeOfLastStateChangeFormatted
   commentId: P:HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChangeFormatted
+  fullName: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChangeFormatted
+- uid: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChangeFormatted*
+  href: api/HyperVAdmin.Models.VirtualMachineModel.html#HyperVAdmin_Models_VirtualMachineModel_TimeOfLastStateChangeFormatted_
+  commentId: Overload:HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChangeFormatted
+  name: TimeOfLastStateChangeFormatted
   fullName: HyperVAdmin.Models.VirtualMachineModel.TimeOfLastStateChangeFormatted
 - uid: HyperVAdmin.Models.VirtualMachineState
   name: VirtualMachineState
@@ -221,6 +371,46 @@ references:
   href: api/HyperVAdmin.Models.VirtualMachineState.html#HyperVAdmin_Models_VirtualMachineState_Enabled
   commentId: F:HyperVAdmin.Models.VirtualMachineState.Enabled
   fullName: HyperVAdmin.Models.VirtualMachineState.Enabled
+- uid: HyperVAdmin.Modules
+  name: HyperVAdmin.Modules
+  href: api/HyperVAdmin.Modules.html#HyperVAdmin_Modules
+  commentId: N:HyperVAdmin.Modules
+  fullName: HyperVAdmin.Modules
+- uid: HyperVAdmin.Modules.TimingModule
+  name: TimingModule
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule
+  commentId: T:HyperVAdmin.Modules.TimingModule
+  fullName: HyperVAdmin.Modules.TimingModule
+- uid: HyperVAdmin.Modules.TimingModule.Dispose
+  name: Dispose()
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_Dispose
+  commentId: M:HyperVAdmin.Modules.TimingModule.Dispose
+  fullName: HyperVAdmin.Modules.TimingModule.Dispose()
+- uid: HyperVAdmin.Modules.TimingModule.Dispose*
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_Dispose_
+  commentId: Overload:HyperVAdmin.Modules.TimingModule.Dispose
+  name: Dispose
+  fullName: HyperVAdmin.Modules.TimingModule.Dispose()
+- uid: HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
+  name: Init(HttpApplication)
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_Init_System_Web_HttpApplication_
+  commentId: M:HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
+  fullName: HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
+- uid: HyperVAdmin.Modules.TimingModule.Init*
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_Init_
+  commentId: Overload:HyperVAdmin.Modules.TimingModule.Init
+  name: Init
+  fullName: HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
+- uid: HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object,System.EventArgs)
+  name: OnBeginRequest(Object, EventArgs)
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_OnBeginRequest_System_Object_System_EventArgs_
+  commentId: M:HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object,System.EventArgs)
+  fullName: HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object, System.EventArgs)
+- uid: HyperVAdmin.Modules.TimingModule.OnBeginRequest*
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_OnBeginRequest_
+  commentId: Overload:HyperVAdmin.Modules.TimingModule.OnBeginRequest
+  name: OnBeginRequest
+  fullName: HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object, System.EventArgs)
 - uid: HyperVAdmin.MvcApplication
   name: MvcApplication
   href: api/HyperVAdmin.MvcApplication.html#HyperVAdmin_MvcApplication
@@ -231,6 +421,11 @@ references:
   href: api/HyperVAdmin.MvcApplication.html#HyperVAdmin_MvcApplication_Application_Start
   commentId: M:HyperVAdmin.MvcApplication.Application_Start
   fullName: HyperVAdmin.MvcApplication.Application_Start()
+- uid: HyperVAdmin.MvcApplication.Application_Start*
+  href: api/HyperVAdmin.MvcApplication.html#HyperVAdmin_MvcApplication_Application_Start_
+  commentId: Overload:HyperVAdmin.MvcApplication.Application_Start
+  name: Application_Start
+  fullName: HyperVAdmin.MvcApplication.Application_Start()
 - uid: HyperVAdmin.RouteConfig
   name: RouteConfig
   href: api/HyperVAdmin.RouteConfig.html#HyperVAdmin_RouteConfig
@@ -240,6 +435,11 @@ references:
   name: RegisterRoutes(RouteCollection)
   href: api/HyperVAdmin.RouteConfig.html#HyperVAdmin_RouteConfig_RegisterRoutes_System_Web_Routing_RouteCollection_
   commentId: M:HyperVAdmin.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)
+  fullName: HyperVAdmin.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)
+- uid: HyperVAdmin.RouteConfig.RegisterRoutes*
+  href: api/HyperVAdmin.RouteConfig.html#HyperVAdmin_RouteConfig_RegisterRoutes_
+  commentId: Overload:HyperVAdmin.RouteConfig.RegisterRoutes
+  name: RegisterRoutes
   fullName: HyperVAdmin.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)
 - uid: HyperVAdmin.Utilities
   name: HyperVAdmin.Utilities
@@ -256,6 +456,11 @@ references:
   href: api/HyperVAdmin.Utilities.HtmlUtility.html#HyperVAdmin_Utilities_HtmlUtility_GetVirtualApplicationPath
   commentId: M:HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath
   fullName: HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath()
+- uid: HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath*
+  href: api/HyperVAdmin.Utilities.HtmlUtility.html#HyperVAdmin_Utilities_HtmlUtility_GetVirtualApplicationPath_
+  commentId: Overload:HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath
+  name: GetVirtualApplicationPath
+  fullName: HyperVAdmin.Utilities.HtmlUtility.GetVirtualApplicationPath()
 - uid: HyperVAdmin.Utilities.HyperVUtility
   name: HyperVUtility
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility
@@ -266,40 +471,80 @@ references:
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_System_String_System_String_System_Management_ManagementScope_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,System.Management.ManagementScope)
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String, System.String, System.Management.ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice
+  name: GetHostSystemDevice
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String, System.String, System.Management.ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject,System.UInt16,System.String,System.String)
   name: GetResourceAllocationsettingData(ManagementObject, UInt16, String, String)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_System_Management_ManagementObject_System_UInt16_System_String_System_String_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject,System.UInt16,System.String,System.String)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject, System.UInt16, System.String, System.String)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData
+  name: GetResourceAllocationsettingData
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject, System.UInt16, System.String, System.String)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope,System.UInt16,System.String,System.String)
   name: GetResourceAllocationsettingDataDefault(ManagementScope, UInt16, String, String)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_System_Management_ManagementScope_System_UInt16_System_String_System_String_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope,System.UInt16,System.String,System.String)
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope, System.UInt16, System.String, System.String)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault
+  name: GetResourceAllocationsettingDataDefault
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope, System.UInt16, System.String, System.String)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope,System.String)
   name: GetServiceObject(ManagementScope, String)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_System_Management_ManagementScope_System_String_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope,System.String)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope, System.String)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetServiceObject
+  name: GetServiceObject
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope, System.String)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,System.Management.ManagementScope)
   name: GetSystemDevice(String, String, String, ManagementScope)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_System_String_System_String_System_String_System_Management_ManagementScope_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,System.Management.ManagementScope)
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String, System.String, System.String, System.Management.ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice
+  name: GetSystemDevice
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String, System.String, System.String, System.Management.ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,System.Management.ManagementScope)
   name: GetTargetComputer(String, ManagementScope)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_System_String_System_Management_ManagementScope_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,System.Management.ManagementScope)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String, System.Management.ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer
+  name: GetTargetComputer
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String, System.Management.ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
   name: GetVirtualSystemSettingData(ManagementObject)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_System_Management_ManagementObject_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData
+  name: GetVirtualSystemSettingData
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
 - uid: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject,System.Management.ManagementScope)
   name: JobCompleted(ManagementBaseObject, ManagementScope)
   href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_JobCompleted_System_Management_ManagementBaseObject_System_Management_ManagementScope_
   commentId: M:HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject,System.Management.ManagementScope)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject, System.Management.ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.JobCompleted*
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_JobCompleted_
+  commentId: Overload:HyperVAdmin.Utilities.HyperVUtility.JobCompleted
+  name: JobCompleted
   fullName: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject, System.Management.ManagementScope)
 - uid: HyperVAdmin.Utilities.OtherResourceType
   name: OtherResourceType
