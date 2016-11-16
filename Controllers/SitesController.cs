@@ -1,7 +1,5 @@
 ﻿using HyperVAdmin.Attributes;
 using HyperVAdmin.Models;
-using Microsoft.Web.Administration;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
@@ -11,8 +9,6 @@ namespace HyperVAdmin.Controllers
     /// </summary>
     public class SitesController : Controller
     {
-        private ServerManager manager = new ServerManager();
-
         /// <summary>
         /// Shows a list of all Sites and their related actions.
         /// </summary>
@@ -41,12 +37,7 @@ namespace HyperVAdmin.Controllers
         [HttpPost]
         public void StopSite(string sitename)
         {
-            Site site = manager.Sites.Where(s => s.Name == sitename).FirstOrDefault();
-
-            if (site != null)
-            {
-                site.Stop();
-            }
+            SiteModel.StopSite(sitename);
         }
 
         /// <summary>
@@ -57,12 +48,7 @@ namespace HyperVAdmin.Controllers
         [HttpPost]
         public void StartSite(string sitename)
         {
-            Site site = manager.Sites.Where(s => s.Name == sitename).FirstOrDefault();
-
-            if (site != null)
-            {
-                site.Start();
-            }
+            SiteModel.StartSite(sitename);
         }
     }
 }

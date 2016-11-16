@@ -10,6 +10,8 @@ namespace HyperVAdmin.Models
     /// </summary>
     public class SiteModel
     {
+        public static ServerManager Manager = new ServerManager();
+
         /// <summary>
         /// The name of the Site.
         /// </summary>
@@ -72,6 +74,34 @@ namespace HyperVAdmin.Models
             }
 
             return models;
+        }
+
+        /// <summary>
+        /// Stops an IIS website.
+        /// </summary>
+        /// <param name="sitename">The site to stop.</param>
+        public static void StopSite(string sitename)
+        {
+            Site site = Manager.Sites.FirstOrDefault(s => s.Name == sitename);
+
+            if (site != null)
+            {
+                site.Stop();
+            }
+        }
+
+        /// <summary>
+        /// Starts an IIS website.
+        /// </summary>
+        /// <param name="sitename">The site to start.</param>
+        public static void StartSite(string sitename)
+        {
+            Site site = Manager.Sites.FirstOrDefault(s => s.Name == sitename);
+
+            if (site != null)
+            {
+                site.Start();
+            }
         }
     }
 }

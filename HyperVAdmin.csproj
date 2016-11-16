@@ -182,6 +182,8 @@
     <Content Include="Documentation\_site\api\HyperVAdmin.Models.SiteModel.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Models.VirtualMachineModel.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Models.VirtualMachineState.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Modules.html" />
+    <Content Include="Documentation\_site\api\HyperVAdmin.Modules.TimingModule.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.MvcApplication.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.RouteConfig.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Utilities.html" />
@@ -263,6 +265,9 @@
     <Content Include="Documentation\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Attributes.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Utilities.HtmlUtility.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Modules.TimingModule.yml" />
+    <Content Include="Documentation\api\HyperVAdmin.Modules.yml" />
+    <Content Include="Documentation\filterConfig.yml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -342,7 +347,8 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>docfx $(SolutionDir)HyperVAdmin\Documentation\docfx.json</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

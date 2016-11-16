@@ -80,18 +80,12 @@
             </summary>
             <param name="vmName">Which VM to toggle.</param>
             <param name="state">What VirtualMachineState to set the VM to.</param>
-            <returns>JSON with a string indiciating success of the action.</returns>
+            <returns>JSON with a string indicating success of the action.</returns>
         </member>
         <member name="T:HyperVAdmin.Models.SiteModel">
             <summary>
             The Model representing a site.
             </summary>
-        </member>
-        <member name="M:HyperVAdmin.Models.SiteModel.GetSites">
-            <summary>
-            Retrieves a list of SiteModels.
-            </summary>
-            <returns>A list of SiteModels</returns>
         </member>
         <member name="P:HyperVAdmin.Models.SiteModel.Name">
             <summary>
@@ -113,22 +107,28 @@
             The current state of the Site, such as stopped, started etc.
             </summary>
         </member>
+        <member name="M:HyperVAdmin.Models.SiteModel.GetSites">
+            <summary>
+            Retrieves a list of SiteModels.
+            </summary>
+            <returns>A list of SiteModels</returns>
+        </member>
+        <member name="M:HyperVAdmin.Models.SiteModel.StopSite(System.String)">
+            <summary>
+            Stops an IIS website.
+            </summary>
+            <param name="sitename">The site to stop.</param>
+        </member>
+        <member name="M:HyperVAdmin.Models.SiteModel.StartSite(System.String)">
+            <summary>
+            Starts an IIS website.
+            </summary>
+            <param name="sitename">The site to start.</param>
+        </member>
         <member name="T:HyperVAdmin.Models.VirtualMachineModel">
             <summary>
             The model representing a VirtualMachine
             </summary>
-        </member>
-        <member name="M:HyperVAdmin.Models.VirtualMachineModel.GetVMList">
-            <summary>
-            Gets a list of VirtualMachinesModels.
-            </summary>
-            <returns>A list of VirtualMachineModels.</returns>
-        </member>
-        <member name="M:HyperVAdmin.Models.VirtualMachineModel.GetVMScope">
-            <summary>
-            Used to retrieve the VirtualMachineModel List by GetVMList.
-            </summary>
-            <returns>The ManagementScope object to use to build the VM List.</returns>
         </member>
         <member name="P:HyperVAdmin.Models.VirtualMachineModel.Name">
             <summary>
@@ -194,6 +194,26 @@
             <summary>
             A human readable represantation of the time the VM has been running.
             </summary>
+        </member>
+        <member name="M:HyperVAdmin.Models.VirtualMachineModel.GetVMList">
+            <summary>
+            Gets a list of VirtualMachinesModels.
+            </summary>
+            <returns>A list of VirtualMachineModels.</returns>
+        </member>
+        <member name="M:HyperVAdmin.Models.VirtualMachineModel.ToggleState(System.String,HyperVAdmin.Models.VirtualMachineState)">
+            <summary>
+            Toggles the state of the VM. The vmName is used to target the VM and the state is used to set the state of the VM.
+            </summary>
+            <param name="vmName">Which VM to toggle.</param>
+            <param name="state">What VirtualMachineState to set the VM to.</param>
+            <returns>A string indicating success of the action.</returns>
+        </member>
+        <member name="M:HyperVAdmin.Models.VirtualMachineModel.GetVMScope">
+            <summary>
+            Used to retrieve the VirtualMachineModel List by GetVMList.
+            </summary>
+            <returns>The ManagementScope object to use to build the VM List.</returns>
         </member>
         <member name="T:HyperVAdmin.Models.VirtualMachineState">
             <summary>The used VirtualMachineStates used internally by WMI. Only supported states for this application are present.</summary>
