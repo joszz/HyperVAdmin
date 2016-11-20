@@ -1,4 +1,4 @@
--exclude:
- uidRegex:^System\.Web
--exclude:
- uidRegex:^System\.Object
+apiRules:
+- exclude:
+    uidRegex: ^System
+    type: Namespace
