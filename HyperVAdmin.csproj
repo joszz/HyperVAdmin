@@ -177,6 +177,8 @@
     </Content>
     <Content Include="Content\Images\Favicons\manifest.json" />
     <Content Include="build_documentation.bat" />
+    <Content Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
     <Content Include="Content\Styles\waves.css" />
