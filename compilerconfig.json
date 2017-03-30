@@ -1,0 +1,8 @@
+﻿[
+  {
+    "includeInProject": true,
+    "options": { "sourceMap": true },
+    "outputFile": "Content/Styles/default.css",
+    "inputFile": "Content/Styles/default.scss"
+  }
+]
