@@ -121,7 +121,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AssemblyCopyright.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyCopyright.tt</DependentUpon>
+    </Compile>
     <Compile Include="Attributes\AJAXOnlyAttribute.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\SitesController.cs" />
     <Compile Include="Controllers\VMsController.cs" />
@@ -136,6 +142,10 @@
     <Compile Include="Utilities\HyperVUtility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AssemblyCopyright.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyCopyright.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Images\Favicons\apple-touch-icon.png" />
     <Content Include="Content\Images\Favicons\browserconfig.xml" />
@@ -274,6 +284,7 @@
     <Folder Include="Documentation\apidoc\" />
     <Folder Include="Documentation\images\" />
     <Folder Include="Documentation\src\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -307,9 +318,6 @@
     <Content Include="Content\Styles\Default\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\Default.css.map" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
   </ItemGroup>
@@ -318,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\Styles\Default\_jquery.isloading.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

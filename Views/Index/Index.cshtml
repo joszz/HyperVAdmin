@@ -1,19 +1,20 @@
 ﻿@using HyperVAdmin.Models
-@using Microsoft.Web.Administration
-
-@model List<VirtualMachineModel>
 
 @{
     ViewBag.Title = "Hyper-V Admin";
+    bool hyperVEnabled = (bool)ViewBag.HyperVEnabled;
 }
 
-<div class="row">
-    <div class="col-xs-12">
-        @Html.Partial("~/Views/VMs/Index.cshtml", Model)
+@if (hyperVEnabled)
+{
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.Partial("~/Views/VMs/Index.cshtml", (List<VirtualMachineModel>)ViewBag.VMs)
+        </div>
     </div>
-</div>
+}
 
-<div class="row hidden-xs">
+<div class="row hidden-xs @(!hyperVEnabled ? "full-height" : null)">
     <div class="col-xs-12">
         @Html.Partial("~/Views/Sites/Index.cshtml", (List<SiteModel>)ViewBag.Sites)
     </div>

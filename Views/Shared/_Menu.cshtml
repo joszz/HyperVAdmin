@@ -11,13 +11,18 @@
                 <img src="~/Content/Images/Favicons/favicon-32x32.png" alt="Logo" />
                 <span>Hyper-V Admin</span>
             </a>
-            <small class="text-muted">1.0</small>
+            <small class="text-muted">
+                @typeof(HyperVAdmin.MvcApplication).Assembly.GetName().Version
+            </small>
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li>
-                    @Html.ActionLink("Virtual machines", "Index", "VMs")
-                </li>
+                @if ((bool)ViewBag.HyperVEnabled)
+                {
+                    <li>
+                        @Html.ActionLink("Virtual machines", "Index", "VMs")
+                    </li>
+                }
                 <li>
                     @Html.ActionLink("Sites", "Index", "Sites")
                 </li>

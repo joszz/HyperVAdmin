@@ -10,6 +10,9 @@ namespace HyperVAdmin.Models
     /// </summary>
     public class SiteModel
     {
+        /// <summary>
+        /// IIS ServerManager used to retrieve sites and info.
+        /// </summary>
         public static ServerManager Manager = new ServerManager();
 
         /// <summary>

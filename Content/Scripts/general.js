@@ -15,7 +15,7 @@ $(function () {
         $('#virtual-machines table').addSortWidget({
             img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
             img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
-            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
+            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif"
         });
     }
 
@@ -29,7 +29,7 @@ $(function () {
         $('#sites table').addSortWidget({
             img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
             img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
-            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif",
+            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif"
         });
     }
 });
@@ -55,7 +55,7 @@ function refreshVMList() {
                 clone.find("td:eq(4)").html(value.CoresAmount);
                 clone.find("td:eq(5)").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
                 clone.find("td:eq(6)").html(value.MAC);
-                clone.find("button").addClass("btn-" + (value.State == 2 ? "success" : "danger"));
+                clone.find("button").addClass("btn-" + (value.State === 2 ? "success" : "danger"));
                 clone.removeClass("hidden");
 
                 clone.appendTo($("#virtual-machines tbody"));
@@ -118,10 +118,10 @@ function refreshSites() {
             $.each(data, function (index, value) {
                 var clone = $("#sites tr.hidden").clone();
 
-                clone.find(".glyphicon-off").addClass("btn-" + (value.State == 1 ? "success" : "danger"));
+                clone.find(".glyphicon-off").addClass("btn-" + (value.State === 1 ? "success" : "danger"));
 
                 $.each(value.Bindings, function (index, value) {
-                    var binding = clone.find("td:eq(0) a.protocol.hidden").clone()
+                    var binding = clone.find("td:eq(0) a.protocol.hidden").clone();
                     binding.removeClass("hidden").attr("href", value).html(index);
                     binding.appendTo(clone.find("td:eq(0) .btn-group"));
                 });

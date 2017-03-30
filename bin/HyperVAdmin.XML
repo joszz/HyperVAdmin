@@ -17,6 +17,21 @@
             <param name="methodInfo"></param>
             <returns>Boolean indicating if current request is an AJAX request</returns>
         </member>
+        <member name="T:HyperVAdmin.Controllers.BaseController">
+            <summary>
+            BaseController for all controllers.
+            </summary>
+        </member>
+        <member name="F:HyperVAdmin.Controllers.BaseController.hyperVEnabled">
+            <summary>
+            Whether HyperV is enabled in web.config.
+            </summary>
+        </member>
+        <member name="M:HyperVAdmin.Controllers.BaseController.#ctor">
+            <summary>
+            Sets HyperVEnabled web.config setting to ViewBag.
+            </summary>
+        </member>
         <member name="T:HyperVAdmin.Controllers.IndexController">
             <summary>
             The homepage
@@ -62,6 +77,11 @@
             Controller to manage all VM related actions.
             </summary>
         </member>
+        <member name="M:HyperVAdmin.Controllers.VMsController.#ctor">
+            <summary>
+            Check if HyperV is enabled in web.config, if not throw exception.
+            </summary>
+        </member>
         <member name="M:HyperVAdmin.Controllers.VMsController.Index">
             <summary>
             Shows a list of all VMs and their related actions.
@@ -85,6 +105,11 @@
         <member name="T:HyperVAdmin.Models.SiteModel">
             <summary>
             The Model representing a site.
+            </summary>
+        </member>
+        <member name="F:HyperVAdmin.Models.SiteModel.Manager">
+            <summary>
+            IIS ServerManager used to retrieve sites and info.
             </summary>
         </member>
         <member name="P:HyperVAdmin.Models.SiteModel.Name">

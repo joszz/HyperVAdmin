@@ -7,7 +7,7 @@ namespace HyperVAdmin.Controllers
     /// <summary>
     /// Controller to manage all Sites related actions.
     /// </summary>
-    public class SitesController : Controller
+    public class SitesController : BaseController
     {
         /// <summary>
         /// Shows a list of all Sites and their related actions.

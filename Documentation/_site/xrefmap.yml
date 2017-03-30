@@ -55,6 +55,30 @@ references:
   commentId: N:HyperVAdmin.Controllers
   fullName: HyperVAdmin.Controllers
   nameWithType: HyperVAdmin.Controllers
+- uid: HyperVAdmin.Controllers.BaseController
+  name: BaseController
+  href: api/HyperVAdmin.Controllers.BaseController.html
+  commentId: T:HyperVAdmin.Controllers.BaseController
+  fullName: HyperVAdmin.Controllers.BaseController
+  nameWithType: BaseController
+- uid: HyperVAdmin.Controllers.BaseController.#ctor
+  name: BaseController()
+  href: api/HyperVAdmin.Controllers.BaseController.html#HyperVAdmin_Controllers_BaseController__ctor
+  commentId: M:HyperVAdmin.Controllers.BaseController.#ctor
+  fullName: HyperVAdmin.Controllers.BaseController.BaseController()
+  nameWithType: BaseController.BaseController()
+- uid: HyperVAdmin.Controllers.BaseController.#ctor*
+  name: BaseController
+  href: api/HyperVAdmin.Controllers.BaseController.html#HyperVAdmin_Controllers_BaseController__ctor_
+  commentId: Overload:HyperVAdmin.Controllers.BaseController.#ctor
+  fullName: HyperVAdmin.Controllers.BaseController.BaseController
+  nameWithType: BaseController.BaseController
+- uid: HyperVAdmin.Controllers.BaseController.hyperVEnabled
+  name: hyperVEnabled
+  href: api/HyperVAdmin.Controllers.BaseController.html#HyperVAdmin_Controllers_BaseController_hyperVEnabled
+  commentId: F:HyperVAdmin.Controllers.BaseController.hyperVEnabled
+  fullName: HyperVAdmin.Controllers.BaseController.hyperVEnabled
+  nameWithType: BaseController.hyperVEnabled
 - uid: HyperVAdmin.Controllers.IndexController
   name: IndexController
   href: api/HyperVAdmin.Controllers.IndexController.html
@@ -133,6 +157,18 @@ references:
   commentId: T:HyperVAdmin.Controllers.VMsController
   fullName: HyperVAdmin.Controllers.VMsController
   nameWithType: VMsController
+- uid: HyperVAdmin.Controllers.VMsController.#ctor
+  name: VMsController()
+  href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController__ctor
+  commentId: M:HyperVAdmin.Controllers.VMsController.#ctor
+  fullName: HyperVAdmin.Controllers.VMsController.VMsController()
+  nameWithType: VMsController.VMsController()
+- uid: HyperVAdmin.Controllers.VMsController.#ctor*
+  name: VMsController
+  href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController__ctor_
+  commentId: Overload:HyperVAdmin.Controllers.VMsController.#ctor
+  fullName: HyperVAdmin.Controllers.VMsController.VMsController
+  nameWithType: VMsController.VMsController
 - uid: HyperVAdmin.Controllers.VMsController.GetVMs
   name: GetVMs()
   href: api/HyperVAdmin.Controllers.VMsController.html#HyperVAdmin_Controllers_VMsController_GetVMs

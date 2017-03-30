@@ -1,14 +1,26 @@
-﻿using HyperVAdmin.Attributes;
-using HyperVAdmin.Models;
+﻿using System;
 using System.Web.Mvc;
+using HyperVAdmin.Attributes;
+using HyperVAdmin.Models;
 
 namespace HyperVAdmin.Controllers
 {
     /// <summary>
     /// Controller to manage all VM related actions.
     /// </summary>
-    public class VMsController : Controller
+    public class VMsController : BaseController
     {
+        /// <summary>
+        /// Check if HyperV is enabled in web.config, if not throw exception.
+        /// </summary>
+        public VMsController() : base()
+        {
+            if(!hyperVEnabled)
+            {
+                throw new Exception("Hyper V is not enabled!");
+            }
+        }
+
         /// <summary>
         /// Shows a list of all VMs and their related actions.
         /// </summary>
