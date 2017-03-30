@@ -62,19 +62,32 @@ namespace HyperVAdmin.Models
 
                 foreach (Binding binding in site.Bindings.OrderBy(b => b.Protocol))
                 {
-                    string url = binding.Protocol + "://" + Environment.MachineName;
+                    string url = string.Empty;
 
-                    if (!(binding.EndPoint.Port == 80 && binding.Protocol == "http") && !(binding.EndPoint.Port == 443 && binding.Protocol == "https"))
+                    if (binding.Host != string.Empty)
                     {
-                        url += ":" + binding.EndPoint.Port;
+                        url = binding.Protocol + "://" + binding.Host;
+                    }
+                    else
+                    {
+                        url = binding.Protocol + "://" + Environment.MachineName;
+
+                        if (!(binding.EndPoint.Port == 80 && binding.Protocol == "http") && !(binding.EndPoint.Port == 443 && binding.Protocol == "https"))
+                        {
+                            url += ":" + binding.EndPoint.Port;
+                        }
                     }
 
-                    model.Bindings.Add(binding.Protocol, url);
-
+                    if (!model.Bindings.ContainsKey(binding.Protocol))
+                    {
+                        model.Bindings.Add(binding.Protocol, url);
+                    }
                 }
 
                 models.Add(model);
             }
+
+            models = models.OrderBy(s => s.Name).ToList();
 
             return models;
         }

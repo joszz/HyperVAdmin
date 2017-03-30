@@ -34,7 +34,8 @@
 
                                 @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
                                 {
-                                    <a href="@keyValue.Value" class="btn btn-default protocol @Html.Raw(site.State == ObjectState.Stopped ? "disabled" : null)" title="Open website">@keyValue.Key</a>
+                                    <a href="@keyValue.Value" target="_blank" title="Open website" 
+                                       class="btn btn-default protocol @Html.Raw(site.State == ObjectState.Stopped ? "disabled" : null)">@keyValue.Key</a>
                                 }
                             </div>
                         </td>

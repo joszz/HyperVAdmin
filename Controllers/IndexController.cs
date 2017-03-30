@@ -16,7 +16,11 @@ namespace HyperVAdmin.Controllers
         public ActionResult Index()
         {
             ViewBag.Sites = SiteModel.GetSites();
-            ViewBag.VMs = VirtualMachineModel.GetVMList();
+
+            if (hyperVEnabled)
+            {
+                ViewBag.VMs = VirtualMachineModel.GetVMList();
+            }
 
             return View();
         }
