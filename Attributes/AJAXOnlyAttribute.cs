@@ -9,7 +9,7 @@ namespace HyperVAdmin.Attributes
     public class AJAXOnlyAttribute : ActionMethodSelectorAttribute
     {
         /// <summary>
-        /// Check whether the request is an AJAX request or not/
+        /// Check whether the request is an AJAX request or not.
         /// </summary>
         /// <param name="controllerContext"></param>
         /// <param name="methodInfo"></param>

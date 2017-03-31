@@ -22,6 +22,10 @@ In the web.config of this project there are a couple settings you can change;
 
 	The time between automatic AJAX enabled refresh of list content in seconds.
 
+* **HyperVEnabled**
+
+    Whether or not HyperV views are enabled on the website. Defaults to true.
+
 * **HyperVManagementPath**
 
 	The "\\v2" can be stripped of to support older Hyper-V installations.
