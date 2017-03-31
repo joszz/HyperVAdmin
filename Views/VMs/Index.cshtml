@@ -5,7 +5,7 @@
     <div class="panel-heading">
         <div class="pull-right btn-group">
             <button class="btn btn-default">
-                <i class="glyphicon glyphicon-refresh"></i>
+                <i class="fa fa-refresh"></i>
             </button>
         </div>
         <h4>Virtual machines</h4>
@@ -29,7 +29,7 @@
                     <tr>
                         <td>
                             <div class="btn-group">
-                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") glyphicon glyphicon-off" title="Toggle state" />
+                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
                             </div>
                         </td>
                         <td>@vm.Name</td>
@@ -44,7 +44,7 @@
                 <tr class="hidden">
                     <td>
                         <div class="btn-group">
-                            <button class="btn glyphicon glyphicon-off" title="Toggle state" />
+                            <button class="btn fa fa-power-off" title="Toggle state" />
                         </div>
                     </td>
                     <td></td>

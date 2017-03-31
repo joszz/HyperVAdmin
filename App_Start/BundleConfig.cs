@@ -18,8 +18,8 @@ namespace HyperVAdmin
             ));
 
             bundles.Add(new StyleBundle("~/Content/Styles/bundle").Include(
-                "~/Content/Styles/Bootstrap/bootstrap.css",
-                "~/Content/Styles/Bootstrap/bootstrap-theme.css",
+                "~/Content/Styles/Bootstrap.css",
+                "~/Content/Styles/FontAwesome.css",
                 "~/Content/Styles/waves.css",
                 "~/Content/Styles/Default.css"
             ));

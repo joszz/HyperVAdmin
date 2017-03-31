@@ -9,7 +9,7 @@ $(function () {
     if ($("#virtual-machines:visible").length > 0) {
         refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
 
-        $("#virtual-machines").on("click", ".glyphicon-off", toggleVM);
+        $("#virtual-machines").on("click", ".fa-power-off", toggleVM);
         $("#virtual-machines .panel-heading button").click(refreshVMList);
 
         $('#virtual-machines table').addSortWidget({
@@ -23,8 +23,8 @@ $(function () {
         refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);
 
         $("#sites .panel-heading button").click(refreshSites);
-        $("#sites").on("click", "button.glyphicon-copy:visible", copyPath);
-        $("#sites").on("click", "tr td:first-child button.glyphicon-off:visible", toggleSite);
+        $("#sites").on("click", "button.fa-copy:visible", copyPath);
+        $("#sites").on("click", "tr td:first-child button.fa-power-off:visible", toggleSite);
 
         $('#sites table').addSortWidget({
             img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
@@ -118,7 +118,7 @@ function refreshSites() {
             $.each(data, function (index, value) {
                 var clone = $("#sites tr.hidden").clone();
 
-                clone.find(".glyphicon-off").addClass("btn-" + (value.State === 1 ? "success" : "danger"));
+                clone.find(".fa-power-off").addClass("btn-" + (value.State === 1 ? "success" : "danger"));
 
                 $.each(value.Bindings, function (index, value) {
                     var binding = clone.find("td:eq(0) a.protocol.hidden").clone();

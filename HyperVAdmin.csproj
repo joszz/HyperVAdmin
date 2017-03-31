@@ -146,7 +146,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssemblyCopyright.cs</LastGenOutput>
     </Content>
-    <Content Include="Content\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\Favicons\apple-touch-icon.png" />
     <Content Include="Content\Images\Favicons\browserconfig.xml" />
     <Content Include="Content\Images\Favicons\favicon-16x16.png" />
@@ -168,19 +171,105 @@
     <Content Include="Content\Scripts\jQuery\jquery-3.1.1.min.js" />
     <Content Include="Content\Scripts\sorttable.js" />
     <Content Include="Content\Scripts\waves.js" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap-theme.css" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap.css" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Styles\Bootstrap.css">
+      <DependentUpon>Bootstrap.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\Bootstrap.min.css">
+      <DependentUpon>Bootstrap.css</DependentUpon>
+    </Content>
     <Content Include="Content\Styles\Default.css">
       <DependentUpon>Default.scss</DependentUpon>
     </Content>
     <Content Include="Content\Images\Favicons\manifest.json" />
     <Content Include="build_documentation.bat" />
     <Content Include="compilerconfig.json" />
-    <Content Include="compilerconfig.json.defaults" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_alerts.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_buttons.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_center-block.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_forms.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_gradients.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_grid.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_hide-text.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_image.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_labels.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_list-group.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_opacity.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_pagination.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_panels.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_resize.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_size.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_table-row.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="Content\Styles\Bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="Content\Styles\Bootstrap\_alerts.scss" />
+    <Content Include="Content\Styles\Bootstrap\_badges.scss" />
+    <Content Include="Content\Styles\Bootstrap\_breadcrumbs.scss" />
+    <Content Include="Content\Styles\Bootstrap\_button-groups.scss" />
+    <Content Include="Content\Styles\Bootstrap\_buttons.scss" />
+    <Content Include="Content\Styles\Bootstrap\_carousel.scss" />
+    <Content Include="Content\Styles\Bootstrap\_close.scss" />
+    <Content Include="Content\Styles\Bootstrap\_code.scss" />
+    <Content Include="Content\Styles\Bootstrap\_component-animations.scss" />
+    <Content Include="Content\Styles\Bootstrap\_dropdowns.scss" />
+    <Content Include="Content\Styles\Bootstrap\_forms.scss" />
+    <Content Include="Content\Styles\Bootstrap\_glyphicons.scss" />
+    <Content Include="Content\Styles\Bootstrap\_grid.scss" />
+    <Content Include="Content\Styles\Bootstrap\_input-groups.scss" />
+    <Content Include="Content\Styles\Bootstrap\_jumbotron.scss" />
+    <Content Include="Content\Styles\Bootstrap\_labels.scss" />
+    <Content Include="Content\Styles\Bootstrap\_list-group.scss" />
+    <Content Include="Content\Styles\Bootstrap\_media.scss" />
+    <Content Include="Content\Styles\Bootstrap\_mixins.scss" />
+    <Content Include="Content\Styles\Bootstrap\_modals.scss" />
+    <Content Include="Content\Styles\Bootstrap\_navbar.scss" />
+    <Content Include="Content\Styles\Bootstrap\_navs.scss" />
+    <Content Include="Content\Styles\Bootstrap\_normalize.scss" />
+    <Content Include="Content\Styles\Bootstrap\_pager.scss" />
+    <Content Include="Content\Styles\Bootstrap\_pagination.scss" />
+    <Content Include="Content\Styles\Bootstrap\_panels.scss" />
+    <Content Include="Content\Styles\Bootstrap\_popovers.scss" />
+    <Content Include="Content\Styles\Bootstrap\_print.scss" />
+    <Content Include="Content\Styles\Bootstrap\_progress-bars.scss" />
+    <Content Include="Content\Styles\Bootstrap\_responsive-embed.scss" />
+    <Content Include="Content\Styles\Bootstrap\_responsive-utilities.scss" />
+    <Content Include="Content\Styles\Bootstrap\_scaffolding.scss" />
+    <Content Include="Content\Styles\Bootstrap\_tables.scss" />
+    <Content Include="Content\Styles\Bootstrap\_theme.scss" />
+    <Content Include="Content\Styles\Bootstrap\_thumbnails.scss" />
+    <Content Include="Content\Styles\Bootstrap\_tooltip.scss" />
+    <Content Include="Content\Styles\Bootstrap\_type.scss" />
+    <Content Include="Content\Styles\Bootstrap\_utilities.scss" />
+    <Content Include="Content\Styles\Bootstrap\_variables.scss" />
+    <Content Include="Content\Styles\Bootstrap\_wells.scss" />
+    <Content Include="Content\Styles\Bootstrap.scss" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
+    <Content Include="Content\Styles\Default.min.css">
+      <DependentUpon>Default.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\FontAwesome.css">
+      <DependentUpon>FontAwesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\FontAwesome.min.css">
+      <DependentUpon>FontAwesome.css</DependentUpon>
+    </Content>
     <Content Include="Content\Styles\waves.css" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
     <Content Include="Documentation\_site\api\HyperVAdmin.Attributes.html" />
@@ -280,6 +369,20 @@
     <Content Include="Documentation\api\HyperVAdmin.Modules.TimingModule.yml" />
     <Content Include="Documentation\api\HyperVAdmin.Modules.yml" />
     <Content Include="Documentation\filterConfig.yml" />
+    <Content Include="Content\Styles\FontAwesome.scss" />
+    <Content Include="Content\Styles\FontAwesome\_animated.scss" />
+    <Content Include="Content\Styles\FontAwesome\_bordered-pulled.scss" />
+    <Content Include="Content\Styles\FontAwesome\_core.scss" />
+    <Content Include="Content\Styles\FontAwesome\_fixed-width.scss" />
+    <Content Include="Content\Styles\FontAwesome\_icons.scss" />
+    <Content Include="Content\Styles\FontAwesome\_larger.scss" />
+    <Content Include="Content\Styles\FontAwesome\_list.scss" />
+    <Content Include="Content\Styles\FontAwesome\_mixins.scss" />
+    <Content Include="Content\Styles\FontAwesome\_path.scss" />
+    <Content Include="Content\Styles\FontAwesome\_rotated-flipped.scss" />
+    <Content Include="Content\Styles\FontAwesome\_screen-reader.scss" />
+    <Content Include="Content\Styles\FontAwesome\_stacked.scss" />
+    <Content Include="Content\Styles\FontAwesome\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,16 +396,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Index\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\Fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\Fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\Fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap-theme.css.map" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap-theme.min.css.map" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap.css.map" />
-    <Content Include="Content\Styles\Bootstrap\bootstrap.min.css.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Menu.cshtml" />

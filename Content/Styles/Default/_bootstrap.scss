@@ -1,10 +1,4 @@
-﻿@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('#{$bootstrapFont}.eot');
-    src: url('#{$bootstrapFont}.eot?#iefix') format('embedded-opentype'), url('#{$bootstrapFont}.woff2') format('woff2'), url('#{$bootstrapFont}.woff') format('woff'), url('#{$bootstrapFont}.ttf') format('truetype'), url('#{$bootstrapFont}.svg#glyphicons_halflingsregular') format('svg');
-}
-
-.table > tbody > tr > td {
+﻿.table > tbody > tr > td {
     vertical-align: middle;
 }
 
@@ -22,4 +16,12 @@
 a.navbar-brand img {
     float: left;
     margin: -5px 5px 0 5px;
+}
+
+footer,
+nav.navbar {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    background-image: $gradiantDark;
+    background-repeat: repeat-x;
 }

@@ -1,8 +1,41 @@
 ﻿[
+  //HyperVAdmin CSS
   {
     "includeInProject": true,
     "options": { "sourceMap": true },
     "outputFile": "Content/Styles/default.css",
     "inputFile": "Content/Styles/default.scss"
+  },
+  {
+    "includeInProject": true,
+    "minify": { "enabled": true },
+    "outputFile": "Content/Styles/Default.min.css",
+    "inputFile": "Content/Styles/Default.scss"
+  },
+  //Bootstrap
+  {
+    "includeInProject": true,
+    "options": { "sourceMap": true },
+    "outputFile": "Content/Styles/Bootstrap.css",
+    "inputFile": "Content/Styles/Bootstrap.scss"
+  },
+  {
+    "includeInProject": true,
+    "minify": { "enabled": true },
+    "outputFile": "Content/Styles/Bootstrap.min.css",
+    "inputFile": "Content/Styles/Bootstrap.scss"
+  },
+  //FontAwesome
+  {
+    "includeInProject": true,
+    "options": { "sourceMap": true },
+    "outputFile": "Content/Styles/FontAwesome.css",
+    "inputFile": "Content/Styles/FontAwesome.scss"
+  },
+  {
+    "includeInProject": true,
+    "minify": { "enabled": true },
+    "outputFile": "Content/Styles/FontAwesome.min.css",
+    "inputFile": "Content/Styles/FontAwesome.scss"
   }
 ]
