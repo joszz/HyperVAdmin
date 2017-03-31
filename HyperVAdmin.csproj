@@ -261,6 +261,7 @@
     <Content Include="Content\Styles\Bootstrap.scss" />
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
     <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
+    <Content Include="Content\Scripts\yuidoc.json" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
     <Content Include="Content\Styles\Default.min.css">
@@ -391,7 +392,7 @@
     <Folder Include="Documentation\apidoc\" />
     <Folder Include="Documentation\images\" />
     <Folder Include="Documentation\src\" />
-    <Folder Include="Views\Base\" />
+    <Folder Include="Documentation\yuidoc\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -417,9 +418,6 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Styles\Default\_icon-refresh-animate.scss" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\Styles\Default\_jquery.isloading.scss" />

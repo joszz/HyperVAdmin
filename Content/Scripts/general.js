@@ -1,5 +1,10 @@
 ﻿var refreshVMListIntervalID = 0, refreshSitesListIntervalID = 0;
 
+/**
+* Document onload, call to initialize plugins and eventhandlers.
+* 
+* @method document.onload
+*/
 $(function () {
     Waves.attach(".btn");
     Waves.init();
@@ -34,6 +39,11 @@ $(function () {
     }
 });
 
+/**
+ * Refreshes the VM table with fresh data.
+ * 
+ * @method refreshVMList
+ */
 function refreshVMList() {
     $("#virtual-machines").isLoading();
 
@@ -75,6 +85,11 @@ function refreshVMList() {
     });
 }
 
+/**
+ * Toggles the state of the VM to On/Off.
+ * 
+ * @method toggleVM
+ */
 function toggleVM() {
     var $this = $(this);
     $this.blur();
@@ -103,6 +118,11 @@ function toggleVM() {
     }
 }
 
+/**
+ * Refreshes the sites table with fresh data.
+ * 
+ * @method refreshSites
+ */
 function refreshSites() {
     $("#sites").isLoading();
 
@@ -148,6 +168,12 @@ function refreshSites() {
     });
 }
 
+/**
+ * Toggles the state of the site to On/Off.
+ * 
+ * @method toggleSite
+ * @param {Object} event    The JS event, used to stop the bubble.
+ */
 function toggleSite(event) {
     event.stopPropagation();
 
@@ -170,6 +196,12 @@ function toggleSite(event) {
     }
 }
 
+/**
+ * Copies the path of a site.
+ * 
+ * @method copyPath
+ * @param {Object} event    The JS event, used to stop the bubble.
+ */
 function copyPath(event) {
     event.stopPropagation();
 
@@ -179,6 +211,11 @@ function copyPath(event) {
     flashAlert("Copied to clipboard!", "success");
 }
 
+/**
+ * Fades out the alert after alertTimeout (in seconds).
+ * 
+ * @method fadeOutAlert
+ */
 function fadeOutAlert() {
     window.setTimeout(function () {
         $("div.alert").fadeOut("fast", function () {
@@ -187,6 +224,13 @@ function fadeOutAlert() {
     }, alertTimeout * 1000);
 }
 
+/**
+ * Displays an alert message (and fades it after).
+ * 
+ * @method flashAlert
+ * @param {String} message  The message to display.
+ * @param {String} type     The bootstrap type of alert.
+ */
 function flashAlert(message, type) {
     $("div.alert").addClass("alert-" + type);
     $("div.alert").html(message);

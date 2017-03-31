@@ -1,0 +1,563 @@
+{
+    "project": {
+        "name": "Hyper-V Admin",
+        "description": "",
+        "version": "1.1",
+        "url": "",
+        "logo": "../../Images/Favicons/favicon-32x32"
+    },
+    "files": {
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {},
+    "elements": {},
+    "classitems": [
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 887,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, object)"
+            },
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 907,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 916,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created element and returns a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 937,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 951,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 979,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 990,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1001,
+            "description": "Returns a function to use in pseudos for :enabled/:disabled",
+            "params": [
+                {
+                    "name": "disabled",
+                    "description": "true for :disabled; false for :enabled",
+                    "type": "Boolean"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1057,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1079,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1091,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1103,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1583,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 1616,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 2647,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
+            "line": 9817,
+            "description": "Load a url into a page",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 3,
+            "description": "Document onload, call to initialize plugins and eventhandlers.",
+            "itemtype": "method",
+            "name": "document.onload",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 42,
+            "description": "Refreshes the VM table with fresh data.",
+            "itemtype": "method",
+            "name": "refreshVMList",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 88,
+            "description": "Toggles the state of the VM to On/Off.",
+            "itemtype": "method",
+            "name": "toggleVM",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 121,
+            "description": "Refreshes the sites table with fresh data.",
+            "itemtype": "method",
+            "name": "refreshSites",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 171,
+            "description": "Toggles the state of the site to On/Off.",
+            "itemtype": "method",
+            "name": "toggleSite",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The JS event, used to stop the bubble.",
+                    "type": "Object"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 199,
+            "description": "Copies the path of a site.",
+            "itemtype": "method",
+            "name": "copyPath",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The JS event, used to stop the bubble.",
+                    "type": "Object"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 214,
+            "description": "Fades out the alert after alertTimeout (in seconds).",
+            "itemtype": "method",
+            "name": "fadeOutAlert",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 227,
+            "description": "Displays an alert message (and fades it after).",
+            "itemtype": "method",
+            "name": "flashAlert",
+            "params": [
+                {
+                    "name": "message",
+                    "description": "The message to display.",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "description": "The bootstrap type of alert.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js",
+            "line": 1,
+            "description": "Loading plugin for jQuery\nversion: v1.0.6\n\nSmall helper to give the user a visual feedback that something is happening\nwhen fetching/posting data\n\nUSAGE:\n- global overlay:                     $.isLoading();\n- use javascript:                     $( selector ).isLoading();\n- On non-form elements:               $(\"div\").isLoading({ text: \"Loading\", position:'inside'});\n- remove the loading element:         $( selector ).isLoading( \"hide\" );",
+            "author": "Laurent Blanes <laurent.blanes@gmail.com>\n---\nCopyright 2013, Laurent Blanes ( https://github.com/hekigan/is-loading )\n\nThe MIT License (MIT)\n\nCopyright (c) 2013 Laurent Blanes\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 193,
+            "description": "Collection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 246,
+            "description": "Hide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 312,
+            "description": "Disable mousedown event for 500ms during and after touch",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 353,
+            "description": "Delegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 377,
+            "description": "Bubble the click and show effect if .waves-effect elem was found",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 472,
+            "description": "Attach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 506,
+            "description": "Cause a ripple to appear in an element via code.",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 558,
+            "description": "Remove all ripples from an element.",
+            "class": ""
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+            "line": 573,
+            "description": "Deprecated API fallback",
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:887"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:951"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1079"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1091"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1103"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:887"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:907"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:916"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:937"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:951"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:979"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:990"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for :enabled/:disabled",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1001"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1057"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1079"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1091"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1103"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1583"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1616"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:2647"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:9817"
+        },
+        {
+            "message": "Missing item type\nLoading plugin for jQuery\nversion: v1.0.6\n\nSmall helper to give the user a visual feedback that something is happening\nwhen fetching/posting data\n\nUSAGE:\n- global overlay:                     $.isLoading();\n- use javascript:                     $( selector ).isLoading();\n- On non-form elements:               $(\"div\").isLoading({ text: \"Loading\", position:'inside'});\n- remove the loading element:         $( selector ).isLoading( \"hide\" );",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js:1"
+        },
+        {
+            "message": "Missing item type\nCollection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:193"
+        },
+        {
+            "message": "Missing item type\nHide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:246"
+        },
+        {
+            "message": "Missing item type\nDisable mousedown event for 500ms during and after touch",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:312"
+        },
+        {
+            "message": "Missing item type\nDelegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:353"
+        },
+        {
+            "message": "Missing item type\nBubble the click and show effect if .waves-effect elem was found",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:377"
+        },
+        {
+            "message": "Missing item type\nAttach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:472"
+        },
+        {
+            "message": "Missing item type\nCause a ripple to appear in an element via code.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:506"
+        },
+        {
+            "message": "Missing item type\nRemove all ripples from an element.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:558"
+        },
+        {
+            "message": "Missing item type\nDeprecated API fallback",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:573"
+        }
+    ]
+}

@@ -17,7 +17,7 @@ namespace HyperVAdmin.Controllers
         {
             if(!hyperVEnabled)
             {
-                throw new Exception("Hyper V is not enabled!");
+                throw new UnauthorizedAccessException("Hyper V is not enabled!");
             }
         }
 

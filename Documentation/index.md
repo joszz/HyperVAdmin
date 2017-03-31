@@ -37,3 +37,6 @@ In the web.config of this project there are a couple settings you can change;
 * **compilation debug="false"**
 	
 	Change this to true to turn of minification (amongst others). False will minify JS and CSS.
+
+## YUIDoc
+[Find the JS docs here](../yuidoc/)

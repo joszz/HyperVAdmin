@@ -1,0 +1,13 @@
+{
+  "name": "Hyper-V Admin",
+  "description": "",
+  "version": "1.1",
+  "url": "",
+  "logo": "../../Images/Favicons/favicon-32x32",
+  "options": {
+    "outdir": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Documentation\\yuidoc",
+    "linkNatives": "true",
+    "themedir": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Documentation\\yuidoc-bootstrap-theme",
+    "helpers": [ "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Documentation\\yuidoc-bootstrap-theme\\helpers/helpers.js" ]
+  }
+}

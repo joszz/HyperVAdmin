@@ -11,7 +11,7 @@
         </member>
         <member name="M:HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext,System.Reflection.MethodInfo)">
             <summary>
-            Check whether the request is an AJAX request or not/
+            Check whether the request is an AJAX request or not.
             </summary>
             <param name="controllerContext"></param>
             <param name="methodInfo"></param>
