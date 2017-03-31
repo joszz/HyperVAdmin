@@ -259,6 +259,8 @@
     <Content Include="Content\Styles\Bootstrap\_variables.scss" />
     <Content Include="Content\Styles\Bootstrap\_wells.scss" />
     <Content Include="Content\Styles\Bootstrap.scss" />
+    <Content Include="Content\Styles\Default\_fontawesome.scss" />
+    <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
     <Content Include="Content\Styles\Default.min.css">

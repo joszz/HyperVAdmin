@@ -1,6 +1,5 @@
 ﻿@using System.Configuration;
 @using System.Diagnostics;
-@using System.Web.Hosting;
 @using HyperVAdmin.Utilities;
 
 <!DOCTYPE html>
@@ -13,11 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#4F4F4F">
 
-    <link rel="apple-touch-icon" sizes="76x76" href="Content/Images/Favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="Content/Images/Favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="Content/Images/Favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="Content/Images/Favicons/manifest.json">
-    <link rel="mask-icon" href="Content/Images/Favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="76x76" href="@Url.Content("~/Content/Images/Favicons/apple-touch-icon.png")">
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/Images/Favicons/favicon-32x32.png")" sizes="32x32">
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/Images/Favicons/favicon-16x16.png")" sizes="16x16">
+    <link rel="manifest" href="@Url.Content("~/Content/Images/Favicons/manifest.json")">
+    <link rel="mask-icon" href="@Url.Content("~/Content/Images/Favicons/safari-pinned-tab.svg")" color="#5bbad5">
 
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/Styles/bundle")

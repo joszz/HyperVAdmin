@@ -67,7 +67,7 @@ namespace HyperVAdmin.Models
                     if (!(binding.EndPoint.Port == 80 && binding.Protocol == "http") && 
                         !(binding.EndPoint.Port == 443 && binding.Protocol == "https"))
                     {
-                        url = ":" + binding.EndPoint.Port;
+                        url += ":" + binding.EndPoint.Port;
                     }
 
                     if (!model.Bindings.ContainsKey(binding.Protocol))
