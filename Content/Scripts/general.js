@@ -1,4 +1,11 @@
-﻿var refreshVMListIntervalID = 0, refreshSitesListIntervalID = 0;
+﻿/**
+* Main JS file.
+* 
+* @class Window
+* @module General
+*/
+
+var refreshVMListIntervalID = 0, refreshSitesListIntervalID = 0;
 
 /**
 * Document onload, call to initialize plugins and eventhandlers.

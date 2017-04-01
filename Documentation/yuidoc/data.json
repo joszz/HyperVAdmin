@@ -16,8 +16,12 @@
         },
         "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js": {
             "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "General": 1
+            },
+            "classes": {
+                "Window": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -36,8 +40,37 @@
             "namespaces": {}
         }
     },
-    "modules": {},
-    "classes": {},
+    "modules": {
+        "General": {
+            "name": "General",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Window": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 1,
+            "description": "Main JS file."
+        }
+    },
+    "classes": {
+        "Window": {
+            "name": "Window",
+            "shortname": "Window",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "General",
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 1,
+            "description": "Main JS file."
+        }
+    },
     "elements": {},
     "classitems": [
         {
@@ -48,7 +81,7 @@
                 "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
                 "type": "Function(string, object)"
             },
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -61,7 +94,7 @@
                     "type": "Function"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -74,7 +107,7 @@
                     "type": "Function"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -92,7 +125,7 @@
                     "type": "Function"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -114,7 +147,7 @@
                 "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
                 "type": "Number"
             },
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -127,7 +160,7 @@
                     "type": "String"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -140,7 +173,7 @@
                     "type": "String"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -153,7 +186,7 @@
                     "type": "Boolean"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -166,7 +199,7 @@
                     "type": "Function"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -183,7 +216,7 @@
                 "description": "The input node if acceptable, otherwise a falsy value",
                 "type": "Element|Object|Boolean"
             },
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -200,7 +233,7 @@
                 "description": "True iff elem is a non-HTML XML node",
                 "type": "Boolean"
             },
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -218,7 +251,7 @@
                 "description": "Returns the current document",
                 "type": "Object"
             },
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -231,7 +264,7 @@
                     "type": "ArrayLike"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -244,7 +277,7 @@
                     "type": "Array|Element"
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
@@ -274,49 +307,53 @@
                     "optional": true
                 }
             ],
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
             "line": 9817,
             "description": "Load a url into a page",
-            "class": ""
+            "class": "Window"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 3,
+            "line": 10,
             "description": "Document onload, call to initialize plugins and eventhandlers.",
             "itemtype": "method",
             "name": "document.onload",
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 42,
+            "line": 49,
             "description": "Refreshes the VM table with fresh data.",
             "itemtype": "method",
             "name": "refreshVMList",
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 88,
+            "line": 95,
             "description": "Toggles the state of the VM to On/Off.",
             "itemtype": "method",
             "name": "toggleVM",
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 121,
+            "line": 128,
             "description": "Refreshes the sites table with fresh data.",
             "itemtype": "method",
             "name": "refreshSites",
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 171,
+            "line": 178,
             "description": "Toggles the state of the site to On/Off.",
             "itemtype": "method",
             "name": "toggleSite",
@@ -327,11 +364,12 @@
                     "type": "Object"
                 }
             ],
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 199,
+            "line": 206,
             "description": "Copies the path of a site.",
             "itemtype": "method",
             "name": "copyPath",
@@ -342,19 +380,21 @@
                     "type": "Object"
                 }
             ],
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 214,
+            "line": 221,
             "description": "Fades out the alert after alertTimeout (in seconds).",
             "itemtype": "method",
             "name": "fadeOutAlert",
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 227,
+            "line": 234,
             "description": "Displays an alert message (and fades it after).",
             "itemtype": "method",
             "name": "flashAlert",
@@ -370,68 +410,79 @@
                     "type": "String"
                 }
             ],
-            "class": ""
+            "class": "Window",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js",
             "line": 1,
             "description": "Loading plugin for jQuery\nversion: v1.0.6\n\nSmall helper to give the user a visual feedback that something is happening\nwhen fetching/posting data\n\nUSAGE:\n- global overlay:                     $.isLoading();\n- use javascript:                     $( selector ).isLoading();\n- On non-form elements:               $(\"div\").isLoading({ text: \"Loading\", position:'inside'});\n- remove the loading element:         $( selector ).isLoading( \"hide\" );",
             "author": "Laurent Blanes <laurent.blanes@gmail.com>\n---\nCopyright 2013, Laurent Blanes ( https://github.com/hekigan/is-loading )\n\nThe MIT License (MIT)\n\nCopyright (c) 2013 Laurent Blanes\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 193,
             "description": "Collection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 246,
             "description": "Hide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 312,
             "description": "Disable mousedown event for 500ms during and after touch",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 353,
             "description": "Delegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 377,
             "description": "Bubble the click and show effect if .waves-effect elem was found",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 472,
             "description": "Attach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 506,
             "description": "Cause a ripple to appear in an element via code.",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 558,
             "description": "Remove all ripples from an element.",
-            "class": ""
+            "class": "",
+            "module": "General"
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
             "line": 573,
             "description": "Deprecated API fallback",
-            "class": ""
+            "class": "",
+            "module": "General"
         }
     ],
     "warnings": [
