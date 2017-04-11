@@ -132,6 +132,11 @@
             The current state of the Site, such as stopped, started etc.
             </summary>
         </member>
+        <member name="P:HyperVAdmin.Models.SiteModel.Applications">
+            <summary>
+            The web applications defined for a site.
+            </summary>
+        </member>
         <member name="M:HyperVAdmin.Models.SiteModel.GetSites">
             <summary>
             Retrieves a list of SiteModels.

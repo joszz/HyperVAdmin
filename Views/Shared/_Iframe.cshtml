@@ -1,0 +1,16 @@
+﻿@using System.Configuration;
+@using System.Diagnostics;
+@using HyperVAdmin.Utilities;
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/Styles/bundle")
+</head>
+<body id="iframe">
+    @RenderBody()
+</body>
+</html>

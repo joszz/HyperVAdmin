@@ -30,6 +30,9 @@
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") fa fa-power-off" title="Toggle website state"></button>
                                 <button class="btn btn-default fa fa-copy" title="Copy path"></button>
+                                <a href="@Url.Action("applications", "sites", new { sitename = site.Name })" data-fancybox
+                                   class="btn btn-default fa fa-puzzle-piece @(site.Applications.Count == 0 ? "disabled" : null)"></a>
+
                                 <textarea class="offcanvas">@site.PhysicalPath</textarea>
 
                                 @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
@@ -43,6 +46,7 @@
                         <td>
                             @site.PhysicalPath
                         </td>
+                        <td class="text-right"></td>
                     </tr>
                 }
 
@@ -51,6 +55,8 @@
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle website state"></button>
                             <button class="btn btn-default fa fa-copy" title="Copy path"></button>
+                            <a href="@Url.Action("applications", "sites")" data-fancybox
+                               class="btn btn-default fa fa-puzzle-piece disabled"></a>
                             <textarea class="offcanvas"></textarea>
 
                             <a class="btn btn-default protocol hidden" title="Open website" target="_blank"></a>

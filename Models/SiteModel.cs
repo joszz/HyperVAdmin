@@ -43,6 +43,11 @@ namespace HyperVAdmin.Models
         public ObjectState State { get; set; }
 
         /// <summary>
+        /// The web applications defined for a site.
+        /// </summary>
+        public List<Application> Applications{ get; set; }
+
+        /// <summary>
         /// Retrieves a list of SiteModels.
         /// </summary>
         /// <returns>A list of SiteModels</returns>
@@ -57,7 +62,8 @@ namespace HyperVAdmin.Models
                 {
                     Name = site.Name,
                     PhysicalPath = site.Applications[0].VirtualDirectories[0].PhysicalPath,
-                    State = site.State
+                    State = site.State,
+                    Applications = site.Applications.Where(app => app.Path != "/").ToList()
                 };
 
                 foreach (Binding binding in site.Bindings.OrderBy(b => b.Protocol))

@@ -18,6 +18,15 @@ $(function () {
 
     $("a, button").vibrate();
 
+    $("[data-fancybox]").fancybox({
+        fullScreen: false,
+        closeBtn: true,
+        iframe: {
+            css: { "max-width": "800px" }
+        }
+
+    });
+
     if ($("#virtual-machines:visible").length > 0) {
         refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
 
@@ -146,6 +155,12 @@ function refreshSites() {
                 var clone = $("#sites tr.hidden").clone();
 
                 clone.find(".fa-power-off").addClass("btn-" + (value.State === 1 ? "success" : "danger"));
+
+                if (value.Applications.length) {
+                    var anchor = clone.find(".fa-puzzle-piece");
+                    var href = anchor.attr("href");
+                    anchor.removeClass("disabled").attr("href", href + "?sitename=" + value.Name);
+                }
 
                 $.each(value.Bindings, function (index, value) {
                     var binding = clone.find("td:eq(0) a.protocol.hidden").clone();

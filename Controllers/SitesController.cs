@@ -1,6 +1,8 @@
 ﻿using HyperVAdmin.Attributes;
 using HyperVAdmin.Models;
 using System.Web.Mvc;
+using System.Linq;
+using System;
 
 namespace HyperVAdmin.Controllers
 {
@@ -49,6 +51,23 @@ namespace HyperVAdmin.Controllers
         public void StartSite(string sitename)
         {
             SiteModel.StartSite(sitename);
+        }
+
+        public ActionResult Applications(string sitename)
+        {
+            if(sitename == null)
+            {
+                throw new Exception("No sitename defined!");
+            }
+
+            SiteModel model = SiteModel.GetSites().FirstOrDefault(site => site.Name.ToLower() == sitename.ToLower());
+
+            if(model == null)
+            {
+                throw new Exception("Site \"" + sitename + "\" not defined!");
+            }
+
+            return View(model);
         }
     }
 }

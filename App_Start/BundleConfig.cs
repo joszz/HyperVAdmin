@@ -10,6 +10,7 @@ namespace HyperVAdmin
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                 "~/Content/Scripts/jQuery/jquery-{version}.js",
                 "~/Content/Scripts/Bootstrap/bootstrap.js",
+                "~/Content/Scripts/Fancybox/jquery.fancybox.js",
                 "~/Content/Scripts/jquery.isloading.js",
                 "~/Content/Scripts/jquery.vibrate.js",
                 "~/Content/Scripts/sorttable.js",
@@ -19,6 +20,7 @@ namespace HyperVAdmin
 
             bundles.Add(new StyleBundle("~/Content/Styles/bundle").Include(
                 "~/Content/Styles/Bootstrap.css",
+                "~/Content/Styles/Fancybox/jquery.fancybox.css",
                 "~/Content/Styles/FontAwesome.css",
                 "~/Content/Styles/waves.css",
                 "~/Content/Styles/Default.css"

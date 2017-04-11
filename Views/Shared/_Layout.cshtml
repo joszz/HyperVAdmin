@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#4F4F4F">
 
     <link rel="apple-touch-icon" sizes="76x76" href="@Url.Content("~/Content/Images/Favicons/apple-touch-icon.png")">
@@ -21,7 +20,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/Styles/bundle")
 </head>
-<body>
+<body id="maincontent">
     @Html.Partial("~/Views/Shared/_Menu.cshtml", ViewData["Sprints"], ViewData)
 
     <div class="container">

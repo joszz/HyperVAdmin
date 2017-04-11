@@ -1,0 +1,42 @@
+﻿@using HyperVAdmin.Models;
+@using Microsoft.Web.Administration;
+
+@model SiteModel
+
+@{
+    ViewBag.Title = "Applications";
+    Layout = "~/Views/Shared/_Iframe.cshtml";
+}
+
+<div class="panel panel-primary" id="applications">
+    <div class="panel-heading">
+        <h4>Applications</h4>
+    </div>
+
+    <div class="panel-body table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th data-nosort="true">Actions</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Application app in Model.Applications)
+                {
+                    <tr>
+                        <td>
+                            @foreach (KeyValuePair<string, string> keyValue in Model.Bindings)
+                            {
+                                <a href="@(keyValue.Value + app.Path)" target="_blank" title="Open website">@keyValue.Key</a>
+                            }
+                        </td>
+                        <td>
+                            @app.Path
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

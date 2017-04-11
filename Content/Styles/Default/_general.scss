@@ -14,6 +14,12 @@ body {
     overflow: hidden;
 }
 
+body#iframe {
+    padding: 0;
+    background: initial;
+    height: auto;
+}
+
 nav small {
     padding: 18px 0 0 0;
     float: left;
@@ -42,11 +48,16 @@ div.alert {
     }
 }
 
-.panel {
+body#iframe .panel,
+body#iframe .panel-heading {
+    border-radius: 0;
+}
+
+body#maincontent .panel {
     height: calc(100% - 15px);
 }
 
-.panel-body {
+body#maincontent .panel-body {
     overflow-y: auto;
     height: calc(100% - 60px);
 }

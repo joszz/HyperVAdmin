@@ -164,6 +164,8 @@
     <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js" />
     <Content Include="Content\Scripts\Bootstrap\npm.js" />
+    <Content Include="Content\Scripts\Fancybox\jquery.fancybox.js" />
+    <Content Include="Content\Scripts\Fancybox\jquery.fancybox.min.js" />
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
     <Content Include="Content\Scripts\jquery.vibrate.js" />
@@ -267,6 +269,8 @@
     <Content Include="Content\Styles\Default.min.css">
       <DependentUpon>Default.css</DependentUpon>
     </Content>
+    <Content Include="Content\Styles\Fancybox\jquery.fancybox.css" />
+    <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css" />
     <Content Include="Content\Styles\FontAwesome.css">
       <DependentUpon>FontAwesome.scss</DependentUpon>
     </Content>
@@ -456,6 +460,8 @@
     <Content Include="Documentation\yuidoc\assets\vendor\prettify\COPYING" />
     <Content Include="Documentation\yuidoc\data.json" />
     <Content Include="packages.config" />
+    <Content Include="Views\Sites\Applications.cshtml" />
+    <Content Include="Views\Shared\_Iframe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
