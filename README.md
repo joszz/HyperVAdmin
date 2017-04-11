@@ -35,7 +35,7 @@ In the web.config of this project there are a couple settings you can change;
 
 - **HyperVEnabled**
 
-    Whether or not HyperV views are enabled on the website. Defaults to true.
+	Whether or not HyperV views are enabled on the website. Defaults to true.
 
 - **HyperVManagementPath**
 

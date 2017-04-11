@@ -12,6 +12,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     overflow: hidden;
+    font-family: "Roboto", Arial, sans-serif !important;
 }
 
 nav small {
@@ -72,4 +73,23 @@ th img {
 
 #last-state-change {
     min-width: 155px;
+}
+
+div#confirm-dialog {
+    overflow: hidden;
+}
+
+div#confirm-dialog h2 {
+    white-space: nowrap;
+    margin: 10px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+div#confirm-dialog button {
+    width: 100px;
+}
+
+div#confirm-dialog button#confirm-yes {
+    margin-right: 15px;
 }

@@ -1,5 +1,4 @@
-﻿
-using System.Web.Hosting;
+﻿using System.Web.Hosting;
 
 namespace HyperVAdmin.Utilities
 {
