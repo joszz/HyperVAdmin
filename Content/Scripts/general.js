@@ -197,6 +197,7 @@ function refreshSites() {
                     binding.appendTo(clone.find(".bindings"));
                 });
 
+                clone.find(".protocol.hidden").remove();
                 clone.find("td.name").html(value.Name);
                 clone.find("textarea").val(value.PhysicalPath);
                 clone.find("td.path").html(value.PhysicalPath);
