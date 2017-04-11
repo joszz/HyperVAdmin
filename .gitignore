@@ -51,5 +51,4 @@ Temporary Items
 *.csproj.user
 obj
 .sass-cache
-watch.bat
 Web.config
