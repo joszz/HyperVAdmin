@@ -14,45 +14,45 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th data-nosort="true">Actions</th>
                     <th>Name</th>
                     <th id="last-state-change">Last state change</th>
                     <th>On time</th>
                     <th class="text-center">Cores</th>
                     <th>Memory</th>
                     <th>MAC</th>
+                    <th data-nosort="true" class="text-right">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (VirtualMachineModel vm in Model)
                 {
                     <tr>
-                        <td>
-                            <div class="btn-group">
-                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
-                            </div>
-                        </td>
                         <td>@vm.Name</td>
                         <td>@vm.TimeOfLastStateChangeFormatted</td>
                         <td>@vm.GetOnTimeFormatted</td>
                         <td class="text-center">@vm.CoresAmount</td>
                         <td>@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
                         <td>@vm.MAC</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
+                            </div>
+                        </td>
                     </tr>
                 }
 
                 <tr class="hidden">
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn fa fa-power-off" title="Toggle state" />
-                        </div>
-                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td class="text-center"></td>
                     <td></td>
                     <td></td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button class="btn fa fa-power-off" title="Toggle state" />
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
