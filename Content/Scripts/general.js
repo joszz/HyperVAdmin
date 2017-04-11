@@ -142,11 +142,10 @@ function toggleVM() {
 
         if ($(this).attr("id") == "confirm-yes") {
             $this.addClass("disabled");
-
             $.post({
                 url: baseUrl + "VMs/ToggleState",
                 data: {
-                    vmName: $.trim($this.closest("tr").find("td:eq(1)").html()),
+                    vmName: $.trim($this.closest("tr").find("td:eq(0)").html()),
                     state: $this.hasClass("btn-danger") ? 2 : 3
                 },
                 success: function (data) {
