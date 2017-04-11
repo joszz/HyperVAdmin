@@ -45,6 +45,12 @@ $(function () {
         });
     }
 
+    $.fancybox.defaults.smallBtn = $.fancybox.defaults.fullScreen = $.fancybox.defaults.slideShow = false;
+    $.fancybox.defaults.iframe.css = {
+        "max-width": "500px",
+        "width": "90%"
+    };
+
     initializeFancybox();
 });
 
@@ -56,13 +62,7 @@ $(function () {
  */
 function initializeFancybox() {
     $(".fa-puzzle-piece").off().on("click", function () {
-        $.fancybox.open({ src: $(this).data("href") }, {
-            fullScreen: false,
-            closeBtn: true,
-            iframe: {
-                css: { "max-width": "500px" }
-            }
-        });
+        $.fancybox.open({ src: $(this).data("href") });
     });
 }
 
@@ -103,12 +103,12 @@ function refreshVMList() {
             $.each(data, function (index, value) {
                 var clone = $("#virtual-machines tr.hidden").clone();
 
-                clone.find("td:eq(1)").html(value.Name);
-                clone.find("td:eq(2)").html(value.TimeOfLastStateChangeFormatted);
-                clone.find("td:eq(3)").html(value.GetOnTimeFormatted);
-                clone.find("td:eq(4)").html(value.CoresAmount);
-                clone.find("td:eq(5)").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
-                clone.find("td:eq(6)").html(value.MAC);
+                clone.find("td:eq(0)").html(value.Name);
+                clone.find("td:eq(1)").html(value.TimeOfLastStateChangeFormatted);
+                clone.find("td:eq(2)").html(value.GetOnTimeFormatted);
+                clone.find("td:eq(3)").html(value.CoresAmount);
+                clone.find("td:eq(4)").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
+                clone.find("td:eq(5)").html(value.MAC);
                 clone.find("button").addClass("btn-" + (value.State === 2 ? "success" : "danger"));
                 clone.removeClass("hidden");
 
@@ -136,30 +136,36 @@ function refreshVMList() {
  */
 function toggleVM() {
     var $this = $(this);
-    $this.blur();
 
-    if (confirm("Are you sure you want to toggle this VM " + ($(this).hasClass("btn-danger") ? "on" : "off") + "?")) {
-        $this.addClass("disabled");
+    openConfirmDialog("Are you sure?", null, function (btn) {
+        $.fancybox.close();
 
-        $.post({
-            url: baseUrl + "VMs/ToggleState",
-            data: {
-                vmName: $.trim($(this).closest("tr").find("td:eq(1)").html()),
-                state: $(this).hasClass("btn-danger") ? 2 : 3
-            },
-            success: function (data) {
-                $this.toggleClass("btn-success btn-danger");
+        if ($(this).attr("id") == "confirm-yes") {
+            $this.addClass("disabled");
 
-                flashAlert(data, "success");
-            },
-            error: function () {
-                flashAlert("Something went wrong changing VM state!", "danger");
-            },
-            complete: function () {
-                $this.toggleClass("disabled");
-            }
-        });
-    }
+            $.post({
+                url: baseUrl + "VMs/ToggleState",
+                data: {
+                    vmName: $.trim($this.closest("tr").find("td:eq(1)").html()),
+                    state: $this.hasClass("btn-danger") ? 2 : 3
+                },
+                success: function (data) {
+                    $this.toggleClass("btn-success btn-danger");
+
+                    flashAlert(data, "success");
+                },
+                error: function () {
+                    flashAlert("Something went wrong changing VM state!", "danger");
+                },
+                complete: function () {
+                    $this.toggleClass("disabled");
+
+                    $this = undefined;
+                }
+            });
+        }
+    });
+
 }
 
 /**
@@ -187,7 +193,7 @@ function refreshSites() {
                 if (value.Applications.length) {
                     var anchor = clone.find(".fa-puzzle-piece");
                     var href = anchor.data("href");
-                    
+
                     anchor.removeClass("disabled").data("href", href + "?sitename=" + value.Name);
                 }
 
@@ -229,24 +235,29 @@ function refreshSites() {
  */
 function toggleSite(event) {
     event.stopPropagation();
+    var $this = $(this);
 
-    if (confirm("Are you sure you want to " + ($(this).hasClass("btn-success") ? "stop" : "start") + " this website?")) {
-        var button = $(this);
+    openConfirmDialog("Are you sure?", null, function (btn) {
+        $.fancybox.close();
 
-        $("tr").removeClass("active");
-        $(this).closest("tr").find(".protocol").toggleClass("disabled");
+        if ($(this).attr("id") == "confirm-yes") {
+            $this.closest("tr").find(".protocol").toggleClass("disabled");
 
-        $.post({
-            url: baseUrl + "Sites/" + ($(this).hasClass("btn-success") ? "StopSite" : "StartSite"),
-            data: {
-                sitename: $.trim($(this).closest("tr").find(".name").html())
-            },
-            success: function () {
-                button.toggleClass("btn-success btn-danger");
-                button.closest("tr").toggleClass("disabled");
-            }
-        });
-    }
+            $.post({
+                url: baseUrl + "Sites/" + ($this.hasClass("btn-success") ? "StopSite" : "StartSite"),
+                data: {
+                    sitename: $.trim($this.closest("tr").find(".name").html())
+                },
+                success: function () {
+                    $this.toggleClass("btn-success btn-danger");
+                    $this.closest("tr").toggleClass("disabled");
+                },
+                complete: function () {
+                    $this = undefined;
+                }
+            });
+        }
+    });
 }
 
 /**
