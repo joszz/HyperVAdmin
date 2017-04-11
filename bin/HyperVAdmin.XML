@@ -72,6 +72,13 @@
             </summary>
             <param name="sitename">Which site to start.</param>
         </member>
+        <member name="M:HyperVAdmin.Controllers.SitesController.Applications(System.String)">
+            <summary>
+            Shows all the applications defined for a website. Used within Fancybox (iFrame).
+            </summary>
+            <param name="sitename">The site to show the applications for.</param>
+            <returns>The view</returns>
+        </member>
         <member name="T:HyperVAdmin.Controllers.VMsController">
             <summary>
             Controller to manage all VM related actions.

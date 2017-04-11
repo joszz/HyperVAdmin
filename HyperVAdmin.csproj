@@ -121,7 +121,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="AssemblyCopyright.cs">
+    <Compile Include="Properties\AssemblyCopyright.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyCopyright.tt</DependentUpon>
@@ -142,7 +142,7 @@
     <Compile Include="Utilities\HyperVUtility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AssemblyCopyright.tt">
+    <Content Include="Properties\AssemblyCopyright.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssemblyCopyright.cs</LastGenOutput>
     </Content>
@@ -462,7 +462,9 @@
     <Content Include="Documentation\yuidoc\data.json" />
     <Content Include="packages.config" />
     <Content Include="Views\Sites\Applications.cshtml" />
-    <Content Include="Views\Shared\_Iframe.cshtml" />
+    <Content Include="Views\Shared\_iFrame.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_ConfirmDialog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
