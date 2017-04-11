@@ -269,6 +269,7 @@
     <Content Include="Content\Styles\Default.min.css">
       <DependentUpon>Default.css</DependentUpon>
     </Content>
+    <None Include="Content\Styles\Default\_iframe.scss" />
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.css" />
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css" />
     <Content Include="Content\Styles\FontAwesome.css">

@@ -1,0 +1,10 @@
+﻿body#iframe {
+    padding: 0;
+    background: initial;
+    height: auto;
+}
+
+body#iframe .panel,
+body#iframe .panel-heading {
+    border-radius: 0;
+}

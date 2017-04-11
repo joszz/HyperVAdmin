@@ -18,15 +18,6 @@ $(function () {
 
     $("a, button").vibrate();
 
-    $("[data-fancybox]").fancybox({
-        fullScreen: false,
-        closeBtn: true,
-        iframe: {
-            css: { "max-width": "800px" }
-        }
-
-    });
-
     if ($("#virtual-machines:visible").length > 0) {
         refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
 
@@ -45,7 +36,7 @@ $(function () {
 
         $("#sites .panel-heading button").click(refreshSites);
         $("#sites").on("click", "button.fa-copy:visible", copyPath);
-        $("#sites").on("click", "tr td:first-child button.fa-power-off:visible", toggleSite);
+        $("#sites").on("click", "button.fa-power-off:visible", toggleSite);
 
         $('#sites table').addSortWidget({
             img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
@@ -53,7 +44,44 @@ $(function () {
             img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif"
         });
     }
+
+    initializeFancybox();
 });
+
+/**
+ * Initializes and removes fancybox click handlers for application modal dialog.
+ * Called on load and when refreshing site list.
+ * 
+ * @method initializeFancybox
+ */
+function initializeFancybox() {
+    $(".fa-puzzle-piece").off().on("click", function () {
+        $.fancybox.open({ src: $(this).data("href") }, {
+            fullScreen: false,
+            closeBtn: true,
+            iframe: {
+                css: { "max-width": "500px" }
+            }
+        });
+    });
+}
+
+function openConfirmDialog(title, data, buttonClick) {
+    $("div#confirm-dialog h2").html(title);
+
+    $.each(data, function (index, value) {
+        $.each(value, function (index, value) {
+            $("div#confirm-dialog").data(index, value);
+        });
+    });
+
+    $("div#confirm-dialog button").off().on("click", buttonClick);
+
+    $.fancybox.open({
+        src: "#confirm-dialog",
+        opts: { closeBtn: false, closeClickOutside: false }
+    });
+}
 
 /**
  * Refreshes the VM table with fresh data.
@@ -158,24 +186,26 @@ function refreshSites() {
 
                 if (value.Applications.length) {
                     var anchor = clone.find(".fa-puzzle-piece");
-                    var href = anchor.attr("href");
-                    anchor.removeClass("disabled").attr("href", href + "?sitename=" + value.Name);
+                    var href = anchor.data("href");
+                    
+                    anchor.removeClass("disabled").data("href", href + "?sitename=" + value.Name);
                 }
 
                 $.each(value.Bindings, function (index, value) {
-                    var binding = clone.find("td:eq(0) a.protocol.hidden").clone();
+                    var binding = clone.find(".protocol.hidden").clone();
                     binding.removeClass("hidden").attr("href", value).html(index);
-                    binding.appendTo(clone.find("td:eq(0) .btn-group"));
+                    binding.appendTo(clone.find(".bindings"));
                 });
 
-                clone.find("td:eq(1)").html(value.Name);
+                clone.find("td.name").html(value.Name);
                 clone.find("textarea").val(value.PhysicalPath);
-                clone.find("td:eq(2)").html(value.PhysicalPath);
+                clone.find("td.path").html(value.PhysicalPath);
                 clone.removeClass("hidden");
 
                 clone.appendTo($("#sites tbody"));
             });
 
+            initializeFancybox();
             flashAlert("Site list refreshed!", "success");
         },
         error: function () {

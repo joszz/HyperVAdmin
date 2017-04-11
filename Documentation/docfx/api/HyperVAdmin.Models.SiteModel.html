@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SiteModel
    ">
-    <meta name="generator" content="docfx 2.15.3.0">
+    <meta name="generator" content="docfx 2.15.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -92,17 +92,12 @@
               <h6><strong>Assembly</strong>:HyperVAdmin.dll</h6>
               <h5 id="HyperVAdmin_Models_SiteModel_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class SiteModel</code></pre>
+                <pre><code class="lang-csharp hljs">public class SiteModel : object</code></pre>
               </div>
               <h3 id="fields">Fields
               </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_Manager.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.Manager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L16">View Source</a>
-              </span>
+              
+              
               <h4 id="HyperVAdmin_Models_SiteModel_Manager" data-uid="HyperVAdmin.Models.SiteModel.Manager">Manager</h4>
               <div class="markdown level1 summary"><p>IIS ServerManager used to retrieve sites and info.</p>
 </div>
@@ -121,20 +116,41 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.Web.Administration.ServerManager</span></td>
+                    <td><span class="xref">ServerManager</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_Bindings.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.Bindings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L32">View Source</a>
-              </span>
+              
+              
+              <a id="HyperVAdmin_Models_SiteModel_Applications_" data-uid="HyperVAdmin.Models.SiteModel.Applications*"></a>
+              <h4 id="HyperVAdmin_Models_SiteModel_Applications" data-uid="HyperVAdmin.Models.SiteModel.Applications">Applications</h4>
+              <div class="markdown level1 summary"><p>The web applications defined for a site.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;Application&gt; Applications { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">List</span>&lt;<span class="xref">Application</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_Bindings_" data-uid="HyperVAdmin.Models.SiteModel.Bindings*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_Bindings" data-uid="HyperVAdmin.Models.SiteModel.Bindings">Bindings</h4>
               <div class="markdown level1 summary"><p>The bindings of the Site.</p>
@@ -154,18 +170,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_Name.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L21">View Source</a>
-              </span>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_Name_" data-uid="HyperVAdmin.Models.SiteModel.Name*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_Name" data-uid="HyperVAdmin.Models.SiteModel.Name">Name</h4>
               <div class="markdown level1 summary"><p>The name of the Site.</p>
@@ -190,13 +201,8 @@
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_PhysicalPath.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.PhysicalPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L26">View Source</a>
-              </span>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_PhysicalPath_" data-uid="HyperVAdmin.Models.SiteModel.PhysicalPath*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_PhysicalPath" data-uid="HyperVAdmin.Models.SiteModel.PhysicalPath">PhysicalPath</h4>
               <div class="markdown level1 summary"><p>The fullpath of the site&#39;s location.</p>
@@ -221,13 +227,8 @@
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_State.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L43">View Source</a>
-              </span>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_State_" data-uid="HyperVAdmin.Models.SiteModel.State*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_State" data-uid="HyperVAdmin.Models.SiteModel.State">State</h4>
               <div class="markdown level1 summary"><p>The current state of the Site, such as stopped, started etc.</p>
@@ -247,20 +248,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.Web.Administration.ObjectState</span></td>
+                    <td><span class="xref">ObjectState</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_GetSites.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.GetSites%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L49">View Source</a>
-              </span>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_GetSites_" data-uid="HyperVAdmin.Models.SiteModel.GetSites*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_GetSites" data-uid="HyperVAdmin.Models.SiteModel.GetSites">GetSites()</h4>
               <div class="markdown level1 summary"><p>Retrieves a list of SiteModels.</p>
@@ -280,19 +276,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="HyperVAdmin.Models.SiteModel.html">SiteModel</a>&gt;</td>
+                    <td><span class="xref">List</span>&lt;<a class="xref" href="HyperVAdmin.Models.SiteModel.html">SiteModel</a>&gt;</td>
                     <td><p>A list of SiteModels</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_StartSite_System_String_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.StartSite(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L105">View Source</a>
-              </span>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_StartSite_" data-uid="HyperVAdmin.Models.SiteModel.StartSite*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_StartSite_System_String_" data-uid="HyperVAdmin.Models.SiteModel.StartSite(System.String)">StartSite(String)</h4>
               <div class="markdown level1 summary"><p>Starts an IIS website.</p>
@@ -320,13 +311,8 @@
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel_StopSite_System_String_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel.StopSite(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L91">View Source</a>
-              </span>
+              
+              
               <a id="HyperVAdmin_Models_SiteModel_StopSite_" data-uid="HyperVAdmin.Models.SiteModel.StopSite*"></a>
               <h4 id="HyperVAdmin_Models_SiteModel_StopSite_System_String_" data-uid="HyperVAdmin.Models.SiteModel.StopSite(System.String)">StopSite(String)</h4>
               <div class="markdown level1 summary"><p>Stops an IIS website.</p>
@@ -361,12 +347,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Models_SiteModel.md&amp;value=---%0Auid%3A%20HyperVAdmin.Models.SiteModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Models/SiteModel.cs/#L11" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

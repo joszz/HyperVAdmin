@@ -1,5 +1,4 @@
 ﻿@using System.Configuration;
-@using System.Diagnostics;
 @using HyperVAdmin.Utilities;
 
 <!DOCTYPE html>
@@ -27,30 +26,8 @@
         @RenderBody()
     </div>
 
-    <footer class="navbar navbar-inverse">
-        <div class="container">
-            <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright text-muted pull-left">
-                Copyright &copy; 2016 @Html.Raw(@DateTime.Now.Year != 2016 ? " - " + DateTime.Now.Year : null)
-                Jos Nienhuis | 
-
-                @{
-                    Stopwatch stopwatch = (Stopwatch)HttpContext.Current.Items["Stopwatch"];
-                    stopwatch.Stop();
-
-                    TimeSpan ts = stopwatch.Elapsed;
-                    double elapsed = (double)ts.Milliseconds / 1000;
-                    string elapsedTime = String.Format("{0}s", elapsed.ToString());
-                }
-
-                Execution time @elapsedTime
-            </a>
-            <div class="pull-right">
-                <div class="btn-group">
-                    <a href="@Html.Raw(HtmlUtility.GetVirtualApplicationPath() + "Documentation/docfx/")" target="_blank" class="btn btn-default fa fa-question" title="RTFM!"></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @Html.Partial("~/Views/Shared/_Footer.cshtml")
+    @Html.Partial("~/Views/Shared/_ConfirmDialog.cshtml")
 
     <div class="alert"></div>
 
@@ -59,7 +36,6 @@
         var refreshInterval = @ConfigurationManager.AppSettings["RefreshInterval"];
         var baseUrl = "@Html.Raw(HtmlUtility.GetVirtualApplicationPath())";
     </script>
-
     @Scripts.Render("~/bundles/scripts")
 </body>
 </html>

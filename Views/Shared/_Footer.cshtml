@@ -1,0 +1,28 @@
+﻿@using System.Diagnostics;
+@using HyperVAdmin.Utilities;
+
+<footer class="navbar navbar-inverse">
+    <div class="container">
+        <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright text-muted pull-left">
+            Copyright &copy; 2016 @Html.Raw(@DateTime.Now.Year != 2016 ? " - " + DateTime.Now.Year : null)
+            Jos Nienhuis
+            <span class="hidden-xs">
+                |
+                @{
+                    Stopwatch stopwatch = (Stopwatch)HttpContext.Current.Items["Stopwatch"];
+                    stopwatch.Stop();
+
+                    TimeSpan ts = stopwatch.Elapsed;
+                    double elapsed = (double)ts.Milliseconds / 1000;
+                    string elapsedTime = String.Format("{0}s", elapsed.ToString());
+                }
+                Execution time @elapsedTime
+            </span>
+        </a>
+        <div class="pull-right">
+            <div class="btn-group">
+                <a href="@Html.Raw(HtmlUtility.GetVirtualApplicationPath() + "Documentation/docfx/")" target="_blank" class="btn btn-default fa fa-question" title="RTFM!"></a>
+            </div>
+        </div>
+    </div>
+</footer>

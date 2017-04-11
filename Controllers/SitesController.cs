@@ -53,6 +53,11 @@ namespace HyperVAdmin.Controllers
             SiteModel.StartSite(sitename);
         }
 
+        /// <summary>
+        /// Shows all the applications defined for a website. Used within Fancybox (iFrame).
+        /// </summary>
+        /// <param name="sitename">The site to show the applications for.</param>
+        /// <returns>The view</returns>
         public ActionResult Applications(string sitename)
         {
             if(sitename == null)

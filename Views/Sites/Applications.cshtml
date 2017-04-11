@@ -14,27 +14,27 @@
     </div>
 
     <div class="panel-body table-responsive">
-        <table class="table table-hover">
+        <table class="table table-hover table-striped">
             <thead>
                 <tr>
-                    <th data-nosort="true">Actions</th>
-                    <th>Name</th>
+                    <th>Binding</th>
+                    <th>Path</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (Application app in Model.Applications)
                 {
-                    <tr>
-                        <td>
-                            @foreach (KeyValuePair<string, string> keyValue in Model.Bindings)
-                            {
+                    foreach (KeyValuePair<string, string> keyValue in Model.Bindings)
+                    {
+                        <tr>
+                            <td>
                                 <a href="@(keyValue.Value + app.Path)" target="_blank" title="Open website">@keyValue.Key</a>
-                            }
-                        </td>
-                        <td>
-                            @app.Path
-                        </td>
-                    </tr>
+                            </td>
+                            <td>
+                                @app.Path
+                            </td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>
