@@ -14,26 +14,32 @@
         <table class="table table-hover">
             <thead>
                 <tr>
+                    <th data-nosort="true" class="hidden-sm hidden-md hidden-lg">Actions</th>
                     <th>Name</th>
                     <th id="last-state-change">Last state change</th>
                     <th>On time</th>
                     <th class="text-center">Cores</th>
                     <th>Memory</th>
                     <th>MAC</th>
-                    <th data-nosort="true" class="text-right">Actions</th>
+                    <th data-nosort="true" class="text-right hidden-xs">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (VirtualMachineModel vm in Model)
                 {
                     <tr>
-                        <td>@vm.Name</td>
-                        <td>@vm.TimeOfLastStateChangeFormatted</td>
-                        <td>@vm.GetOnTimeFormatted</td>
-                        <td class="text-center">@vm.CoresAmount</td>
-                        <td>@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
-                        <td>@vm.MAC</td>
-                        <td class="text-right">
+                        <td class="hidden-sm hidden-md hidden-lg actions">
+                            <div class="btn-group">
+                                <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
+                            </div>
+                        </td>
+                        <td class="name">@vm.Name</td>
+                        <td class="last-state-change">@vm.TimeOfLastStateChangeFormatted</td>
+                        <td class="on-time">@vm.GetOnTimeFormatted</td>
+                        <td class="text-center cores">@vm.CoresAmount</td>
+                        <td class="memory">@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
+                        <td class="mac">@vm.MAC</td>
+                        <td class="text-right hidden-xs actions">
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
                             </div>
@@ -42,13 +48,18 @@
                 }
 
                 <tr class="hidden">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="text-center"></td>
-                    <td></td>
-                    <td></td>
-                    <td class="text-right">
+                    <td class="hidden-sm hidden-md hidden-lg actions">
+                        <div class="btn-group">
+                            <button class="btn fa fa-power-off" title="Toggle state" />
+                        </div>
+                    </td>
+                    <td class="name"></td>
+                    <td class="last-state-change"></td>
+                    <td class="on-time"></td>
+                    <td class="text-center cores"></td>
+                    <td class="memory"></td>
+                    <td class="mac"></td>
+                    <td class="text-right hidden-xs actions">
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle state" />
                         </div>

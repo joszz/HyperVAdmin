@@ -103,12 +103,12 @@ function refreshVMList() {
             $.each(data, function (index, value) {
                 var clone = $("#virtual-machines tr.hidden").clone();
 
-                clone.find("td:eq(0)").html(value.Name);
-                clone.find("td:eq(1)").html(value.TimeOfLastStateChangeFormatted);
-                clone.find("td:eq(2)").html(value.GetOnTimeFormatted);
-                clone.find("td:eq(3)").html(value.CoresAmount);
-                clone.find("td:eq(4)").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
-                clone.find("td:eq(5)").html(value.MAC);
+                clone.find("td.name").html(value.Name);
+                clone.find("td.last-state-change").html(value.TimeOfLastStateChangeFormatted);
+                clone.find("td.on-time").html(value.GetOnTimeFormatted);
+                clone.find("td.cores").html(value.CoresAmount);
+                clone.find("td.memory").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
+                clone.find("td.mac").html(value.MAC);
                 clone.find("button").addClass("btn-" + (value.State === 2 ? "success" : "danger"));
                 clone.removeClass("hidden");
 
@@ -145,7 +145,7 @@ function toggleVM() {
             $.post({
                 url: baseUrl + "VMs/ToggleState",
                 data: {
-                    vmName: $.trim($this.closest("tr").find("td:eq(0)").html()),
+                    vmName: $.trim($this.closest("tr").find("td.name").html()),
                     state: $this.hasClass("btn-danger") ? 2 : 3
                 },
                 success: function (data) {
