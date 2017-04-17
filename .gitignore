@@ -54,3 +54,4 @@ obj
 Web.config
 .vs
 bin
+build_documentation.bat
