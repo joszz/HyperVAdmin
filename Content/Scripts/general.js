@@ -66,6 +66,14 @@ function initializeFancybox() {
     });
 }
 
+/**
+* Shows a confirm dialog with yes/no buttons
+* 
+* @method openConfirmDialog
+* @param title {String} The title to set for the confirm dialog.
+* @param data {String} The data attributes to set on the confirm dialog, for later us.
+* @param buttonClick {Object} callback for clicking the confirm button.
+*/
 function openConfirmDialog(title, data, buttonClick) {
     $("div#confirm-dialog h2").html(title);
 
