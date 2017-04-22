@@ -1,9 +1,9 @@
 {
   "name": "Hyper-V Admin",
   "description": "",
-  "version": "1.1",
+  "version": "1.2",
   "url": "",
-  "logo": "../../Images/Favicons/favicon-32x32",
+  "logo": "../../Content/Images/Favicons/favicon.ico",
   "options": {
     "outdir": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Documentation\\yuidoc",
     "linkNatives": "true",

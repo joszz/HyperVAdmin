@@ -2,11 +2,18 @@
     "project": {
         "name": "Hyper-V Admin",
         "description": "",
-        "version": "1.1",
+        "version": "1.2",
         "url": "",
-        "logo": "../../Images/Favicons/favicon-32x32"
+        "logo": "../../Content/Images/Favicons/favicon.ico"
     },
     "files": {
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js": {
             "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
             "modules": {},
@@ -25,15 +32,15 @@
             "fors": {},
             "namespaces": {}
         },
-        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js": {
-            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js",
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
             "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js": {
-            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
+        "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js": {
+            "name": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js",
             "modules": {},
             "classes": {},
             "fors": {},
@@ -73,6 +80,60 @@
     },
     "elements": {},
     "classitems": [
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 193,
+            "description": "Collection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 246,
+            "description": "Hide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 312,
+            "description": "Disable mousedown event for 500ms during and after touch",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 353,
+            "description": "Delegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 377,
+            "description": "Bubble the click and show effect if .waves-effect elem was found",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 472,
+            "description": "Attach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 506,
+            "description": "Cause a ripple to appear in an element via code.",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 558,
+            "description": "Remove all ripples from an element.",
+            "class": "Window"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js",
+            "line": 573,
+            "description": "Deprecated API fallback",
+            "class": "Window"
+        },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js",
             "line": 887,
@@ -326,7 +387,42 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 49,
+            "line": 61,
+            "description": "Initializes and removes fancybox click handlers for application modal dialog.\nCalled on load and when refreshing site list.",
+            "itemtype": "method",
+            "name": "initializeFancybox",
+            "class": "Window",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 73,
+            "description": "Shows a confirm dialog with yes/no buttons",
+            "itemtype": "method",
+            "name": "openConfirmDialog",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "The title to set for the confirm dialog.",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "The data attributes to set on the confirm dialog, for later us.",
+                    "type": "String"
+                },
+                {
+                    "name": "buttonClick",
+                    "description": "callback for clicking the confirm button.",
+                    "type": "Object"
+                }
+            ],
+            "class": "Window",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 98,
             "description": "Refreshes the VM table with fresh data.",
             "itemtype": "method",
             "name": "refreshVMList",
@@ -335,7 +431,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 95,
+            "line": 144,
             "description": "Toggles the state of the VM to On/Off.",
             "itemtype": "method",
             "name": "toggleVM",
@@ -344,7 +440,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 128,
+            "line": 181,
             "description": "Refreshes the sites table with fresh data.",
             "itemtype": "method",
             "name": "refreshSites",
@@ -353,7 +449,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 178,
+            "line": 240,
             "description": "Toggles the state of the site to On/Off.",
             "itemtype": "method",
             "name": "toggleSite",
@@ -369,7 +465,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 206,
+            "line": 273,
             "description": "Copies the path of a site.",
             "itemtype": "method",
             "name": "copyPath",
@@ -385,7 +481,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 221,
+            "line": 288,
             "description": "Fades out the alert after alertTimeout (in seconds).",
             "itemtype": "method",
             "name": "fadeOutAlert",
@@ -394,7 +490,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 234,
+            "line": 301,
             "description": "Displays an alert message (and fades it after).",
             "itemtype": "method",
             "name": "flashAlert",
@@ -414,73 +510,83 @@
             "module": "General"
         },
         {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
+            "line": 1,
+            "preserve": "jquery.fullscreen 1.1.5\nhttps://github.com/kayahr/jquery-fullscreen-plugin\nCopyright (C) 2012-2013 Klaus Reimer <k@ailis.de>\nLicensed under the MIT license\n(See http://www.opensource.org/licenses/mit-license)",
+            "class": "",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
+            "line": 11,
+            "description": "Sets or gets the fullscreen state.",
+            "params": [
+                {
+                    "name": "state",
+                    "description": "True to enable fullscreen mode, false to disable it. If not\n           specified then the current fullscreen state is returned.",
+                    "type": "Boolean="
+                }
+            ],
+            "return": {
+                "description": "When querying the fullscreen state then the current fullscreen\n           element (or true if browser doesn't support it) is returned\n           when browser is currently in full screen mode. False is returned\n           if browser is not in full screen mode. Null is returned if \n           browser doesn't support fullscreen mode at all. When setting \n           the fullscreen state then the current jQuery selection is \n           returned for chaining.",
+                "type": "Boolean|Element|jQuery|null"
+            },
+            "this": "{jQuery}",
+            "class": "",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
+            "line": 108,
+            "description": "Toggles the fullscreen mode.",
+            "return": {
+                "description": "The jQuery selection for chaining.",
+                "type": "!jQuery"
+            },
+            "this": "{jQuery}",
+            "class": "",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
+            "line": 121,
+            "description": "Handles the browser-specific fullscreenchange event and triggers\na jquery event for it.",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The fullscreenchange event.",
+                    "type": "?Event"
+                }
+            ],
+            "class": "",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
+            "line": 133,
+            "description": "Handles the browser-specific fullscreenerror event and triggers\na jquery event for it.",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The fullscreenerror event.",
+                    "type": "?Event"
+                }
+            ],
+            "class": "",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js",
+            "line": 145,
+            "description": "Installs the fullscreenchange event handler.",
+            "class": "",
+            "module": "General"
+        },
+        {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js",
             "line": 1,
             "description": "Loading plugin for jQuery\nversion: v1.0.6\n\nSmall helper to give the user a visual feedback that something is happening\nwhen fetching/posting data\n\nUSAGE:\n- global overlay:                     $.isLoading();\n- use javascript:                     $( selector ).isLoading();\n- On non-form elements:               $(\"div\").isLoading({ text: \"Loading\", position:'inside'});\n- remove the loading element:         $( selector ).isLoading( \"hide\" );",
             "author": "Laurent Blanes <laurent.blanes@gmail.com>\n---\nCopyright 2013, Laurent Blanes ( https://github.com/hekigan/is-loading )\n\nThe MIT License (MIT)\n\nCopyright (c) 2013 Laurent Blanes\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 193,
-            "description": "Collection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 246,
-            "description": "Hide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 312,
-            "description": "Disable mousedown event for 500ms during and after touch",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 353,
-            "description": "Delegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 377,
-            "description": "Bubble the click and show effect if .waves-effect elem was found",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 472,
-            "description": "Attach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 506,
-            "description": "Cause a ripple to appear in an element via code.",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 558,
-            "description": "Remove all ripples from an element.",
-            "class": "",
-            "module": "General"
-        },
-        {
-            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js",
-            "line": 573,
-            "description": "Deprecated API fallback",
             "class": "",
             "module": "General"
         }
@@ -505,6 +611,54 @@
         {
             "message": "replacing incorrect tag: returns with return",
             "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:1103"
+        },
+        {
+            "message": "unknown tag: preserve",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:1"
+        },
+        {
+            "message": "unknown tag: this",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:11"
+        },
+        {
+            "message": "unknown tag: this",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:108"
+        },
+        {
+            "message": "Missing item type\nCollection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:193"
+        },
+        {
+            "message": "Missing item type\nHide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:246"
+        },
+        {
+            "message": "Missing item type\nDisable mousedown event for 500ms during and after touch",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:312"
+        },
+        {
+            "message": "Missing item type\nDelegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:353"
+        },
+        {
+            "message": "Missing item type\nBubble the click and show effect if .waves-effect elem was found",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:377"
+        },
+        {
+            "message": "Missing item type\nAttach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:472"
+        },
+        {
+            "message": "Missing item type\nCause a ripple to appear in an element via code.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:506"
+        },
+        {
+            "message": "Missing item type\nRemove all ripples from an element.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:558"
+        },
+        {
+            "message": "Missing item type\nDeprecated API fallback",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\Waves\\waves.js:573"
         },
         {
             "message": "Missing item type\nCreate key-value caches of limited size",
@@ -571,44 +725,32 @@
             "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jQuery\\jquery-3.2.1.js:9817"
         },
         {
+            "message": "Missing item type",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:1"
+        },
+        {
+            "message": "Missing item type\nSets or gets the fullscreen state.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:11"
+        },
+        {
+            "message": "Missing item type\nToggles the fullscreen mode.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:108"
+        },
+        {
+            "message": "Missing item type\nHandles the browser-specific fullscreenchange event and triggers\na jquery event for it.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:121"
+        },
+        {
+            "message": "Missing item type\nHandles the browser-specific fullscreenerror event and triggers\na jquery event for it.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:133"
+        },
+        {
+            "message": "Missing item type\nInstalls the fullscreenchange event handler.",
+            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.fullscreen.js:145"
+        },
+        {
             "message": "Missing item type\nLoading plugin for jQuery\nversion: v1.0.6\n\nSmall helper to give the user a visual feedback that something is happening\nwhen fetching/posting data\n\nUSAGE:\n- global overlay:                     $.isLoading();\n- use javascript:                     $( selector ).isLoading();\n- On non-form elements:               $(\"div\").isLoading({ text: \"Loading\", position:'inside'});\n- remove the loading element:         $( selector ).isLoading( \"hide\" );",
             "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\jquery.isloading.js:1"
-        },
-        {
-            "message": "Missing item type\nCollection of wrapper for HTML element that only have single tag\nlike <input> and <img>",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:193"
-        },
-        {
-            "message": "Missing item type\nHide the effect and remove the ripple. Must be\na separate function to pass the JSLint...",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:246"
-        },
-        {
-            "message": "Missing item type\nDisable mousedown event for 500ms during and after touch",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:312"
-        },
-        {
-            "message": "Missing item type\nDelegated click handler for .waves-effect element.\nreturns null when .waves-effect element not in \"click tree\"",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:353"
-        },
-        {
-            "message": "Missing item type\nBubble the click and show effect if .waves-effect elem was found",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:377"
-        },
-        {
-            "message": "Missing item type\nAttach Waves to dynamically loaded inputs, or add .waves-effect and other\nwaves classes to a set of elements. Set drag to true if the ripple mouseover\nor skimming effect should be applied to the elements.",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:472"
-        },
-        {
-            "message": "Missing item type\nCause a ripple to appear in an element via code.",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:506"
-        },
-        {
-            "message": "Missing item type\nRemove all ripples from an element.",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:558"
-        },
-        {
-            "message": "Missing item type\nDeprecated API fallback",
-            "line": " C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\waves.js:573"
         }
     ]
 }

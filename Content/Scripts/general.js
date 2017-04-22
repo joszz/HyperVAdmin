@@ -74,9 +74,9 @@ function initializeFancybox() {
 * Shows a confirm dialog with yes/no buttons
 * 
 * @method openConfirmDialog
-* @param title {String} The title to set for the confirm dialog.
-* @param data {String} The data attributes to set on the confirm dialog, for later us.
-* @param buttonClick {Object} callback for clicking the confirm button.
+* @param {String} title        The title to set for the confirm dialog.
+* @param {String} data         The data attributes to set on the confirm dialog, for later us.
+* @param {Object} buttonClick  callback for clicking the confirm button.
 */
 function openConfirmDialog(title, data, buttonClick) {
     $("div#confirm-dialog h2").html(title);
@@ -152,7 +152,7 @@ function toggleVM() {
     openConfirmDialog("Are you sure?", null, function (btn) {
         $.fancybox.close();
 
-        if ($(this).attr("id") == "confirm-yes") {
+        if ($(this).attr("id") === "confirm-yes") {
             $this.addClass("disabled");
             $.post({
                 url: baseUrl + "VMs/ToggleState",
@@ -176,7 +176,6 @@ function toggleVM() {
             });
         }
     });
-
 }
 
 /**
@@ -251,7 +250,7 @@ function toggleSite(event) {
     openConfirmDialog("Are you sure?", null, function (btn) {
         $.fancybox.close();
 
-        if ($(this).attr("id") == "confirm-yes") {
+        if ($(this).attr("id") === "confirm-yes") {
             $this.closest("tr").find(".protocol").toggleClass("disabled");
 
             $.post({
