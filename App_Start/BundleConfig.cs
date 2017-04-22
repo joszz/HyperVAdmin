@@ -13,8 +13,9 @@ namespace HyperVAdmin
                 "~/Content/Scripts/Fancybox/jquery.fancybox.js",
                 "~/Content/Scripts/jquery.isloading.js",
                 "~/Content/Scripts/jquery.vibrate.js",
+                "~/Content/Scripts/jquery.fullscreen.js",
                 "~/Content/Scripts/sorttable.js",
-                "~/Content/Scripts/waves.js",
+                "~/Content/Scripts/Waves/waves.js",
                 "~/Content/Scripts/general.js"
             ));
 
@@ -22,7 +23,7 @@ namespace HyperVAdmin
                 "~/Content/Styles/Bootstrap.css",
                 "~/Content/Styles/Fancybox/jquery.fancybox.css",
                 "~/Content/Styles/FontAwesome.css",
-                "~/Content/Styles/waves.css",
+                "~/Content/Styles/Waves/waves.css",
                 "~/Content/Styles/Default.css"
             ));
         }

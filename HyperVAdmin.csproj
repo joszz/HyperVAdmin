@@ -142,6 +142,44 @@
     <Compile Include="Utilities\HyperVUtility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Fonts\fontawesome-webfont.eot">
+      <DependentUpon>FontAwesome.otf</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fontawesome-webfont.svg">
+      <DependentUpon>FontAwesome.otf</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf">
+      <DependentUpon>FontAwesome.otf</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fontawesome-webfont.woff">
+      <DependentUpon>FontAwesome.otf</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\fontawesome-webfont.woff2">
+      <DependentUpon>FontAwesome.otf</DependentUpon>
+    </Content>
+    <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Content\Scripts\Fancybox\jquery.fancybox.min.js">
+      <DependentUpon>jquery.fancybox.js</DependentUpon>
+    </Content>
+    <Content Include="Content\Scripts\jquery.fullscreen.js" />
+    <Content Include="Content\Scripts\jQuery\jquery-3.2.1.min.js">
+      <DependentUpon>jquery-3.2.1.js</DependentUpon>
+    </Content>
+    <Content Include="Content\Scripts\Waves\waves.min.js">
+      <DependentUpon>waves.js</DependentUpon>
+    </Content>
+    <Content Include="Content\Scripts\Waves\waves.min.js.map">
+      <DependentUpon>waves.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css">
+      <DependentUpon>jquery.fancybox.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\Waves\waves.css" />
+    <Content Include="Content\Styles\Waves\waves.min.css">
+      <DependentUpon>waves.css</DependentUpon>
+    </Content>
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.BundleConfig.html" />
@@ -190,7 +228,6 @@
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
-    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\Favicons\apple-touch-icon.png" />
     <Content Include="Content\Images\Favicons\browserconfig.xml" />
     <Content Include="Content\Images\Favicons\favicon-16x16.png" />
@@ -203,17 +240,14 @@
     <Content Include="Content\Images\Sorttable\desc_sort.gif" />
     <Content Include="Content\Images\Sorttable\no_sort.gif" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
-    <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js" />
     <Content Include="Content\Scripts\Bootstrap\npm.js" />
     <Content Include="Content\Scripts\Fancybox\jquery.fancybox.js" />
-    <Content Include="Content\Scripts\Fancybox\jquery.fancybox.min.js" />
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
     <Content Include="Content\Scripts\jquery.vibrate.js" />
     <Content Include="Content\Scripts\jQuery\jquery-3.2.1.js" />
-    <Content Include="Content\Scripts\jQuery\jquery-3.2.1.min.js" />
     <Content Include="Content\Scripts\sorttable.js" />
-    <Content Include="Content\Scripts\waves.js" />
+    <Content Include="Content\Scripts\Waves\waves.js" />
     <Content Include="Content\Styles\Bootstrap.css">
       <DependentUpon>Bootstrap.scss</DependentUpon>
     </Content>
@@ -226,10 +260,6 @@
     <Content Include="Content\Images\Favicons\manifest.json" />
     <Content Include="build_documentation.bat" />
     <Content Include="compilerconfig.json" />
-    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\Fonts\FontAwesome.otf" />
     <Content Include="Content\Styles\Bootstrap\mixins\_alerts.scss" />
     <Content Include="Content\Styles\Bootstrap\mixins\_background-variant.scss" />
@@ -306,20 +336,19 @@
     <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
     <Content Include="Content\Scripts\yuidoc.json" />
     <None Include="Content\Styles\Default\_footer.scss" />
+    <Content Include="Content\Styles\Default\_roboto.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
     <Content Include="Content\Styles\Default.min.css">
       <DependentUpon>Default.css</DependentUpon>
     </Content>
     <None Include="Content\Styles\Default\_iframe.scss" />
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.css" />
-    <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css" />
     <Content Include="Content\Styles\FontAwesome.css">
       <DependentUpon>FontAwesome.scss</DependentUpon>
     </Content>
     <Content Include="Content\Styles\FontAwesome.min.css">
       <DependentUpon>FontAwesome.css</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\waves.css" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\custom.css" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\external-small.png" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\logo.png" />

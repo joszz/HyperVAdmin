@@ -18,6 +18,10 @@ $(function () {
 
     $("a, button").vibrate();
 
+    $("footer .fa-arrows-alt").click(function () {
+        $(document).fullScreen(!$(document).fullScreen());
+    });
+
     if ($("#virtual-machines:visible").length > 0) {
         refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
 
