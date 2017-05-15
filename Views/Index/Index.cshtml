@@ -3,19 +3,23 @@
 @{
     ViewBag.Title = "Hyper-V Admin";
     bool hyperVEnabled = (bool)ViewBag.HyperVEnabled;
+    bool iisEnabled = (bool)ViewBag.IISEnabled;
 }
 
 @if (hyperVEnabled)
 {
-    <div class="row">
+    <div class="row @(!iisEnabled ? "full-height" : null)">
         <div class="col-xs-12">
             @Html.Partial("~/Views/VMs/Index.cshtml", (List<VirtualMachineModel>)ViewBag.VMs)
         </div>
     </div>
 }
 
-<div class="row hidden-xs @(!hyperVEnabled ? "full-height" : null)">
-    <div class="col-xs-12">
-        @Html.Partial("~/Views/Sites/Index.cshtml", (List<SiteModel>)ViewBag.Sites)
+@if (iisEnabled)
+{
+    <div class="row @(!hyperVEnabled ? "full-height" : "hidden-xs")" >
+        <div class="col-xs-12">
+            @Html.Partial("~/Views/Sites/Index.cshtml", (List<SiteModel>)ViewBag.Sites)
+        </div>
     </div>
-</div>
+}

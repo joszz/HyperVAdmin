@@ -23,9 +23,12 @@
                         @Html.ActionLink("Virtual machines", "Index", "VMs")
                     </li>
                 }
-                <li>
-                    @Html.ActionLink("Sites", "Index", "Sites")
-                </li>
+                @if ((bool)ViewBag.IISEnabled)
+                {
+                    <li>
+                        @Html.ActionLink("Sites", "Index", "Sites")
+                    </li>
+                }
             </ul>
         </div>
     </div>

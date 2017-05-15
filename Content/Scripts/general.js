@@ -22,6 +22,8 @@ $(function () {
         $(document).fullScreen(!$(document).fullScreen());
     });
 
+    initializeHelpShortcut();
+
     if ($("#virtual-machines:visible").length > 0) {
         refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
 
@@ -57,6 +59,27 @@ $(function () {
 
     initializeFancybox();
 });
+
+/**
+* Initializes the event handling for F1 keyboard shortcut to open the docs.
+* 
+* @method initializeHelpShortcut
+*/
+function initializeHelpShortcut() {
+    //Fix for F1 shortcut in IE.
+    window.onhelp = function () {
+        return false;
+    };
+
+    $("body").keydown(function (event) {
+        //keycode 112 === F1
+        
+        if (event.which === 112) {
+            $("footer .fa-question")[0].click();
+            event.preventDefault();
+        }
+    });
+}
 
 /**
  * Initializes and removes fancybox click handlers for application modal dialog.

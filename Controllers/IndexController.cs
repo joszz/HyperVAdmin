@@ -14,7 +14,10 @@ namespace HyperVAdmin.Controllers
         /// <returns>The default view</returns>
         public ActionResult Index()
         {
-            ViewBag.Sites = SiteModel.GetSites();
+            if (iisEnabled)
+            {
+                ViewBag.Sites = SiteModel.GetSites();
+            }
 
             if (hyperVEnabled)
             {

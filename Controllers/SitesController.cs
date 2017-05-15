@@ -12,6 +12,17 @@ namespace HyperVAdmin.Controllers
     public class SitesController : BaseController
     {
         /// <summary>
+        /// Check if IIS is enabled in web.config, if not throw exception.
+        /// </summary>
+        public SitesController() : base()
+        {
+            if (!iisEnabled)
+            {
+                throw new UnauthorizedAccessException("IIS is not enabled!");
+            }
+        }
+
+        /// <summary>
         /// Shows a list of all Sites and their related actions.
         /// </summary>
         /// <returns>The view showing all VMs</returns>

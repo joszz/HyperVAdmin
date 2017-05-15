@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HyperVAdmin</RootNamespace>
     <AssemblyName>HyperVAdmin</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -418,36 +418,12 @@
     <Content Include="Documentation\.gitignore" />
     <Content Include="Documentation\api\.gitignore" />
     <Content Include="Documentation\api\index.md" />
-    <Content Include="Documentation\api\toc.yml" />
     <Content Include="Documentation\articles\intro.md" />
     <Content Include="Documentation\articles\toc.yml" />
     <Content Include="Documentation\docfx.json" />
     <Content Include="Documentation\index.md" />
     <Content Include="Documentation\toc.yml" />
     <Content Include="Documentation\api\.manifest" />
-    <Content Include="Documentation\api\HyperVAdmin.BundleConfig.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Controllers.IndexController.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Controllers.SitesController.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Controllers.VMsController.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Controllers.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Models.SiteModel.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Models.VirtualMachineModel.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Models.VirtualMachineState.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Models.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.MvcApplication.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.RouteConfig.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.HyperVUtility.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.OtherResourceType.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.ResourceSubType.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.ResourceType.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.ReturnCode.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Attributes.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Utilities.HtmlUtility.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Modules.TimingModule.yml" />
-    <Content Include="Documentation\api\HyperVAdmin.Modules.yml" />
     <Content Include="Documentation\filterConfig.yml" />
     <Content Include="Content\Styles\FontAwesome.scss" />
     <Content Include="Content\Styles\FontAwesome\_animated.scss" />

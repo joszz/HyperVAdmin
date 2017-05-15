@@ -12,13 +12,31 @@ namespace HyperVAdmin.Controllers
         /// Whether HyperV is enabled in web.config.
         /// </summary>
         protected bool hyperVEnabled = true;
-     
+
+        /// <summary>
+        /// Whether IIS is enabled in web.config.
+        /// </summary>
+        protected bool iisEnabled = true;
+
         /// <summary>
         /// Sets HyperVEnabled web.config setting to ViewBag.
         /// </summary>
         public BaseController()
         {
-            ViewBag.HyperVEnabled = hyperVEnabled = bool.Parse(ConfigurationManager.AppSettings["HyperVEnabled"]);
+            string modules = ConfigurationManager.AppSettings["ModulesEnabled"].ToLower();
+
+            if(modules == "iis")
+            {
+                hyperVEnabled = false;
+            }
+            else if (modules == "hyperv")
+            {
+                iisEnabled = false;
+            }
+
+
+            ViewBag.HyperVEnabled = hyperVEnabled;
+            ViewBag.IISEnabled = iisEnabled;
         }
     }
 }
