@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AJAXOnlyAttribute
    ">
-    <meta name="generator" content="docfx 2.16.4.1">
+    <meta name="generator" content="docfx 2.18.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -57,7 +57,7 @@
           </div>
         </div>
       </header>
-      <div role="main" class="container body-content">
+      <div class="container body-content">
         
         <div id="search-results">
           <div class="search-list"></div>
@@ -75,77 +75,77 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="HyperVAdmin_Attributes_AJAXOnlyAttribute" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute">Class AJAXOnlyAttribute
-              </h1>
-              <div class="markdown level0 summary"><p>Custom attribute to decorate functions with. Only allows AJAX requests on actions decorated with [AJAXOnly].</p>
+            <article class="content wrap" id="_content" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute">
+  
+  
+  <h1 id="HyperVAdmin_Attributes_AJAXOnlyAttribute" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute">Class AJAXOnlyAttribute
+  </h1>
+  <div class="markdown level0 summary"><p>Custom attribute to decorate functions with. Only allows AJAX requests on actions decorated with [AJAXOnly].</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">AJAXOnlyAttribute</span></div>
-              </div>
-              <h6><strong>Namespace</strong>:HyperVAdmin.Attributes</h6>
-              <h6><strong>Assembly</strong>:HyperVAdmin.dll</h6>
-              <h5 id="HyperVAdmin_Attributes_AJAXOnlyAttribute_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class AJAXOnlyAttribute : ActionMethodSelectorAttribute</code></pre>
-              </div>
-              <h3 id="methods">Methods
-              </h3>
-              
-              
-              <a id="HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest*"></a>
-              <h4 id="HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_ControllerContext_MethodInfo_" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(ControllerContext,MethodInfo)">IsValidForRequest(ControllerContext, MethodInfo)</h4>
-              <div class="markdown level1 summary"><p>Check whether the request is an AJAX request or not.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AJAXOnlyAttribute</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="HyperVAdmin.Attributes.html">HyperVAdmin.Attributes</a></h6>
+  <h6><strong>Assembly</strong>: HyperVAdmin.dll</h6>
+  <h5 id="HyperVAdmin_Attributes_AJAXOnlyAttribute_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AJAXOnlyAttribute : ActionMethodSelectorAttribute</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest*"></a>
+  <h4 id="HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_ControllerContext_MethodInfo_" data-uid="HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(ControllerContext,MethodInfo)">IsValidForRequest(ControllerContext, MethodInfo)</h4>
+  <div class="markdown level1 summary"><p>Check whether the request is an AJAX request or not.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override bool IsValidForRequest(ControllerContext controllerContext, MethodInfo methodInfo)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">ControllerContext</span></td>
-                    <td><span class="parametername">controllerContext</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">MethodInfo</span></td>
-                    <td><span class="parametername">methodInfo</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><p>Boolean indicating if current request is an AJAX request</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsValidForRequest(ControllerContext controllerContext, MethodInfo methodInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ControllerContext</span></td>
+        <td><span class="parametername">controllerContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MethodInfo</span></td>
+        <td><span class="parametername">methodInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean indicating if current request is an AJAX request</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

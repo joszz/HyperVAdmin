@@ -89,7 +89,7 @@ function initializeHelpShortcut() {
  */
 function initializeFancybox() {
     $(".fa-puzzle-piece").off().on("click", function () {
-        $.fancybox.open({ src: $(this).data("href") });
+        $.fancybox.open({ src: $(this).data("href"), type: "iframe" });
     });
 }
 

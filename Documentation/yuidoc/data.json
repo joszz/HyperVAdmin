@@ -387,7 +387,16 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 61,
+            "line": 63,
+            "description": "Initializes the event handling for F1 keyboard shortcut to open the docs.",
+            "itemtype": "method",
+            "name": "initializeHelpShortcut",
+            "class": "Window",
+            "module": "General"
+        },
+        {
+            "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
+            "line": 84,
             "description": "Initializes and removes fancybox click handlers for application modal dialog.\nCalled on load and when refreshing site list.",
             "itemtype": "method",
             "name": "initializeFancybox",
@@ -396,7 +405,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 73,
+            "line": 96,
             "description": "Shows a confirm dialog with yes/no buttons",
             "itemtype": "method",
             "name": "openConfirmDialog",
@@ -422,7 +431,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 98,
+            "line": 121,
             "description": "Refreshes the VM table with fresh data.",
             "itemtype": "method",
             "name": "refreshVMList",
@@ -431,7 +440,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 144,
+            "line": 167,
             "description": "Toggles the state of the VM to On/Off.",
             "itemtype": "method",
             "name": "toggleVM",
@@ -440,7 +449,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 181,
+            "line": 204,
             "description": "Refreshes the sites table with fresh data.",
             "itemtype": "method",
             "name": "refreshSites",
@@ -449,7 +458,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 240,
+            "line": 263,
             "description": "Toggles the state of the site to On/Off.",
             "itemtype": "method",
             "name": "toggleSite",
@@ -465,7 +474,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 273,
+            "line": 296,
             "description": "Copies the path of a site.",
             "itemtype": "method",
             "name": "copyPath",
@@ -481,7 +490,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 288,
+            "line": 311,
             "description": "Fades out the alert after alertTimeout (in seconds).",
             "itemtype": "method",
             "name": "fadeOutAlert",
@@ -490,7 +499,7 @@
         },
         {
             "file": "C:\\Users\\jos_n\\Documents\\GitHub\\HyperVAdmin\\Content\\Scripts\\general.js",
-            "line": 301,
+            "line": 324,
             "description": "Displays an alert message (and fades it after).",
             "itemtype": "method",
             "name": "flashAlert",
