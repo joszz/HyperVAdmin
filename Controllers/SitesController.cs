@@ -35,19 +35,15 @@ namespace HyperVAdmin.Controllers
         /// Gets a JSON array with all Sites. Called by AJAX to refresh content.
         /// </summary>
         /// <returns></returns>
-        [AJAXOnly]
-        [HttpPost]
         public JsonResult GetSites()
         {
-            return Json(SiteModel.GetSites());
+            return Json(SiteModel.GetSites(), JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
         /// Stops a site. Sitename is used to determine which site to stop.
         /// </summary>
         /// <param name="sitename">Which site to stop.</param>
-        [AJAXOnly]
-        [HttpPost]
         public void StopSite(string sitename)
         {
             SiteModel.StopSite(sitename);
@@ -57,8 +53,6 @@ namespace HyperVAdmin.Controllers
         /// Starts a site. Sitename is used to determine which site to start.
         /// </summary>
         /// <param name="sitename">Which site to start.</param>
-        [AJAXOnly]
-        [HttpPost]
         public void StartSite(string sitename)
         {
             SiteModel.StartSite(sitename);

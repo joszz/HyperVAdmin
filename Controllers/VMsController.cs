@@ -34,11 +34,9 @@ namespace HyperVAdmin.Controllers
         /// Gets a JSON array with all VMs. Called by AJAX to refresh content.
         /// </summary>
         /// <returns>A JSON array with all VMs.</returns>
-        [AJAXOnly]
-        [HttpPost]
         public JsonResult GetVMs()
         {
-            return Json(VirtualMachineModel.GetVMList());
+            return Json(VirtualMachineModel.GetVMList(), JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>
@@ -47,11 +45,9 @@ namespace HyperVAdmin.Controllers
         /// <param name="vmName">Which VM to toggle.</param>
         /// <param name="state">What VirtualMachineState to set the VM to.</param>
         /// <returns>JSON with a string indicating success of the action.</returns>
-        [AJAXOnly]
-        [HttpPost]
         public JsonResult ToggleState(string vmName, VirtualMachineState state)
         {
-            return Json(VirtualMachineModel.ToggleState(vmName, state));
+            return Json(VirtualMachineModel.ToggleState(vmName, state), JsonRequestBehavior.AllowGet);
         }
     }
 }
