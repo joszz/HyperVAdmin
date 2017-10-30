@@ -29,11 +29,6 @@ namespace HyperVAdmin.Models
         public UInt64 MemoryTotal { get; set; }
 
         /// <summary>
-        /// The used memory of this VM. Currently not used.
-        /// </summary>
-        public int MemoryUsed { get; set; }
-
-        /// <summary>
         /// The units of virtual memory allocation as a string (such as MB).
         /// </summary>
         public string MemoryAllocationUnits { get; set; }
@@ -46,12 +41,25 @@ namespace HyperVAdmin.Models
         /// <summary>
         /// The amounts of virtual cores associated with this VM.
         /// </summary>
-        public UInt64 CoresAmount { get; set; }
+        public ushort CoresAmount { get; set; }
 
         /// <summary>
         /// The MAC address of the virtual network switch adapter.
         /// </summary>
         public string MAC { get; set; }
+
+        private UInt16 _cpuLoad = 0;
+        public UInt16? CPULoad
+        {
+            get
+            {
+                return _cpuLoad;
+            }
+            set
+            {
+                _cpuLoad = value == null ? (UInt16)0 : (UInt16)value;
+            }
+        }
 
         /// <summary>
         /// The last time the VirtualMachineState was changed.
@@ -116,8 +124,8 @@ namespace HyperVAdmin.Models
             {
                 ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();
                 ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject cores = settings.GetRelated("Msvm_ProcessorSettingData").Cast<ManagementObject>().ToList().First();
                 ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().First();
+                ManagementObject information = vm.GetRelated("Msvm_SummaryInformation").Cast<ManagementObject>().ToList().First();
                 string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
 
                 vms.Add(new VirtualMachineModel
@@ -125,9 +133,10 @@ namespace HyperVAdmin.Models
                     Name = vm["ElementName"].ToString(),
                     Description = vm["Description"].ToString(),
                     State = (VirtualMachineState)(UInt16)vm["EnabledState"],
-                    MemoryTotal = (UInt64)memorySettings["Limit"],
+                    MemoryTotal = (UInt64)memorySettings["VirtualQuantity"],
                     MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString() == "byte * 2^20" ? "MB" : memorySettings["AllocationUnits"].ToString(),
-                    CoresAmount = (UInt64)cores["VirtualQuantity"],
+                    CoresAmount = (ushort)information["NumberOfProcessors"],
+                    CPULoad = (UInt16?)information["ProcessorLoad"],
                     MAC = mac.Substring(0, mac.Length - 1),
                     TimeOfLastStateChange = ManagementDateTimeConverter.ToDateTime(vm["TimeOfLastStateChange"].ToString()),
                     OnTimeInMilliseconds = (UInt64)vm["OnTimeInMilliseconds"]
