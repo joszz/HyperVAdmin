@@ -1,5 +1,5 @@
 // ==================================================
-// fancyBox v3.2.1
+// fancyBox v3.2.3
 //
 // Licensed GPLv3 for open source use
 // or fancyBox Commercial License for commercial use
@@ -65,6 +65,7 @@
             'thumbs',
             'share',
             //'download',
+            //'zoom',
             'close'
         ],
 
@@ -190,17 +191,23 @@
 
         btnTpl : {
 
-            download   : '<a download data-fancybox-download class="fancybox-button fancybox-button--download" title="{{DOWNLOAD}}">' +
-                            '<svg viewBox="0 0 40 40">' +
-                                '<path d="M20,23 L20,8 L20,23 L13,16 L20,23 L27,16 L20,23 M9,28 L31,28" />' +
-                            '</svg>' +
-                        '</a>',
+            download : '<a download data-fancybox-download class="fancybox-button fancybox-button--download" title="{{DOWNLOAD}}">' +
+                    '<svg viewBox="0 0 40 40">' +
+                        '<path d="M20,23 L20,8 L20,23 L13,16 L20,23 L27,16 L20,23 M9,28 L31,28" />' +
+                    '</svg>' +
+                '</a>',
 
-            close      : '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
-                            '<svg viewBox="0 0 40 40">' +
-                                '<path d="M10,10 L30,30 M30,10 L10,30" />' +
-                            '</svg>' +
-                        '</button>',
+            zoom : '<button data-fancybox-zoom class="fancybox-button fancybox-button--zoom" title="{{ZOOM}}">' +
+                    '<svg viewBox="0 0 40 40">' +
+                        '<path d="M 18,17 m -8, 0 a 8,8 0 1,0 16,0 a 8,8 0 1,0 -16,0 M25,23 L31,29 L25,23"></path>' +
+                    '</svg>' +
+                '</button>',
+
+            close : '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+                '<svg viewBox="0 0 40 40">' +
+                    '<path d="M10,10 L30,30 M30,10 L10,30" />' +
+                '</svg>' +
+            '</button>',
 
             // This small close button will be appended to your html/inline/ajax content by default,
             // if "smallBtn" option is not set to false
@@ -217,7 +224,7 @@
                           '<svg viewBox="0 0 40 40">' +
                             '<path d="M30,20 L10,20 L30,20 L22,28 L30,20 L22,12 L30,20"></path>' +
                           '</svg>' +
-                        '</button>',
+                        '</button>'
         },
 
         // Container is injected into this element
@@ -273,10 +280,11 @@
         },
 
         thumbs : {
-            autoStart   : false,                 // Display thumbnails on opening
-            hideOnClose : true,                  // Hide thumbnail grid when closing animation starts
-            parentEl    : '.fancybox-container'  // Container is injected into this element
-        },
+			autoStart   : false,                  // Display thumbnails on opening
+			hideOnClose : true,                   // Hide thumbnail grid when closing animation starts
+			parentEl    : '.fancybox-container',  // Container is injected into this element
+			axis        : 'y'                     // Vertical (y) or horizontal (x)
+		},
 
         // Callbacks
         //==========
@@ -372,7 +380,8 @@
                 FULL_SCREEN : 'Full screen',
                 THUMBS      : 'Thumbnails',
                 DOWNLOAD    : 'Download',
-                SHARE       : 'Share'
+                SHARE       : 'Share',
+                ZOOM        : 'Zoom'
             },
             'de' : {
                 CLOSE       : 'Schliessen',
@@ -384,7 +393,8 @@
                 FULL_SCREEN : 'Vollbild',
                 THUMBS      : 'Vorschaubilder',
                 DOWNLOAD    : 'Herunterladen',
-                SHARE       : 'Teilen'
+                SHARE       : 'Teilen',
+                ZOOM        : 'Maßstab'
             }
         }
 
@@ -458,7 +468,7 @@
     var FancyBox = function( content, opts, index ) {
         var self = this;
 
-        self.opts = $.extend( true, { index : index }, defaults, opts || {} );
+        self.opts = $.extend( true, { index : index }, $.fancybox.defaults, opts || {} );
 
         if ( $.fancybox.isMobile ) {
             self.opts = $.extend( true, {}, self.opts, self.opts.mobile );
@@ -835,6 +845,9 @@
 
                 self.next();
 
+            }).on( 'click.fb', '[data-fancybox-zoom]', function(e) {
+                // Click handler for zoom button
+                self[ self.isScaledDown() ? 'scaleToActual' : 'scaleToFit' ]();
             });
 
 
@@ -2630,9 +2643,12 @@
             $container.find('[data-fancybox-next]').prop( 'disabled', ( !current.opts.loop && index >= self.group.length - 1 ) );
 
             if ( current.type === 'image' ) {
-                $container.find('[data-fancybox-download]').attr( 'href', current.opts.image.src || current.src );
+
+                // Update download button source
+                $container.find('[data-fancybox-download]').attr( 'href', current.opts.image.src || current.src ).show();
+
             } else {
-                $container.find('[data-fancybox-download]').hide();
+                $container.find('[data-fancybox-download],[data-fancybox-zoom]').hide();
             }
         },
 
@@ -2690,7 +2706,7 @@
 
     $.fancybox = {
 
-        version  : "3.2.1",
+        version  : "3.2.3",
         defaults : defaults,
 
 
@@ -2768,7 +2784,7 @@
         // Try to detect mobile devices
         // ============================
 
-        isMobile : document.createTouch !== undefined && /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent),
+        isMobile : document.createTouch !== undefined && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
 
 
         // Detect if 'translate3d' support is available
@@ -4579,25 +4595,26 @@
 ;(function (document, $) {
 	'use strict';
 
-	$.extend(true, $.fancybox.defaults, {
+	// Make sure there are default values
+	$.fancybox.defaults = $.extend(true, {
 		btnTpl : {
 			thumbs :
-				'<button data-fancybox-thumbs class="fancybox-button fancybox-button--thumbs" title="{{THUMBS}}">' +
-					'<svg viewBox="0 0 120 120">' +
-						'<path d="M30,30 h14 v14 h-14 Z M50,30 h14 v14 h-14 Z M70,30 h14 v14 h-14 Z M30,50 h14 v14 h-14 Z M50,50 h14 v14 h-14 Z M70,50 h14 v14 h-14 Z M30,70 h14 v14 h-14 Z M50,70 h14 v14 h-14 Z M70,70 h14 v14 h-14 Z" />' +
-					'</svg>' +
-				'</button>'
+			'<button data-fancybox-thumbs class="fancybox-button fancybox-button--thumbs" title="{{THUMBS}}">' +
+				'<svg viewBox="0 0 120 120">' +
+					'<path d="M30,30 h14 v14 h-14 Z M50,30 h14 v14 h-14 Z M70,30 h14 v14 h-14 Z M30,50 h14 v14 h-14 Z M50,50 h14 v14 h-14 Z M70,50 h14 v14 h-14 Z M30,70 h14 v14 h-14 Z M50,70 h14 v14 h-14 Z M70,70 h14 v14 h-14 Z" />' +
+				'</svg>' +
+			'</button>'
 		},
 		thumbs : {
-			autoStart   : false,                 // Display thumbnails on opening
-			hideOnClose : true,                  // Hide thumbnail grid when closing animation starts
-			parentEl    : '.fancybox-container'  // Container is injected into this element
-        }
-	});
+			autoStart   : false,                  // Display thumbnails on opening
+			hideOnClose : true,                   // Hide thumbnail grid when closing animation starts
+			parentEl    : '.fancybox-container',  // Container is injected into this element
+			axis        : 'y'                     // Vertical (y) or horizontal (x)
+		}
+	}, $.fancybox.defaults);
 
 	var FancyThumbs = function( instance ) {
-		this.instance = instance;
-		this.init();
+		this.init( instance );
 	};
 
 	$.extend( FancyThumbs.prototype, {
@@ -4606,10 +4623,14 @@
 		$grid		: null,
 		$list		: null,
 		isVisible	: false,
+		isActive	: false,
 
-		init : function() {
-			var self = this,
-				instance = self.instance;
+		init : function( instance ) {
+			var self = this;
+
+			self.instance = instance;
+
+			instance.Thumbs = self;
 
 			// Enable thumbs if at least two group items have thumbnails
 			var first  = instance.group[0],
@@ -4630,14 +4651,8 @@
 
 				self.isActive = true;
 
-				if ( self.opts.autoStart === true ) {
-					self.show();
-				}
-
 			} else {
 				self.$button.hide();
-
-				self.isActive = false;
 			}
 		},
 
@@ -4648,7 +4663,7 @@
 				list,
 				src;
 
-			self.$grid = $('<div class="fancybox-thumbs"></div>').appendTo( instance.$refs.container.find( parentEl ).addBack().filter( parentEl ) );
+			self.$grid = $('<div class="fancybox-thumbs fancybox-thumbs-' + self.opts.axis + '"></div>').appendTo( instance.$refs.container.find( parentEl ).addBack().filter( parentEl ) );
 
 			// Build list HTML
 			list = '<ul>';
@@ -4701,34 +4716,44 @@
 				$(this).css({
 					width         : Math.floor(width),
 					height        : Math.floor(height),
-					'margin-top'  : Math.min( 0, Math.floor(thumbHeight * 0.3 - height * 0.3 ) ),
-					'margin-left' : Math.min( 0, Math.floor(thumbWidth  * 0.5 - width  * 0.5 ) )
+					'margin-top'  : height > thumbHeight ? ( Math.floor(thumbHeight * 0.3 - height * 0.3 ) ) : Math.floor(thumbHeight * 0.5 - height * 0.5 ),
+					'margin-left' : Math.floor(thumbWidth * 0.5 - width * 0.5 )
 				}).show();
 
 			})
 			.each(function() {
 				this.src = $( this ).data( 'src' );
 			});
+
+			if ( self.opts.axis === 'x' ) {
+				self.$list.width( parseInt( self.$grid.css("padding-right") ) + ( instance.group.length * self.$list.children().eq(0).outerWidth(true) ) + 'px' );
+			}
 		},
 
 		focus : function( duration ) {
-			var $list = this.$list;
-			var thumb, thumbPos;
+			var self = this,
+				$list = self.$list,
+				thumb,
+				thumbPos;
 
-			if ( this.instance.current ) {
+			if ( self.instance.current ) {
 				thumb = $list.children()
 					.removeClass( 'fancybox-thumbs-active' )
-					.filter('[data-index="' + this.instance.current.index  + '"]')
+					.filter('[data-index="' + self.instance.current.index  + '"]')
 					.addClass('fancybox-thumbs-active');
 
 				thumbPos = thumb.position();
 
 				// Check if need to scroll to make current thumb visible
-				if ( thumbPos.top < 0 || thumbPos.top > $list.height() - thumb.outerHeight() ) {
+				if ( self.opts.axis === 'y' && ( thumbPos.top < 0 || thumbPos.top > ( $list.height() - thumb.outerHeight() ) ) ) {
 					$list.stop().animate({ 'scrollTop' : $list.scrollTop() + thumbPos.top }, duration);
 
-				} else if ( thumbPos.left < 0 || thumbPos.left > $list.width() - thumb.outerWidth() ) {
-					$list.stop().animate({ 'scrollLeft' : $list.scrollLeft() + thumbPos.left }, duration);
+				} else if ( self.opts.axis === 'x' && (
+						thumbPos.left < $list.parent().scrollLeft() ||
+						thumbPos.left > ( $list.parent().scrollLeft() + ( $list.parent().width() - thumb.outerWidth() ) )
+					)
+				) {
+					$list.parent().stop().animate({ 'scrollLeft' : thumbPos.left }, duration);
 				}
 			}
 		},
@@ -4775,7 +4800,11 @@
 			var Thumbs;
 
 			if ( instance && !instance.Thumbs ) {
-				Thumbs = instance.Thumbs = new FancyThumbs( instance );
+				Thumbs = new FancyThumbs( instance );
+
+				if ( Thumbs.isActive && Thumbs.opts.autoStart === true ) {
+					Thumbs.show();
+				}
 			}
 		},
 
@@ -4818,6 +4847,7 @@
 // ==========================================================================
 ;(function (document, $) {
 	'use strict';
+
 	$.extend(true, $.fancybox.defaults, {
 		btnTpl : {
 			share :
@@ -4845,6 +4875,7 @@
 							'<span>Twitter</span>' +
 						'</a>' +
 					'</p>' +
+					'<p><input type="text" value="{{src_raw}}" onfocus="this.select()" /></p>' +
 				'</div>'
 		}
 	});
@@ -4852,21 +4883,22 @@
 	$(document).on('click', '[data-fancybox-share]', function() {
 
 		var f = $.fancybox.getInstance(),
+			url,
 			tpl;
 
 		if ( f ) {
-			tpl = f.current.opts.share.tpl.replace( /\{\{src\}\}/g, encodeURIComponent( f.current.opts.hash === false ? f.current.src : window.location ) );
-
-			if ( f.$caption ) {
-				tpl = tpl.replace( /\{\{descr\}\}/g, encodeURIComponent( f.$caption.text() ) );
-			}
+			url = f.current.opts.hash === false ? f.current.src : window.location;
+			tpl = f.current.opts.share.tpl
+					.replace( /\{\{src\}\}/g, encodeURIComponent( url ) )
+					.replace( /\{\{src_raw\}\}/g, url )
+					.replace( /\{\{descr\}\}/g, f.$caption ? encodeURIComponent( f.$caption.text() ) : '' );
 
 			$.fancybox.open({
 				src  : f.translate( f, tpl ),
 				type : 'html',
 				opts : {
-					autoFocus : false,
-					animationEffect : 'fade'
+					animationEffect   : "fade",
+					animationDuration : 250
 				}
 			});
 		}
