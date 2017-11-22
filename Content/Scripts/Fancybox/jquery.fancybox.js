@@ -1,5 +1,5 @@
 // ==================================================
-// fancyBox v3.2.5
+// fancyBox v3.2.8
 //
 // Licensed GPLv3 for open source use
 // or fancyBox Commercial License for commercial use
@@ -286,6 +286,10 @@
 			axis        : 'y'                     // Vertical (y) or horizontal (x) scrolling
 		},
 
+        // Use mousewheel to navigate gallery
+        // If 'auto' - enabled for images only
+        wheel : 'auto',
+
         // Callbacks
         //==========
 
@@ -348,7 +352,8 @@
         // =============================================
 
         mobile : {
-            margin : 0,
+            idleTime : false,
+            margin   : 0,
 
             clickContent : function( current, event ) {
                 return current.type === 'image' ? 'toggleControls' : false;
@@ -961,7 +966,7 @@
                 self.idleInterval = window.setInterval(function() {
                     self.idleSecondsCounter++;
 
-                    if ( self.idleSecondsCounter >= self.group[ self.currIndex ].opts.idleTime ) {
+                    if ( self.idleSecondsCounter >= self.group[ self.currIndex ].opts.idleTime && !self.isDragging ) {
                         self.isIdle = true;
                         self.idleSecondsCounter = 0;
 
@@ -1024,7 +1029,7 @@
 
             var groupLen = self.group.length;
 
-            if ( self.isSliding || self.isClosing || ( self.isAnimating && self.firstRun ) ) {
+            if ( self.isDragging || self.isClosing || ( self.isAnimating && self.firstRun ) ) {
                 return;
             }
 
@@ -1037,7 +1042,7 @@
 
             firstRun = self.firstRun = ( self.firstRun === null );
 
-            if ( groupLen < 2 && !firstRun && !!self.isSliding ) {
+            if ( groupLen < 2 && !firstRun && !!self.isDragging ) {
                 return;
             }
 
@@ -1397,7 +1402,7 @@
 
             if ( $what && ( slide.width || slide.height ) ) {
                 self.isAnimating = false;
-                
+
                 $.fancybox.stop( $what );
 
                 $.fancybox.setTranslate( $what, self.getFitPos( slide ) );
@@ -1997,6 +2002,9 @@
 
             slide.$slide.one('onReset', function () {
 
+                // Pause all html5 video/audio
+                $(this).find("video,audio").each(function () { this.pause(); });
+
                 // Put content back
                 if ( slide.$placeholder ) {
                     slide.$placeholder.after( content.hide() ).remove();
@@ -2322,6 +2330,13 @@
             self.updateCursor();
 
             self.trigger( 'afterShow' );
+
+            // Play first html5 video/audio
+            var media = current.$slide.find("video,audio").first();
+
+            if ( media.length ) {
+                media[0].play();
+            }
 
             // Try to focus on the first focusable element
             if ( $( document.activeElement ).is( '[disabled]' ) || ( current.opts.autoFocus && !( current.type == 'image' || current.type === 'iframe' ) ) ) {
@@ -2714,7 +2729,7 @@
 
     $.fancybox = {
 
-        version  : "3.2.5",
+        version  : "3.2.8",
         defaults : defaults,
 
 
@@ -3342,7 +3357,6 @@
 	};
 
 	var isClickable = function( $el ) {
-
 		if ( $el.is('a,area,button,[role="button"],input,label,select,summary,textarea') || $.isFunction( $el.get(0).onclick ) || $el.data('selectable') ) {
 			return true;
 		}
@@ -3446,8 +3460,7 @@
 
 		self.startPoints = pointers( e );
 
-		// Prevent zooming if already swiping
-		if ( !self.startPoints || ( self.startPoints.length > 1 && instance.isSliding ) ) {
+		if ( !self.startPoints ) {
 			return;
 		}
 
@@ -3492,22 +3505,21 @@
 		self.contentLastPos  = null;
 
 		if ( self.startPoints.length === 1 && !self.isZooming ) {
-			self.canTap = !instance.isSliding;
+			self.canTap = true;
 
 			if ( current.type === 'image' && ( self.contentStartPos.width > self.canvasWidth + 1 || self.contentStartPos.height > self.canvasHeight + 1 ) ) {
 
 				$.fancybox.stop( self.$content );
 
-				self.$content.css( 'transition-duration', '0ms' );
+				self.$content.css( 'transition-duration', '' );
 
 				self.isPanning = true;
 
 			} else {
-
 				self.isSwiping = true;
 			}
 
-			self.$container.addClass('fancybox-controls--isGrabbing');
+			self.$container.addClass( 'fancybox-controls--isGrabbing' );
 		}
 
 		if ( self.startPoints.length === 2 && !instance.isAnimating && !current.hasError && current.type === 'image' && ( current.isLoaded || current.$ghost ) ) {
@@ -3518,7 +3530,7 @@
 
 			$.fancybox.stop( self.$content );
 
-			self.$content.css( 'transition-duration', '0ms' );
+			self.$content.css( 'transition-duration', '' );
 
 			self.centerPointStartX = ( ( self.startPoints[0].x + self.startPoints[1].x ) * 0.5 ) - $(window).scrollLeft();
 			self.centerPointStartY = ( ( self.startPoints[0].y + self.startPoints[1].y ) * 0.5 ) - $(window).scrollTop();
@@ -3555,7 +3567,7 @@
 		self.distance = distance( self.newPoints[0], self.startPoints[0] );
 
 		// Skip false ontouchmove events (Chrome)
-		if ( self.distance > 0 ) {
+		if ( self.distance > 0 && !self.tapped ) {
 
 			if ( !( self.$target.is( self.$stage ) || self.$stage.find( self.$target ).length ) ) {
 				return;
@@ -3580,14 +3592,14 @@
 
 	Guestures.prototype.onSwipe = function() {
 
-		var self = this;
-
-		var swiping = self.isSwiping;
-		var left    = self.sliderStartPos.left || 0;
-		var angle;
+		var self = this,
+			swiping = self.isSwiping,
+			left    = self.sliderStartPos.left || 0,
+			angle;
 
 		if ( swiping === true ) {
 
+			// We need at least 10px distance to correctly calculate an angle
 			if ( Math.abs( self.distance ) > 10 )  {
 
 				self.canTap = false;
@@ -3595,7 +3607,7 @@
 				if ( self.instance.group.length < 2 && self.opts.vertical ) {
 					self.isSwiping  = 'y';
 
-				} else if ( self.instance.isSliding || self.opts.vertical === false || ( self.opts.vertical === 'auto' && $( window ).width() > 800 ) ) {
+				} else if ( self.instance.isDragging || self.opts.vertical === false || ( self.opts.vertical === 'auto' && $( window ).width() > 800 ) ) {
 					self.isSwiping  = 'x';
 
 				} else {
@@ -3604,7 +3616,7 @@
 					self.isSwiping = ( angle > 45 && angle < 135 ) ? 'y' : 'x';
 				}
 
-				self.instance.isSliding = self.isSwiping;
+				self.instance.isDragging = self.isSwiping;
 
 				// Reset points to avoid jumping, because we dropped first swipes to calculate the angle
 				self.startPoints = self.newPoints;
@@ -3612,7 +3624,7 @@
 				$.each(self.instance.slides, function( index, slide ) {
 					$.fancybox.stop( slide.$slide );
 
-					slide.$slide.css( 'transition-duration', '0ms' );
+					slide.$slide.css( 'transition-duration', '' );
 
 					slide.inTransition = false;
 
@@ -3621,68 +3633,67 @@
 					}
 				});
 
-				//self.instance.current.isMoved = true;
-
 				// Stop slideshow
 				if ( self.instance.SlideShow && self.instance.SlideShow.isActive ) {
 					self.instance.SlideShow.stop();
 				}
 			}
 
-		} else {
-
-			if ( swiping == 'x' ) {
-
-				// Sticky edges
-				if ( self.distanceX > 0 && ( self.instance.group.length < 2 || ( self.instance.current.index === 0 && !self.instance.current.opts.loop ) ) ) {
-					left = left + Math.pow( self.distanceX, 0.8 );
-
-				} else if ( self.distanceX < 0 && ( self.instance.group.length < 2 || ( self.instance.current.index === self.instance.group.length - 1 && !self.instance.current.opts.loop ) ) ) {
-					left = left - Math.pow( -self.distanceX, 0.8 );
-
-				} else {
-					left = left + self.distanceX;
-				}
-
-			}
-
-			self.sliderLastPos = {
-				top  : swiping == 'x' ? 0 : self.sliderStartPos.top + self.distanceY,
-				left : left
-			};
-
-			if ( self.requestId ) {
-				cancelAFrame( self.requestId );
-
-				self.requestId = null;
-			}
-
-			self.requestId = requestAFrame(function() {
-
-				if ( self.sliderLastPos ) {
-					$.each(self.instance.slides, function( index, slide ) {
-						var pos = slide.pos - self.instance.currPos;
-
-						$.fancybox.setTranslate( slide.$slide, {
-							top  : self.sliderLastPos.top,
-							left : self.sliderLastPos.left + ( pos * self.canvasWidth ) + ( pos * slide.opts.gutter )
-						});
-					});
-
-					self.$container.addClass( 'fancybox-is-sliding' );
-				}
-
-			});
+			return;
 
 		}
+
+		if ( swiping == 'x' ) {
+
+			// Sticky edges
+			if ( self.distanceX > 0 && ( self.instance.group.length < 2 || ( self.instance.current.index === 0 && !self.instance.current.opts.loop ) ) ) {
+				left = left + Math.pow( self.distanceX, 0.8 );
+
+			} else if ( self.distanceX < 0 && ( self.instance.group.length < 2 || ( self.instance.current.index === self.instance.group.length - 1 && !self.instance.current.opts.loop ) ) ) {
+				left = left - Math.pow( -self.distanceX, 0.8 );
+
+			} else {
+				left = left + self.distanceX;
+			}
+
+		}
+
+		self.sliderLastPos = {
+			top  : swiping == 'x' ? 0 : self.sliderStartPos.top + self.distanceY,
+			left : left
+		};
+
+		if ( self.requestId ) {
+			cancelAFrame( self.requestId );
+
+			self.requestId = null;
+		}
+
+		self.requestId = requestAFrame(function() {
+
+			if ( self.sliderLastPos ) {
+				$.each(self.instance.slides, function( index, slide ) {
+					var pos = slide.pos - self.instance.currPos;
+
+					$.fancybox.setTranslate( slide.$slide, {
+						top  : self.sliderLastPos.top,
+						left : self.sliderLastPos.left + ( pos * self.canvasWidth ) + ( pos * slide.opts.gutter )
+					});
+				});
+
+				self.$container.addClass( 'fancybox-is-sliding' );
+			}
+
+		});
 
 	};
 
 	Guestures.prototype.onPan = function() {
 
-		var self = this;
-
-		var newOffsetX, newOffsetY, newPos;
+		var self = this,
+			newOffsetX,
+			newOffsetY,
+			newPos;
 
 		self.canTap = false;
 
@@ -3899,6 +3910,8 @@
 		self.isPanning = false;
 		self.isZooming = false;
 
+		self.instance.isDragging = false;
+
 		if ( self.canTap )  {
 			return self.onTap( e );
 		}
@@ -3929,8 +3942,7 @@
 		var self = this;
 		var ret = false;
 
-		self.instance.isSliding = false;
-		self.sliderLastPos      = null;
+		self.sliderLastPos = null;
 
 		// Close if swiped vertically / navigate if horizontally
 		if ( swiping == 'y' && Math.abs( self.distanceY ) > 50 ) {
@@ -4120,11 +4132,6 @@
 			return;
 		}
 
-		// Skip if current slide is not in the center
-		if ( instance.isSliding ) {
-			return;
-		}
-
 		// Skip if clicked on the scrollbar
 		if ( tapX > $target[0].clientWidth + $target.offset().left ) {
 			return;
@@ -4152,7 +4159,7 @@
 			self.tapped = null;
 
 			// Skip if distance between taps is too big
-			if ( Math.abs( tapX - self.tapX ) > 50 || Math.abs( tapY - self.tapY ) > 50 || instance.isSliding ) {
+			if ( Math.abs( tapX - self.tapX ) > 50 || Math.abs( tapY - self.tapY ) > 50 ) {
 				return this;
 			}
 
@@ -4167,12 +4174,13 @@
 			self.tapY = tapY;
 
 			if ( current.opts[ 'dblclick' + where ] && current.opts[ 'dblclick' + where ] !== current.opts[ 'click' + where ] ) {
+
 				self.tapped = setTimeout(function() {
 					self.tapped = null;
 
 					process( 'click' + where );
 
-				}, 300);
+				}, 500);
 
 			} else {
 				process( 'click' + where );
@@ -5150,3 +5158,60 @@
     });
 
 }( document, window, window.jQuery || jQuery ));
+
+;(function (document, $) {
+	'use strict';
+
+	var prevTime = new Date().getTime();
+
+    $(document).on({
+        'onInit.fb' : function( e, instance, current ) {
+			instance.$refs.stage.on('mousewheel DOMMouseScroll wheel MozMousePixelScroll', function(e) {
+				var current = instance.current,
+					currTime,
+					value,
+					delta,
+					isHorizontal,
+					isVertical;
+
+				if ( current.opts.wheel === false || ( current.opts.wheel === 'auto' && current.type !== 'image' ) ) {
+					return;
+				}
+
+				if ( current.$slide.hasClass( 'fancybox-animated' ) ) {
+				    return;
+				}
+
+				if ( instance.group.length < 1 ) {
+					return;
+				}
+
+				e.preventDefault();
+				e.stopPropagation();
+
+				e = e.originalEvent || e;
+
+				if ( currTime - prevTime < 250 ) {
+					return;
+				}
+
+				prevTime = currTime;
+
+				value = e.wheelDelta || -e.deltaY || -e.detail;
+				delta = Math.max(-1, Math.min(1, value));
+
+				isHorizontal = typeof e.wheelDeltaX !== 'undefined' || typeof e.deltaX !== 'undefined';
+				isVertical   = !isHorizontal || ( (Math.abs(e.wheelDeltaX) < Math.abs(e.wheelDelta)) || (Math.abs(e.deltaX) < Math.abs(e.deltaY)) );
+
+				if ( delta < 0 ) {
+					instance[ isVertical ? 'previous' : 'next' ]();
+
+				} else {
+					instance[ isVertical ? 'next' : 'previous' ]();
+				}
+
+			});
+		}
+    });
+
+}( document, window.jQuery || jQuery ));
