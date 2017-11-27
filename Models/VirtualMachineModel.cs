@@ -122,10 +122,10 @@ namespace HyperVAdmin.Models
 
             foreach (ManagementObject vm in vmCollection)
             {
-                ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().First();
-                ManagementObject information = vm.GetRelated("Msvm_SummaryInformation").Cast<ManagementObject>().ToList().First();
+                ManagementObject settings = vm.GetRelated("Msvm_VirtualSystemSettingData").Cast<ManagementObject>().ToList().FirstOrDefault();
+                ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().FirstOrDefault();
+                ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().FirstOrDefault();
+                ManagementObject information = vm.GetRelated("Msvm_SummaryInformation").Cast<ManagementObject>().ToList().FirstOrDefault();
                 string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
 
                 vms.Add(new VirtualMachineModel
@@ -135,8 +135,8 @@ namespace HyperVAdmin.Models
                     State = (VirtualMachineState)(UInt16)vm["EnabledState"],
                     MemoryTotal = (UInt64)memorySettings["VirtualQuantity"],
                     MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString() == "byte * 2^20" ? "MB" : memorySettings["AllocationUnits"].ToString(),
-                    CoresAmount = (ushort)information["NumberOfProcessors"],
-                    CPULoad = (UInt16?)information["ProcessorLoad"],
+                    CoresAmount = information != null ? (ushort)information["NumberOfProcessors"] : (ushort)0,
+                    CPULoad = information != null ? (UInt16?)information["ProcessorLoad"] : null,
                     MAC = mac.Substring(0, mac.Length - 1),
                     TimeOfLastStateChange = ManagementDateTimeConverter.ToDateTime(vm["TimeOfLastStateChange"].ToString()),
                     OnTimeInMilliseconds = (UInt64)vm["OnTimeInMilliseconds"]
