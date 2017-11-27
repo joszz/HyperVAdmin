@@ -49,6 +49,9 @@ namespace HyperVAdmin.Models
         public string MAC { get; set; }
 
         private UInt16 _cpuLoad = 0;
+        /// <summary>
+        /// The CPULoad retrieved from WMI.
+        /// </summary>
         public UInt16? CPULoad
         {
             get
