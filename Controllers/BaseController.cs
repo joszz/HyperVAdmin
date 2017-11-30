@@ -34,7 +34,6 @@ namespace HyperVAdmin.Controllers
                 iisEnabled = false;
             }
 
-
             ViewBag.HyperVEnabled = hyperVEnabled;
             ViewBag.IISEnabled = iisEnabled;
         }
