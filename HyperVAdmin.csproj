@@ -142,21 +142,9 @@
     <Compile Include="Utilities\HyperVUtility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Fonts\fontawesome-webfont.eot">
-      <DependentUpon>FontAwesome.otf</DependentUpon>
-    </Content>
-    <Content Include="Content\Fonts\fontawesome-webfont.svg">
-      <DependentUpon>FontAwesome.otf</DependentUpon>
-    </Content>
-    <Content Include="Content\Fonts\fontawesome-webfont.ttf">
-      <DependentUpon>FontAwesome.otf</DependentUpon>
-    </Content>
-    <Content Include="Content\Fonts\fontawesome-webfont.woff">
-      <DependentUpon>FontAwesome.otf</DependentUpon>
-    </Content>
-    <Content Include="Content\Fonts\fontawesome-webfont.woff2">
-      <DependentUpon>FontAwesome.otf</DependentUpon>
-    </Content>
+    <Content Include="Content\Fonts\fa-brands-400.svg" />
+    <Content Include="Content\Fonts\fa-regular-400.svg" />
+    <Content Include="Content\Fonts\fa-solid-900.svg" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
@@ -173,8 +161,29 @@
     <Content Include="Content\Scripts\Waves\waves.min.js.map">
       <DependentUpon>waves.min.js</DependentUpon>
     </Content>
+    <Content Include="Content\Styles\fa-brands.scss">
+      <DependentUpon>fontawesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\fa-regular.scss">
+      <DependentUpon>fontawesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\fa-solid.css">
+      <DependentUpon>fa-solid.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\fa-solid.min.css">
+      <DependentUpon>fa-solid.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\fa-solid.scss">
+      <DependentUpon>fontawesome.scss</DependentUpon>
+    </Content>
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css">
       <DependentUpon>jquery.fancybox.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\fontawesome.css">
+      <DependentUpon>fontawesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\fontawesome.min.css">
+      <DependentUpon>fontawesome.css</DependentUpon>
     </Content>
     <Content Include="Content\Styles\Waves\waves.css" />
     <Content Include="Content\Styles\Waves\waves.min.css">
@@ -260,7 +269,6 @@
     <Content Include="Content\Images\Favicons\manifest.json" />
     <Content Include="build_documentation.bat" />
     <Content Include="compilerconfig.json" />
-    <Content Include="Content\Fonts\FontAwesome.otf" />
     <Content Include="Content\Styles\Bootstrap\mixins\_alerts.scss" />
     <Content Include="Content\Styles\Bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\Styles\Bootstrap\mixins\_border-radius.scss" />
@@ -335,6 +343,18 @@
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
     <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
     <Content Include="Content\Scripts\yuidoc.json" />
+    <Content Include="Content\Fonts\fa-brands-400.eot" />
+    <Content Include="Content\Fonts\fa-brands-400.ttf" />
+    <Content Include="Content\Fonts\fa-brands-400.woff" />
+    <Content Include="Content\Fonts\fa-brands-400.woff2" />
+    <Content Include="Content\Fonts\fa-regular-400.eot" />
+    <Content Include="Content\Fonts\fa-regular-400.ttf" />
+    <Content Include="Content\Fonts\fa-regular-400.woff" />
+    <Content Include="Content\Fonts\fa-regular-400.woff2" />
+    <Content Include="Content\Fonts\fa-solid-900.eot" />
+    <Content Include="Content\Fonts\fa-solid-900.ttf" />
+    <Content Include="Content\Fonts\fa-solid-900.woff" />
+    <Content Include="Content\Fonts\fa-solid-900.woff2" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <Content Include="Content\Styles\Default\_roboto.scss" />
     <None Include="Content\Styles\Default\_sites.scss" />
@@ -343,12 +363,6 @@
     </Content>
     <None Include="Content\Styles\Default\_iframe.scss" />
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.css" />
-    <Content Include="Content\Styles\FontAwesome.css">
-      <DependentUpon>FontAwesome.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\FontAwesome.min.css">
-      <DependentUpon>FontAwesome.css</DependentUpon>
-    </Content>
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\custom.css" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\external-small.png" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\logo.png" />
@@ -425,20 +439,6 @@
     <Content Include="Documentation\toc.yml" />
     <Content Include="Documentation\api\.manifest" />
     <Content Include="Documentation\filterConfig.yml" />
-    <Content Include="Content\Styles\FontAwesome.scss" />
-    <Content Include="Content\Styles\FontAwesome\_animated.scss" />
-    <Content Include="Content\Styles\FontAwesome\_bordered-pulled.scss" />
-    <Content Include="Content\Styles\FontAwesome\_core.scss" />
-    <Content Include="Content\Styles\FontAwesome\_fixed-width.scss" />
-    <Content Include="Content\Styles\FontAwesome\_icons.scss" />
-    <Content Include="Content\Styles\FontAwesome\_larger.scss" />
-    <Content Include="Content\Styles\FontAwesome\_list.scss" />
-    <Content Include="Content\Styles\FontAwesome\_mixins.scss" />
-    <Content Include="Content\Styles\FontAwesome\_path.scss" />
-    <Content Include="Content\Styles\FontAwesome\_rotated-flipped.scss" />
-    <Content Include="Content\Styles\FontAwesome\_screen-reader.scss" />
-    <Content Include="Content\Styles\FontAwesome\_stacked.scss" />
-    <Content Include="Content\Styles\FontAwesome\_variables.scss" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\.npmignore" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\example.sh" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\layouts\main.handlebars" />
@@ -472,6 +472,19 @@
     <Content Include="Documentation\docfx\manifest.json" />
     <Content Include="Documentation\docfx\search-stopwords.json" />
     <Content Include="Documentation\docfx\xrefmap.yml" />
+    <Content Include="Content\Styles\FontAwesome\_animated.scss" />
+    <Content Include="Content\Styles\FontAwesome\_bordered-pulled.scss" />
+    <Content Include="Content\Styles\FontAwesome\_core.scss" />
+    <Content Include="Content\Styles\FontAwesome\_fixed-width.scss" />
+    <Content Include="Content\Styles\FontAwesome\_icons.scss" />
+    <Content Include="Content\Styles\FontAwesome\_larger.scss" />
+    <Content Include="Content\Styles\FontAwesome\_list.scss" />
+    <Content Include="Content\Styles\FontAwesome\_mixins.scss" />
+    <Content Include="Content\Styles\FontAwesome\_rotated-flipped.scss" />
+    <Content Include="Content\Styles\FontAwesome\_screen-reader.scss" />
+    <Content Include="Content\Styles\FontAwesome\_stacked.scss" />
+    <Content Include="Content\Styles\FontAwesome\_variables.scss" />
+    <Content Include="Content\Styles\fontawesome.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

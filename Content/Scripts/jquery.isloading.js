@@ -44,7 +44,7 @@
         defaults = {
             'position': "overlay",        // right | inside | overlay
             'text': "Loading",                 // Text to display next to the loader
-            'class': "fa fa-refresh",    // loader CSS class
+            'class': "fa fa-sync",    // loader CSS class
             'transparency': 0.5,        // background transparency for using with overlay
             'tpl': '<span class="isloading-wrapper %wrapper%">%text%<i class="%class% fa-spin"></i></span>',    // loader base Tag. Change to support bootstrap > 3.x
             'disableSource': true,      // true | false

@@ -29,13 +29,26 @@
   {
     "includeInProject": true,
     "options": { "sourceMap": true },
-    "outputFile": "Content/Styles/FontAwesome.css",
-    "inputFile": "Content/Styles/FontAwesome.scss"
+    "outputFile": "Content/Styles/fontawesome.css",
+    "inputFile": "Content/Styles/fontawesome.scss"
   },
   {
     "includeInProject": true,
     "minify": { "enabled": true },
-    "outputFile": "Content/Styles/FontAwesome.min.css",
-    "inputFile": "Content/Styles/FontAwesome.scss"
+    "outputFile": "Content/Styles/fontawesome.min.css",
+    "inputFile": "Content/Styles/fontawesome.scss"
+  },
+  //FontAwesome solid
+  {
+    "includeInProject": true,
+    "options": { "sourceMap": true },
+    "outputFile": "Content/Styles/fa-solid.css",
+    "inputFile": "Content/Styles/fa-solid.scss"
+  },
+  {
+    "includeInProject": true,
+    "minify": { "enabled": true },
+    "outputFile": "Content/Styles/fa-solid.min.css",
+    "inputFile": "Content/Styles/fa-solid.scss"
   }
 ]
