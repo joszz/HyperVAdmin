@@ -228,6 +228,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-edge:before { content: fa-content($fa-var-edge); }
 .#{$fa-css-prefix}-edit:before { content: fa-content($fa-var-edit); }
 .#{$fa-css-prefix}-eject:before { content: fa-content($fa-var-eject); }
+.#{$fa-css-prefix}-elementor:before { content: fa-content($fa-var-elementor); }
 .#{$fa-css-prefix}-ellipsis-h:before { content: fa-content($fa-var-ellipsis-h); }
 .#{$fa-css-prefix}-ellipsis-v:before { content: fa-content($fa-var-ellipsis-v); }
 .#{$fa-css-prefix}-ember:before { content: fa-content($fa-var-ember); }
@@ -790,3 +791,4 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-yen-sign:before { content: fa-content($fa-var-yen-sign); }
 .#{$fa-css-prefix}-yoast:before { content: fa-content($fa-var-yoast); }
 .#{$fa-css-prefix}-youtube:before { content: fa-content($fa-var-youtube); }
+.#{$fa-css-prefix}-youtube-square:before { content: fa-content($fa-var-youtube-square); }
