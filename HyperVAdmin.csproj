@@ -152,8 +152,9 @@
       <DependentUpon>jquery.fancybox.js</DependentUpon>
     </Content>
     <Content Include="Content\Scripts\jquery.fullscreen.js" />
-    <Content Include="Content\Scripts\jQuery\jquery-3.2.1.min.js">
-      <DependentUpon>jquery-3.2.1.js</DependentUpon>
+    <Content Include="Content\Scripts\jQuery\jquery-3.3.1.js" />
+    <Content Include="Content\Scripts\jQuery\jquery-3.3.1.min.js">
+      <DependentUpon>jquery-3.3.1.js</DependentUpon>
     </Content>
     <Content Include="Content\Scripts\Waves\waves.min.js">
       <DependentUpon>waves.js</DependentUpon>
@@ -254,7 +255,6 @@
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
     <Content Include="Content\Scripts\jquery.vibrate.js" />
-    <Content Include="Content\Scripts\jQuery\jquery-3.2.1.js" />
     <Content Include="Content\Scripts\sorttable.js" />
     <Content Include="Content\Scripts\Waves\waves.js" />
     <Content Include="Content\Styles\Bootstrap.css">
