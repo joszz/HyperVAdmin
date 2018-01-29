@@ -20,10 +20,7 @@ namespace HyperVAdmin
             ));
 
             bundles.Add(new StyleBundle("~/Content/Styles/bundle").Include(
-                "~/Content/Styles/Bootstrap.css",
                 "~/Content/Styles/Fancybox/jquery.fancybox.css",
-                "~/Content/Styles/fa-solid.css",
-                "~/Content/Styles/fontawesome.css",
                 "~/Content/Styles/Waves/waves.css",
                 "~/Content/Styles/Default.css"
             ));

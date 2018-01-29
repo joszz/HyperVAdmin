@@ -168,23 +168,11 @@
     <Content Include="Content\Styles\fa-regular.scss">
       <DependentUpon>fontawesome.scss</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\fa-solid.css">
-      <DependentUpon>fa-solid.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\fa-solid.min.css">
-      <DependentUpon>fa-solid.css</DependentUpon>
-    </Content>
     <Content Include="Content\Styles\fa-solid.scss">
       <DependentUpon>fontawesome.scss</DependentUpon>
     </Content>
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css">
       <DependentUpon>jquery.fancybox.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\fontawesome.css">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\fontawesome.min.css">
-      <DependentUpon>fontawesome.css</DependentUpon>
     </Content>
     <Content Include="Content\Styles\Waves\waves.css" />
     <Content Include="Content\Styles\Waves\waves.min.css">
@@ -257,17 +245,10 @@
     <Content Include="Content\Scripts\jquery.vibrate.js" />
     <Content Include="Content\Scripts\sorttable.js" />
     <Content Include="Content\Scripts\Waves\waves.js" />
-    <Content Include="Content\Styles\Bootstrap.css">
-      <DependentUpon>Bootstrap.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\Bootstrap.min.css">
-      <DependentUpon>Bootstrap.css</DependentUpon>
-    </Content>
     <Content Include="Content\Styles\Default.css">
       <DependentUpon>Default.scss</DependentUpon>
     </Content>
     <Content Include="Content\Images\Favicons\manifest.json" />
-    <Content Include="build_documentation.bat" />
     <Content Include="compilerconfig.json" />
     <Content Include="Content\Styles\Bootstrap\mixins\_alerts.scss" />
     <Content Include="Content\Styles\Bootstrap\mixins\_background-variant.scss" />

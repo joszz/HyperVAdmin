@@ -11,44 +11,5 @@
     "minify": { "enabled": true },
     "outputFile": "Content/Styles/Default.min.css",
     "inputFile": "Content/Styles/Default.scss"
-  },
-  //Bootstrap
-  {
-    "includeInProject": true,
-    "options": { "sourceMap": true },
-    "outputFile": "Content/Styles/Bootstrap.css",
-    "inputFile": "Content/Styles/Bootstrap.scss"
-  },
-  {
-    "includeInProject": true,
-    "minify": { "enabled": true },
-    "outputFile": "Content/Styles/Bootstrap.min.css",
-    "inputFile": "Content/Styles/Bootstrap.scss"
-  },
-  //FontAwesome
-  {
-    "includeInProject": true,
-    "options": { "sourceMap": true },
-    "outputFile": "Content/Styles/fontawesome.css",
-    "inputFile": "Content/Styles/fontawesome.scss"
-  },
-  {
-    "includeInProject": true,
-    "minify": { "enabled": true },
-    "outputFile": "Content/Styles/fontawesome.min.css",
-    "inputFile": "Content/Styles/fontawesome.scss"
-  },
-  //FontAwesome solid
-  {
-    "includeInProject": true,
-    "options": { "sourceMap": true },
-    "outputFile": "Content/Styles/fa-solid.css",
-    "inputFile": "Content/Styles/fa-solid.scss"
-  },
-  {
-    "includeInProject": true,
-    "minify": { "enabled": true },
-    "outputFile": "Content/Styles/fa-solid.min.css",
-    "inputFile": "Content/Styles/fa-solid.scss"
   }
 ]
