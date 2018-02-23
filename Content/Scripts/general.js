@@ -51,7 +51,8 @@ $(function () {
         });
     }
 
-    $.fancybox.defaults.smallBtn = $.fancybox.defaults.fullScreen = $.fancybox.defaults.slideShow = false;
+    //$.fancybox.defaults.smallBtn = $.fancybox.defaults.fullScreen = $.fancybox.defaults.slideShow = false;
+    $.fancybox.defaults.modal = true;
     $.fancybox.defaults.iframe.css = {
         "max-width": "500px",
         "width": "90%"
