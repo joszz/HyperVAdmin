@@ -1,4 +1,8 @@
-﻿@using HyperVAdmin.Utilities;
+﻿@using HyperVAdmin.ConfigurationSections;
+
+@{
+    string currentController = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+}
 
 <nav class="navbar navbar-inverse navbar-fixed-top compensate-for-scrollbar">
     <div class="container">
@@ -21,15 +25,27 @@
             @if (Session["user"] != null || UserConfig.UsersCollection.Count == 0)
             {
                 <ul class="nav navbar-nav">
-                    @if ((bool)ViewBag.HyperVEnabled)
+                    @foreach (KeyValuePair<string, WeblinkInstanceElement> link in WeblinkConfig.WeblinksCollection)
                     {
                         <li>
+                            <a href="@link.Value.Url" @Html.Raw(link.Value.Target != string.Empty ? "target='" + link.Value.Target + "'" : null)>@link.Value.Name</a>
+                        </li>
+                    }
+
+                    @if (WeblinkConfig.WeblinksCollection.Count > 0)
+                    {
+                        <li class="divider"></li>
+                    }
+
+                    @if ((bool)ViewBag.HyperVEnabled)
+                    {
+                        <li @Html.Raw(currentController == "VMs" ? "class='active'" : null)>
                             @Html.ActionLink("Virtual machines", "Index", "VMs")
                         </li>
                     }
                     @if ((bool)ViewBag.IISEnabled)
                     {
-                        <li>
+                        <li @Html.Raw(currentController == "Sites" ? "class='active'" : null)>
                             @Html.ActionLink("Sites", "Index", "Sites")
                         </li>
                     }

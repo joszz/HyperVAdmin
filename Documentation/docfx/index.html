@@ -101,13 +101,22 @@
 <li><p><strong>compilation debug=&quot;false&quot;</strong></p>
 <p>  Change this to true to turn of minification (amongst others). False will minify JS and CSS.</p>
 </li>
-<li><p><strong>userConfiguration (optional)</strong></p>
+<li><p><strong>users</strong> (optional)</p>
 <p>  This optional section in the web.config can be used to add a login form to this application. 
   The section can be added directly under the root node <em>configuration</em>. It has the following format;</p>
-<pre><code class="lang-xml">&lt;userConfiguration&gt;
+<pre><code class="lang-xml">&lt;users&gt;
     &lt;add username=&quot;provide-username&quot; password=&quot;provide-password&quot; displayname=&quot;provide-displayname-or-leave-empty&quot; /&gt;
-&lt;/userConfiguration&gt;
+&lt;/users&gt;
 </code></pre><p>  Multiple users can be added by just copying the &lt;add node. The displayname is used in the menu to indicate which user is logged in.</p>
+</li>
+<li><p><strong>weblinks</strong> (optional)</p>
+<p>  This optional section in the web.config can be used to add links to the menu pointing to external sites.
+  The section can be added directly under the root node <em>configuration</em>. It has the following format;</p>
+<pre><code class="lang-xml">&lt;weblinks&gt;
+    &lt;add name=&quot;provide-menuname&quot; url=&quot;provide-URL&quot; target=&quot;_blank&quot; /&gt;
+&lt;/weblinks&gt;
+</code></pre><p>  Multiple links can be added by just copying the &lt;add node. 
+  The target is used in the menu to indicate if the link should be opened in a new tab. If not specified will open in same tab.</p>
 </li>
 </ul>
 <h2 id="yuidoc">YUIDoc</h2>

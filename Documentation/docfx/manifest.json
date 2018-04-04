@@ -62,6 +62,114 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.UserCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.UserCollection.html",
+          "hash": "HIESvZzSANOIZ24jU8c1wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.UserConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.UserConfig.html",
+          "hash": "Oq/5H86dy8e/iJ5SXSTzxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.UserConfigSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.UserConfigSection.html",
+          "hash": "jySe+XqALPz6iGfZGBK2rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.UserInstanceElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.UserInstanceElement.html",
+          "hash": "5OriCFUNran/t7Xm5Gc7rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkCollection.html",
+          "hash": "to0W8WN1H1FJypo9CYwPLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkConfig.html",
+          "hash": "hks5YyFzWGA78U2LqVbkFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkConfigSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkConfigSection.html",
+          "hash": "mPgnM0aTMnELbOlJXhsc4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkInstanceElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.WeblinkInstanceElement.html",
+          "hash": "FImlFUwTg5FNkWBmrC2bmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.ConfigurationSections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.ConfigurationSections.html",
+          "hash": "b2wdsbvYT9BzDu0KNsyBEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/HyperVAdmin.Controllers.BaseController.yml",
       "output": {
         ".html": {
@@ -302,59 +410,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HyperVAdmin.Utilities.UserCollection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HyperVAdmin.Utilities.UserCollection.html",
-          "hash": "29enbKAttPUKRKyU5RviLg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/HyperVAdmin.Utilities.UserConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HyperVAdmin.Utilities.UserConfig.html",
-          "hash": "QN/N7vS7EhQ8g5xcDF4lkA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/HyperVAdmin.Utilities.UserConfigSection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HyperVAdmin.Utilities.UserConfigSection.html",
-          "hash": "+FAsp3yjTLhwpZrPgsxvnw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/HyperVAdmin.Utilities.UserInstanceElement.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HyperVAdmin.Utilities.UserInstanceElement.html",
-          "hash": "j6LlZ1x+ky3yuOyEMFoyiw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/HyperVAdmin.Utilities.yml",
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.html",
-          "hash": "RNGMpud3uxECMQFNk6TJWg=="
+          "hash": "TpFJmlM85qVhxiGfBSHrrA=="
         }
       },
       "is_incremental": false,
@@ -390,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Hr5rZm9RFXPF7c5bpC0JeQ=="
+          "hash": "uQq4AClOhuJ1YcE4tPlmeA=="
         }
       },
       "is_incremental": false,
@@ -405,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "A905ELzcvx5tgQsV7Gozrw=="
+          "hash": "+5yiizsMHbmYy/qEfBB+Zg=="
         }
       },
       "is_incremental": false,
@@ -427,22 +487,21 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

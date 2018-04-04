@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
 
-namespace HyperVAdmin.Utilities
+namespace HyperVAdmin.ConfigurationSections
 {
     public class UserConfigSection : ConfigurationSection
     {
@@ -38,7 +38,7 @@ namespace HyperVAdmin.Utilities
             set { base["password"] = value; }
         }
 
-        [ConfigurationProperty("displayname", IsRequired = true)]
+        [ConfigurationProperty("displayname", IsRequired = false)]
         public string Displayname
         {
             get
@@ -55,11 +55,11 @@ namespace HyperVAdmin.Utilities
 
         static UserConfig()
         {
-            UserConfigSection section = (UserConfigSection)ConfigurationManager.GetSection("userConfiguration");
+            UserConfigSection section = (UserConfigSection)ConfigurationManager.GetSection("users");
 
-            foreach (UserInstanceElement i in section.Users)
+            foreach (UserInstanceElement user in section.Users)
             {
-                UsersCollection.Add(i.Username, i);
+                UsersCollection.Add(user.Username, user);
             }
         }
 

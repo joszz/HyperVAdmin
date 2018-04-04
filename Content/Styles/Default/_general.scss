@@ -15,11 +15,6 @@ body {
     font-family: "Roboto", Arial, sans-serif !important;
 }
 
-nav small {
-    padding: 18px 0 0 0;
-    float: left;
-}
-
 div.alert {
     position: fixed;
     bottom: 15px;
@@ -27,29 +22,6 @@ div.alert {
     z-index: 7501;
     margin-bottom: 0;
     display: none;
-}
-
-.row {
-    height: 50%;
-}
-
-.row.full-height {
-    height: 100%;
-}
-
-@media (max-width: 768px) {
-    .row {
-        height: 100%;
-    }
-}
-
-body#maincontent .panel {
-    height: calc(100% - 15px);
-}
-
-body#maincontent .panel-body {
-    overflow-y: auto;
-    height: calc(100% - 60px);
 }
 
 th {
@@ -69,6 +41,15 @@ th img {
     cursor: pointer;
     float: right;
     margin: 2px 0 0 0;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > td {
+    white-space: nowrap;
 }
 
 #last-state-change {
@@ -100,12 +81,4 @@ div#confirm-dialog button#confirm-yes {
 
 .fancybox-active {
     height: inherit;
-}
-
-.container.full-height {
-    display: table;
-}
-
-#navbar .btn-group{
-    margin: 7px 0 0 7px;
 }

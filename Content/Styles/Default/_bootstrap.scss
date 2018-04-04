@@ -1,11 +1,24 @@
-﻿.table > tbody > tr > td {
-    vertical-align: middle;
+﻿.row {
+    height: 50%;
 }
 
+.row.full-height {
+    height: 100%;
+}
 
-.table > thead > tr > th,
-.table > tbody > tr > td {
-    white-space: nowrap;
+@media (max-width: 768px) {
+    .row {
+        height: 100%;
+    }
+}
+
+body#maincontent .panel {
+    height: calc(100% - 15px);
+}
+
+body#maincontent .panel-body {
+    overflow-y: auto;
+    height: calc(100% - 60px);
 }
 
 .btn-group > .btn, .btn-group-vertical > .btn {
@@ -13,15 +26,6 @@
     margin-left: -5px !important;
 }
 
-a.navbar-brand img {
-    float: left;
-    margin: -5px 5px 0 5px;
-}
-
-footer,
-nav.navbar {
-    opacity: 0.9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    background-image: $gradiantDark;
-    background-repeat: repeat-x;
+.container.full-height {
+    display: table;
 }

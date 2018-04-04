@@ -1,0 +1,29 @@
+﻿a.navbar-brand img {
+    float: left;
+    margin: -5px 5px 0 5px;
+}
+
+#navbar .btn-group {
+    margin: 7px 0 0 7px;
+}
+
+#navbar .divider {
+    background: $navbar-inverse-link-color;
+    width: 1px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+footer,
+nav.navbar {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    background-image: $gradiantDark;
+    background-repeat: repeat-x;
+}
+
+nav small {
+    padding: 18px 0 0 0;
+    float: left;
+}
+
