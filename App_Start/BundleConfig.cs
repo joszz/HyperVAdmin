@@ -16,12 +16,14 @@ namespace HyperVAdmin
                 "~/Content/Scripts/jquery.fullscreen.js",
                 "~/Content/Scripts/sorttable.js",
                 "~/Content/Scripts/Waves/waves.js",
+                "~/Content/Scripts/BootstrapToggle/bootstrap-toggle.js",
                 "~/Content/Scripts/general.js"
             ));
 
             bundles.Add(new StyleBundle("~/Content/Styles/bundle").Include(
                 "~/Content/Styles/Fancybox/jquery.fancybox.css",
                 "~/Content/Styles/Waves/waves.css",
+                "~/Content/Styles/BootstrapToggle/bootstrap-toggle.css",
                 "~/Content/Styles/Default.css"
             ));
         }

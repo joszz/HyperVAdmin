@@ -21,8 +21,8 @@
 </head>
 <body id="maincontent">
     @Html.Partial("~/Views/Shared/_Menu.cshtml", ViewData["Sprints"], ViewData)
-
-    <div class="container">
+    
+    <div class="container @Html.Raw(ViewBag.ContainerClass)">
         @RenderBody()
     </div>
 

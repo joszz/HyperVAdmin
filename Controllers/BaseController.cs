@@ -1,8 +1,10 @@
-﻿using System.Configuration;
+﻿using HyperVAdmin.Attributes;
+using System.Configuration;
 using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
 {
+    [CustomAuthentication]
     /// <summary>
     /// BaseController for all controllers.
     /// </summary>

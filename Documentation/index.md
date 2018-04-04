@@ -38,5 +38,18 @@ In the web.config of this project there are a couple settings you can change;
 	
 	Change this to true to turn of minification (amongst others). False will minify JS and CSS.
 
+* **userConfiguration (optional)**
+
+    This optional section in the web.config can be used to add a login form to this application. 
+    The section can be added directly under the root node *configuration*. It has the following format;
+    ```xml
+    <userConfiguration>
+        <add username="provide-username" password="provide-password" displayname="provide-displayname-or-leave-empty" />
+    </userConfiguration>
+    ```
+
+    Multiple users can be added by just copying the <add node. The displayname is used in the menu to indicate which user is logged in.
+
+
 ## YUIDoc
 [Find the JS docs here](../yuidoc/)

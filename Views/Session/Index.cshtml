@@ -1,0 +1,30 @@
+﻿@model bool
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="vertical-center login">
+    <div class="panel panel-success" id="login">
+        <div class="panel-heading">
+            <h4>Login</h4>
+
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group @Html.Raw(!Model ? "has-error" : null)">
+                    @Html.TextBox("User", null, new { @class = "form-control", placeholder = "User" })
+                </div>
+                <div class="form-group @Html.Raw(!Model ? "has-error" : null)">
+                    @Html.Password("Password", null, new { @class = "form-control", placeholder = "Password" })
+                </div>
+                <div id="rememberme-wrapper">
+                    @Html.CheckBox("rememberme", true, new { data_toggle = "toggle", data_onstyle = "success", data_offstyle = "danger", data_size = "small" })
+                    @Html.Label("rememberme", "Remember me")
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+            }
+        </div>
+    </div>
+</div>

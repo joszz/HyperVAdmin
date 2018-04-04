@@ -1,1 +1,465 @@
-{"homepages":[],"source_base_path":"C:/Users/jos_n/Documents/GitHub/HyperVAdmin/Documentation","xrefmap":"xrefmap.yml","files":[{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Modules.TimingModule.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Modules.TimingModule.html","hash":"ZMeJIZ5IUYA5Tiwr2dAOxw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.HtmlUtility.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.HtmlUtility.html","hash":"IbQJdF76u01FyTzsWy/nyg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.ResourceType.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.ResourceType.html","hash":"kcKhBAbAEF8IPRhuRmid/Q=="}},"is_incremental":false,"version":""},{"type":"Conceptual","source_relative_path":"index.md","output":{".html":{"relative_path":"index.html","hash":"4cYpQIvAYHQFy1a/1e/nKg=="}},"is_incremental":false,"version":""},{"type":"Conceptual","source_relative_path":"articles/intro.md","output":{".html":{"relative_path":"articles/intro.html","hash":"mPmHmoOfvBTx9lrUZaVqMA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Controllers.BaseController.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Controllers.BaseController.html","hash":"NUg4HGhRJCRIykGKGtQXCA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Controllers.VMsController.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Controllers.VMsController.html","hash":"66ufxTI+Th5hUSHOjU02xQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Models.VirtualMachineModel.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Models.VirtualMachineModel.html","hash":"yx5qCIYU7nD2YG1hslsriw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Modules.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Modules.html","hash":"xFPDaLftDjr0ZlYvXQuADg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.HyperVUtility.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.HyperVUtility.html","hash":"rMdTYFxIiUmcvgwbefNd5Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.ReturnCode.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.ReturnCode.html","hash":"FC6Humxj54DDJ1YWte2jhA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Attributes.AJAXOnlyAttribute.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html","hash":"chlhCIYG1wSINUSj2vu6Ag=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Controllers.IndexController.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Controllers.IndexController.html","hash":"Xtyz32awIhSoIyT32clLQQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Models.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Models.html","hash":"R+S/1lgoEZsEzth0QURlrg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.MvcApplication.yml","output":{".html":{"relative_path":"api/HyperVAdmin.MvcApplication.html","hash":"hytteZjDYlz6Oi5erHHPFQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.OtherResourceType.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.OtherResourceType.html","hash":"+IriWtBzvgVFlZgUpm7pbA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.html","hash":"XuMsLsQKXs3fJxvMp++sDw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.BundleConfig.yml","output":{".html":{"relative_path":"api/HyperVAdmin.BundleConfig.html","hash":"SZdPoll/yUpevpsZeY2GRw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Controllers.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Controllers.html","hash":"F5BjRnHZL1tuSy88H9igPg=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"api/toc.yml","output":{".html":{"relative_path":"api/toc.html","hash":"8BOviWSmWCveEtQqR1xFzQ=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"articles/toc.yml","output":{".html":{"relative_path":"articles/toc.html","hash":"P9GAqZkT6mZuWFb9hyI8/Q=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"toc.yml","output":{".html":{"relative_path":"toc.html","hash":"Lh0kbVYcr050n2+P09YWMA=="}},"is_incremental":false,"version":""},{"type":"Conceptual","source_relative_path":"api/index.md","output":{".html":{"relative_path":"api/index.html","hash":"plWfTFPACPiwHp5Fq4EQkg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Models.VirtualMachineState.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Models.VirtualMachineState.html","hash":"9jxorQMAs+5Gkx4b30TE/g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.RouteConfig.yml","output":{".html":{"relative_path":"api/HyperVAdmin.RouteConfig.html","hash":"45iyzIG7J1gKmfBr/+1qrA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Utilities.ResourceSubType.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Utilities.ResourceSubType.html","hash":"bp2mGTYSyCYkJUt08WBOzw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.yml","output":{".html":{"relative_path":"api/HyperVAdmin.html","hash":"QGBZDBcqbxyJYX2j/aav+A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Attributes.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Attributes.html","hash":"5cYUxC/toBQSNOfVASTjQg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Controllers.SitesController.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Controllers.SitesController.html","hash":"iB9cLxP78loXqL+wdA6waQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"api/HyperVAdmin.Models.SiteModel.yml","output":{".html":{"relative_path":"api/HyperVAdmin.Models.SiteModel.html","hash":"qN62UAdpWPv23tUX6lhhPA=="}},"is_incremental":false,"version":""},{"type":"Resource","output":{"resource":{"relative_path":"index.json"}},"is_incremental":false}],"version_info":{}}
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/josn/Documents/GitHub/HyperVAdmin/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Attributes.AJAXOnlyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html",
+          "hash": "sGmFGv0B37si7xMMyqBjZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Attributes.CustomAuthentication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Attributes.CustomAuthentication.html",
+          "hash": "xmmATJKLbwLYxhy6CpBLvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Attributes.html",
+          "hash": "2Gfge49QoiuZXsiV2HyS7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.BundleConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.BundleConfig.html",
+          "hash": "5iX8+Pdgbyv4XQRRox19Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Controllers.BaseController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Controllers.BaseController.html",
+          "hash": "XSc6gdFxKIRiHBnQPZDPeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Controllers.IndexController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Controllers.IndexController.html",
+          "hash": "SCOc0aZ0xiyJp/Rbq5XbOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Controllers.SessionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Controllers.SessionController.html",
+          "hash": "twmNJdoVmy0+8JkTGopHMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Controllers.SitesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Controllers.SitesController.html",
+          "hash": "j4XTphDnpJfPQky3I33yyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Controllers.VMsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Controllers.VMsController.html",
+          "hash": "DhGsQkYRvSA/ClCZi8Jygg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Controllers.html",
+          "hash": "B2S7pGmXYz88spZ3boCIfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Models.SiteModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Models.SiteModel.html",
+          "hash": "yuBc7F6RL+AMa6wQ4iYQVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Models.VirtualMachineModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Models.VirtualMachineModel.html",
+          "hash": "3D12AjIg6C+750tEBP2cAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Models.VirtualMachineState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Models.VirtualMachineState.html",
+          "hash": "OaSJVM5HIxlCRIwAydB1Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Models.html",
+          "hash": "xRwnmy3FKAM9lUDY2KKMCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Modules.TimingModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Modules.TimingModule.html",
+          "hash": "4OgSKMchktKORW8L6pb7jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Modules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Modules.html",
+          "hash": "K3GxXhQVPlSxk77mWlh0nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.MvcApplication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.MvcApplication.html",
+          "hash": "ngrwFHDZJHGJ7u5Bts5ddQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.RouteConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.RouteConfig.html",
+          "hash": "HeQV0Hph22vSzMW93A7qDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.HtmlUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.HtmlUtility.html",
+          "hash": "SXUb90XJ+tGpG1PxzEoZDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.HyperVUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.HyperVUtility.html",
+          "hash": "feRs4YHLD8mwBYS+fC/RNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.OtherResourceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.OtherResourceType.html",
+          "hash": "PfAgDk+eY0PPhCAxPnRjFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.ResourceSubType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.ResourceSubType.html",
+          "hash": "EZhAf47zkxOskj6kjjLy8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.ResourceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.ResourceType.html",
+          "hash": "LVCjuGPWFTrQwH0APPvYuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.ReturnCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.ReturnCode.html",
+          "hash": "K57g07n+TtoB6j0oczbcdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.UserCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.UserCollection.html",
+          "hash": "29enbKAttPUKRKyU5RviLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.UserConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.UserConfig.html",
+          "hash": "QN/N7vS7EhQ8g5xcDF4lkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.UserConfigSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.UserConfigSection.html",
+          "hash": "+FAsp3yjTLhwpZrPgsxvnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.UserInstanceElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.UserInstanceElement.html",
+          "hash": "j6LlZ1x+ky3yuOyEMFoyiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.Utilities.html",
+          "hash": "RNGMpud3uxECMQFNk6TJWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HyperVAdmin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HyperVAdmin.html",
+          "hash": "b/qIHeW7eyLwOmttrMsCIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "pXPjYxcW/kCHH/LFFYteiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Hr5rZm9RFXPF7c5bpC0JeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "A905ELzcvx5tgQsV7Gozrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "zUEcqxeC8MmPdFio0fKEQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

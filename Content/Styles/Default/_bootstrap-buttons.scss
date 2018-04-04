@@ -333,3 +333,19 @@ fieldset[disabled] .btn-danger.active {
     background-color: #c12e2a;
     background-image: none;
 }
+
+.btn-dark,
+.btn-dark:active,
+.btn-dark:focus,
+.btn-dark:hover {
+    background-image: none;
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #333;
+}
+
+.btn-dark:active,
+.btn-dark:hover {
+    background-image: linear-gradient(to bottom, #5cb85c 0px, #419641 100%);
+    background-position: 0;
+}

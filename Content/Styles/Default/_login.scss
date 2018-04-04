@@ -1,0 +1,53 @@
+﻿body#maincontent #login {
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#login input {
+    position: relative;
+}
+
+#login input:focus {
+    z-index: 2;
+}
+
+#login input[type="text"] {
+    border-radius: 4px 4px 0 0;
+    margin-bottom: -1px;
+}
+
+#login input[type="password"] {
+    border-radius: 0 0 4px 4px;
+}
+
+#login button {
+    margin-top: 15px;
+}
+
+#login .toggle {
+    float: right;
+    height: auto !important;
+}
+
+#login .form-group {
+    margin-bottom: 0;
+}
+
+#rememberme-wrapper {
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+}
+
+div.vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#login label:not(.toggle-on):not(.toggle-off) {
+    margin-right: 15px;
+    float: right;
+    font-weight: normal;
+    line-height: 29px;
+}

@@ -1,4 +1,6 @@
-﻿<nav class="navbar navbar-inverse navbar-fixed-top compensate-for-scrollbar">
+﻿@using HyperVAdmin.Utilities;
+
+<nav class="navbar navbar-inverse navbar-fixed-top compensate-for-scrollbar">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -16,20 +18,30 @@
             </small>
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
-            <ul class="nav navbar-nav">
-                @if ((bool)ViewBag.HyperVEnabled)
+            @if (Session["user"] != null || UserConfig.UsersCollection.Count == 0)
+            {
+                <ul class="nav navbar-nav">
+                    @if ((bool)ViewBag.HyperVEnabled)
+                    {
+                        <li>
+                            @Html.ActionLink("Virtual machines", "Index", "VMs")
+                        </li>
+                    }
+                    @if ((bool)ViewBag.IISEnabled)
+                    {
+                        <li>
+                            @Html.ActionLink("Sites", "Index", "Sites")
+                        </li>
+                    }
+                </ul>
+                if (Session["user"] != null)
                 {
-                    <li>
-                        @Html.ActionLink("Virtual machines", "Index", "VMs")
-                    </li>
+                    <div class="pull-right btn-group">
+                        <i class="btn btn-dark fa fa-user" title="Logged in as: @Session["user"].ToString()"></i>
+                        @Html.ActionLink(" ", "Logoff", "Session", null, new { @class = "btn btn-dark fa fa-sign-out-alt", title = "Logout" })
+                    </div>
                 }
-                @if ((bool)ViewBag.IISEnabled)
-                {
-                    <li>
-                        @Html.ActionLink("Sites", "Index", "Sites")
-                    </li>
-                }
-            </ul>
+            }
         </div>
     </div>
 </nav>
