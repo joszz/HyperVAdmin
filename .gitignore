@@ -51,7 +51,7 @@ Temporary Items
 *.csproj.user
 obj
 .sass-cache
-Web.config
 .vs
 bin
 build_documentation.bat
+Web.config
