@@ -1,4 +1,5 @@
-﻿using System.Web.Optimization;
+﻿using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace HyperVAdmin
@@ -13,6 +14,12 @@ namespace HyperVAdmin
         {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Removing all the view engines
+            ViewEngines.Engines.Clear();
+
+            //Add Razor Engine (which we are using)
+            ViewEngines.Engines.Add(new ViewEngine());
         }
     }
 }
