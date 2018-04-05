@@ -27,3 +27,18 @@ nav small {
     float: left;
 }
 
+@media (max-width: $screen-sm) {
+    #navbar {
+        position: relative;
+    }
+
+    #navbar .divider {
+        display: none;
+    }
+
+    #navbar .btn-group {
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+}
