@@ -88,7 +88,7 @@ function initializeHelpShortcut() {
  * @method initializeFancybox
  */
 function initializeFancybox() {
-    $(".fa-puzzle-piece").off().on("click", function () {
+    $(".fa-puzzle-piece:not(.disabled)").off().on("click", function () {
         $.fancybox.open({ src: $(this).data("href"), type: "iframe" });
     });
 }
