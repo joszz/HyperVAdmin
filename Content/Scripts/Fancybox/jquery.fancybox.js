@@ -1,5 +1,5 @@
 // ==================================================
-// fancyBox v3.3.0
+// fancyBox v3.3.4
 //
 // Licensed GPLv3 for open source use
 // or fancyBox Commercial License for commercial use
@@ -526,18 +526,6 @@
         $scrollDiv,
         $container,
         buttonStr;
-
-      // iOS hack; https://bugs.webkit.org/show_bug.cgi?id=176896
-      if (
-        firstItem.type !== "image" &&
-        /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-        !window.MSStream &&
-        !$("body").hasClass("fancybox-iosfix")
-      ) {
-        $("body")
-          .addClass("fancybox-iosfix")
-          .css("top", -$W.scrollTop());
-      }
 
       // Hide scrollbars
       // ===============
@@ -1678,7 +1666,7 @@
         if (slide.isLoading && (!$img || !$img[0].complete) && !slide.hasError) {
           self.showLoading(slide);
         }
-      }, 300);
+      }, 350);
 
       // If we have "srcset", then we need to find first matching "src" value.
       // This is necessary, because when you set an src attribute, the browser will preload the image
@@ -1769,6 +1757,7 @@
           .attr("src", thumbSrc);
       }
 
+      // Start loading actual image
       self.setBigImage(slide);
     },
 
@@ -2181,6 +2170,7 @@
 
       duration = parseInt(slide.forcedDuration === undefined ? duration : slide.forcedDuration, 10);
 
+      // Do not animate if revealing the same slide
       if (slide.pos === self.currPos) {
         if (slide.isComplete) {
           effect = false;
@@ -2204,7 +2194,6 @@
 
       // Zoom animation
       // ==============
-
       if (effect === "zoom") {
         end.scaleX = end.width / start.width;
         end.scaleY = end.height / start.height;
@@ -2289,7 +2278,7 @@
       var self = this,
         rez = false,
         $thumb = slide.opts.$thumb,
-        thumbPos = $thumb ? $thumb.offset() : 0,
+        thumbPos = $thumb && $thumb.length && $thumb[0].ownerDocument === document ? $thumb.offset() : 0,
         slidePos;
 
       // Check if element is inside the viewport by at least 1 pixel
@@ -2323,7 +2312,7 @@
         );
       };
 
-      if (thumbPos && $thumb[0].ownerDocument === document && isElementVisible($thumb)) {
+      if (thumbPos && isElementVisible($thumb)) {
         slidePos = self.$refs.stage.offset();
 
         rez = {
@@ -2637,14 +2626,6 @@
         $body.removeClass("fancybox-active compensate-for-scrollbar");
 
         $("#fancybox-style-noscroll").remove();
-
-        if ($body.hasClass("fancybox-iosfix")) {
-          scrollTop = parseInt($body[0].style.top, 10);
-
-          $body.css("top", "").removeClass("fancybox-iosfix");
-
-          $W.scrollTop(-scrollTop);
-        }
       }
     },
 
@@ -2764,7 +2745,7 @@
   });
 
   $.fancybox = {
-    version: "3.3.0",
+    version: "3.3.4",
     defaults: defaults,
 
     // Get current instance and execute a command.
@@ -3252,7 +3233,11 @@
       thumb =
         $.type(providerOpts.thumb) === "function" ? providerOpts.thumb.call(this, rez, params, item) : format(providerOpts.thumb, rez);
 
-      if (providerName === "vimeo") {
+      if (providerName === "youtube") {
+        url = url.replace(/&t=((\d+)m)?(\d+)s/, function(match, p1, m, s) {
+          return "&start=" + ((m ? parseInt(m, 10) * 60 : 0) + parseInt(s, 10));
+        });
+      } else if (providerName === "vimeo") {
         url = url.replace("&%23", "#");
       }
 
@@ -3278,8 +3263,9 @@
       }
 
       $.extend(item, {
-        src: url,
         type: type,
+        src: url,
+        origSrc: item.src,
         contentSource: provider,
         contentType: type === "image" ? "image" : provider == "gmap_place" || provider == "gmap_search" ? "map" : "video"
       });
@@ -4806,6 +4792,11 @@
         "</button>"
     },
     share: {
+      url: function(instance, item) {
+        return (
+          (!instance.currentHash && !(item.type === "inline" || item.type === "html") ? item.origSrc || item.src : false) || window.location
+        );
+      },
       tpl:
         '<div class="fancybox-share">' +
         "<h1>{{SHARE}}</h1>" +
@@ -4846,38 +4837,44 @@
   }
 
   $(document).on("click", "[data-fancybox-share]", function() {
-    var f = $.fancybox.getInstance(),
+    var instance = $.fancybox.getInstance(),
+      current = instance.current || null,
       url,
       tpl;
 
-    if (f) {
-      url = f.current.opts.hash === false ? f.current.src : window.location;
-      tpl = f.current.opts.share.tpl
-        .replace(/\{\{media\}\}/g, f.current.type === "image" ? encodeURIComponent(f.current.src) : "")
-        .replace(/\{\{url\}\}/g, encodeURIComponent(url))
-        .replace(/\{\{url_raw\}\}/g, escapeHtml(url))
-        .replace(/\{\{descr\}\}/g, f.$caption ? encodeURIComponent(f.$caption.text()) : "");
-
-      $.fancybox.open({
-        src: f.translate(f, tpl),
-        type: "html",
-        opts: {
-          animationEffect: false,
-          afterLoad: function(instance, current) {
-            // Close self if parent instance is closing
-            f.$refs.container.one("beforeClose.fb", function() {
-              instance.close(null, 0);
-            });
-
-            // Opening links in a popup window
-            current.$content.find(".fancybox-share__links a").click(function() {
-              window.open(this.href, "Share", "width=550, height=450");
-              return false;
-            });
-          }
-        }
-      });
+    if (!current) {
+      return;
     }
+
+    if ($.type(current.opts.share.url) === "function") {
+      url = current.opts.share.url.apply(current, [instance, current]);
+    }
+
+    tpl = current.opts.share.tpl
+      .replace(/\{\{media\}\}/g, current.type === "image" ? encodeURIComponent(current.src) : "")
+      .replace(/\{\{url\}\}/g, encodeURIComponent(url))
+      .replace(/\{\{url_raw\}\}/g, escapeHtml(url))
+      .replace(/\{\{descr\}\}/g, instance.$caption ? encodeURIComponent(instance.$caption.text()) : "");
+
+    $.fancybox.open({
+      src: instance.translate(instance, tpl),
+      type: "html",
+      opts: {
+        animationEffect: false,
+        afterLoad: function(shareInstance, shareCurrent) {
+          // Close self if parent instance is closing
+          instance.$refs.container.one("beforeClose.fb", function() {
+            shareInstance.close(null, 0);
+          });
+
+          // Opening links in a popup window
+          shareCurrent.$content.find(".fancybox-share__links a").click(function() {
+            window.open(this.href, "Share", "width=550, height=450");
+            return false;
+          });
+        }
+      }
+    });
   });
 })(document, window.jQuery || jQuery);
 
