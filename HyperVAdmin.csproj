@@ -482,6 +482,8 @@
     <Content Include="Content\Styles\FontAwesome\_variables.scss" />
     <Content Include="Content\Styles\fontawesome.scss" />
     <Content Include="Views\Session\Index.cshtml" />
+    <Content Include="Content\Styles\FontAwesome\v4-shims.scss" />
+    <Content Include="Content\Styles\FontAwesome\_shims.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
