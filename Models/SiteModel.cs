@@ -70,7 +70,8 @@ namespace HyperVAdmin.Models
                 {
                     string url = binding.Protocol + "://" + (binding.Host != string.Empty ? binding.Host : Environment.MachineName);
 
-                    if (!(binding.EndPoint.Port == 80 && binding.Protocol == "http") && 
+                    if (binding.EndPoint != null && 
+                        !(binding.EndPoint.Port == 80 && binding.Protocol == "http") && 
                         !(binding.EndPoint.Port == 443 && binding.Protocol == "https"))
                     {
                         url += ":" + binding.EndPoint.Port;
