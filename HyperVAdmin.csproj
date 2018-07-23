@@ -178,17 +178,17 @@
     <Content Include="Content\Styles\BootstrapToggle\bootstrap-toggle.min.css">
       <DependentUpon>bootstrap-toggle.css</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\fa-brands.scss">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\fa-regular.scss">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\fa-solid.scss">
+    <Content Include="Content\Styles\brands.scss">
       <DependentUpon>fontawesome.scss</DependentUpon>
     </Content>
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css">
       <DependentUpon>jquery.fancybox.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\regular.scss">
+      <DependentUpon>fontawesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\solid.scss">
+      <DependentUpon>fontawesome.scss</DependentUpon>
     </Content>
     <Content Include="Content\Styles\Waves\waves.css" />
     <Content Include="Content\Styles\Waves\waves.min.css">

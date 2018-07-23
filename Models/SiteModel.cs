@@ -45,7 +45,7 @@ namespace HyperVAdmin.Models
         /// <summary>
         /// The web applications defined for a site.
         /// </summary>
-        public List<Application> Applications{ get; set; }
+        public List<Application> Applications { get; set; }
 
         /// <summary>
         /// Retrieves a list of SiteModels.
@@ -68,18 +68,21 @@ namespace HyperVAdmin.Models
 
                 foreach (Binding binding in site.Bindings.OrderBy(b => b.Protocol))
                 {
-                    string url = binding.Protocol + "://" + (binding.Host != string.Empty ? binding.Host : Environment.MachineName);
-
-                    if (binding.EndPoint != null && 
-                        !(binding.EndPoint.Port == 80 && binding.Protocol == "http") && 
-                        !(binding.EndPoint.Port == 443 && binding.Protocol == "https"))
+                    if (binding.Protocol.ToLowerInvariant() == "http" || binding.Protocol.ToLowerInvariant() == "https")
                     {
-                        url += ":" + binding.EndPoint.Port;
-                    }
+                        string url = binding.Protocol + "://" + (binding.Host != string.Empty ? binding.Host : Environment.MachineName);
 
-                    if (!model.Bindings.ContainsKey(binding.Protocol))
-                    {
-                        model.Bindings.Add(binding.Protocol, url);
+                        if (binding.EndPoint != null &&
+                            !(binding.EndPoint.Port == 80 && binding.Protocol == "http") &&
+                            !(binding.EndPoint.Port == 443 && binding.Protocol == "https"))
+                        {
+                            url += ":" + binding.EndPoint.Port;
+                        }
+
+                        if (!model.Bindings.ContainsKey(binding.Protocol))
+                        {
+                            model.Bindings.Add(binding.Protocol, url);
+                        }
                     }
                 }
 
