@@ -6,6 +6,7 @@
 */
 
 var refreshVMListIntervalID = 0, refreshSitesListIntervalID = 0;
+var settings;
 
 /**
 * Document onload, call to initialize plugins and eventhandlers.
@@ -13,6 +14,12 @@ var refreshVMListIntervalID = 0, refreshSitesListIntervalID = 0;
 * @method document.onload
 */
 $(function () {
+    settings = {
+        alertTimeout: $("body").data("alerttimeout"),
+        refreshInterval: $("body").data("refreshinterval"),
+        baseUrl: $("body").data("baseurl")
+    };
+    
     Waves.attach(".btn");
     Waves.init();
 
@@ -25,29 +32,29 @@ $(function () {
     initializeHelpShortcut();
 
     if ($("#virtual-machines:visible").length > 0) {
-        refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
+        refreshVMListIntervalID = window.setInterval(refreshVMList, settings.refreshInterval * 1000);
 
         $("#virtual-machines").on("click", ".fa-power-off", toggleVM);
         $("#virtual-machines .panel-heading button").click(refreshVMList);
 
         $('#virtual-machines table').addSortWidget({
-            img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
-            img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
-            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif"
+            img_asc: settings.baseUrl + "Content/Images/Sorttable/asc_sort.gif",
+            img_desc: settings.baseUrl + "Content/Images/Sorttable/desc_sort.gif",
+            img_nosort: settings.baseUrl + "Content/Images/Sorttable/no_sort.gif"
         });
     }
 
     if ($("#sites:visible").length > 0) {
-        refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);
+        refreshSitesListIntervalID = window.setInterval(refreshSites, settings.refreshInterval * 1000);
 
         $("#sites .panel-heading button").click(refreshSites);
         $("#sites").on("click", "button.fa-copy:visible", copyPath);
         $("#sites").on("click", "button.fa-power-off:visible", toggleSite);
 
         $('#sites table').addSortWidget({
-            img_asc: baseUrl + "Content/Images/Sorttable/asc_sort.gif",
-            img_desc: baseUrl + "Content/Images/Sorttable/desc_sort.gif",
-            img_nosort: baseUrl + "Content/Images/Sorttable/no_sort.gif"
+            img_asc: settings.baseUrl + "Content/Images/Sorttable/asc_sort.gif",
+            img_desc: settings.baseUrl + "Content/Images/Sorttable/desc_sort.gif",
+            img_nosort: settings.baseUrl + "Content/Images/Sorttable/no_sort.gif"
         });
     }
 
@@ -73,7 +80,7 @@ function initializeHelpShortcut() {
 
     $("body").keydown(function (event) {
         //keycode 112 === F1
-        
+
         if (event.which === 112) {
             $("footer .fa-question")[0].click();
             event.preventDefault();
@@ -130,7 +137,7 @@ function refreshVMList() {
     var $this = $(this);
 
     $.getJSON({
-        url: baseUrl + "VMs/GetVMs",
+        url: settings.baseUrl + "VMs/GetVMs",
         type: "POST",
         success: function (data) {
             $("#virtual-machines tbody tr:not(.hidden)").remove();
@@ -159,7 +166,7 @@ function refreshVMList() {
             $("#virtual-machines").isLoading("hide");
             $this.blur();
 
-            refreshVMListIntervalID = window.setInterval(refreshVMList, refreshInterval * 1000);
+            refreshVMListIntervalID = window.setInterval(refreshVMList, settings.refreshInterval * 1000);
         }
     });
 }
@@ -178,7 +185,7 @@ function toggleVM() {
         if ($(this).attr("id") === "confirm-yes") {
             $this.addClass("disabled");
             $.post({
-                url: baseUrl + "VMs/ToggleState",
+                url: settings.baseUrl + "VMs/ToggleState",
                 data: {
                     vmName: $.trim($this.closest("tr").find("td.name").html()),
                     state: $this.hasClass("btn-danger") ? 2 : 3
@@ -213,7 +220,7 @@ function refreshSites() {
     var $this = $(this);
 
     $.getJSON({
-        url: baseUrl + "Sites/GetSites",
+        url: settings.baseUrl + "Sites/GetSites",
         type: "POST",
         success: function (data) {
             $("#sites tbody tr:not(.hidden)").remove();
@@ -255,7 +262,7 @@ function refreshSites() {
             $("#sites").isLoading("hide");
             $this.blur();
 
-            refreshSitesListIntervalID = window.setInterval(refreshSites, refreshInterval * 1000);
+            refreshSitesListIntervalID = window.setInterval(refreshSites, settings.refreshInterval * 1000);
         }
     });
 }
@@ -277,7 +284,7 @@ function toggleSite(event) {
             $this.closest("tr").find(".protocol").toggleClass("disabled");
 
             $.post({
-                url: baseUrl + "Sites/" + ($this.hasClass("btn-success") ? "StopSite" : "StartSite"),
+                url: settings.baseUrl + "Sites/" + ($this.hasClass("btn-success") ? "StopSite" : "StartSite"),
                 data: {
                     sitename: $.trim($this.closest("tr").find(".name").html())
                 },
@@ -318,7 +325,7 @@ function fadeOutAlert() {
         $("div.alert").fadeOut("fast", function () {
             $("div.alert").removeClass("alert-success alert-danger");
         });
-    }, alertTimeout * 1000);
+    }, settings.alertTimeout * 1000);
 }
 
 /**

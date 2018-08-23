@@ -19,7 +19,10 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/Styles/bundle")
 </head>
-<body id="maincontent">
+<body id="maincontent"
+      data-alerttimeout="@ConfigurationManager.AppSettings["AlertTimeout"]"
+      data-refreshinterval="@ConfigurationManager.AppSettings["RefreshInterval"]"
+      data-baseurl="@Html.Raw(HtmlUtility.GetVirtualApplicationPath())">
     @Html.Partial("~/Views/Shared/_Menu.cshtml", ViewData["Sprints"], ViewData)
     
     <div class="container @Html.Raw(ViewBag.ContainerClass)">
@@ -31,11 +34,6 @@
 
     <div class="alert"></div>
 
-    <script type="text/javascript">
-        var alertTimeout = @ConfigurationManager.AppSettings["AlertTimeout"];
-        var refreshInterval = @ConfigurationManager.AppSettings["RefreshInterval"];
-        var baseUrl = "@Html.Raw(HtmlUtility.GetVirtualApplicationPath())";
-    </script>
     @Scripts.Render("~/bundles/scripts")
 </body>
 </html>
