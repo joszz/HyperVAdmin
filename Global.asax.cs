@@ -30,4 +30,5 @@ namespace HyperVAdmin
             Response.Headers.Remove("Server");
         }
     }
+#pragma warning restore 1591
 }
