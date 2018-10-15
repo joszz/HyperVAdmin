@@ -178,16 +178,16 @@
     <Content Include="Content\Styles\BootstrapToggle\bootstrap-toggle.min.css">
       <DependentUpon>bootstrap-toggle.css</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\brands.scss">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
     <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css">
       <DependentUpon>jquery.fancybox.css</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\regular.scss">
+    <Content Include="Content\Styles\FontAwesome\brands.scss">
       <DependentUpon>fontawesome.scss</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\solid.scss">
+    <Content Include="Content\Styles\FontAwesome\regular.scss">
+      <DependentUpon>fontawesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\FontAwesome\solid.scss">
       <DependentUpon>fontawesome.scss</DependentUpon>
     </Content>
     <Content Include="Content\Styles\Waves\waves.css" />
@@ -481,10 +481,10 @@
     <Content Include="Content\Styles\FontAwesome\_screen-reader.scss" />
     <Content Include="Content\Styles\FontAwesome\_stacked.scss" />
     <Content Include="Content\Styles\FontAwesome\_variables.scss" />
-    <Content Include="Content\Styles\fontawesome.scss" />
     <Content Include="Views\Session\Index.cshtml" />
     <Content Include="Content\Styles\FontAwesome\v4-shims.scss" />
     <Content Include="Content\Styles\FontAwesome\_shims.scss" />
+    <Content Include="Content\Styles\FontAwesome\fontawesome.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
