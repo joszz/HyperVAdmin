@@ -255,7 +255,6 @@
     <Content Include="Content\Images\Sorttable\desc_sort.gif" />
     <Content Include="Content\Images\Sorttable\no_sort.gif" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
-    <Content Include="Content\Scripts\Bootstrap\npm.js" />
     <Content Include="Content\Scripts\Fancybox\jquery.fancybox.js" />
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
