@@ -148,9 +148,7 @@
     <Compile Include="ViewEngine.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Fonts\fa-brands-400.svg" />
-    <Content Include="Content\Fonts\fa-regular-400.svg" />
-    <Content Include="Content\Fonts\fa-solid-900.svg" />
+    <Content Include="Content\Fonts\icomoon.svg" />
     <Content Include="Content\Scripts\BootstrapToggle\bootstrap-toggle.js" />
     <Content Include="Content\Scripts\BootstrapToggle\bootstrap-toggle.min.js">
       <DependentUpon>bootstrap-toggle.js</DependentUpon>
@@ -340,18 +338,11 @@
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
     <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
     <Content Include="Content\Scripts\yuidoc.json" />
-    <Content Include="Content\Fonts\fa-brands-400.eot" />
-    <Content Include="Content\Fonts\fa-brands-400.ttf" />
-    <Content Include="Content\Fonts\fa-brands-400.woff" />
-    <Content Include="Content\Fonts\fa-brands-400.woff2" />
-    <Content Include="Content\Fonts\fa-regular-400.eot" />
-    <Content Include="Content\Fonts\fa-regular-400.ttf" />
-    <Content Include="Content\Fonts\fa-regular-400.woff" />
-    <Content Include="Content\Fonts\fa-regular-400.woff2" />
-    <Content Include="Content\Fonts\fa-solid-900.eot" />
-    <Content Include="Content\Fonts\fa-solid-900.ttf" />
-    <Content Include="Content\Fonts\fa-solid-900.woff" />
-    <Content Include="Content\Fonts\fa-solid-900.woff2" />
+    <Content Include="Content\Fonts\icomoon.eot" />
+    <Content Include="Content\Fonts\icomoon.json" />
+    <Content Include="Content\Fonts\icomoon.ttf" />
+    <Content Include="Content\Fonts\icomoon.woff" />
+    <Content Include="Content\Fonts\icomoon.woff2" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <Content Include="Content\Styles\Default\_roboto.scss" />
     <Content Include="Content\Styles\Default\_login.scss" />

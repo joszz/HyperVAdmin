@@ -53,7 +53,7 @@
                 if (Session["user"] != null)
                 {
                     <div class="pull-right btn-group">
-                        <i class="btn btn-dark fa fa-user" title="Logged in as: @Session["user"].ToString()"></i>
+                        <button class="btn btn-dark fa fa-user" title="Logged in as: @Session["user"].ToString()"></button>
                         @Html.ActionLink(" ", "Logoff", "Session", null, new { @class = "btn btn-dark fa fa-sign-out-alt", title = "Logout" })
                     </div>
                 }

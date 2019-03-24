@@ -1,3 +1,60 @@
-﻿.btn {
+﻿@import '../FontAwesome/variables';
+@import '../FontAwesome/mixins';
+@import '../FontAwesome/core';
+@import '../FontAwesome/animated';
+
+
+.btn {
     line-height: 1.42857143;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: $fa-font-display;
+    src: url('#{$fa-font-path}/icomoon.eot');
+    src: url('#{$fa-font-path}/icomoon.eot?#iefix') format('embedded-opentype'), url('#{$fa-font-path}/icomoon.woff2') format('woff2'), url('#{$fa-font-path}/icomoon.woff') format('woff'), url('#{$fa-font-path}/icomoon.ttf') format('truetype'), url('#{$fa-font-path}/icomoon.svg#fontawesome') format('svg');
+}
+
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.#{$fa-css-prefix}-power-off:before {
+    content: fa-content($fa-var-power-off);
+}
+
+.#{$fa-css-prefix}-sync:before {
+    content: fa-content($fa-var-sync);
+}
+
+.#{$fa-css-prefix}-arrows-alt:before {
+    content: fa-content($fa-var-arrows-alt);
+}
+
+.#{$fa-css-prefix}-copy:before {
+    content: fa-content($fa-var-copy);
+}
+
+.#{$fa-css-prefix}-question:before {
+    content: fa-content($fa-var-question);
+}
+
+.#{$fa-css-prefix}-puzzle-piece:before {
+    content: fa-content($fa-var-puzzle-piece);
+}
+
+.#{$fa-css-prefix}-sign-out-alt:before {
+    content: fa-content($fa-var-sign-out-alt);
+}
+
+.#{$fa-css-prefix}-user:before {
+    content: fa-content($fa-var-user);
+}
+
+.#{$fa-css-prefix}-sign-out-alt:before {
+    content: fa-content($fa-var-sign-out-alt);
 }
