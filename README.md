@@ -11,7 +11,7 @@ Screenshots
 Prerequisites
 -------------
 - IIS
-- .NET Framework 4.7
+- .NET Framework 4.8
 
 Installation
 ------------

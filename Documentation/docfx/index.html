@@ -8,7 +8,7 @@
     <title>Hyper-V Admin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Hyper-V Admin ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.42.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:rel" content="">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -60,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -74,7 +76,7 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>IIS</li>
-<li>.NET Framework 4.5</li>
+<li>.NET Framework 4.8</li>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>Just create a website or application in IIS as you normally would. Point the path to the location of this project&#39;s files.</p>
@@ -101,23 +103,6 @@
 <li><p><strong>compilation debug=&quot;false&quot;</strong></p>
 <p>  Change this to true to turn of minification (amongst others). False will minify JS and CSS.</p>
 </li>
-<li><p><strong>users</strong> (optional)</p>
-<p>  This optional section in the web.config can be used to add a login form to this application. 
-  The section can be added directly under the root node <em>configuration</em>. It has the following format;</p>
-<pre><code class="lang-xml">&lt;users&gt;
-    &lt;add username=&quot;provide-username&quot; password=&quot;provide-password&quot; displayname=&quot;provide-displayname-or-leave-empty&quot; /&gt;
-&lt;/users&gt;
-</code></pre><p>  Multiple users can be added by just copying the &lt;add node. The displayname is used in the menu to indicate which user is logged in.</p>
-</li>
-<li><p><strong>weblinks</strong> (optional)</p>
-<p>  This optional section in the web.config can be used to add links to the menu pointing to external sites.
-  The section can be added directly under the root node <em>configuration</em>. It has the following format;</p>
-<pre><code class="lang-xml">&lt;weblinks&gt;
-    &lt;add name=&quot;provide-menuname&quot; url=&quot;provide-URL&quot; target=&quot;_blank&quot; /&gt;
-&lt;/weblinks&gt;
-</code></pre><p>  Multiple links can be added by just copying the &lt;add node. 
-  The target is used in the menu to indicate if the link should be opened in a new tab. If not specified will open in same tab.</p>
-</li>
 </ul>
 <h2 id="yuidoc">YUIDoc</h2>
 <p><a href="../yuidoc/">Find the JS docs here</a></p>
@@ -128,6 +113,9 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Documentation/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
