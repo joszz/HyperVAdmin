@@ -55,3 +55,19 @@ obj
 bin
 build_documentation.bat
 Web.config
+
+# Ignore NuGet Packages
+*.nupkg
+
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Ignore other intermediate files that NuGet might create. project.lock.json is used in conjunction
+# with project.json (NuGet v3); project.assets.json is used in conjunction with the PackageReference
+# format (NuGet v4 and .NET Core).
+project.lock.json
+project.assets.json
