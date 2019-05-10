@@ -54,7 +54,6 @@ obj
 .vs
 bin
 build_documentation.bat
-Web.config
 
 # Ignore NuGet Packages
 *.nupkg
