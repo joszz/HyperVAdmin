@@ -121,9 +121,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Attributes\CustomAuthentication.cs" />
-    <Compile Include="ConfigurationSections\WeblinkConfigSection.cs" />
-    <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Properties\AssemblyCopyright.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,7 +138,6 @@
     <Compile Include="Models\VirtualMachineModel.cs" />
     <Compile Include="Modules\TimingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ConfigurationSections\UserConfigSection.cs" />
     <Compile Include="Utilities\HtmlUtility.cs" />
     <Compile Include="Utilities\HyperVUtility.cs" />
     <Compile Include="ViewEngine.cs" />

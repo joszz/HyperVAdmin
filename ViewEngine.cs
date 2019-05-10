@@ -2,6 +2,9 @@
 
 namespace HyperVAdmin
 {
+    /// <summary>
+    /// Custom viewengine, to optimize view resolving.
+    /// </summary>
     public class ViewEngine : RazorViewEngine
     {
         /// <summary>

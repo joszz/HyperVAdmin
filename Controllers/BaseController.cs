@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
 {
-    [CustomAuthentication]
     /// <summary>
     /// BaseController for all controllers.
     /// </summary>
