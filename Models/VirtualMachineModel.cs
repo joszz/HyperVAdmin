@@ -129,7 +129,17 @@ namespace HyperVAdmin.Models
                 ManagementObject memorySettings = settings.GetRelated("Msvm_MemorySettingData").Cast<ManagementObject>().ToList().FirstOrDefault();
                 ManagementObject ethernet = settings.GetRelated("Msvm_SyntheticEthernetPortSettingData").Cast<ManagementObject>().ToList().FirstOrDefault();
                 ManagementObject information = vm.GetRelated("Msvm_SummaryInformation").Cast<ManagementObject>().ToList().FirstOrDefault();
-                string mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
+
+                string mac = string.Empty;
+                if (ethernet == null)
+                {
+                    ethernet = settings.GetRelated("Msvm_EmulatedEthernetPortSettingData").Cast<ManagementObject>().ToList().FirstOrDefault();
+                }
+
+                if(ethernet != null)
+                { 
+                    mac = Regex.Replace(ethernet["Address"].ToString(), ".{2}", "$0:");
+                }
 
                 vms.Add(new VirtualMachineModel
                 {
@@ -140,7 +150,7 @@ namespace HyperVAdmin.Models
                     MemoryAllocationUnits = memorySettings["AllocationUnits"].ToString() == "byte * 2^20" ? "MB" : memorySettings["AllocationUnits"].ToString(),
                     CoresAmount = information != null ? (ushort)information["NumberOfProcessors"] : (ushort)0,
                     CPULoad = information != null ? (UInt16?)information["ProcessorLoad"] : null,
-                    MAC = mac.Substring(0, mac.Length - 1),
+                    MAC = string.IsNullOrWhiteSpace(mac) ? mac :  mac.Substring(0, mac.Length - 1),
                     TimeOfLastStateChange = ManagementDateTimeConverter.ToDateTime(vm["TimeOfLastStateChange"].ToString()),
                     OnTimeInMilliseconds = (UInt64)vm["OnTimeInMilliseconds"]
                 });
