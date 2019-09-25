@@ -1,11 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
 <head>
+    <title>@ViewBag.Title</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#4F4F4F">
+
+    @Styles.Render("~/Content/Styles/bundle")
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/scripts")
 
     <link rel="apple-touch-icon" sizes="76x76" href="@Url.Content("~/Content/Images/Favicons/apple-touch-icon.png")">
     <link rel="icon" type="image/png" href="@Url.Content("~/Content/Images/Favicons/favicon-32x32.png")" sizes="32x32">
@@ -13,15 +17,15 @@
     <link rel="manifest" href="@Url.Content("~/Content/Images/Favicons/manifest.json")">
     <link rel="mask-icon" href="@Url.Content("~/Content/Images/Favicons/safari-pinned-tab.svg")" color="#5bbad5">
 
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/Styles/bundle")
+
+
 </head>
 <body id="maincontent"
       data-alerttimeout="@ConfigurationManager.AppSettings["AlertTimeout"]"
       data-refreshinterval="@ConfigurationManager.AppSettings["RefreshInterval"]"
       data-baseurl="@Html.Raw(HtmlUtility.GetVirtualApplicationPath())">
     @Html.Partial("~/Views/Shared/_Menu.cshtml", ViewData["Sprints"], ViewData)
-    
+
     <div class="container @Html.Raw(ViewBag.ContainerClass)">
         @RenderBody()
     </div>
@@ -30,7 +34,5 @@
     @Html.Partial("~/Views/Shared/_ConfirmDialog.cshtml")
 
     <div class="alert"></div>
-
-    @Scripts.Render("~/bundles/scripts")
 </body>
 </html>
