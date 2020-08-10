@@ -15,6 +15,8 @@ namespace HyperVAdmin
                 "~/Content/Vendor/jquery.vibrate/jquery.vibrate.js",
                 "~/Content/Vendor/waves/waves.js",
                 "~/Content/Vendor/sorttable/sorttable.js",
+                "~/Content/Vendor/bootstrap/js/dist/util.js",
+                "~/Content/Vendor/bootstrap/js/dist/collapse.js",
 
                 "~/Content/Scripts/general.js"
             ));

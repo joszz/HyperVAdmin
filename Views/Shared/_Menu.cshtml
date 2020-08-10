@@ -21,15 +21,15 @@
                 <ul class="navbar-nav ml-auto">
                     @if ((bool)ViewBag.HyperVEnabled)
                     {
-                        <li @Html.Raw(currentController == "VMs" ? "class='active'" : null)>
+                        <li class="nav-item">
 
-                            @Html.ActionLink("Virtual machines", "Index", "VMs", null, new { @class = "text-light ml-3" })
+                            @Html.ActionLink("Virtual machines", "Index", "VMs", null, new { @class = "nav-link" + (currentController == "VMs" ? " active" : null) })
                         </li>
                     }
                     @if ((bool)ViewBag.IISEnabled)
                     {
-                        <li @Html.Raw(currentController == "Sites" ? "class='active'" : null)>
-                            @Html.ActionLink("Sites", "Index", "Sites", null, new { @class = "text-light  ml-3" }))
+                        <li class="nav-item">
+                            @Html.ActionLink("Sites", "Index", "Sites", null, new { @class = "nav-link" + (currentController == "Sites" ? " active" : null) })
                         </li>
                     }
                 </ul>
