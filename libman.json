@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.5.1",
+      "destination": "Content/Vendor/jquery/"
+    },
+    {
+      "library": "fancybox@3.5.7",
+      "destination": "Content/Vendor/fancybox/"
+    },
+    {
+      "library": "jquery-fullscreen-plugin@1.1.5",
+      "destination": "Content/Vendor/jquery-fullscreen-plugin/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "@fortawesome/fontawesome-free@5.14.0",
+      "destination": "Content/Vendor/fortawesome/",
+      "files": [
+        "scss/_variables.scss",
+        "scss/_mixins.scss",
+        "scss/_core.scss",
+        "scss/_animated.scss"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,7 @@
-﻿@import '../FontAwesome/variables';
-@import '../FontAwesome/mixins';
-@import '../FontAwesome/core';
-@import '../FontAwesome/animated';
-
+﻿@import '../../Vendor/fortawesome/scss/variables' ;
+@import '../../Vendor/fortawesome/scss/mixins';
+@import '../../Vendor/fortawesome/scss/core';
+@import '../../Vendor/fortawesome/scss/animated';
 
 .btn {
     line-height: 1.42857143;

@@ -148,48 +148,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fonts\icomoon.svg" />
-    <Content Include="Content\Scripts\BootstrapToggle\bootstrap-toggle.js" />
-    <Content Include="Content\Scripts\BootstrapToggle\bootstrap-toggle.min.js">
-      <DependentUpon>bootstrap-toggle.js</DependentUpon>
-    </Content>
-    <Content Include="Content\Scripts\BootstrapToggle\bootstrap-toggle.min.js.map">
-      <DependentUpon>bootstrap-toggle.min.js</DependentUpon>
-    </Content>
     <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
-    <Content Include="Content\Scripts\Fancybox\jquery.fancybox.min.js">
-      <DependentUpon>jquery.fancybox.js</DependentUpon>
-    </Content>
-    <Content Include="Content\Scripts\jquery.fullscreen.js" />
-    <Content Include="Content\Scripts\jQuery\jquery-3.5.1.js" />
-    <Content Include="Content\Scripts\jQuery\jquery-3.5.1.min.js" />
     <Content Include="Content\Scripts\Waves\waves.min.js">
       <DependentUpon>waves.js</DependentUpon>
     </Content>
     <Content Include="Content\Scripts\Waves\waves.min.js.map">
       <DependentUpon>waves.min.js</DependentUpon>
     </Content>
-    <Content Include="Content\Styles\BootstrapToggle\bootstrap-toggle.css" />
-    <Content Include="Content\Styles\BootstrapToggle\bootstrap-toggle.min.css">
-      <DependentUpon>bootstrap-toggle.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\Fancybox\jquery.fancybox.min.css">
-      <DependentUpon>jquery.fancybox.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\FontAwesome\brands.scss">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\FontAwesome\regular.scss">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Styles\FontAwesome\solid.scss">
-      <DependentUpon>fontawesome.scss</DependentUpon>
-    </Content>
     <Content Include="Content\Styles\Waves\waves.css" />
     <Content Include="Content\Styles\Waves\waves.min.css">
       <DependentUpon>waves.css</DependentUpon>
     </Content>
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.js" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.min.css" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.min.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen-min.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen-min.min.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen.min.js" />
+    <Content Include="Content\Vendor\jquery\jquery.js" />
+    <Content Include="Content\Vendor\jquery\jquery.min.js" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.min.js" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.BundleConfig.html" />
@@ -250,7 +233,6 @@
     <Content Include="Content\Images\Sorttable\desc_sort.gif" />
     <Content Include="Content\Images\Sorttable\no_sort.gif" />
     <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
-    <Content Include="Content\Scripts\Fancybox\jquery.fancybox.js" />
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
     <Content Include="Content\Scripts\jquery.vibrate.js" />
@@ -349,7 +331,6 @@
       <DependentUpon>Default.css</DependentUpon>
     </Content>
     <None Include="Content\Styles\Default\_iframe.scss" />
-    <Content Include="Content\Styles\Fancybox\jquery.fancybox.css" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\custom.css" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\external-small.png" />
     <Content Include="Documentation\yuidoc-bootstrap-theme\assets\css\logo.png" />
@@ -457,22 +438,14 @@
     <Content Include="Documentation\docfx\manifest.json" />
     <Content Include="Documentation\docfx\search-stopwords.json" />
     <Content Include="Documentation\docfx\xrefmap.yml" />
-    <Content Include="Content\Styles\FontAwesome\_animated.scss" />
-    <Content Include="Content\Styles\FontAwesome\_bordered-pulled.scss" />
-    <Content Include="Content\Styles\FontAwesome\_core.scss" />
-    <Content Include="Content\Styles\FontAwesome\_fixed-width.scss" />
-    <Content Include="Content\Styles\FontAwesome\_icons.scss" />
-    <Content Include="Content\Styles\FontAwesome\_larger.scss" />
-    <Content Include="Content\Styles\FontAwesome\_list.scss" />
-    <Content Include="Content\Styles\FontAwesome\_mixins.scss" />
-    <Content Include="Content\Styles\FontAwesome\_rotated-flipped.scss" />
-    <Content Include="Content\Styles\FontAwesome\_screen-reader.scss" />
-    <Content Include="Content\Styles\FontAwesome\_stacked.scss" />
-    <Content Include="Content\Styles\FontAwesome\_variables.scss" />
     <Content Include="Views\Session\Index.cshtml" />
-    <Content Include="Content\Styles\FontAwesome\v4-shims.scss" />
-    <Content Include="Content\Styles\FontAwesome\_shims.scss" />
-    <Content Include="Content\Styles\FontAwesome\fontawesome.scss" />
+    <Content Include="libman.json" />
+    <Content Include="Content\Vendor\jquery\jquery.min.map" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Content\Vendor\fortawesome\scss\_animated.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_core.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_mixins.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
