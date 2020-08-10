@@ -29,6 +29,31 @@
       "provider": "unpkg",
       "library": "bootstrap@4.5.2",
       "destination": "Content/Vendor/bootstrap/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "https://raw.githubusercontent.com/joszz/is-loading/master/jquery.isloading.js",
+      "destination": "Content/Vendor/jquery.isloading/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "https://raw.githubusercontent.com/Illyism/jquery.vibrate.js/master/build/jquery/jquery.vibrate.js",
+      "destination": "Content/Vendor/jquery.vibrate/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "https://raw.githubusercontent.com/fians/Waves/master/dist/waves.js",
+      "destination": "Content/Vendor/waves/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "https://raw.githubusercontent.com/fians/Waves/master/dist/waves.css",
+      "destination": "Content/Vendor/waves/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "https://raw.githubusercontent.com/joszz/sorttable/master/sorttable.js",
+      "destination": "Content/Vendor/sorttable/"
     }
   ]
 }
