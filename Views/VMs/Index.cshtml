@@ -1,31 +1,31 @@
 ﻿@model List<VirtualMachineModel>
 
-<div class="panel panel-primary" id="virtual-machines">
-    <div class="panel-heading">
-        <div class="pull-right btn-group">
+<div class="card h-100" id="virtual-machines">
+    <div class="card-header">
+        <div class="float-right btn-group">
             <button class="btn btn-default fa fa-sync" title="Refresh"></button>
         </div>
-        <h4>Virtual machines</h4>
+        <h3 class="mb-0">Virtual machines</h3>
     </div>
-    <div class="panel-body table-responsive">
+    <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>
                 <tr>
-                    <th data-nosort="true" class="hidden-sm hidden-md hidden-lg">Actions</th>
+                    <th data-nosort="true" class="d-table-cell d-sm-none">Actions</th>
                     <th>Name</th>
                     <th id="last-state-change">Last state change</th>
                     <th>On time</th>
                     <th class="text-center">Cores</th>
                     <th>Memory</th>
                     <th>MAC</th>
-                    <th data-nosort="true" class="text-right hidden-xs">Actions</th>
+                    <th data-nosort="true" class="text-right d-none d-sm-table-cell">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (VirtualMachineModel vm in Model)
                 {
                     <tr>
-                        <td class="hidden-sm hidden-md hidden-lg actions">
+                        <td class="d-table-cell d-sm-none actions">
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
                             </div>
@@ -36,7 +36,7 @@
                         <td class="text-center cores">@vm.CoresAmount</td>
                         <td class="memory">@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
                         <td class="mac">@vm.MAC</td>
-                        <td class="text-right hidden-xs actions">
+                        <td class="text-right d-none d-sm-table-cell actions">
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
                             </div>
@@ -44,8 +44,8 @@
                     </tr>
                 }
 
-                <tr class="hidden">
-                    <td class="hidden-sm hidden-md hidden-lg actions">
+                <tr class="d-none">
+                    <td class="d-table-cell d-sm-none actions">
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle state" />
                         </div>
@@ -56,7 +56,7 @@
                     <td class="text-center cores"></td>
                     <td class="memory"></td>
                     <td class="mac"></td>
-                    <td class="text-right hidden-xs actions">
+                    <td class="text-right d-none d-sm-table-cell actions">
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle state" />
                         </div>

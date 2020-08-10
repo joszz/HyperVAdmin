@@ -24,6 +24,11 @@
         "scss/_core.scss",
         "scss/_animated.scss"
       ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "bootstrap@4.5.2",
+      "destination": "Content/Vendor/bootstrap/"
     }
   ]
 }

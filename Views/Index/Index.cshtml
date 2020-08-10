@@ -6,8 +6,8 @@
 
 @if (hyperVEnabled)
 {
-    <div class="row @(!iisEnabled ? "full-height" : null)">
-        <div class="col-xs-12">
+    <div class="row flex-grow-1 mb-2">
+        <div class="col-12">
             @Html.Partial("~/Views/VMs/Index.cshtml", (List<VirtualMachineModel>)ViewBag.VMs)
         </div>
     </div>
@@ -15,8 +15,8 @@
 
 @if (iisEnabled)
 {
-    <div class="row @(!hyperVEnabled ? "full-height" : "hidden-xs")" >
-        <div class="col-xs-12">
+    <div class="row flex-grow-1 mt-2">
+        <div class="col-12">
             @Html.Partial("~/Views/Sites/Index.cshtml", (List<SiteModel>)ViewBag.Sites)
         </div>
     </div>

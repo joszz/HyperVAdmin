@@ -1,6 +1,6 @@
 ﻿/**
 * Main JS file.
-* 
+*
 * @class Window
 * @module General
 */
@@ -10,7 +10,7 @@ var settings;
 
 /**
 * Document onload, call to initialize plugins and eventhandlers.
-* 
+*
 * @method document.onload
 */
 $(function () {
@@ -19,7 +19,7 @@ $(function () {
         refreshInterval: $("body").data("refreshinterval"),
         baseUrl: $("body").data("baseurl")
     };
-    
+
     Waves.attach(".btn");
     Waves.init();
 
@@ -35,7 +35,7 @@ $(function () {
         refreshVMListIntervalID = window.setInterval(refreshVMList, settings.refreshInterval * 1000);
 
         $("#virtual-machines").on("click", ".fa-power-off", toggleVM);
-        $("#virtual-machines .panel-heading button").click(refreshVMList);
+        $("#virtual-machines .card-header button").click(refreshVMList);
 
         $('#virtual-machines table').addSortWidget({
             img_asc: settings.baseUrl + "Content/Images/Sorttable/asc_sort.gif",
@@ -47,7 +47,7 @@ $(function () {
     if ($("#sites:visible").length > 0) {
         refreshSitesListIntervalID = window.setInterval(refreshSites, settings.refreshInterval * 1000);
 
-        $("#sites .panel-heading button").click(refreshSites);
+        $("#sites .card-header button").click(refreshSites);
         $("#sites").on("click", "button.fa-copy:visible", copyPath);
         $("#sites").on("click", "button.fa-power-off:visible", toggleSite);
 
@@ -58,18 +58,12 @@ $(function () {
         });
     }
 
-    $.fancybox.defaults.smallBtn = $.fancybox.defaults.fullScreen = $.fancybox.defaults.slideShow = false;
-    $.fancybox.defaults.iframe.css = {
-        "max-width": "500px",
-        "width": "90%"
-    };
-
     initializeFancybox();
 });
 
 /**
 * Initializes the event handling for F1 keyboard shortcut to open the docs.
-* 
+*
 * @method initializeHelpShortcut
 */
 function initializeHelpShortcut() {
@@ -91,10 +85,12 @@ function initializeHelpShortcut() {
 /**
  * Initializes and removes fancybox click handlers for application modal dialog.
  * Called on load and when refreshing site list.
- * 
+ *
  * @method initializeFancybox
  */
 function initializeFancybox() {
+    $.fancybox.defaults.smallBtn = $.fancybox.defaults.fullScreen = $.fancybox.defaults.slideShow = false;
+
     $(".fa-puzzle-piece:not(.disabled)").off().on("click", function () {
         $.fancybox.open({ src: $(this).data("href"), type: "iframe" });
     });
@@ -102,7 +98,7 @@ function initializeFancybox() {
 
 /**
 * Shows a confirm dialog with yes/no buttons
-* 
+*
 * @method openConfirmDialog
 * @param {String} title        The title to set for the confirm dialog.
 * @param {String} data         The data attributes to set on the confirm dialog, for later us.
@@ -127,7 +123,7 @@ function openConfirmDialog(title, data, buttonClick) {
 
 /**
  * Refreshes the VM table with fresh data.
- * 
+ *
  * @method refreshVMList
  */
 function refreshVMList() {
@@ -140,10 +136,10 @@ function refreshVMList() {
         url: settings.baseUrl + "VMs/GetVMs",
         type: "POST",
         success: function (data) {
-            $("#virtual-machines tbody tr:not(.hidden)").remove();
+            $("#virtual-machines tbody tr:not(.d-none)").remove();
 
             $.each(data, function (index, value) {
-                var clone = $("#virtual-machines tr.hidden").clone();
+                var clone = $("#virtual-machines tr.d-none").clone();
 
                 clone.find("td.name").html(value.Name);
                 clone.find("td.last-state-change").html(value.TimeOfLastStateChangeFormatted);
@@ -152,7 +148,7 @@ function refreshVMList() {
                 clone.find("td.memory").html(value.MemoryTotal + " " + value.MemoryAllocationUnits);
                 clone.find("td.mac").html(value.MAC);
                 clone.find("button").addClass("btn-" + (value.State === 2 ? "success" : "danger"));
-                clone.removeClass("hidden");
+                clone.removeClass("d-none");
 
                 clone.appendTo($("#virtual-machines tbody"));
             });
@@ -173,7 +169,7 @@ function refreshVMList() {
 
 /**
  * Toggles the state of the VM to On/Off.
- * 
+ *
  * @method toggleVM
  */
 function toggleVM() {
@@ -210,7 +206,7 @@ function toggleVM() {
 
 /**
  * Refreshes the sites table with fresh data.
- * 
+ *
  * @method refreshSites
  */
 function refreshSites() {
@@ -223,10 +219,10 @@ function refreshSites() {
         url: settings.baseUrl + "Sites/GetSites",
         type: "POST",
         success: function (data) {
-            $("#sites tbody tr:not(.hidden)").remove();
+            $("#sites tbody tr:not(.d-none)").remove();
 
             $.each(data, function (index, value) {
-                var clone = $("#sites tr.hidden").clone();
+                var clone = $("#sites tr.d-none").clone();
 
                 clone.find(".fa-power-off").addClass("btn-" + (value.State === 1 ? "success" : "danger"));
 
@@ -247,7 +243,7 @@ function refreshSites() {
                 clone.find("td.name").html(value.Name);
                 clone.find("textarea").val(value.PhysicalPath);
                 clone.find("td.path").html(value.PhysicalPath);
-                clone.removeClass("hidden");
+                clone.removeClass("d-none");
 
                 clone.appendTo($("#sites tbody"));
             });
@@ -269,7 +265,7 @@ function refreshSites() {
 
 /**
  * Toggles the state of the site to On/Off.
- * 
+ *
  * @method toggleSite
  * @param {Object} event    The JS event, used to stop the bubble.
  */
@@ -302,7 +298,7 @@ function toggleSite(event) {
 
 /**
  * Copies the path of a site.
- * 
+ *
  * @method copyPath
  * @param {Object} event    The JS event, used to stop the bubble.
  */
@@ -317,7 +313,7 @@ function copyPath(event) {
 
 /**
  * Fades out the alert after alertTimeout (in seconds).
- * 
+ *
  * @method fadeOutAlert
  */
 function fadeOutAlert() {
@@ -330,7 +326,7 @@ function fadeOutAlert() {
 
 /**
  * Displays an alert message (and fades it after).
- * 
+ *
  * @method flashAlert
  * @param {String} message  The message to display.
  * @param {String} type     The bootstrap type of alert.

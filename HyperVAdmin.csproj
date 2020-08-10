@@ -69,6 +69,7 @@
     <Reference Include="System.Management">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
@@ -148,9 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fonts\icomoon.svg" />
-    <Content Include="Content\Scripts\Bootstrap\bootstrap.min.js">
-      <DependentUpon>bootstrap.js</DependentUpon>
-    </Content>
     <Content Include="Content\Scripts\Waves\waves.min.js">
       <DependentUpon>waves.js</DependentUpon>
     </Content>
@@ -161,18 +159,6 @@
     <Content Include="Content\Styles\Waves\waves.min.css">
       <DependentUpon>waves.css</DependentUpon>
     </Content>
-    <Content Include="Content\Vendor\fancybox\jquery.fancybox.css" />
-    <Content Include="Content\Vendor\fancybox\jquery.fancybox.js" />
-    <Content Include="Content\Vendor\fancybox\jquery.fancybox.min.css" />
-    <Content Include="Content\Vendor\fancybox\jquery.fancybox.min.js" />
-    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen-min.js" />
-    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen-min.min.js" />
-    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen.js" />
-    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen.min.js" />
-    <Content Include="Content\Vendor\jquery\jquery.js" />
-    <Content Include="Content\Vendor\jquery\jquery.min.js" />
-    <Content Include="Content\Vendor\jquery\jquery.slim.js" />
-    <Content Include="Content\Vendor\jquery\jquery.slim.min.js" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.BundleConfig.html" />
@@ -232,7 +218,6 @@
     <Content Include="Content\Images\Sorttable\asc_sort.gif" />
     <Content Include="Content\Images\Sorttable\desc_sort.gif" />
     <Content Include="Content\Images\Sorttable\no_sort.gif" />
-    <Content Include="Content\Scripts\Bootstrap\bootstrap.js" />
     <Content Include="Content\Scripts\general.js" />
     <Content Include="Content\Scripts\jquery.isloading.js" />
     <Content Include="Content\Scripts\jquery.vibrate.js" />
@@ -243,76 +228,6 @@
     </Content>
     <Content Include="Content\Images\Favicons\manifest.json" />
     <Content Include="compilerconfig.json" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_alerts.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_background-variant.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_border-radius.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_buttons.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_center-block.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_clearfix.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_forms.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_gradients.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_grid-framework.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_grid.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_hide-text.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_image.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_labels.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_list-group.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_nav-divider.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_nav-vertical-align.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_opacity.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_pagination.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_panels.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_progress-bar.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_reset-filter.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_reset-text.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_resize.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_responsive-visibility.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_size.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_tab-focus.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_table-row.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_text-emphasis.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_text-overflow.scss" />
-    <Content Include="Content\Styles\Bootstrap\mixins\_vendor-prefixes.scss" />
-    <Content Include="Content\Styles\Bootstrap\_alerts.scss" />
-    <Content Include="Content\Styles\Bootstrap\_badges.scss" />
-    <Content Include="Content\Styles\Bootstrap\_breadcrumbs.scss" />
-    <Content Include="Content\Styles\Bootstrap\_button-groups.scss" />
-    <Content Include="Content\Styles\Bootstrap\_buttons.scss" />
-    <Content Include="Content\Styles\Bootstrap\_carousel.scss" />
-    <Content Include="Content\Styles\Bootstrap\_close.scss" />
-    <Content Include="Content\Styles\Bootstrap\_code.scss" />
-    <Content Include="Content\Styles\Bootstrap\_component-animations.scss" />
-    <Content Include="Content\Styles\Bootstrap\_dropdowns.scss" />
-    <Content Include="Content\Styles\Bootstrap\_forms.scss" />
-    <Content Include="Content\Styles\Bootstrap\_glyphicons.scss" />
-    <Content Include="Content\Styles\Bootstrap\_grid.scss" />
-    <Content Include="Content\Styles\Bootstrap\_input-groups.scss" />
-    <Content Include="Content\Styles\Bootstrap\_jumbotron.scss" />
-    <Content Include="Content\Styles\Bootstrap\_labels.scss" />
-    <Content Include="Content\Styles\Bootstrap\_list-group.scss" />
-    <Content Include="Content\Styles\Bootstrap\_media.scss" />
-    <Content Include="Content\Styles\Bootstrap\_mixins.scss" />
-    <Content Include="Content\Styles\Bootstrap\_modals.scss" />
-    <Content Include="Content\Styles\Bootstrap\_navbar.scss" />
-    <Content Include="Content\Styles\Bootstrap\_navs.scss" />
-    <Content Include="Content\Styles\Bootstrap\_normalize.scss" />
-    <Content Include="Content\Styles\Bootstrap\_pager.scss" />
-    <Content Include="Content\Styles\Bootstrap\_pagination.scss" />
-    <Content Include="Content\Styles\Bootstrap\_panels.scss" />
-    <Content Include="Content\Styles\Bootstrap\_popovers.scss" />
-    <Content Include="Content\Styles\Bootstrap\_print.scss" />
-    <Content Include="Content\Styles\Bootstrap\_progress-bars.scss" />
-    <Content Include="Content\Styles\Bootstrap\_responsive-embed.scss" />
-    <Content Include="Content\Styles\Bootstrap\_responsive-utilities.scss" />
-    <Content Include="Content\Styles\Bootstrap\_scaffolding.scss" />
-    <Content Include="Content\Styles\Bootstrap\_tables.scss" />
-    <Content Include="Content\Styles\Bootstrap\_theme.scss" />
-    <Content Include="Content\Styles\Bootstrap\_thumbnails.scss" />
-    <Content Include="Content\Styles\Bootstrap\_tooltip.scss" />
-    <Content Include="Content\Styles\Bootstrap\_type.scss" />
-    <Content Include="Content\Styles\Bootstrap\_utilities.scss" />
-    <Content Include="Content\Styles\Bootstrap\_variables.scss" />
-    <Content Include="Content\Styles\Bootstrap\_wells.scss" />
     <Content Include="Content\Styles\Bootstrap.scss" />
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
     <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
@@ -440,12 +355,6 @@
     <Content Include="Documentation\docfx\xrefmap.yml" />
     <Content Include="Views\Session\Index.cshtml" />
     <Content Include="libman.json" />
-    <Content Include="Content\Vendor\jquery\jquery.min.map" />
-    <Content Include="Content\Vendor\jquery\jquery.slim.min.map" />
-    <Content Include="Content\Vendor\fortawesome\scss\_animated.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_core.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_mixins.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -461,9 +370,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\Default\_general.scss" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Styles\Default\_bootstrap.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Styles\Default\_variables.scss" />

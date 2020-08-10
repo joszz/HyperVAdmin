@@ -2,39 +2,38 @@
     string currentController = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
 }
 
-<nav class="navbar navbar-inverse navbar-fixed-top compensate-for-scrollbar">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark fixed-top compensate-for-scrollbar">
+        <div class="container">
             <a class="navbar-brand" href="@Url.Action("Index", "Index")" title="Home">
-                <img src="~/Content/Images/Favicons/favicon-32x32.png" alt="Logo" />
-                <span>Hyper-V Admin</span>
+                <img src="~/Content/Images/Favicons/favicon-32x32.png" alt="Logo" class="float-left" />
+                <span  class="float-left">Hyper-V Admin</span>
+                <small class="float-left text-muted ml-3 mt-1">
+                    @typeof(HyperVAdmin.MvcApplication).Assembly.GetName().Version
+                </small>
             </a>
-            <small class="text-muted">
-                @typeof(HyperVAdmin.MvcApplication).Assembly.GetName().Version
-            </small>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav ml-auto">
+                    @if ((bool)ViewBag.HyperVEnabled)
+                    {
+                        <li @Html.Raw(currentController == "VMs" ? "class='active'" : null)>
+
+                            @Html.ActionLink("Virtual machines", "Index", "VMs", null, new { @class = "text-light ml-3" })
+                        </li>
+                    }
+                    @if ((bool)ViewBag.IISEnabled)
+                    {
+                        <li @Html.Raw(currentController == "Sites" ? "class='active'" : null)>
+                            @Html.ActionLink("Sites", "Index", "Sites", null, new { @class = "text-light  ml-3" }))
+                        </li>
+                    }
+                </ul>
+            </div>
         </div>
-        <div id="navbar" class="collapse navbar-collapse navbar-right">
-            {
-            <ul class="nav navbar-nav">
-                @if ((bool)ViewBag.HyperVEnabled)
-                {
-                    <li @Html.Raw(currentController == "VMs" ? "class='active'" : null)>
-                        @Html.ActionLink("Virtual machines", "Index", "VMs")
-                    </li>
-                }
-                @if ((bool)ViewBag.IISEnabled)
-                {
-                    <li @Html.Raw(currentController == "Sites" ? "class='active'" : null)>
-                        @Html.ActionLink("Sites", "Index", "Sites")
-                    </li>
-                }
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>

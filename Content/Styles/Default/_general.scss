@@ -1,17 +1,21 @@
-﻿html,
-body,
-.container,
-.row > div {
+﻿html {
     height: 100%;
 }
 
 body {
-    padding-top: 70px;
-    padding-bottom: 55px;
+    min-height: 100%;
+}
+
+body > .container {
+    min-height: 100%;
+    padding-bottom: 46px;
+}
+
+body {
+    padding-top: 58px;
     background-image: $gradiantDark;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    overflow: hidden;
     font-family: "Roboto", Arial, sans-serif !important;
 }
 
@@ -81,4 +85,8 @@ div#confirm-dialog button#confirm-yes {
 
 .fancybox-active {
     height: inherit;
+}
+.isloading-overlay{
+    margin-top: -1px;
+    margin-left: -1px;
 }

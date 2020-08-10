@@ -16,18 +16,17 @@
     <link rel="icon" type="image/png" href="@Url.Content("~/Content/Images/Favicons/favicon-16x16.png")" sizes="16x16">
     <link rel="manifest" href="@Url.Content("~/Content/Images/Favicons/manifest.json")">
     <link rel="mask-icon" href="@Url.Content("~/Content/Images/Favicons/safari-pinned-tab.svg")" color="#5bbad5">
-
-
-
 </head>
-<body id="maincontent"
+<body id="maincontent" class="d-flex"
       data-alerttimeout="@ConfigurationManager.AppSettings["AlertTimeout"]"
       data-refreshinterval="@ConfigurationManager.AppSettings["RefreshInterval"]"
       data-baseurl="@Html.Raw(HtmlUtility.GetVirtualApplicationPath())">
-    @Html.Partial("~/Views/Shared/_Menu.cshtml", ViewData["Sprints"], ViewData)
+    @Html.Partial("~/Views/Shared/_Menu.cshtml")
 
     <div class="container @Html.Raw(ViewBag.ContainerClass)">
-        @RenderBody()
+        <div class="d-flex flex-column h-100 pt-3 pb-3">
+            @RenderBody()
+        </div>
     </div>
 
     @Html.Partial("~/Views/Shared/_Footer.cshtml")

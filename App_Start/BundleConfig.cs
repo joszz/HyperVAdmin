@@ -12,7 +12,6 @@ namespace HyperVAdmin
                 "~/Content/Vendor/fancybox/jquery.fancybox.js",
                 "~/Content/Vendor/jquery-fullscreen-plugin/jquery.fullscreen.js",
 
-                "~/Content/Scripts/Bootstrap/bootstrap.js",
                 "~/Content/Scripts/jquery.isloading.js",
                 "~/Content/Scripts/jquery.vibrate.js",
                 "~/Content/Scripts/sorttable.js",

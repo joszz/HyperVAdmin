@@ -1,35 +1,34 @@
 ﻿@model List<SiteModel>
 
-<div class="panel panel-primary" id="sites">
-    <div class="panel-heading">
-        <div class="pull-right btn-group">
+<div class="card h-100" id="sites">
+    <div class="card-header">
+        <div class="float-right btn-group">
             <button class="btn btn-default fa fa-sync" title="Refresh"></button>
         </div>
-        <h4>Sites</h4>
+        <h3 class="mb-0">Sites</h3>
     </div>
 
-    <div class="panel-body table-responsive">
+    <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>
                 <tr>
-                    <th data-nosort="true" class="hidden-sm hidden-md hidden-lg">Actions</th>
+                    <th data-nosort="true" class="d-table-cell d-sm-none">Actions</th>
                     <th>Name</th>
                     <th>Path</th>
-                    <th data-nosort="true" class="text-right hidden-xs">Actions</th>
+                    <th data-nosort="true" class="text-right d-none d-sm-table-cell">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (SiteModel site in Model)
                 {
                     <tr>
-                        <td class="hidden-sm hidden-md hidden-lg">
+                        <td class="d-block d-sm-none actions">
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") fa fa-power-off" title="Toggle website state"></button>
                                 <button class="btn btn-default fa fa-copy" title="Copy path"></button>
                                 <textarea class="offcanvas">@site.PhysicalPath</textarea>
                                 <button data-href="@Url.Action("applications", "sites", new { sitename = site.Name })" title="Applications"
                                         class="btn btn-default fa fa-puzzle-piece @(site.Applications.Count == 0 ? "disabled" : null)"></button>
-
                             </div>
 
                             <div class="btn-group bindings">
@@ -42,7 +41,7 @@
                         </td>
                         <td class="name">@site.Name</td>
                         <td class="path">@site.PhysicalPath</td>
-                        <td class="text-right hidden-xs">
+                        <td class="text-right d-none d-sm-block actions">
                             <div class="btn-group bindings">
                                 @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
                                 {
@@ -62,8 +61,8 @@
                     </tr>
                 }
 
-                <tr class="hidden">
-                    <td class="hidden-sm hidden-md hidden-lg">
+                <tr class="d-none">
+                    <td class="d-table-cell d-sm-none actions">
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle website state"></button>
                             <button class="btn btn-default fa fa-copy" title="Copy path"></button>
@@ -75,10 +74,8 @@
                     </td>
                     <td class="name"></td>
                     <td class="path"></td>
-                    <td class="text-right hidden-xs">
-                        <div class="btn-group bindings">
-
-                        </div>
+                    <td class="text-right d-none d-sm-table-cell actions">
+                        <div class="btn-group bindings"></div>
                         <div class="btn-group">
                             <button class="btn btn-default fa fa-copy" title="Copy path"></button>
                             <textarea class="offcanvas"></textarea>
