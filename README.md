@@ -31,11 +31,11 @@ In the web.config of this project there are a couple settings you can change;
 
 - **RefreshInterval**
 
-	The time between automatic AJAX enabled refresh of list content in seconds.
+	The time between automatic refresh of list content, in seconds.
 
-- **HyperVEnabled**
+- **ModulesEnabled**
 
-	Whether or not HyperV views are enabled on the website. Defaults to true.
+	Which views are enabled. Either only HyperV, only IIS, or show both.
 
 - **HyperVManagementPath**
 
@@ -48,28 +48,3 @@ In the web.config of this project there are a couple settings you can change;
 - **compilation debug="false"**
 
 	Change this to true to turn of minification (amongst others). False will minify JS and CSS.
-
-- **users** (optional)
-
-    This optional section in the web.config can be used to add a login form to this application. 
-    The section can be added directly under the root node *configuration*. It has the following format;
-    ```xml
-    <users>
-        <add username="provide-username" password="provide-password" displayname="provide-displayname-or-leave-empty" />
-    </users>
-    ```
-
-    Multiple users can be added by just copying the <add node. The displayname is used in the menu to indicate which user is logged in.
-
-- **weblinks** (optional)
-
-    This optional section in the web.config can be used to add links to the menu pointing to external sites.
-    The section can be added directly under the root node *configuration*. It has the following format;
-    ```xml
-    <weblinks>
-        <add name="provide-menuname" url="provide-URL" target="_blank" />
-    </weblinks>
-    ```
-
-    Multiple links can be added by just copying the <add node. 
-    The target is used in the menu to indicate if the link should be opened in a new tab. If not specified will open in same tab.

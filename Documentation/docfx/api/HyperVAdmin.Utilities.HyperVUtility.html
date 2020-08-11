@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HyperVUtility
    ">
-    <meta name="generator" content="docfx 2.42.2.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -94,19 +94,14 @@
   <h6><strong>Assembly</strong>: HyperVAdmin.dll</h6>
   <h5 id="HyperVAdmin_Utilities_HyperVUtility_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HyperVUtility : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class HyperVUtility</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_System_String_System_String_ManagementScope_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String%2CSystem.String%2CManagementScope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L123">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_System_String_System_String_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,ManagementScope)">GetHostSystemDevice(String, String, ManagementScope)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_System_String_System_String_System_Management_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,System.Management.ManagementScope)">GetHostSystemDevice(String, String, ManagementScope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -134,7 +129,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ManagementScope</span></td>
+        <td><span class="xref">System.Management.ManagementScope</span></td>
         <td><span class="parametername">scope</span></td>
         <td></td>
       </tr>
@@ -150,25 +145,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_ManagementObject_UInt16_System_String_System_String_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(ManagementObject%2CUInt16%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L302">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_ManagementObject_UInt16_System_String_System_String_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(ManagementObject,UInt16,System.String,System.String)">GetResourceAllocationsettingData(ManagementObject, UInt16, String, String)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_System_Management_ManagementObject_System_UInt16_System_String_System_String_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject,System.UInt16,System.String,System.String)">GetResourceAllocationsettingData(ManagementObject, UInt16, String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ManagementObject GetResourceAllocationsettingData(ManagementObject vm, UInt16 resourceType, string resourceSubType, string otherResourceType)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ManagementObject GetResourceAllocationsettingData(ManagementObject vm, ushort resourceType, string resourceSubType, string otherResourceType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,12 +171,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td><span class="parametername">vm</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">UInt16</span></td>
+        <td><span class="xref">System.UInt16</span></td>
         <td><span class="parametername">resourceType</span></td>
         <td></td>
       </tr>
@@ -212,25 +202,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_ManagementScope_UInt16_System_String_System_String_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(ManagementScope%2CUInt16%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L255">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_ManagementScope_UInt16_System_String_System_String_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(ManagementScope,UInt16,System.String,System.String)">GetResourceAllocationsettingDataDefault(ManagementScope, UInt16, String, String)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_System_Management_ManagementScope_System_UInt16_System_String_System_String_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope,System.UInt16,System.String,System.String)">GetResourceAllocationsettingDataDefault(ManagementScope, UInt16, String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ManagementObject GetResourceAllocationsettingDataDefault(ManagementScope scope, UInt16 resourceType, string resourceSubType, string otherResourceType)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ManagementObject GetResourceAllocationsettingDataDefault(ManagementScope scope, ushort resourceType, string resourceSubType, string otherResourceType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,12 +228,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementScope</span></td>
+        <td><span class="xref">System.Management.ManagementScope</span></td>
         <td><span class="parametername">scope</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">UInt16</span></td>
+        <td><span class="xref">System.UInt16</span></td>
         <td><span class="parametername">resourceType</span></td>
         <td></td>
       </tr>
@@ -274,20 +259,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_ManagementScope_System_String_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(ManagementScope%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L107">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetServiceObject*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_ManagementScope_System_String_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(ManagementScope,System.String)">GetServiceObject(ManagementScope, String)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_System_Management_ManagementScope_System_String_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope,System.String)">GetServiceObject(ManagementScope, String)</h4>
   <div class="markdown level1 summary"><p>Common utility function to get a service object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -306,7 +286,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementScope</span></td>
+        <td><span class="xref">System.Management.ManagementScope</span></td>
         <td><span class="parametername">scope</span></td>
         <td></td>
       </tr>
@@ -327,20 +307,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_System_String_System_String_System_String_ManagementScope_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String%2CSystem.String%2CSystem.String%2CManagementScope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L131">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_System_String_System_String_System_String_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,ManagementScope)">GetSystemDevice(String, String, String, ManagementScope)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_System_String_System_String_System_String_System_Management_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,System.Management.ManagementScope)">GetSystemDevice(String, String, String, ManagementScope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -373,7 +348,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ManagementScope</span></td>
+        <td><span class="xref">System.Management.ManagementScope</span></td>
         <td><span class="parametername">scope</span></td>
         <td></td>
       </tr>
@@ -389,20 +364,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_System_String_ManagementScope_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String%2CManagementScope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L189">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_System_String_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,ManagementScope)">GetTargetComputer(String, ManagementScope)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_System_String_System_Management_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,System.Management.ManagementScope)">GetTargetComputer(String, ManagementScope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -425,7 +395,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ManagementScope</span></td>
+        <td><span class="xref">System.Management.ManagementScope</span></td>
         <td><span class="parametername">scope</span></td>
         <td></td>
       </tr>
@@ -441,20 +411,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_ManagementObject_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(ManagementObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L207">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_ManagementObject_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(ManagementObject)">GetVirtualSystemSettingData(ManagementObject)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_System_Management_ManagementObject_" data-uid="HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)">GetVirtualSystemSettingData(ManagementObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -472,7 +437,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td><span class="parametername">vm</span></td>
         <td></td>
       </tr>
@@ -488,20 +453,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementObject</span></td>
+        <td><span class="xref">System.Management.ManagementObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility_JobCompleted_ManagementBaseObject_ManagementScope_.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility.JobCompleted(ManagementBaseObject%2CManagementScope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L160">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Utilities_HyperVUtility_JobCompleted_" data-uid="HyperVAdmin.Utilities.HyperVUtility.JobCompleted*"></a>
-  <h4 id="HyperVAdmin_Utilities_HyperVUtility_JobCompleted_ManagementBaseObject_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.JobCompleted(ManagementBaseObject,ManagementScope)">JobCompleted(ManagementBaseObject, ManagementScope)</h4>
+  <h4 id="HyperVAdmin_Utilities_HyperVUtility_JobCompleted_System_Management_ManagementBaseObject_System_Management_ManagementScope_" data-uid="HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject,System.Management.ManagementScope)">JobCompleted(ManagementBaseObject, ManagementScope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -519,12 +479,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ManagementBaseObject</span></td>
+        <td><span class="xref">System.Management.ManagementBaseObject</span></td>
         <td><span class="parametername">outParams</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ManagementScope</span></td>
+        <td><span class="xref">System.Management.ManagementScope</span></td>
         <td><span class="parametername">scope</span></td>
         <td></td>
       </tr>
@@ -552,12 +512,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Utilities_HyperVUtility.md&amp;value=---%0Auid%3A%20HyperVAdmin.Utilities.HyperVUtility%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Utilities/HyperVUtility.cs/#L86" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

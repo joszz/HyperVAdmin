@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BaseController
    ">
-    <meta name="generator" content="docfx 2.42.2.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,26 +89,23 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BaseController</span></div>
-      <div class="level2"><a class="xref" href="HyperVAdmin.Controllers.IndexController.html">IndexController</a></div>
-      <div class="level2"><a class="xref" href="HyperVAdmin.Controllers.SitesController.html">SitesController</a></div>
-      <div class="level2"><a class="xref" href="HyperVAdmin.Controllers.VMsController.html">VMsController</a></div>
+    <div class="level1"><span class="xref">System.Web.Mvc.ControllerBase</span></div>
+    <div class="level2"><span class="xref">System.Web.Mvc.Controller</span></div>
+    <div class="level3"><span class="xref">BaseController</span></div>
+      <div class="level4"><a class="xref" href="HyperVAdmin.Controllers.IndexController.html">IndexController</a></div>
+      <div class="level4"><a class="xref" href="HyperVAdmin.Controllers.SitesController.html">SitesController</a></div>
+      <div class="level4"><a class="xref" href="HyperVAdmin.Controllers.VMsController.html">VMsController</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="HyperVAdmin.Controllers.html">HyperVAdmin.Controllers</a></h6>
   <h6><strong>Assembly</strong>: HyperVAdmin.dll</h6>
   <h5 id="HyperVAdmin_Controllers_BaseController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseController : Controller</code></pre>
+    <pre><code class="lang-csharp hljs">public class BaseController : Controller, IActionFilter, IAuthenticationFilter, IAuthorizationFilter, IDisposable, IExceptionFilter, IResultFilter, IAsyncController, IController, IAsyncManagerContainer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Controllers_BaseController__ctor.md&amp;value=---%0Auid%3A%20HyperVAdmin.Controllers.BaseController.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Controllers/BaseController.cs/#L25">View Source</a>
-  </span>
+  
+  
   <a id="HyperVAdmin_Controllers_BaseController__ctor_" data-uid="HyperVAdmin.Controllers.BaseController.#ctor*"></a>
   <h4 id="HyperVAdmin_Controllers_BaseController__ctor" data-uid="HyperVAdmin.Controllers.BaseController.#ctor">BaseController()</h4>
   <div class="markdown level1 summary"><p>Sets HyperVEnabled web.config setting to ViewBag.</p>
@@ -120,13 +117,8 @@
   </div>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Controllers_BaseController_hyperVEnabled.md&amp;value=---%0Auid%3A%20HyperVAdmin.Controllers.BaseController.hyperVEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Controllers/BaseController.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="HyperVAdmin_Controllers_BaseController_hyperVEnabled" data-uid="HyperVAdmin.Controllers.BaseController.hyperVEnabled">hyperVEnabled</h4>
   <div class="markdown level1 summary"><p>Whether HyperV is enabled in web.config.</p>
 </div>
@@ -150,13 +142,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Controllers_BaseController_iisEnabled.md&amp;value=---%0Auid%3A%20HyperVAdmin.Controllers.BaseController.iisEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Controllers/BaseController.cs/#L20">View Source</a>
-  </span>
+  
+  
   <h4 id="HyperVAdmin_Controllers_BaseController_iisEnabled" data-uid="HyperVAdmin.Controllers.BaseController.iisEnabled">iisEnabled</h4>
   <div class="markdown level1 summary"><p>Whether IIS is enabled in web.config.</p>
 </div>
@@ -187,12 +174,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/joszz/HyperVAdmin/new/master/apiSpec/new?filename=HyperVAdmin_Controllers_BaseController.md&amp;value=---%0Auid%3A%20HyperVAdmin.Controllers.BaseController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/joszz/HyperVAdmin/blob/master/Controllers/BaseController.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

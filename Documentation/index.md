@@ -1,4 +1,6 @@
 # Hyper-V Admin
+&copy; 2020, Jos Nienhuis
+
 A little website to control and check your Hyper-V VMs and IIS websites with.
 
 ## Prerequisites
@@ -14,29 +16,28 @@ https://technet.microsoft.com/en-us/library/cc731755(v=ws.10).aspx
 
 ## Configuration
 In the web.config of this project there are a couple settings you can change;
-* **AlertTimeout**
+In the web.config of this project there are a couple settings you can change;
+
+- **AlertTimeout**
 
 	The time the Bootstrap alert box will be displayed in seconds.
 
-* **RefreshInterval**
+- **RefreshInterval**
 
-	The time between automatic AJAX enabled refresh of list content in seconds.
+	The time between automatic refresh of list content, in seconds.
 
-* **ModulesEnabled**
+- **ModulesEnabled**
 
-    Whether or not HyperV and IIS are views are enabled on the website. Valid values are "hyperv", "iis" or "both".
+	Which views are enabled. Either only HyperV, only IIS, or show both.
 
-* **HyperVManagementPath**
+- **HyperVManagementPath**
 
-	The "\\v2" can be stripped of to support older Hyper-V installations.
+	The "\v2" can be stripped of to support older Hyper-V installations.
 
-* **HyperVQueryVMs**
+- **HyperVQueryVMs**
 
 	The WMI query used to retrieve Hyper-V VMs.
 
-* **compilation debug="false"**
-	
-	Change this to true to turn of minification (amongst others). False will minify JS and CSS.
+- **compilation debug="false"**
 
-## YUIDoc
-[Find the JS docs here](../yuidoc/)
+	Change this to true to turn of minification (amongst others). False will minify JS and CSS.

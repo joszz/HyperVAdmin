@@ -19,11 +19,11 @@ references:
   commentId: T:HyperVAdmin.Attributes.AJAXOnlyAttribute
   fullName: HyperVAdmin.Attributes.AJAXOnlyAttribute
   nameWithType: AJAXOnlyAttribute
-- uid: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(ControllerContext,MethodInfo)
+- uid: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext,System.Reflection.MethodInfo)
   name: IsValidForRequest(ControllerContext, MethodInfo)
-  href: api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html#HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_ControllerContext_MethodInfo_
-  commentId: M:HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(ControllerContext,MethodInfo)
-  fullName: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(ControllerContext, MethodInfo)
+  href: api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html#HyperVAdmin_Attributes_AJAXOnlyAttribute_IsValidForRequest_System_Web_Mvc_ControllerContext_System_Reflection_MethodInfo_
+  commentId: M:HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext,System.Reflection.MethodInfo)
+  fullName: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest(System.Web.Mvc.ControllerContext, System.Reflection.MethodInfo)
   nameWithType: AJAXOnlyAttribute.IsValidForRequest(ControllerContext, MethodInfo)
 - uid: HyperVAdmin.Attributes.AJAXOnlyAttribute.IsValidForRequest*
   name: IsValidForRequest
@@ -38,11 +38,11 @@ references:
   commentId: T:HyperVAdmin.BundleConfig
   fullName: HyperVAdmin.BundleConfig
   nameWithType: BundleConfig
-- uid: HyperVAdmin.BundleConfig.RegisterBundles(BundleCollection)
+- uid: HyperVAdmin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)
   name: RegisterBundles(BundleCollection)
-  href: api/HyperVAdmin.BundleConfig.html#HyperVAdmin_BundleConfig_RegisterBundles_BundleCollection_
-  commentId: M:HyperVAdmin.BundleConfig.RegisterBundles(BundleCollection)
-  fullName: HyperVAdmin.BundleConfig.RegisterBundles(BundleCollection)
+  href: api/HyperVAdmin.BundleConfig.html#HyperVAdmin_BundleConfig_RegisterBundles_System_Web_Optimization_BundleCollection_
+  commentId: M:HyperVAdmin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)
+  fullName: HyperVAdmin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)
   nameWithType: BundleConfig.RegisterBundles(BundleCollection)
 - uid: HyperVAdmin.BundleConfig.RegisterBundles*
   name: RegisterBundles
@@ -628,11 +628,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Modules.TimingModule.Dispose
   nameWithType: TimingModule.Dispose
-- uid: HyperVAdmin.Modules.TimingModule.Init(HttpApplication)
+- uid: HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
   name: Init(HttpApplication)
-  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_Init_HttpApplication_
-  commentId: M:HyperVAdmin.Modules.TimingModule.Init(HttpApplication)
-  fullName: HyperVAdmin.Modules.TimingModule.Init(HttpApplication)
+  href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_Init_System_Web_HttpApplication_
+  commentId: M:HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
+  fullName: HyperVAdmin.Modules.TimingModule.Init(System.Web.HttpApplication)
   nameWithType: TimingModule.Init(HttpApplication)
 - uid: HyperVAdmin.Modules.TimingModule.Init*
   name: Init
@@ -642,11 +642,11 @@ references:
   fullName: HyperVAdmin.Modules.TimingModule.Init
   nameWithType: TimingModule.Init
 - uid: HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object,System.EventArgs)
-  name: OnBeginRequest(Object, System.EventArgs)
+  name: OnBeginRequest(Object, EventArgs)
   href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_OnBeginRequest_System_Object_System_EventArgs_
   commentId: M:HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object,System.EventArgs)
   fullName: HyperVAdmin.Modules.TimingModule.OnBeginRequest(System.Object, System.EventArgs)
-  nameWithType: TimingModule.OnBeginRequest(Object, System.EventArgs)
+  nameWithType: TimingModule.OnBeginRequest(Object, EventArgs)
 - uid: HyperVAdmin.Modules.TimingModule.OnBeginRequest*
   name: OnBeginRequest
   href: api/HyperVAdmin.Modules.TimingModule.html#HyperVAdmin_Modules_TimingModule_OnBeginRequest_
@@ -692,11 +692,11 @@ references:
   commentId: T:HyperVAdmin.RouteConfig
   fullName: HyperVAdmin.RouteConfig
   nameWithType: RouteConfig
-- uid: HyperVAdmin.RouteConfig.RegisterRoutes(RouteCollection)
+- uid: HyperVAdmin.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)
   name: RegisterRoutes(RouteCollection)
-  href: api/HyperVAdmin.RouteConfig.html#HyperVAdmin_RouteConfig_RegisterRoutes_RouteCollection_
-  commentId: M:HyperVAdmin.RouteConfig.RegisterRoutes(RouteCollection)
-  fullName: HyperVAdmin.RouteConfig.RegisterRoutes(RouteCollection)
+  href: api/HyperVAdmin.RouteConfig.html#HyperVAdmin_RouteConfig_RegisterRoutes_System_Web_Routing_RouteCollection_
+  commentId: M:HyperVAdmin.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)
+  fullName: HyperVAdmin.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)
   nameWithType: RouteConfig.RegisterRoutes(RouteCollection)
 - uid: HyperVAdmin.RouteConfig.RegisterRoutes*
   name: RegisterRoutes
@@ -736,11 +736,11 @@ references:
   commentId: T:HyperVAdmin.Utilities.HyperVUtility
   fullName: HyperVAdmin.Utilities.HyperVUtility
   nameWithType: HyperVUtility
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,System.Management.ManagementScope)
   name: GetHostSystemDevice(String, String, ManagementScope)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_System_String_System_String_ManagementScope_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,ManagementScope)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String, System.String, ManagementScope)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetHostSystemDevice_System_String_System_String_System_Management_ManagementScope_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String,System.String,System.Management.ManagementScope)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice(System.String, System.String, System.Management.ManagementScope)
   nameWithType: HyperVUtility.GetHostSystemDevice(String, String, ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice*
   name: GetHostSystemDevice
@@ -749,11 +749,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetHostSystemDevice
   nameWithType: HyperVUtility.GetHostSystemDevice
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(ManagementObject,UInt16,System.String,System.String)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject,System.UInt16,System.String,System.String)
   name: GetResourceAllocationsettingData(ManagementObject, UInt16, String, String)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_ManagementObject_UInt16_System_String_System_String_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(ManagementObject,UInt16,System.String,System.String)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(ManagementObject, UInt16, System.String, System.String)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingData_System_Management_ManagementObject_System_UInt16_System_String_System_String_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject,System.UInt16,System.String,System.String)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData(System.Management.ManagementObject, System.UInt16, System.String, System.String)
   nameWithType: HyperVUtility.GetResourceAllocationsettingData(ManagementObject, UInt16, String, String)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData*
   name: GetResourceAllocationsettingData
@@ -762,11 +762,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingData
   nameWithType: HyperVUtility.GetResourceAllocationsettingData
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(ManagementScope,UInt16,System.String,System.String)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope,System.UInt16,System.String,System.String)
   name: GetResourceAllocationsettingDataDefault(ManagementScope, UInt16, String, String)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_ManagementScope_UInt16_System_String_System_String_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(ManagementScope,UInt16,System.String,System.String)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(ManagementScope, UInt16, System.String, System.String)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetResourceAllocationsettingDataDefault_System_Management_ManagementScope_System_UInt16_System_String_System_String_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope,System.UInt16,System.String,System.String)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault(System.Management.ManagementScope, System.UInt16, System.String, System.String)
   nameWithType: HyperVUtility.GetResourceAllocationsettingDataDefault(ManagementScope, UInt16, String, String)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault*
   name: GetResourceAllocationsettingDataDefault
@@ -775,11 +775,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetResourceAllocationsettingDataDefault
   nameWithType: HyperVUtility.GetResourceAllocationsettingDataDefault
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(ManagementScope,System.String)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope,System.String)
   name: GetServiceObject(ManagementScope, String)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_ManagementScope_System_String_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(ManagementScope,System.String)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(ManagementScope, System.String)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetServiceObject_System_Management_ManagementScope_System_String_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope,System.String)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject(System.Management.ManagementScope, System.String)
   nameWithType: HyperVUtility.GetServiceObject(ManagementScope, String)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject*
   name: GetServiceObject
@@ -788,11 +788,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetServiceObject
   nameWithType: HyperVUtility.GetServiceObject
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,System.Management.ManagementScope)
   name: GetSystemDevice(String, String, String, ManagementScope)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_System_String_System_String_System_String_ManagementScope_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,ManagementScope)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String, System.String, System.String, ManagementScope)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetSystemDevice_System_String_System_String_System_String_System_Management_ManagementScope_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String,System.String,System.String,System.Management.ManagementScope)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice(System.String, System.String, System.String, System.Management.ManagementScope)
   nameWithType: HyperVUtility.GetSystemDevice(String, String, String, ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice*
   name: GetSystemDevice
@@ -801,11 +801,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetSystemDevice
   nameWithType: HyperVUtility.GetSystemDevice
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,System.Management.ManagementScope)
   name: GetTargetComputer(String, ManagementScope)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_System_String_ManagementScope_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,ManagementScope)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String, ManagementScope)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetTargetComputer_System_String_System_Management_ManagementScope_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String,System.Management.ManagementScope)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer(System.String, System.Management.ManagementScope)
   nameWithType: HyperVUtility.GetTargetComputer(String, ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer*
   name: GetTargetComputer
@@ -814,11 +814,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetTargetComputer
   nameWithType: HyperVUtility.GetTargetComputer
-- uid: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(ManagementObject)
+- uid: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
   name: GetVirtualSystemSettingData(ManagementObject)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_ManagementObject_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(ManagementObject)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(ManagementObject)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_GetVirtualSystemSettingData_System_Management_ManagementObject_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData(System.Management.ManagementObject)
   nameWithType: HyperVUtility.GetVirtualSystemSettingData(ManagementObject)
 - uid: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData*
   name: GetVirtualSystemSettingData
@@ -827,11 +827,11 @@ references:
   isSpec: "True"
   fullName: HyperVAdmin.Utilities.HyperVUtility.GetVirtualSystemSettingData
   nameWithType: HyperVUtility.GetVirtualSystemSettingData
-- uid: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(ManagementBaseObject,ManagementScope)
+- uid: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject,System.Management.ManagementScope)
   name: JobCompleted(ManagementBaseObject, ManagementScope)
-  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_JobCompleted_ManagementBaseObject_ManagementScope_
-  commentId: M:HyperVAdmin.Utilities.HyperVUtility.JobCompleted(ManagementBaseObject,ManagementScope)
-  fullName: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(ManagementBaseObject, ManagementScope)
+  href: api/HyperVAdmin.Utilities.HyperVUtility.html#HyperVAdmin_Utilities_HyperVUtility_JobCompleted_System_Management_ManagementBaseObject_System_Management_ManagementScope_
+  commentId: M:HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject,System.Management.ManagementScope)
+  fullName: HyperVAdmin.Utilities.HyperVUtility.JobCompleted(System.Management.ManagementBaseObject, System.Management.ManagementScope)
   nameWithType: HyperVUtility.JobCompleted(ManagementBaseObject, ManagementScope)
 - uid: HyperVAdmin.Utilities.HyperVUtility.JobCompleted*
   name: JobCompleted

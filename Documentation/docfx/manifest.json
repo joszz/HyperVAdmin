@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jos_n/Documents/GitHub/HyperVAdmin/Documentation",
+  "source_base_path": "C:/Users/jos_n/source/repos/joszz/HyperVAdmin/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Attributes.AJAXOnlyAttribute.html",
-          "hash": "S4jai6gFPBp3wOZOQPiXGg=="
+          "hash": "63O6hS++hPJO1TRdlEFdfw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Attributes.html",
-          "hash": "MxKZ3zWL93MuVvbZH/zyjA=="
+          "hash": "HnM3mIgWG7rBiSIy05ar9w=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.BundleConfig.html",
-          "hash": "XL4o+3j4GqXejP8ATyy++w=="
+          "hash": "mgnFzbjEa3DSGqKEMiGaew=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Controllers.BaseController.html",
-          "hash": "YVK2r2Cncu+wspmrJ1nr6g=="
+          "hash": "iTKhWT35FOdtkVwgknX3KA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Controllers.IndexController.html",
-          "hash": "HDOzU+OW89pDvt3RvkoQew=="
+          "hash": "3vtOj9iB7RPLbsRkzeXtQg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Controllers.SitesController.html",
-          "hash": "gar4ISPmN9IRL5mWruClZA=="
+          "hash": "0mnqJ1Rm11nP5KP9z03sHA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Controllers.VMsController.html",
-          "hash": "6xXhI+kAZUziqsKZ3dUrWQ=="
+          "hash": "ndaHMK0n0Iiezthf2EEPpg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Controllers.html",
-          "hash": "l0dKqry/v+xFV0+Alcy6GA=="
+          "hash": "x+FGWcFq32SyFGqdRZUFnw=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Models.SiteModel.html",
-          "hash": "IW6njZQ4IpiJV1dN5fvPKA=="
+          "hash": "mAZbGjjWoQqbvnY0DlrdXw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Models.VirtualMachineModel.html",
-          "hash": "CrbWlwLPrswabLl1ZbeJiA=="
+          "hash": "S25K+aAQzV67Gsz8f78crQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Models.VirtualMachineState.html",
-          "hash": "3wJOLb/d/S33xSo0JWs9qQ=="
+          "hash": "5bJnQEg1XmVQ1f8u9yftEQ=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Models.html",
-          "hash": "TP8F39yv2ATJYG33SL6XWQ=="
+          "hash": "AmHfpq6TrHGkyltbB+zWxw=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Modules.TimingModule.html",
-          "hash": "Z43tXtgIVSttwfS/sImTXA=="
+          "hash": "dKRXbTcK1B4HQsJ8jK9djw=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Modules.html",
-          "hash": "Ets4aaH0K47VG3NSu2t5jw=="
+          "hash": "eoH+XZiZ0dmu6d7SH5Id+A=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.MvcApplication.html",
-          "hash": "o0TXHk80cIeLiYAZ/3mwnA=="
+          "hash": "0nXfNazeQEhUB/nXrj59/w=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.RouteConfig.html",
-          "hash": "Qxz27yiPCPEkqUwyVrwGRw=="
+          "hash": "7iqUGDsj+lTzMUahNde/5g=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.HtmlUtility.html",
-          "hash": "TyzpCXSxbhANg+TKgX0HTg=="
+          "hash": "mtWu5gVJ97DbVaYfdmjyVQ=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.HyperVUtility.html",
-          "hash": "L9bIovUVWYhEqzvK7VhFtQ=="
+          "hash": "9Dk5tR83FkVqur7GUt8/jQ=="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.OtherResourceType.html",
-          "hash": "2e5Q/wCqU9BVc0ZEkujACw=="
+          "hash": "DBmtD1giV8qKr3/3z+dd+g=="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.ResourceSubType.html",
-          "hash": "AUhGYzGareIGVvoMGNX0Pw=="
+          "hash": "ZbQZmhIW7tc66+wuhuprDw=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.ResourceType.html",
-          "hash": "/Zbdj5E2wjPZBziJB6HY0A=="
+          "hash": "XNkARuB9zc+r4w94z7GXfg=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.ReturnCode.html",
-          "hash": "ojnArNRZT0MQcW6ftw/ugA=="
+          "hash": "Bqm7fAEdNrit0Vp8FIom/w=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.Utilities.html",
-          "hash": "GE95BQgxzC5txxCNDFhMeQ=="
+          "hash": "3PumOVUuKA2hnNAInECR0w=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.ViewEngine.html",
-          "hash": "h/gigbJGZFSFHGsihrALYw=="
+          "hash": "RhVYuioDLoQI/jEVaYo31g=="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HyperVAdmin.html",
-          "hash": "Se8lt2p9AoOS7YZVFyI4mg=="
+          "hash": "S+6qdQiU3OuwSbrDm6bdWQ=="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "zYLgIqr+EKUyEbIxlRf50w=="
+          "hash": "YyEJFb8zogm3taeF/0uyeA=="
         }
       },
       "is_incremental": false,
@@ -330,22 +330,19 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "7ZbtttLKWm0pCmi5IiN0Ag=="
+          "hash": "n68DOvrk0rTwEMXuMcVIdw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6NecQnbmMjw77Z7MIXysIw=="
+          "hash": "BsQPvRlC0WkHexmGsShPBQ=="
         }
       },
       "is_incremental": false,
@@ -357,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "1Xdjw8Ib7j95/TiJDj+CFw=="
+          "hash": "EIhwD2+o19OxxQFCB6JJTg=="
         }
       },
       "is_incremental": false,
@@ -375,11 +372,10 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 2,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -388,10 +384,11 @@
           "total_file_count": 25,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 2,
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
