@@ -19,6 +19,10 @@ body {
     font-family: "Roboto", Arial, sans-serif !important;
 }
 
+.container > .flex-column > .row {
+    flex: 1 0;
+}
+
 div.alert {
     position: fixed;
     bottom: 15px;
@@ -86,7 +90,8 @@ div#confirm-dialog button#confirm-yes {
 .fancybox-active {
     height: inherit;
 }
-.isloading-overlay{
+
+.isloading-overlay {
     margin-top: -1px;
     margin-left: -1px;
 }

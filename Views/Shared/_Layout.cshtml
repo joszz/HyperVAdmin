@@ -23,7 +23,7 @@
       data-baseurl="@Html.Raw(HtmlUtility.GetVirtualApplicationPath())">
     @Html.Partial("~/Views/Shared/_Menu.cshtml")
 
-    <div class="container @Html.Raw(ViewBag.ContainerClass)">
+    <div class="container">
         <div class="d-flex flex-column h-100 pt-3 pb-3">
             @RenderBody()
         </div>

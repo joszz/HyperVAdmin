@@ -6,7 +6,7 @@
 
 @if (hyperVEnabled)
 {
-    <div class="row flex-grow-1 mb-2">
+    <div class="row mb-2">
         <div class="col-12">
             @Html.Partial("~/Views/VMs/Index.cshtml", (List<VirtualMachineModel>)ViewBag.VMs)
         </div>
@@ -15,7 +15,7 @@
 
 @if (iisEnabled)
 {
-    <div class="row flex-grow-1 mt-2">
+    <div class="row mt-2">
         <div class="col-12">
             @Html.Partial("~/Views/Sites/Index.cshtml", (List<SiteModel>)ViewBag.Sites)
         </div>

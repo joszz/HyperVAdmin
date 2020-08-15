@@ -126,6 +126,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Properties\AssemblyCopyright.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -217,7 +218,6 @@
     <Content Include="Content\Styles\Bootstrap.scss" />
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
     <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
-    <Content Include="Content\Scripts\yuidoc.json" />
     <Content Include="Content\Fonts\icomoon.eot" />
     <Content Include="Content\Fonts\icomoon.json" />
     <Content Include="Content\Fonts\icomoon.ttf" />

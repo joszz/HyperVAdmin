@@ -3,27 +3,20 @@
     ViewBag.Title = "Login";
 }
 
-<div class="vertical-center login">
-    <div class="panel panel-success" id="login">
-        <div class="panel-heading">
-            <h4>Login</h4>
-        </div>
-        <div class="panel-body">
-            @using (Html.BeginForm())
-            {
-                <div class="form-group @Html.Raw(!Model ? "has-error" : null)">
-                    @Html.TextBox("User", null, new { @class = "form-control", placeholder = "User" })
-                </div>
-                <div class="form-group @Html.Raw(!Model ? "has-error" : null)">
+<div class="d-flex justify-content-center align-items-center h-100" id="login">
+    <div class="col-12 col-xl-4">
+        <div class="card">
+            <div class="card-header text-white bg-success">
+                <h1>Login</h1>
+            </div>
+            <form method="post" class="card-body">
+                <div class="input-group @Html.Raw(!Model ? "has-error" : null)">
                     @Html.Password("Password", null, new { @class = "form-control", placeholder = "Password" })
+                    <div class="input-group-append">
+                        <input type="submit" class="btn btn-success" value="Submit" />
+                    </div>
                 </div>
-                <div id="rememberme-wrapper">
-                    @Html.CheckBox("rememberme", true, new { data_toggle = "toggle", data_onstyle = "success", data_offstyle = "danger", data_size = "small" })
-                    @Html.Label("rememberme", "Remember me")
-                </div>
-
-                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
-            }
+            </form>
         </div>
     </div>
 </div>

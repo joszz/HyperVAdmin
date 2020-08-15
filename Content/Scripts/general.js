@@ -20,8 +20,8 @@ $(function () {
         baseUrl: $("body").data("baseurl")
     };
 
-    Waves.attach(".btn");
-    Waves.init();
+    //Waves.attach(".btn");
+    //Waves.init();
 
     $("a, button").vibrate();
 
