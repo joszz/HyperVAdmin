@@ -20,9 +20,6 @@ $(function () {
         baseUrl: $("body").data("baseurl")
     };
 
-    //Waves.attach(".btn");
-    //Waves.init();
-
     $("a, button").vibrate();
 
     $("footer .fa-arrows-alt").click(function () {

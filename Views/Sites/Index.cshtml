@@ -3,7 +3,7 @@
 <div class="card h-100" id="sites">
     <div class="card-header">
         <div class="float-right btn-group">
-            <button class="btn btn-default fa fa-sync" title="Refresh"></button>
+            <button class="btn btn-light fa fa-sync" title="Refresh"></button>
         </div>
         <h3 class="mb-0">Sites</h3>
     </div>
@@ -25,10 +25,10 @@
                         <td class="d-block d-sm-none actions">
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") fa fa-power-off" title="Toggle website state"></button>
-                                <button class="btn btn-default fa fa-copy" title="Copy path"></button>
+                                <button class="btn btn-dark fa fa-copy" title="Copy path"></button>
                                 <textarea class="offcanvas">@site.PhysicalPath</textarea>
                                 <button data-href="@Url.Action("applications", "sites", new { sitename = site.Name })" title="Applications"
-                                        class="btn btn-default fa fa-puzzle-piece @(site.Applications.Count == 0 ? "disabled" : null)"></button>
+                                        class="btn btn-dark fa fa-puzzle-piece @(site.Applications.Count == 0 ? "disabled" : null)"></button>
                             </div>
 
                             <div class="btn-group bindings">
@@ -46,15 +46,15 @@
                                 @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
                                 {
                                     <a href="@keyValue.Value" target="_blank" title="Open website"
-                                       class="btn btn-default protocol @Html.Raw(site.State == ObjectState.Stopped ? "disabled" : null)">@keyValue.Key</a>
+                                       class="btn btn-dark protocol @Html.Raw(site.State == ObjectState.Stopped ? "disabled" : null)">@keyValue.Key</a>
                                 }
                             </div>
 
                             <div class="btn-group">
-                                <button class="btn btn-default fa fa-copy" title="Copy path"></button>
+                                <button class="btn btn-dark fa fa-copy" title="Copy path"></button>
                                 <textarea class="offcanvas">@site.PhysicalPath</textarea>
                                 <button data-href="@Url.Action("applications", "sites", new { sitename = site.Name })" title="Applications"
-                                        class="btn btn-default fa fa-puzzle-piece @(site.Applications.Count == 0 ? "disabled" : null)"></button>
+                                        class="btn btn-dark fa fa-puzzle-piece @(site.Applications.Count == 0 ? "disabled" : null)"></button>
                                 <button class="btn btn-@Html.Raw(site.State == ObjectState.Stopped ? "danger" : "success") fa fa-power-off" title="Toggle website state"></button>
                             </div>
                         </td>
@@ -65,7 +65,7 @@
                     <td class="d-table-cell d-sm-none actions">
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle website state"></button>
-                            <button class="btn btn-default fa fa-copy" title="Copy path"></button>
+                            <button class="btn btn-dark fa fa-copy" title="Copy path"></button>
                             <textarea class="offcanvas"></textarea>
                             <button data-href="@Url.Action("applications", "sites")" class="btn btn-default fa fa-puzzle-piece disabled" title="Applications"></button>
                         </div>
@@ -77,13 +77,13 @@
                     <td class="text-right d-none d-sm-table-cell actions">
                         <div class="btn-group bindings"></div>
                         <div class="btn-group">
-                            <button class="btn btn-default fa fa-copy" title="Copy path"></button>
+                            <button class="btn btn-dark fa fa-copy" title="Copy path"></button>
                             <textarea class="offcanvas"></textarea>
-                            <button data-href="@Url.Action("applications", "sites")" class="btn btn-default fa fa-puzzle-piece disabled" title="Applications"></button>
+                            <button data-href="@Url.Action("applications", "sites")" class="btn btn-dark fa fa-puzzle-piece disabled" title="Applications"></button>
                             <button class="btn fa fa-power-off" title="Toggle website state"></button>
                         </div>
 
-                        <a class="btn btn-default protocol hidden" href="#" title="Open website" target="_blank"></a>
+                        <a class="btn btn-dark protocol hidden" href="#" title="Open website" target="_blank"></a>
                     </td>
                 </tr>
             </tbody>

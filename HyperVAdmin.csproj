@@ -217,7 +217,6 @@
     <Content Include="compilerconfig.json" />
     <Content Include="Content\Styles\Bootstrap.scss" />
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
-    <Content Include="Content\Styles\Default\_bootstrap-buttons.scss" />
     <Content Include="Content\Fonts\icomoon.eot" />
     <Content Include="Content\Fonts\icomoon.json" />
     <Content Include="Content\Fonts\icomoon.ttf" />

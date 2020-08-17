@@ -42,16 +42,6 @@
     },
     {
       "provider": "filesystem",
-      "library": "https://raw.githubusercontent.com/fians/Waves/master/dist/waves.js",
-      "destination": "Content/Vendor/waves/"
-    },
-    {
-      "provider": "filesystem",
-      "library": "https://raw.githubusercontent.com/fians/Waves/master/dist/waves.css",
-      "destination": "Content/Vendor/waves/"
-    },
-    {
-      "provider": "filesystem",
       "library": "https://raw.githubusercontent.com/joszz/sorttable/master/sorttable.js",
       "destination": "Content/Vendor/sorttable/"
     }

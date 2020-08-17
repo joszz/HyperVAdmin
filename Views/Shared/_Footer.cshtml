@@ -15,7 +15,9 @@
                     double elapsed = (double)ts.Milliseconds / 1000;
                     string elapsedTime = String.Format("{0}s", elapsed.ToString());
                 }
-                Execution time @elapsedTime
+                Execution time: @elapsedTime
+                |
+                Version: @typeof(HyperVAdmin.MvcApplication).Assembly.GetName().Version
             </span>
         </a>
         <div class="float-right">

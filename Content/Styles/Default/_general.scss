@@ -95,3 +95,7 @@ div#confirm-dialog button#confirm-yes {
     margin-top: -1px;
     margin-left: -1px;
 }
+
+.btn.disabled {
+    cursor: not-allowed;
+}

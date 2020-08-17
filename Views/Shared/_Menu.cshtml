@@ -8,9 +8,6 @@
             <a class="navbar-brand" href="@Url.Action("Index", "Index")" title="Home">
                 <img src="~/Content/Images/Favicons/favicon-32x32.png" alt="Logo" class="float-left" />
                 <span class="float-left">Hyper-V Admin</span>
-                <small class="float-left text-muted ml-3 mt-1">
-                    @typeof(HyperVAdmin.MvcApplication).Assembly.GetName().Version
-                </small>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
@@ -18,7 +15,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbar-content">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav">
                     @if ((bool)ViewBag.HyperVEnabled)
                     {
                         <li class="nav-item">
@@ -37,7 +34,7 @@
 
             @if (Session["loggedin"] != null && (bool)Session["loggedin"] && currentController != "Session")
             {
-                @Html.ActionLink(" ", "SignOut", "Session", null, new { @class = "btn btn-outline-light fa fa-sign-out-alt" })
+                @Html.ActionLink(" ", "SignOut", "Session", null, new { @class = "btn btn-dark fa fa-sign-out-alt" })
             }
         </div>
     </nav>

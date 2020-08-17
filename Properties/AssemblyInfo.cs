@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("HyperVAdmin")]
 [assembly: AssemblyDescription("A simple website to manage your Hyper-V VMs")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("JosNienhuis.GotGeeks.com")]
+[assembly: AssemblyCompany("GotGeeks.nl")]
 [assembly: AssemblyProduct("HyperVAdmin")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("nl")]
+[assembly: AssemblyCulture("en")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.3.1")]
-[assembly: AssemblyFileVersion("1.3.1")]
+[assembly: AssemblyVersion("1.4")]
+[assembly: AssemblyFileVersion("1.4")]
