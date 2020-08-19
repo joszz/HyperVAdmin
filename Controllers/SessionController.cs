@@ -8,11 +8,21 @@ namespace HyperVAdmin.Controllers
 {
     public class SessionController : BaseController
     {
+        /// <summary>
+        /// Shows the login form. Sets the model to false, indicating no validation errors.
+        /// </summary>
+        /// <returns>The view with the login form. </returns>
         public ActionResult Index()
         {
             return View(false);
         }
 
+        /// <summary>
+        /// Handles the login form post with the received password. Checks for validity and either redirects to Index or
+        /// shows the view again with the modal set to true, indicating validation errors.
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Index(string password)
         {
@@ -25,6 +35,10 @@ namespace HyperVAdmin.Controllers
             return View(true);
         }
 
+        /// <summary>
+        /// Clears the session, logging the user out and redirects to Index of the session controller.
+        /// </summary>
+        /// <returns>Redirects to action Index.</returns>
         public ActionResult SignOut()
         {
             Session.Clear();

@@ -10,8 +10,8 @@
                 <h1>Login</h1>
             </div>
             <form method="post" class="card-body">
-                <div class="input-group @Html.Raw(!Model ? "has-error" : null)">
-                    @Html.Password("Password", null, new { @class = "form-control", placeholder = "Password" })
+                <div class="input-group">
+                    @Html.Password("Password", null, new { @class = "form-control" + (Model ? " is-invalid"  : null), placeholder = "Password" })
                     <div class="input-group-append">
                         <input type="submit" class="btn btn-success" value="Submit" />
                     </div>
