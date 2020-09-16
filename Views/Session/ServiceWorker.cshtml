@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+    string homeLink = Url.RouteUrl("home") + "/";
+}
+{
+    "name": "RDPMon WebGUI",
+    "short_name": "RDPMon WebGUI",
+    "start_url": "@homeLink",
+    "icons": [
+        {
+            "src": "@(homeLink)img/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "@(homeLink)img/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

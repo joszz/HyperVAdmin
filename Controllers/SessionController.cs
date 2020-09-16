@@ -75,5 +75,17 @@ namespace HyperVAdmin.Controllers
 
             return false;
         }
+
+        public ActionResult Manifest()
+        {
+            HttpContext.Response.Headers["Content-Type"] = "application/manifest+json; charset=UTF-8";
+            return View();
+        }
+
+        public ActionResult ServiceWorker()
+        {
+            HttpContext.Response.Headers["Service-Worker-allowed"] = "../";
+            return File("~/Content/Scripts/worker.min.js", "text/javascript");
+        }
     }
 }

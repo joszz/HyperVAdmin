@@ -150,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fonts\icomoon.svg" />
+    <Content Include="Content\Images\Favicons\android-chrome-192x192.png" />
+    <Content Include="Content\Images\Favicons\android-chrome-256x256.png" />
+    <Content Include="Content\Scripts\worker.js" />
+    <Content Include="Content\Scripts\worker.min.js">
+      <DependentUpon>worker.js</DependentUpon>
+    </Content>
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.BundleConfig.html" />
@@ -213,7 +219,6 @@
     <Content Include="Content\Styles\Default.css">
       <DependentUpon>Default.scss</DependentUpon>
     </Content>
-    <Content Include="Content\Images\Favicons\manifest.json" />
     <Content Include="compilerconfig.json" />
     <Content Include="Content\Styles\Bootstrap.scss" />
     <Content Include="Content\Styles\Default\_fontawesome.scss" />
@@ -340,6 +345,8 @@
     <Content Include="Documentation\docfx\xrefmap.yml" />
     <Content Include="Views\Session\Index.cshtml" />
     <Content Include="libman.json" />
+    <Content Include="Views\Session\Manifest.cshtml" />
+    <Content Include="Views\Session\ServiceWorker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,6 +20,16 @@ $(function () {
         baseUrl: $("body").data("baseurl")
     };
 
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register(settings.baseUrl + "Session/ServiceWorker", { scope: settings.baseUrl }).then(function (_registration) {
+                // Registration was successful
+            }, function (_err) {
+                // registration failed :(
+            });
+        });
+    }
+
     $("a, button").vibrate();
 
     $("footer .fa-arrows-alt").click(function () {
