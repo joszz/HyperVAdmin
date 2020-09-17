@@ -76,12 +76,22 @@ namespace HyperVAdmin.Controllers
             return false;
         }
 
+        /// <summary>
+        /// Shows the manifest JSON file used by PWA installs.
+        /// Sets the correct content-type for the request.
+        /// </summary>
+        /// <returns>A view with the manifest JSON content</returns>
         public ActionResult Manifest()
         {
             HttpContext.Response.Headers["Content-Type"] = "application/manifest+json; charset=UTF-8";
             return View();
         }
 
+        /// <summary>
+        /// Returns the contents of the minified stub service worker. Stubbing the worker to make this project installable as PWA.
+        /// Sets the service-worker-allowed header to the parent, so it has the scope of the whole site.
+        /// </summary>
+        /// <returns>The contents of the minified service worker.</returns>
         public ActionResult ServiceWorker()
         {
             HttpContext.Response.Headers["Service-Worker-allowed"] = "../";
