@@ -192,8 +192,20 @@
     <Content Include="Content\Vendor\bootstrap\js\src\tools\sanitizer.js" />
     <Content Include="Content\Vendor\bootstrap\js\src\tooltip.js" />
     <Content Include="Content\Vendor\bootstrap\js\src\util.js" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.js" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.min.css" />
+    <Content Include="Content\Vendor\fancybox\jquery.fancybox.min.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen-min.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen-min.min.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen.js" />
+    <Content Include="Content\Vendor\jquery-fullscreen-plugin\jquery.fullscreen.min.js" />
     <Content Include="Content\Vendor\jquery.isloading\jquery.isloading.js" />
     <Content Include="Content\Vendor\jquery.vibrate\jquery.vibrate.js" />
+    <Content Include="Content\Vendor\jquery\jquery.js" />
+    <Content Include="Content\Vendor\jquery\jquery.min.js" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.min.js" />
     <Content Include="Content\Vendor\sorttable\sorttable.js" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.AJAXOnlyAttribute.html" />
     <Content Include="Documentation\docfx\api\HyperVAdmin.Attributes.html" />
@@ -432,6 +444,12 @@
     <Content Include="Content\Vendor\bootstrap\scss\_utilities.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\_variables.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Content\Vendor\jquery\jquery.min.map" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Content\Vendor\fortawesome\scss\_animated.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_core.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_mixins.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
