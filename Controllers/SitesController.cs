@@ -2,6 +2,7 @@
 using HyperVAdmin.Models;
 using System;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
@@ -46,7 +47,7 @@ namespace HyperVAdmin.Controllers
         /// <param name="sitename">Which site to stop.</param>
         public void StopSite(string sitename)
         {
-            SiteModel.StopSite(sitename);
+            SiteModel.StopSite(HttpUtility.UrlDecode(sitename));
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace HyperVAdmin.Controllers
         /// <param name="sitename">Which site to start.</param>
         public void StartSite(string sitename)
         {
-            SiteModel.StartSite(sitename);
+            SiteModel.StartSite(HttpUtility.UrlDecode(sitename));
         }
 
         /// <summary>

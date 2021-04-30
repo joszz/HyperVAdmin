@@ -1,6 +1,6 @@
-﻿using HyperVAdmin.Attributes;
-using HyperVAdmin.Models;
+﻿using HyperVAdmin.Models;
 using System;
+using System.Web;
 using System.Web.Mvc;
 
 namespace HyperVAdmin.Controllers
@@ -47,7 +47,7 @@ namespace HyperVAdmin.Controllers
         /// <returns>JSON with a string indicating success of the action.</returns>
         public JsonResult ToggleState(string vmName, VirtualMachineState state)
         {
-            return Json(VirtualMachineModel.ToggleState(vmName, state), JsonRequestBehavior.AllowGet);
+            return Json(VirtualMachineModel.ToggleState(HttpUtility.UrlDecode(vmName), state), JsonRequestBehavior.AllowGet);
         }
     }
 }
