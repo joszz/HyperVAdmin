@@ -15,7 +15,7 @@
                     <th data-nosort="true" class="d-table-cell d-sm-none">Actions</th>
                     <th>Name</th>
                     <th>Path</th>
-                    <th data-nosort="true" class="text-right d-none d-sm-table-cell">Actions</th>
+                    <th data-nosort="true" class="text-end d-none d-sm-table-cell">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,7 +41,7 @@
                         </td>
                         <td class="name">@site.Name</td>
                         <td class="path">@site.PhysicalPath</td>
-                        <td class="text-right d-none d-sm-block actions">
+                        <td class="text-end d-none d-sm-block actions">
                             <div class="btn-group bindings">
                                 @foreach (KeyValuePair<string, string> keyValue in site.Bindings)
                                 {
@@ -74,7 +74,7 @@
                     </td>
                     <td class="name"></td>
                     <td class="path"></td>
-                    <td class="text-right d-none d-sm-table-cell actions">
+                    <td class="text-end d-none d-sm-table-cell actions">
                         <div class="btn-group bindings"></div>
                         <div class="btn-group">
                             <button class="btn btn-dark fa fa-copy" title="Copy path"></button>

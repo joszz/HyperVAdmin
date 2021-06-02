@@ -18,7 +18,7 @@
                     <th class="text-center">Cores</th>
                     <th>Memory</th>
                     <th>MAC</th>
-                    <th data-nosort="true" class="text-right d-none d-sm-table-cell">Actions</th>
+                    <th data-nosort="true" class="text-end d-none d-sm-table-cell">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +36,7 @@
                         <td class="text-center cores">@vm.CoresAmount</td>
                         <td class="memory">@vm.MemoryTotal @vm.MemoryAllocationUnits</td>
                         <td class="mac">@vm.MAC</td>
-                        <td class="text-right d-none d-sm-table-cell actions">
+                        <td class="text-end d-none d-sm-table-cell actions">
                             <div class="btn-group">
                                 <button class="btn btn-@Html.Raw(vm.State == VirtualMachineState.Enabled ? "success" : "danger") fa fa-power-off" title="Toggle state" />
                             </div>
@@ -56,7 +56,7 @@
                     <td class="text-center cores"></td>
                     <td class="memory"></td>
                     <td class="mac"></td>
-                    <td class="text-right d-none d-sm-table-cell actions">
+                    <td class="text-end d-none d-sm-table-cell actions">
                         <div class="btn-group">
                             <button class="btn fa fa-power-off" title="Toggle state" />
                         </div>
