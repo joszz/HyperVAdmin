@@ -17,3 +17,4 @@
 *.RTF	 diff=astextplain
 
 Content/* linguist-vendored
+*.css linguist-detectable=false
