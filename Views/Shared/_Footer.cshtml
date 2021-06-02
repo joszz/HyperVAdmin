@@ -2,7 +2,7 @@
 
 <footer class="navbar navbar-inverse">
     <div class="container">
-        <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright text-muted pull-left">
+        <a href="https://github.com/joszz/HyperVAdmin" target="_blank" class="copyright text-muted text-decoration-none">
             &copy; @DateTime.Now.Year
             Jos Nienhuis
             <span class="d-none d-md-inline">
@@ -20,7 +20,7 @@
                 Version: @typeof(HyperVAdmin.MvcApplication).Assembly.GetName().Version
             </span>
         </a>
-        <div class="float-right">
+        <div class="float-end">
             <div class="btn-group">
                 <button class="btn btn-dark fa fa-arrows-alt rounded-not-mobile"></button>
                 <a href="@Html.Raw(HtmlUtility.GetVirtualApplicationPath() + "Documentation/docfx/")" target="_blank" class="btn btn-dark fa fa-question" title="RTFM!"></a>

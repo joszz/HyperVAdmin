@@ -7,15 +7,18 @@ namespace HyperVAdmin
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
+            bundles.Add(new Bundle("~/bundles/scripts").Include(
                 "~/Content/Vendor/jquery/jquery.js",
                 "~/Content/Vendor/fancybox/jquery.fancybox.js",
                 "~/Content/Vendor/jquery-fullscreen-plugin/jquery.fullscreen.js",
                 "~/Content/Vendor/jquery.isloading/jquery.isloading.js",
                 "~/Content/Vendor/jquery.vibrate/jquery.vibrate.js",
-                "~/Content/Vendor/waves/waves.js",
                 "~/Content/Vendor/sorttable/sorttable.js",
-                "~/Content/Vendor/bootstrap/js/dist/util.js",
+                "~/Content/Vendor/bootstrap/js/dist/dom/data.js",
+                "~/Content/Vendor/bootstrap/js/dist/dom/manipulator.js",
+                "~/Content/Vendor/bootstrap/js/dist/dom/selector-engine.js",
+                "~/Content/Vendor/bootstrap/js/dist/dom/event-handler.js",
+                "~/Content/Vendor/bootstrap/js/dist/base-component.js",
                 "~/Content/Vendor/bootstrap/js/dist/collapse.js",
 
                 "~/Content/Scripts/general.js"
