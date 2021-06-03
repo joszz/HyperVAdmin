@@ -3,5 +3,5 @@ $fontPath: "#{$contentPath}Fonts";
 $bootstrapFont: "#{$fontPath}/glyphicons-halflings-regular";
 
 $fontFamily: "Segoe UI",Segoe,Tahoma,Helvetica,Arial,sans-serif;
-$gradiantDark: linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+$gradiantDark: linear-gradient(to bottom, rgba(60, 60, 60, 0.9) 0%, rgba(34, 34, 34, 0.9) 100%);
 $fa-font-path: "../Fonts";

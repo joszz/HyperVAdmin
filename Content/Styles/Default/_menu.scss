@@ -1,9 +1,9 @@
 ﻿footer,
 nav.navbar {
-    opacity: 0.9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     background-image: $gradiantDark;
+    background-color: transparent;
     background-repeat: repeat-x;
+    backdrop-filter: blur(5px);
 }
 
 @media (max-width: map-get($grid-breakpoints, "sm")) {
