@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fonts\icomoon.svg" />
+    <Content Include="Content\Fonts\roboto-light.svg" />
     <Content Include="Content\Images\Favicons\android-chrome-192x192.png" />
     <Content Include="Content\Images\Favicons\android-chrome-256x256.png" />
     <Content Include="Content\Scripts\worker.js" />
@@ -302,6 +303,10 @@
     <Content Include="Content\Fonts\icomoon.ttf" />
     <Content Include="Content\Fonts\icomoon.woff" />
     <Content Include="Content\Fonts\icomoon.woff2" />
+    <Content Include="Content\Fonts\roboto-light.eot" />
+    <Content Include="Content\Fonts\roboto-light.ttf" />
+    <Content Include="Content\Fonts\roboto-light.woff" />
+    <Content Include="Content\Fonts\roboto-light.woff2" />
     <None Include="Content\Styles\Default\_footer.scss" />
     <Content Include="Content\Styles\Default\_roboto.scss" />
     <Content Include="Content\Styles\Default\_login.scss" />
