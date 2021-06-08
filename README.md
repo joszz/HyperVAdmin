@@ -1,12 +1,12 @@
 Hyper-V Admin
 ================
-&copy; 2020, Jos Nienhuis
+&copy; 2021, Jos Nienhuis
 
 A little website to control and check your Hyper-V VMs and IIS websites with.
 
 Screenshots
 ------------
-![Screenshot](https://raw.githubusercontent.com/joszz/HyperVAdmin/master/Content/Images/Screenshots/Home.jpg "Home")
+![Screenshot](https://raw.githubusercontent.com/joszz/HyperVAdmin/master/Content/Images/Screenshots/desktop_home.png "Home")
 
 Prerequisites
 -------------

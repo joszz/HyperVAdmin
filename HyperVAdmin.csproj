@@ -153,6 +153,9 @@
     <Content Include="Content\Fonts\roboto-light.svg" />
     <Content Include="Content\Images\Favicons\android-chrome-192x192.png" />
     <Content Include="Content\Images\Favicons\android-chrome-256x256.png" />
+    <Content Include="Content\Images\Screenshots\desktop_home.png" />
+    <Content Include="Content\Images\Screenshots\mobile_sites.png" />
+    <Content Include="Content\Images\Screenshots\mobile_vms.png" />
     <Content Include="Content\Scripts\worker.js" />
     <Content Include="Content\Scripts\worker.min.js">
       <DependentUpon>worker.js</DependentUpon>
@@ -287,7 +290,6 @@
     <Content Include="Content\Images\Favicons\favicon.ico" />
     <Content Include="Content\Images\Favicons\mstile-150x150.png" />
     <Content Include="Content\Images\Favicons\safari-pinned-tab.svg" />
-    <Content Include="Content\Images\Screenshots\Home.jpg" />
     <Content Include="Content\Images\Sorttable\asc_sort.gif" />
     <Content Include="Content\Images\Sorttable\desc_sort.gif" />
     <Content Include="Content\Images\Sorttable\no_sort.gif" />
