@@ -27,7 +27,7 @@
     },
     {
       "provider": "unpkg",
-      "library": "bootstrap@5.0.2",
+      "library": "bootstrap@5.1.0",
       "destination": "Content/Vendor/bootstrap/"
     },
     {
