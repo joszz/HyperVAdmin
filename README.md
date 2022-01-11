@@ -1,6 +1,6 @@
 Hyper-V Admin
 ================
-&copy; 2021, Jos Nienhuis
+&copy; 2022, Jos Nienhuis
 
 A little website to control and check your Hyper-V VMs and IIS websites with.
 
