@@ -389,8 +389,6 @@
     <Content Include="libman.json" />
     <Content Include="Views\Session\Manifest.cshtml" />
     <Content Include="Views\Session\ServiceWorker.cshtml" />
-    <Content Include="Content\Vendor\jquery\jquery.min.map" />
-    <Content Include="Content\Vendor\jquery\jquery.slim.min.map" />
     <Content Include="Content\Vendor\bootstrap\scss\_functions.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\_grid.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\_helpers.scss" />
@@ -419,10 +417,6 @@
     <Content Include="Content\Vendor\bootstrap\scss\bootstrap-reboot.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\bootstrap-utilities.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\bootstrap.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_animated.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_core.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_mixins.scss" />
-    <Content Include="Content\Vendor\fortawesome\scss\_variables.scss" />
     <Content Include="Content\Vendor\bootstrap\LICENSE" />
     <Content Include="Content\Vendor\bootstrap\dist\css\bootstrap-grid.css.map" />
     <Content Include="Content\Vendor\bootstrap\dist\css\bootstrap-grid.min.css.map" />
@@ -534,6 +528,12 @@
     <Content Include="Content\Vendor\bootstrap\scss\_forms.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\_maps.scss" />
     <Content Include="Content\Vendor\bootstrap\scss\_placeholders.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_animated.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_core.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_mixins.scss" />
+    <Content Include="Content\Vendor\fortawesome\scss\_variables.scss" />
+    <Content Include="Content\Vendor\jquery\jquery.min.map" />
+    <Content Include="Content\Vendor\jquery\jquery.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
